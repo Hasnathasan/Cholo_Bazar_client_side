@@ -6,6 +6,9 @@ import banner2 from '../../../public/banner-2.png'
 import banner3 from '../../../public/banner-3.png'
 import banner4 from '../../../public/banner-4.png'
 import banner5 from '../../../public/banner-5.png'
+import banner6 from '../../../public/banner-6.png'
+import banner7 from '../../../public/banner-7.png'
+import banner8 from '../../../public/banner-8.png'
 const HomeSlider = () => {
     const settings = {
         fade: true,
@@ -34,6 +37,15 @@ const HomeSlider = () => {
           </div>
           <div>
             <img src={banner5} />
+          </div>
+          <div>
+            <img src={banner6} />
+          </div>
+          <div>
+            <img src={banner7} />
+          </div>
+          <div>
+            <img src={banner8} />
           </div>
         </Slider>
         </div>
