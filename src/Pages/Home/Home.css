@@ -1,0 +1,10 @@
+.activeTab{
+    border: 1px solid #30bbfc !important;
+    border-bottom-color: white !important;
+}
+.nestedTabs li{
+    border: 0px;
+}
+.selectedTabs{
+    color: #41bcf5;
+}

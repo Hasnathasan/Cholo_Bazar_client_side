@@ -1,0 +1,6 @@
+.hover-effect:hover{
+    border-radius: 1px;
+background: #ffffff;
+box-shadow: inset 2px 2px 8px #dadada,
+            inset -2px -2px 8px #e0e0e0;
+}
