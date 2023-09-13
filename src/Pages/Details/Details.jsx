@@ -6,6 +6,7 @@ import './Details.css'
 import Rating from "react-rating";
 import { FaRegStar, FaStar, FaTag } from "react-icons/fa";
 import cartImg from '../../../public/cart-white.png'
+import banner from '../../../public/details-page-banner.png'
 
 function ThumbnailPlugin(mainRef) {
   return (slider) => {
@@ -74,7 +75,7 @@ const Details = () => {
   const { specification, price } = product;
   return (
     <div className="mx-auto max-w-[1160px] py-20">
-      <div className="bg-white flex flex-col md:flex-row p-5 gap-10"> 
+      <div className="bg-white flex flex-col md:flex-row p-5 mb-5 gap-10 shadow-lg"> 
         <div className="w-[400px]">
           <div ref={sliderRef} className="keen-slider w-full mb-7">
             {product.images.map((img, index) => (
@@ -124,9 +125,26 @@ const Details = () => {
               {
                 apiPath === "book" ? <button className="px-8 py-3 border border-green-500 rounded-sm hover:bg-green-500 hover:text-white transition-all">একটু পড়ে দেখুন</button> : ""
               }
-              <button className="px-8 flex gap-2 text-lg font-bold text-white justify-center items-center py-3 bg-amber-500 hover:bg-[#f59f0bd0] rounded duration-500  transition-all"> <img className="w-8" src={cartImg} alt="" />Add to Cart</button>
+              <button className="px-8 flex gap-2 text-lg font-semibold text-white justify-center items-center py-3 bg-amber-500 hover:bg-[#f59f0bd0] rounded duration-500  transition-all"> <img className="w-8" src={cartImg} alt="" />Add to Cart</button>
             </div>
         </div>
+      </div>
+        <img src={banner} alt="" />
+      <div className="bg-white my-5 p-6 mb-5 gap-10 shadow-lg">
+      <h1 className="text-xl text-gray-700">Product Summary & Specification</h1>
+      <h3 className="font-semibold text-[#333333] mt-3 mb-2 text-lg">Summary:</h3>
+      <p className="text-[15px] text-gray-800 mb-5">{product.specification.summary || "N/A"}</p>
+      <hr className="my-5" />
+      <h3 className="font-semibold text-[#333333] mt-3 mb-2 text-lg">Specification:</h3>
+      <div>
+        <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Title:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product.specification.title}</p></div>
+        <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Brand:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product.specification.brand}</p></div>
+        <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Volumn:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product.specification.Volume?product.specification.Volume:product.specification.volume}</p></div>
+        <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Age:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product.specification.age?product.specification.age:"N/A"}</p></div>
+        <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Item Form:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product.specification.item_form || product.specification.category[0]}</p></div>
+        <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Made in:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product.specification.country_of_origin?product.specification.country_of_origin:"N/A"}</p></div>
+        
+      </div>
       </div>
     </div>
   );
