@@ -2,7 +2,8 @@ import { FaRegStar, FaStar } from "react-icons/fa";
 import Rating from "react-rating";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import './FicNonFicCard.css'
-const FicNonFicCard = ({ header, books, tags }) => {
+import { Link } from "react-router-dom";
+const FicNonFicCard = ({ header, books, tags, apiPath }) => {
   if (!books) {
     return <h1>Hi</h1>;
   }
@@ -26,7 +27,8 @@ const FicNonFicCard = ({ header, books, tags }) => {
           </div>
           <TabPanel className=" max-h-[267px] overflow-y-auto">
             {books.map((book) => (
-                <div key={book._id} className="flex gap-2 h-20 items-center border-b py-[44px] border-b-gray-200 mx-6">
+              <Link key={book._id} to={`/details/${apiPath}/${book._id}`}>
+                <div className="flex gap-2 h-20 items-center border-b py-[44px] border-b-gray-200 mx-6">
                 <h1 className="text-2xl text-[#e68a00]">{books.indexOf(book) + 1} .</h1>
                 <img className="w-[44px] h-[63px]" src={book.image} alt="" />
                 <div className="flex flex-col justify-around gap-1">
@@ -46,6 +48,8 @@ const FicNonFicCard = ({ header, books, tags }) => {
                   
                 </div>
               </div>
+              </Link>
+                
             ))}
           </TabPanel>
           <TabPanel className=" max-h-[267px] overflow-y-auto">

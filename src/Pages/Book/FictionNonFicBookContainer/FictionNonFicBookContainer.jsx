@@ -3,6 +3,7 @@ import useFictionBooks from "../../../Hooks/useFictionBooks";
 import FicNonFicCard from "../FicNonFicCard/FicNonFicCard";
 import useNonFictionBooks from "../../../Hooks/useNonFictionBooks";
 import useReligiousBooks from "../../../Hooks/useReligiousBooks";
+import useAcademicBooks from "../../../Hooks/useAcademicBooks";
 
 
 
@@ -36,13 +37,14 @@ const SampleNextArrow = (props) => {
 const FictionNonFicBookContainer = () => {
     const [fictionBooks, isFictionBooksLoading] = useFictionBooks();
     const [nonFictionBooks, isNonFictionBooksLoading] = useNonFictionBooks();
-    const [religiousBooks, isReligiousBooksLoading] = useReligiousBooks()
+    const [religiousBooks, isReligiousBooksLoading] = useReligiousBooks();
+    const [academicBooks, isAcademicBooksLoading] = useAcademicBooks()
     const tagsOfFictionBooks = ["All in Fiction Books", "উপন্যাস", "গল্প, কবিতা ও ছড়া", "সায়েন্স ফিকশন", "রহস্য, গোয়েন্দা, ভৌতিক, থ্রিলার ও অ্যাডভেঞ্চার", "কমিক, রম্য ও শিশুকিশোর"];
     const tagsOfNonFictionBooks = ["All in Non-fiction Books", "ব্যবসা, বিনিয়োগ ও অর্থনীতি", "বঙ্গবন্ধু, বাংলাদেশ ও মুক্তিযুদ্ধ", "রাজনীতি,ইতিহাস ও ঐতিহ্য", "জীবনী, স্মৃতিচারণ ও সাক্ষাৎকার", "বিজ্ঞান ও প্রযুক্তি", "আত্ম-উন্নয়ন ও মোটিভেশন", "বিবিধ"]
     const tagsOfreligiousBooks = ["All in Religious Books", "কুরআন ও হাদীস", "জীবনী ও ইতিহাস-ঐতিহ্য", "ইসলামি সাহিত্য ও গবেষণা", "ইসলামী আদর্শ ও মতবাদ", "আমল ও বিধিবিধান"]
     const tagsOfAcademicBooks = ["All in Career & Academic Books", "স্কুল,কলেজ, মাদ্রাসা ও বিশ্ববিদ্যালয়", "বিসিএস এবং নিয়োগ পরীক্ষা", "বিশ্ববিদ্যালয় ও কলেজ ভর্তি", "ইভাষা ও অভিধান"]
 
-    if(isFictionBooksLoading || isNonFictionBooksLoading || isReligiousBooksLoading){
+    if(isFictionBooksLoading || isNonFictionBooksLoading || isReligiousBooksLoading || isAcademicBooksLoading){
         return <h1>Loading</h1>
     }
     let settings = {
@@ -82,10 +84,10 @@ const FictionNonFicBookContainer = () => {
         <div className="mx-auto my-10">
           <h2 className="text-lg font-bold text-gray-700 mb-3">{""}</h2>
             <Slider {...settings}> 
-                <FicNonFicCard header={"ফিকশন বই"} books={fictionBooks} tags={tagsOfFictionBooks}></FicNonFicCard>
-                <FicNonFicCard header={"নন ফিকশন বই"} books={nonFictionBooks} tags={tagsOfNonFictionBooks}></FicNonFicCard>
-                <FicNonFicCard header={"ধর্মীয় বই"} books={religiousBooks} tags={tagsOfreligiousBooks}></FicNonFicCard>
-                <FicNonFicCard header={"ক্যারিয়ার ও একাডেমিক বই"} books={fictionBooks} tags={tagsOfAcademicBooks}></FicNonFicCard>
+                <FicNonFicCard header={"ফিকশন বই"} books={fictionBooks} tags={tagsOfFictionBooks} apiPath={"fiction-books"}></FicNonFicCard>
+                <FicNonFicCard header={"নন ফিকশন বই"} books={nonFictionBooks} tags={tagsOfNonFictionBooks} apiPath={"non-fiction-books"}></FicNonFicCard>
+                <FicNonFicCard header={"ধর্মীয় বই"} books={religiousBooks} tags={tagsOfreligiousBooks} apiPath={"islami-books"}></FicNonFicCard>
+                <FicNonFicCard header={"ক্যারিয়ার ও একাডেমিক বই"} books={academicBooks} tags={tagsOfAcademicBooks} apiPath={"academic-books"}></FicNonFicCard>
             </Slider>
         </div>
     );
