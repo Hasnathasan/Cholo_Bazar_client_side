@@ -9,6 +9,10 @@ import banner5 from '../../../public/banner-5.png'
 import banner6 from '../../../public/banner-6.png'
 import banner7 from '../../../public/banner-7.png'
 import banner8 from '../../../public/banner-8.png'
+import add1 from '../../../public/add1.png'
+import add2 from '../../../public/add2.png'
+import add3 from '../../../public/add3.png'
+import { RiAlertFill } from "react-icons/ri";
 const HomeSlider = () => {
     const settings = {
         fade: true,
@@ -48,6 +52,12 @@ const HomeSlider = () => {
             <img src={banner8} />
           </div>
         </Slider>
+        <div className="grid grid-cols-2 md:grid-cols-3 mt-3 gap-4">
+          <img src={add1} alt="" />
+          <img src={add2} alt="" />
+          <img src={add3} alt="" />
+        </div>
+        <p className="mt-7 gap-1 items-center text-gray-700 flex justify-center"><RiAlertFill className="text-amber-500 w-6 h-6"></RiAlertFill>  অর্ডারকৃত প্রোডাক্টে রিভিউ এবং রেটিং দিয়ে সংগ্রহ করুন ৫০ পয়েন্ট।</p>
         </div>
     );
 };

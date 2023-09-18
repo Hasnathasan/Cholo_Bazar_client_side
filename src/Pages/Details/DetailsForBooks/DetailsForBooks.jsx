@@ -1,12 +1,15 @@
-import { FaRegStar, FaStar, FaTag } from "react-icons/fa";
+import { FaAngleDown, FaRegStar, FaStar, FaTag } from "react-icons/fa";
 import Rating from "react-rating";
-import cartImg from '../../../../public/cart-white.png'
-import tick from '../../../../public/tick.png'
+import cartImg from '../../../../public/cart-white.png';
+import tick from '../../../../public/tick.png';
 import { BsExclamationCircle, BsPeople } from "react-icons/bs";
+import banner from '../../../../public/details-page-banner.png';
+import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
+import './DetailsForBooks.css'
 
 
 const DetailsForBooks = ({book, apiPath}) => {
-    const {image, title, price, reviews, ratings, number_of_ratings, main_category, language, category, stock, buyers, country, edition, author, book_summary} = book;
+    const {image, title, tags, price, reviews, ratings, number_of_ratings, number_of_pages, main_category, language, publisher, category, stock, buyers, country, edition, author, isbn, book_summary, translator} = book;
     return (
         <div className="mx-auto max-w-[1160px] py-20">
       <div className="bg-white flex flex-col md:flex-row p-5 mb-5 gap-10 shadow-lg"> 
@@ -14,6 +17,7 @@ const DetailsForBooks = ({book, apiPath}) => {
           <div className="w-full p-10 border border-slate-200">
           <img src={image} alt="" />
           </div>
+          <div className="flex gap-[1px] my-5 justify-center"><button className="py-2 px-8 bg-[#2084ff] hover:bg-[#2084ffb4] duration-200 text-white font-semibold text-[15px] rounded-l-sm">Want to read</button> <button className="p-2 bg-[#2084ff] hover:bg-[#2084ffb4] duration-200 text-white font-semibold rounded-r-sm"><FaAngleDown></FaAngleDown></button></div>
         </div>
         <div className="space-y-4">
             <h1 className="text-xl text-gray-700">{title}</h1>
@@ -31,7 +35,7 @@ const DetailsForBooks = ({book, apiPath}) => {
             />
             <p className=" absolute text-slate-800 -top-[3px] left-24">{ratings} rating | {reviews} review</p>
             </div>
-            <p className="flex items-center gap-2 text-slate-700"><BsPeople></BsPeople> <span className="flex gap-1 items-center">{buyers} people want this <BsExclamationCircle className="rotate-180"></BsExclamationCircle></span></p>
+            <p className="flex items-center gap-2 text-slate-700"><BsPeople></BsPeople> <span className="flex gap-1 items-center">{buyers || 0} people want this <BsExclamationCircle className="rotate-180"></BsExclamationCircle></span></p>
             {/* <p className="text-gray-600">Brand: <span className="text-[#0397d6]">{specification?.brand}</span></p>
             <p className="text-gray-600">Category: <span className="text-[#0397d6]">{specification?.category[0]}</span></p> */}
             <div className="flex gap-5 items-end">
@@ -50,31 +54,55 @@ const DetailsForBooks = ({book, apiPath}) => {
             </div>
         </div>
       </div>
-        {/* <img src={banner} alt="" />
+        <img src={banner} alt="" />
       <div className="bg-white my-5 p-6 mb-5 gap-10 shadow-lg">
       <h1 className="text-xl text-gray-700">Product Summary & Specification</h1>
-      <h3 className="font-semibold text-[#333333] mt-3 mb-2 text-lg">Summary:</h3>
-      <p className="text-[15px] text-gray-800 mb-5">{product?.specification?.summary || "N/A"}</p>
-      <hr className="my-5" />
-      <h3 className="font-semibold text-[#333333] mt-3 mb-2 text-lg">Specification:</h3>
-      <div>
-        <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Title:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product.specification?.title}</p></div>
-        <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Brand:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product.specification?.brand}</p></div>
-        <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Volumn:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product.specification?.Volume?product.specification?.Volume:product.specification?.volume}</p></div>
-        <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Age:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product.specification?.age?product.specification?.age:"N/A"}</p></div>
-        <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Item Form:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product.specification?.item_form || product.specification?.category[0]}</p></div>
-        <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Made in:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product.specification?.country_of_origin?product.specification?.country_of_origin:"N/A"}</p></div>
+          <Tabs selectedTabClassName="activeetab">
+            <TabList className="border-b border-gray-400">
+              <Tab>Summary</Tab>
+              <Tab>Specification</Tab>
+              <Tab>Author</Tab>
+            </TabList>
+            <TabPanel>
+      <h3 className="text-[#333333d8] mt-4 mb-2 text-[15px]">{book_summary}</h3>
+            </TabPanel>
+            <TabPanel>
+              <table className="w-full mt-6">
+        <tr><td className="border border-gray-300 bg-[#f1f2f4] text-[15px] text-[#333333] ps-7 p-[10px]">Title:</td> <td className="border w-[85%] border-gray-300 text-[15px] ps-8 text-gray-800">{title}</td></tr>
+        <tr><td className="border border-gray-300 bg-[#f1f2f4] text-[15px] text-[#333333] ps-7 p-[10px]">Author:</td> <td className="border border-gray-300 text-[15px] ps-8 text-sky-500">{author?.name}</td></tr>
+        <tr><td className="border border-gray-300 bg-[#f1f2f4] text-[15px] text-[#333333] ps-7 p-[10px]">Publisher:</td> <td className="border border-gray-300 text-[15px] ps-8  text-sky-500">{publisher || "N/A"}</td></tr>
+        <tr><td className="border border-gray-300 bg-[#f1f2f4] text-[15px] text-[#333333] ps-7 p-[10px]">Publisher:</td> <td className="border border-gray-300 text-[15px] ps-8  text-sky-500">{translator || "N/A"}</td></tr>
+        <tr><td className="border border-gray-300 bg-[#f1f2f4] text-[15px] text-[#333333] ps-7 p-[10px]">ISBN:</td> <td className="border border-gray-300 text-[15px] ps-8  text-gray-800">{isbn || "N/A"}</td></tr>
+        <tr><td className="border border-gray-300 bg-[#f1f2f4] text-[15px] text-[#333333] ps-7 p-[10px]">Edition:</td> <td className="border border-gray-300 text-[15px] ps-8  text-gray-800">{edition || "N/A"}</td></tr>
+        <tr><td className="border border-gray-300 bg-[#f1f2f4] text-[15px] text-[#333333] ps-7 p-[10px]">Number of Pages:</td> <td className="border border-gray-300 text-[15px] ps-8  text-gray-800">{number_of_pages || "N/A"}</td></tr>
+        <tr><td className="border border-gray-300 bg-[#f1f2f4] text-[15px] text-[#333333] ps-7 p-[10px]">Country:</td> <td className="border border-gray-300 text-[15px] ps-8 text-gray-800">{country || "N/A"}</td></tr>
+        <tr><td className="border border-gray-300 bg-[#f1f2f4] text-[15px] text-[#333333] ps-7 p-[10px]">language:</td> <td className="border border-gray-300 text-[15px] ps-8 text-gray-800">{language || "N/A"}</td></tr>
         
-      </div>
-      <hr className="my-8" />
+      </table>
+            </TabPanel>
+            <TabPanel>
+              <div className="flex mt-7 justify-center px-12 gap-5">
+                <div className="flex basis-[15%] flex-col items-center gap-1 ">
+                  <img className="rounded-full " src={author?.image} alt="" />
+                  <h3 className="text-[15px] text-gray-600"><span className="font-semibold">{author?.follower}</span> followers</h3>
+                  <button className="py-1 px-6 bg-[#0397d3] text-white font-semibold text-sm rounded-l-sm">Follow</button>
+                </div>
+                <div className="basis-[85%]">
+                  <h1 className=" text-2xl text-gray-800">{author?.name}</h1>
+                  <h3 className="text-gray-600">{author?.introduction}</h3>
+                </div>
+              </div>
+            </TabPanel>
+          </Tabs>
+          <hr className="my-8" />
       <div className="flex gap-3 items-center">
         {
-          product?.tags?.map((tag, index) => <span key={index} className="py-[5px] px-3 border text-sm rounded-[4px] cursor-pointer text-slate-600 border-slate-200 bg-slate-50 hover:bg-[#7fc8ff] hover:text-white duration-300" >{tag}</span>)
+          tags?.map((tag, index) => <span key={index} className="py-[5px] px-3 border text-sm rounded-[4px] cursor-pointer text-slate-600 border-slate-200 bg-slate-50 hover:bg-[#7fc8ff] hover:text-white duration-300" >{tag}</span>)
         }
       </div>
       <hr className="my-8" />
       <p className="text-red-600 hover:text-cyan-700 duration-300 flex items-center w-max gap-1 mx-auto"> <BsExclamationCircle className="rotate-180 w-6 h-6" /> Report incorrect information</p>
-      </div> */}
+      </div>
     </div>
     );
 };

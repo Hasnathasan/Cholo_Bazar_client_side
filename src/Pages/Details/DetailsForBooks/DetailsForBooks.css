@@ -1,0 +1,9 @@
+.activeetab{
+    color: #1cbb39;
+    border: solid #d0d1d1 !important;
+    border-width: 4px 1px 1px 1px !important;
+    border-top-color: #1cbb39 !important;
+    border-top-left-radius: 6px !important;
+    border-top-right-radius: 6px !important;
+    border-bottom-color: white !important;
+}
