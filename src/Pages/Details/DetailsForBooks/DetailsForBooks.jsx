@@ -95,7 +95,7 @@ const DetailsForBooks = ({book, apiPath}) => {
             </TabPanel>
           </Tabs>
           <hr className="my-8" />
-      <div className="flex gap-3 items-center">
+      <div className="flex gap-3 items-cente flex-wrap">
         {
           tags?.map((tag, index) => <span key={index} className="py-[5px] px-3 border text-sm rounded-[4px] cursor-pointer text-slate-600 border-slate-200 bg-slate-50 hover:bg-[#7fc8ff] hover:text-white duration-300" >{tag}</span>)
         }
