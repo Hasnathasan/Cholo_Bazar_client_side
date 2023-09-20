@@ -1,8 +1,30 @@
 import './Login.css';
 import { FaFacebookF, FaGoogle } from 'react-icons/fa';
 import { BsEnvelope } from "react-icons/bs";
+import { useContext } from 'react';
+import { AuthContext } from '../../Providers/AuthProvider';
 
 const Login = () => {
+  const {googleLogin, faceBookSignIn, user, logout} = useContext(AuthContext);
+  console.log(user);
+  const handleGoogleSignIn = () => {
+    googleLogin()
+    .then(result=> {
+      console.log(result.user);
+    })
+    .catch(error=> {
+      console.log(error);
+    })
+  }
+  const handleFBSignIn = () => {
+    faceBookSignIn()
+    .then(result=> {
+      console.log(result.user);
+    })
+    .catch(error=> {
+      console.log(error);
+    })
+  }
   return (
     <div className='py-10'>
        <div className="bg-white mx-auto w-[560px] shadow-lg p-8 rounded-r-md text-center">
@@ -16,11 +38,11 @@ const Login = () => {
           <div className="flex flex-col w-full border-opacity-50 mb-7">
             <div className="grid h-20 card bg-base-300 rounded-box place-items-center">
               <div className="flex justify-center items-center text-center space-x-6">
-                <button className="flex items-center p-3 px-8 f-style text-white bg-blue-500">
+                <button onClick={handleFBSignIn} className="flex items-center p-3 px-8 f-style text-white bg-blue-500">
                   <FaFacebookF className="text-2xl mr-2" />
                   Facebook
                 </button>
-                <button className="flex items-center p-3 px-8 g-style text-white bg-red-500">
+                <button onClick={handleGoogleSignIn} className="flex items-center p-3 px-8 g-style text-white bg-red-500">
                   <FaGoogle className="text-2xl mr-2" />
                   Google
                 </button>
@@ -35,7 +57,7 @@ const Login = () => {
             </div>
           </div>
           <div className="px-6 md:px-10 mt-14">
-            <button className="bg-green-500 w-full p-3 px-8 rounded font-semibold text-white">
+            <button onClick={() => logout()} className="bg-green-500 w-full p-3 px-8 rounded font-semibold text-white">
               SUBMIT
             </button>
           </div>
