@@ -44,9 +44,9 @@ const FictionNonFicBookContainer = () => {
     const tagsOfreligiousBooks = ["All in Religious Books", "কুরআন ও হাদীস", "জীবনী ও ইতিহাস-ঐতিহ্য", "ইসলামি সাহিত্য ও গবেষণা", "ইসলামী আদর্শ ও মতবাদ", "আমল ও বিধিবিধান"]
     const tagsOfAcademicBooks = ["All in Career & Academic Books", "স্কুল,কলেজ, মাদ্রাসা ও বিশ্ববিদ্যালয়", "বিসিএস এবং নিয়োগ পরীক্ষা", "বিশ্ববিদ্যালয় ও কলেজ ভর্তি", "ইভাষা ও অভিধান"]
 
-    if(isFictionBooksLoading || isNonFictionBooksLoading || isReligiousBooksLoading){
-        return <h1>Loading</h1>
-    }
+    // if(isFictionBooksLoading || isNonFictionBooksLoading || isReligiousBooksLoading){
+    //     return <h1>Loading</h1>
+    // }
     let settings = {
         infinite: false,
         speed: 500,

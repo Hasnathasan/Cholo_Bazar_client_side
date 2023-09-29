@@ -3,9 +3,11 @@ import { FaFacebookF, FaGoogle } from 'react-icons/fa';
 import { BsEnvelope } from "react-icons/bs";
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
+import PhoneAuth from '../../Components/PhoneAuth/PhoneAuth';
+
 
 const Login = () => {
-  const {googleLogin, faceBookSignIn, user, logout} = useContext(AuthContext);
+  const {googleLogin, faceBookSignIn, phoneSignIn, user, logout} = useContext(AuthContext);
   console.log(user);
   const handleGoogleSignIn = () => {
     googleLogin()
@@ -25,6 +27,33 @@ const Login = () => {
       console.log(error);
     })
   }
+
+  
+  
+
+  // Initialize the FirebaseUI Widget using Firebase.
+  
+  // The start method will wait until the DOM is loaded.
+    
+    // Get the user's phone number from input
+//     const number = phoneNumber?.current?.value;
+    
+//     // Get the reCAPTCHA verifier instance
+//     const appVerifier = window.recaptchaVerifier;
+
+// const auth = getAuth();
+// signInWithPhoneNumber(auth, number, appVerifier)
+//     .then((confirmationResult) => {
+//       // SMS sent. Prompt user to type the code from the message, then sign the
+//       // user in with confirmationResult.confirm(code).
+//       window.confirmationResult = confirmationResult;
+//       console.log(confirmationResult);
+//       // ...
+//     }).catch((error) => {
+//       // Error; SMS not sent
+//       // ...
+//     });
+    
   return (
     <div className='py-10'>
        <div className="bg-white mx-auto w-[560px] shadow-lg p-8 rounded-r-md text-center">
@@ -48,18 +77,9 @@ const Login = () => {
                 </button>
               </div>
             </div>
-            <div className="font-semibold text-[15px] mb-7 mt-5">OR</div>
-            <div className="grid card bg-base-300 rounded-box px-6 md:px-10">
-              <div className="flex items-end justify-center">
-                <BsEnvelope className="text-xl text-gray-400 border-b-2 w-7 h-7 pb-2 px-[2px]" />
-                <input className="outline-0 text-gray-600  border-b-2 px-2 pb-1 focus:border-sky-400 duration-300 w-full" type="number" placeholder="Type your Phone Number" />
-              </div>
-            </div>
-          </div>
-          <div className="px-6 md:px-10 mt-14">
-            <button onClick={() => logout()} className="bg-green-500 w-full p-3 px-8 rounded font-semibold text-white">
-              SUBMIT
-            </button>
+            <div className="font-semibold text-[15px] mb- mt-5">OR</div>
+            
+          <PhoneAuth></PhoneAuth>
           </div>
         </div>
     </div>

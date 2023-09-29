@@ -4,7 +4,7 @@ const useFictionBooks = () => {
     const { data: fictionBooks, isLoading: isFictionBooksLoading } = useQuery({
         queryKey: ['fictionBooks'],
         queryFn: async() => {
-            const res = await fetch('http://localhost:5000/fiction-books');
+            const res = await fetch('http://localhost:5000/books/fiction-books');
             return res.json()
         },
       })

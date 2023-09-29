@@ -16,6 +16,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@tanstack/react-query": "^4.32.0",
     "firebase": "^10.4.0",
+    "firebaseui": "^6.1.0",
     "keen-slider": "^6.8.6",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",

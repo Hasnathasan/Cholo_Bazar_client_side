@@ -4,7 +4,7 @@ const useNonFictionBooks = () => {
     const { data: nonFictionBooks, isLoading: isNonFictionBooksLoading } = useQuery({
         queryKey: ['nonFictionBooks'],
         queryFn: async() => {
-            const res = await fetch('http://localhost:5000/non-fiction-books');
+            const res = await fetch('http://localhost:5000/books/non-fiction-books');
             return res.json()
         },
       })

@@ -5,7 +5,7 @@ import './FicNonFicCard.css'
 import { Link } from "react-router-dom";
 const FicNonFicCard = ({ header, books, tags, apiPath }) => {
   if (!books) {
-    return <h1>Hi</h1>;
+    return <div className="h-[400px] flex justify-center items-center"><h1 className=" ">loading............</h1></div>;
   }
   return (
     <div className=" bg-[#8ccdf6] border-[6px] border-[#8ccdf6] rounded mr-5">

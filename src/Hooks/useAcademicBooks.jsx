@@ -4,7 +4,7 @@ const useAcademicBooks = () => {
     const { data: academicBooks, isLoading: isAcademicBooksLoading } = useQuery({
         queryKey: ['academicBooks'],
         queryFn: async() => {
-            const res = await fetch('http://localhost:5000/academic-books');
+            const res = await fetch('http://localhost:5000/books/academic-books');
             return res.json()
         },
       })

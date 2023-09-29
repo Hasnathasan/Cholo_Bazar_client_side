@@ -6,6 +6,7 @@ import { BsExclamationCircle, BsPeople } from "react-icons/bs";
 import banner from '../../../../public/details-page-banner.png';
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import './DetailsForBooks.css'
+import Reviews from "../../../Components/Reviews/Reviews";
 
 
 const DetailsForBooks = ({book, apiPath}) => {
@@ -100,8 +101,10 @@ const DetailsForBooks = ({book, apiPath}) => {
           tags?.map((tag, index) => <span key={index} className="py-[5px] px-3 border text-sm rounded-[4px] cursor-pointer text-slate-600 border-slate-200 bg-slate-50 hover:bg-[#7fc8ff] hover:text-white duration-300" >{tag}</span>)
         }
       </div>
-      <hr className="my-8" />
-      <p className="text-red-600 hover:text-cyan-700 duration-300 flex items-center w-max gap-1 mx-auto"> <BsExclamationCircle className="rotate-180 w-6 h-6" /> Report incorrect information</p>
+      <hr className="my-7" />
+      <p className="text-red-600 hover:text-cyan-700 text-[15px] duration-300 flex items-center w-max gap-1 mx-auto"> <BsExclamationCircle className="rotate-180 w-6 h-6" /> Report incorrect information</p>
+      <hr className="my-7" />
+      <Reviews product={book}></Reviews>
       </div>
     </div>
     );
