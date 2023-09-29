@@ -84,10 +84,10 @@ const FictionNonFicBookContainer = () => {
         <div className="mx-auto my-10">
           <h2 className="text-lg font-bold text-gray-700 mb-3">{""}</h2>
             <Slider {...settings}> 
-                <FicNonFicCard header={"ফিকশন বই"} books={fictionBooks} tags={tagsOfFictionBooks} apiPath={"fiction-books"}></FicNonFicCard>
-                <FicNonFicCard header={"নন ফিকশন বই"} books={nonFictionBooks} tags={tagsOfNonFictionBooks} apiPath={"non-fiction-books"}></FicNonFicCard>
-                <FicNonFicCard header={"ধর্মীয় বই"} books={religiousBooks} tags={tagsOfreligiousBooks} apiPath={"islami-books"}></FicNonFicCard>
-                <FicNonFicCard header={"ক্যারিয়ার ও একাডেমিক বই"} books={academicBooks} tags={tagsOfAcademicBooks} apiPath={"academic-books"}></FicNonFicCard>
+                <FicNonFicCard header={"ফিকশন বই"} books={fictionBooks} tags={tagsOfFictionBooks} apiPath={"books"}></FicNonFicCard>
+                <FicNonFicCard header={"নন ফিকশন বই"} books={nonFictionBooks} tags={tagsOfNonFictionBooks} apiPath={"books"}></FicNonFicCard>
+                <FicNonFicCard header={"ধর্মীয় বই"} books={religiousBooks} tags={tagsOfreligiousBooks} apiPath={"books"}></FicNonFicCard>
+                <FicNonFicCard header={"ক্যারিয়ার ও একাডেমিক বই"} books={academicBooks} tags={tagsOfAcademicBooks} apiPath={"books"}></FicNonFicCard>
             </Slider>
         </div>
     );

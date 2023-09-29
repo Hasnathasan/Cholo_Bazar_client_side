@@ -416,7 +416,7 @@
     {
         "title": "তুমি আমায় ডেকেছিলে কফির নিমন্ত্রণে (হার্ডকভার)",
         "category": "রোমান্টিক উপন্যাস",
-        "main_category": "fiction",
+        "main_category": "fiction-books",
         "rating": 3.5,
         "reviews": [
             {
@@ -488,7 +488,7 @@
     {
         "title": "সে এসে বসুক পাশে (হার্ডকভার)",
         "category": "রোমান্টিক উপন্যাস",
-        "main_category": "fiction",
+        "main_category": "fiction-books",
         "rating": 3.5,
         "reviews": [
             {
@@ -560,7 +560,7 @@
     {
         "title": "সত্যটা মিথ্যা (হার্ডকভার)",
         "category": "থ্রিলার",
-        "main_category": "fiction",
+        "main_category": "fiction-books",
         "rating": 3.5,
         "reviews": [
             {
@@ -632,7 +632,7 @@
     {
         "title": "বাইশের বন্যা (হার্ডকভার)",
         "category": "সমকালীন গল্প",
-        "main_category": "fiction",
+        "main_category": "fiction-books",
         "rating": 4.5,
         "reviews": [
             {
@@ -704,7 +704,7 @@
     {
         "title": "শঙ্খচূড় (হার্ডকভার)",
         "category": "সমকালীন উপন্যাস",
-        "main_category": "fiction",
+        "main_category": "fiction-books",
         "rating": 4.5,
         "reviews": [
             {
@@ -776,7 +776,7 @@
     {
         "title": "নিকটবর্তী ব্যবধান (হার্ডকভার)",
         "category": "বাংলা কবিতা",
-        "main_category": "fiction",
+        "main_category": "fiction-books",
         "rating": 4.5,
         "reviews": [
             {
@@ -847,7 +847,7 @@
     {
         "title": "প্রেমাতাল (হার্ডকভার)",
         "category": "রোমান্টিক উপন্যাস",
-        "main_category": "fiction",
+        "main_category": "fiction-books",
         "rating": 3.5,
         "reviews": [
             {
@@ -919,7 +919,7 @@
     {
         "title": "বিজনেস ব্লুপ্রিন্ট (হার্ডকভার)",
         "category": "ব্যবস্থাপনা ও নেতৃত্ব",
-        "main_category": "non-fiction",
+        "main_category": "non-fiction-books",
         "rating": 4.5,
         "reviews": [
             {
@@ -990,7 +990,7 @@
     {
         "title": "কর্পোরেট এক্সেল (হার্ডকভার)",
         "category": "মাইক্রোসফট অফিস",
-        "main_category": "non-fiction",
+        "main_category": "non-fiction-books",
         "rating": 4.5,
         "reviews": [
             {
@@ -1062,7 +1062,7 @@
     {
         "title": "স্মার্ট ফেসবুক মার্কেটিং (হার্ডকভার)",
         "category": "ব্রান্ডিং, মার্কেটিং ও সেলিং",
-        "main_category": "non-fiction",
+        "main_category": "non-fiction-books",
         "rating": 5,
         "reviews": [
             {
@@ -1133,7 +1133,7 @@
     {
         "title": "ফ্রিডম ফ্রিল্যান্সার (হার্ডকভার)",
         "category": "ফ্রিল্যান্সিং ও আউটসোর্সিং",
-        "main_category": "non-fiction",
+        "main_category": "non-fiction-books",
         "rating": 4.5,
         "reviews": [
             {
@@ -1204,7 +1204,7 @@
     {
         "title": "সুখের সমীকরণ (হার্ডকভার)",
         "category": "অনুবাদ: আত্ম উন্নয়ন ও মেডিটেশন",
-        "main_category": "non-fiction",
+        "main_category": "non-fiction-books",
         "rating": 5,
         "reviews": [
             {
@@ -1276,7 +1276,7 @@
     {
         "title": "ডোপামিন ডিটক্স",
         "category": "অনুবাদ: আত্ম উন্নয়ন ও মেডিটেশন",
-        "main_category": "non-fiction",
+        "main_category": "non-fiction-books",
         "rating": 4.5,
         "reviews": [
             {

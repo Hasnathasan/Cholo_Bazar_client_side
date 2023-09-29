@@ -79,7 +79,7 @@ const Details = () => {
   return (
    <>
    {
-    !apiPath.includes("books") ?  <div className="mx-auto max-w-[1160px] py-20">
+    apiPath !== 'books' ?  <div className="mx-auto max-w-[1160px] py-20">
     <div className="bg-white flex flex-col md:flex-row p-5 mb-5 gap-10 shadow-lg"> 
       <div className="w-[400px]">
         <div ref={sliderRef} className="keen-slider w-full mb-7">

@@ -40,10 +40,10 @@ const FicNonFicCard = ({ header, books, tags, apiPath }) => {
                     emptySymbol={<FaRegStar></FaRegStar>}
                     fullSymbol={<FaStar></FaStar>}
                     fractions={2}
-                    initialRating={book.ratings}
+                    initialRating={book.rating}
                     readonly
                   />
-                  <span className="text-gray-600">({book.reviews})</span>
+                  <span className="text-gray-600">({book.number_of_reviews})</span>
                   </div>
                   
                 </div>

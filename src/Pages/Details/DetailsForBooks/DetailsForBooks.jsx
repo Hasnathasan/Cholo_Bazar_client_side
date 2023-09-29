@@ -10,7 +10,8 @@ import Reviews from "../../../Components/Reviews/Reviews";
 
 
 const DetailsForBooks = ({book, apiPath}) => {
-    const {image, title, tags, price, reviews, ratings, number_of_ratings, number_of_pages, main_category, language, publisher, category, stock, buyers, country, edition, author, isbn, book_summary, translator} = book;
+  console.log(book);
+    const {image, title, tags, price, reviews, rating, number_of_pages, number_of_reviews, main_category, language, publisher, category, stock, buyers, country, edition, author, isbn, book_summary, translator} = book;
     return (
         <div className="mx-auto max-w-[1160px] py-20">
       <div className="bg-white flex flex-col md:flex-row p-5 mb-5 gap-10 shadow-lg"> 
@@ -31,14 +32,13 @@ const DetailsForBooks = ({book, apiPath}) => {
                     emptySymbol={<FaRegStar></FaRegStar>}
                     fullSymbol={<FaStar></FaStar>}
                     fractions={2}
-                    initialRating={ratings}
+                    initialRating={rating}
                     readonly
             />
-            <p className=" absolute text-slate-800 -top-[3px] left-24">{ratings} rating | {reviews} review</p>
+            <p className=" absolute text-slate-800 -top-[3px] left-24">{rating} rating | {number_of_reviews} review</p>
             </div>
             <p className="flex items-center gap-2 text-slate-700"><BsPeople></BsPeople> <span className="flex gap-1 items-center">{buyers || 0} people want this <BsExclamationCircle className="rotate-180"></BsExclamationCircle></span></p>
-            {/* <p className="text-gray-600">Brand: <span className="text-[#0397d6]">{specification?.brand}</span></p>
-            <p className="text-gray-600">Category: <span className="text-[#0397d6]">{specification?.category[0]}</span></p> */}
+            
             <div className="flex gap-5 items-end">
                 <h5 className="text-xl text-gray-400 font-semibold line-through">TK. {price.real_price}</h5>
                 <h5 className="text-xl font-semibold text-gray-700">TK. {price.discount}</h5>
