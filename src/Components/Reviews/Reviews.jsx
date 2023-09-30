@@ -5,6 +5,10 @@ import { IoStarOutline, IoStarSharp } from "react-icons/io5";
 import { BsShieldCheck } from "react-icons/bs";
 import like from '../../../public/like.svg'
 
+
+// To Do: To make the reviews dynamic
+
+
 const Reviews = ({ product }) => {
   console.log(product);
   const { number_of_reviews, reviews, rating, number_of_ratings } = product;
@@ -70,7 +74,7 @@ const Reviews = ({ product }) => {
                   </span>
                   , 28 august, 2023
                 </h4>
-                <div className="flex gap-2">
+                <div className="flex gap-2 items-end">
                 <Rating
                   className="text-orange-400"
                   emptySymbol={<IoStarOutline></IoStarOutline>}

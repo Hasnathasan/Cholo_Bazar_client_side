@@ -27,7 +27,7 @@ const PhoneAuth = () => {
     return (
         <div className="card firebaseui-auth-container ">
            
-          </div>
+        </div>
     );
 };
 

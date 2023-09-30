@@ -5,10 +5,12 @@ import './Navbar.css'
 import {  } from 'react-icons/fa';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../../Providers/AuthProvider';
 
 
 const Navbar = () => {
-    
+    const {user} = useContext(AuthContext)
     return (
         <div className=' w-full mx-auto fixed top-0 z-50 h-[85px] bg-white'>
             <div className='flex justify-between items-center py-5 px-4 lg:px-20'>
@@ -26,7 +28,9 @@ const Navbar = () => {
                     <button>
                         <img className='w-9' src={cart} alt="" />
                     </button>
-                    <Link to="/login"><button className='px-4 py-2 border border-gray-400 rounded hover:bg-green-500 hover:text-white hover:border-green-500 transition-all'>Sign In</button></Link>
+                    {
+                        user ? <button>User is here</button> : <Link to="/login"><button className='px-4 py-2 border border-gray-400 rounded hover:bg-green-500 hover:text-white hover:border-green-500 transition-all'>Sign In</button></Link>
+                    }
                 </div>
             </div>
             <div>
