@@ -4,13 +4,14 @@ import cart from '../../../public/cart.png'
 import './Navbar.css'
 import {  } from 'react-icons/fa';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { Link, NavLink, Navigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
+import { Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from '@nextui-org/react';
 
 
 const Navbar = () => {
-    const {user} = useContext(AuthContext)
+    const {user, logout} = useContext(AuthContext)
     return (
         <div className=' w-full mx-auto fixed top-0 z-50 h-[85px] bg-white'>
             <div className='flex justify-between items-center py-5 px-4 lg:px-20'>
@@ -29,7 +30,34 @@ const Navbar = () => {
                         <img className='w-9' src={cart} alt="" />
                     </button>
                     {
-                        user ? <button>User is here</button> : <Link to="/login"><button className='px-4 py-2 border border-gray-400 rounded hover:bg-green-500 hover:text-white hover:border-green-500 transition-all'>Sign In</button></Link>
+                        user ? 
+                        <Dropdown className='dropdown-classes' >
+      <DropdownTrigger>
+      <button className='px-7 py-2 border border-gray-400 rounded hover:bg-green-500 hover:text-white hover:border-green-500 transition-all'>Hasnat Hasan</button>
+      </DropdownTrigger>
+      <DropdownMenu 
+        aria-label="Dropdown Variants"
+        color={"default"}
+        variant={""}
+        itemClasses={{padding: "0px"}}
+        className='dropdownMenuClasses'
+      >
+        <DropdownItem key="account"><NavLink className="block text-base font-normal hover:text-sky-600 py-[5px]" to={'/my-section/profile'}>My Account</NavLink></DropdownItem>      
+        <DropdownItem key="order"><NavLink className="block text-base font-normal hover:text-sky-600 py-[5px]" to={'/myOrders'}>My Orders</NavLink></DropdownItem>      
+        <DropdownItem key="free-book"><NavLink className="block text-base font-normal hover:text-sky-600 py-[5px]" to={'/downloadFreeBook'}>Download Free Book</NavLink></DropdownItem>
+        <DropdownItem key="ebook"><NavLink className="block text-base font-normal hover:text-sky-600 py-[5px]" to={'/myEbook'}>My eBook Library</NavLink></DropdownItem>
+        <DropdownItem key="list"><NavLink className="block text-base font-normal hover:text-sky-600 py-[5px]" to={'/myList'}>My List</NavLink></DropdownItem>
+        <DropdownItem key="book-self"><NavLink className="block text-base font-normal hover:text-sky-600 py-[5px]" to={'/bookShelf'}>My Book Shelf</NavLink></DropdownItem>
+        <DropdownItem key="wishlist"><NavLink className="block text-base font-normal hover:text-sky-600 py-[5px]" to={'/myWishlish'}>My Wishlist</NavLink></DropdownItem>
+        <DropdownItem key="rating-review"><NavLink className="block text-base font-normal hover:text-sky-600 py-[5px]" to={'/myRatingReviews'}>My Rating Reviews</NavLink></DropdownItem>
+        <DropdownItem key="points"><NavLink className="block text-base font-normal hover:text-sky-600 py-[5px]" to={'/myPoints'}>My Points</NavLink></DropdownItem>
+        <DropdownItem key="followed-authors"><NavLink className="block text-base font-normal hover:text-sky-600 py-[5px]" to={'/myFollowedAuthors'}>My Following Authors</NavLink></DropdownItem>
+        <DropdownItem showDivider={true} key="bkash-account"><NavLink className="block text-base font-normal hover:text-sky-600 py-[5px]" to={'/myBkashAccount'}>My Bkash Account</NavLink></DropdownItem>
+        <DropdownItem key="signOut" onClick={logout}><span className="block text-base font-normal hover:text-sky-600 py-2" >Sign Out</span></DropdownItem>
+
+      </DropdownMenu>
+    </Dropdown>
+                        : <Link to="/login"><button className='px-4 py-2 border border-gray-400 rounded hover:bg-green-500 hover:text-white hover:border-green-500 transition-all'>Sign In</button></Link>
                     }
                 </div>
             </div>

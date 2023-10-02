@@ -1,0 +1,8 @@
+.navlinks a.active{
+    color: #1fca75;
+    background: linear-gradient(to right, transparent, #dfffe5);
+}
+
+.navlinks a{
+    border-bottom: 1px dotted #d3d3d3;
+}

@@ -1,1 +1,15 @@
 
+.dropdownMenuClasses > li{
+    padding: 0px 0px 2px 10px !important;
+}
+
+.dropdownMenuClasses{
+    padding: 10px !important;
+    display: flex !important;
+    gap: 0px !important;
+}
+.dropdown-classes{
+    border-radius: 2px !important;
+    display: flex !important;
+    flex-direction: row !important;
+}
