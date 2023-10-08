@@ -7,7 +7,7 @@ const Home = () => {
   const [tabIndex, setTabIndex] = useState(0);
   const [nestedTabIndex, setNestedTabIndex] = useState(0);
   return (
-    <div className="mt-3">
+    <div className="mt-3 hidden md:block">
       <Tabs
         selectedTabClassName="activeTab"
         selectedIndex={tabIndex}

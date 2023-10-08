@@ -3,6 +3,7 @@ import { useState } from "react";
 import { BsExclamationCircleFill } from "react-icons/bs";
 import useUser from "../../Hooks/useUser";
 import noUser from '../../../public/user.png'
+import { useForm } from "react-hook-form";
 
 const UserProfile = () => {
     const [updatePersonalInfo, setUpdatePersonalInfo] = useState(false);
@@ -10,11 +11,34 @@ const UserProfile = () => {
     const [updateEmail, setUpdateEmail] = useState(false);
     const [updateProfilePic, setUpdateProfilePic] = useState(false);
     const [updatePassword, setUpdatePassword] = useState(false);
-    const [userData, isUserDataLoading] = useUser();
+    const [userData, isUserDataLoading, refetch] = useUser();
+    const {
+      register,
+      handleSubmit,
+    } = useForm()
     if(isUserDataLoading){
       return <h1>Loading....</h1>
     }
     console.log(userData);
+    const {email, name, phoneNumber, photoUrl, date_of_birth, _id, gender} = userData;
+    console.log(phoneNumber);
+    const onSubmit = (data) => {
+      console.log(data);
+      const newUserData = {email, name: data?.name, phoneNumber, photoUrl, date_of_birth: data?.date_of_birth, gender: data?.gender || gender};
+      fetch(`http://localhost:5000/updateUser/${_id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newUserData)
+      })
+      .then(res => res.json())
+      .then(data1 => {
+        console.log(data1)
+        refetch()
+      })
+
+    }
   return (
     <div className="my-7">
       <div className="bg-white mb-8 p-4 shadow-lg rounded border-t-2 border-green-500">
@@ -30,26 +54,32 @@ const UserProfile = () => {
           <p className={`${updatePersonalInfo ? "hidden" : ""} text-sky-500 cursor-pointer`} onClick={() => setUpdatePersonalInfo(true)}>Change Information</p>
         </div>
         <hr className="my-5" />
-       <form action="">
+       <form onSubmit={handleSubmit(onSubmit)}>
        <label className="block my-3" htmlFor="name">
           Name
         </label>
         <input
+        {...register("name", { required: true })}
+        id="name"
+        name="name"
           className="p-[15px] w-[360px] bg-[#fcfcfc] focus:outline-none rounded border border-gray-300"
           type="text"
           defaultValue={userData?.name}
           disabled={!updatePersonalInfo}
         />
-        <label className="block my-3" htmlFor="name">
+        <label className="block my-3" htmlFor="date_of_birth">
           Your Date of Birth
         </label>
         <input
+        id="date_of_birth"
+        name="date_of_birth"
+        {...register("date_of_birth", { required: true })}
           className="p-[15px] w-[360px] bg-[#fcfcfc] focus:outline-none rounded border border-gray-300"
           type="date"
           defaultValue={userData?.date_of_birth}
           disabled={!updatePersonalInfo}
         />
-        <RadioGroup className="my-3" label="Gender" defaultValue={userData?.gender} orientation="horizontal" isDisabled={!updatePersonalInfo}>
+        <RadioGroup {...register("gender", { required: true })} name="gender" id="gender" className="my-3" label="Gender" defaultValue={userData?.gender} orientation="horizontal" isDisabled={!updatePersonalInfo}>
           <Radio value="male">Male</Radio>
           <Radio value="female">Female</Radio>
         </RadioGroup>
@@ -66,7 +96,7 @@ const UserProfile = () => {
         <input
           className="p-[15px] w-[360px] bg-[#fcfcfc] focus:outline-none rounded border border-gray-300"
           type="number"
-          defaultValue={userData?.phoneNumber}
+          defaultValue={parseInt(userData?.phoneNumber)}
           disabled={!updateNumber}
         />
         <button className={`px-5 py-2 mt-5 font-semibold text-lg border block rounded bg-[#3bd257] text-white ${!updateNumber ? "hidden" : ""} border-[#3bd257]`}>

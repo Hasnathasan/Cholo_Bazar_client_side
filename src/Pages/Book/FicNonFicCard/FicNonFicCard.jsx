@@ -3,9 +3,15 @@ import Rating from "react-rating";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import './FicNonFicCard.css'
 import { Link } from "react-router-dom";
+import { Card, Skeleton } from "@nextui-org/react";
 const FicNonFicCard = ({ header, books, tags, apiPath }) => {
   if (!books) {
-    return <div className="h-[400px] flex justify-center items-center"><h1 className=" ">loading............</h1></div>;
+    return <Card className="space-y-3 h-[475px] mr-5">
+    <Skeleton className="w-full h-full">
+      <div className="h-full bg-default-400"></div>
+      
+    </Skeleton>
+  </Card>;
   }
   return (
     <div className=" bg-[#8ccdf6] border-[6px] border-[#8ccdf6] rounded mr-5">
@@ -19,7 +25,7 @@ const FicNonFicCard = ({ header, books, tags, apiPath }) => {
             <Tab className="border w-20 flex justify-center items-center bg-gray-50 rounded-t">লেখক</Tab>
           </TabList>
           <div className="bg-[#f5f3fa] py-[8px] w-full flex justify-center items-center">
-          <select className=" py-2 rounded-2xl px-3 text-sm text-gray-500 w-[300px] focus:outline-none shadow-sky">
+          <select className=" py-2 rounded-2xl px-3 text-sm text-gray-500 w-[300px] focus:outline-none shadow-cyan-400">
           {
             tags?.map((tag, index) => <option key={index}>{tag}</option>)
           }
@@ -63,7 +69,7 @@ const FicNonFicCard = ({ header, books, tags, apiPath }) => {
           </TabPanel>
         </Tabs>
         <div className="flex justify-center py-3 items-center">
-          <button className="px-4 text-sm py-2 border border-sky-400 hover:bg-sky-500 text-sky-500 hover:text-white hover:border-sky-500 transition-all">
+          <button className="px-4 text-sm py-2 border border-cyan-400 hover:bg-cyan-500 text-sky-500 hover:text-white hover:border-sky-500 transition-all">
             View All
           </button>
         </div>
