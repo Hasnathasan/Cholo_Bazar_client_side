@@ -1,12 +1,12 @@
 
 import { Outlet } from "react-router-dom";
-import Navbar from "../Shared/Navbar/Navbar";
+import NavigationBar from "../Shared/NavigationBar/NavigationBar";
 
 const Main = () => {
     return (
         <div>
-            <Navbar></Navbar>
-         <div className=" mt-[85px]">
+            <NavigationBar></NavigationBar>
+         <div className="">
             <Outlet></Outlet>
          </div>
         </div>

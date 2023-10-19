@@ -7,7 +7,11 @@ const Home = () => {
   const [tabIndex, setTabIndex] = useState(0);
   const [nestedTabIndex, setNestedTabIndex] = useState(0);
   return (
-    <div className="mt-3 hidden md:block">
+    <div>
+      <div className="md:hidden">
+      <Book></Book>
+      </div>
+      <div className="hidden md:block">
       <Tabs
         selectedTabClassName="activeTab"
         selectedIndex={tabIndex}
@@ -80,6 +84,7 @@ const Home = () => {
           <h2>Any content 2</h2>
         </TabPanel>
       </Tabs>
+      </div>
     </div>
   );
 };
