@@ -1,6 +1,7 @@
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import './HomeSlider.css'
 import banner1 from '../../../public/banner-1.png'
 import banner2 from '../../../public/banner-2.png'
 import banner3 from '../../../public/banner-3.png'
@@ -22,34 +23,63 @@ const HomeSlider = () => {
       autoplaySpeed: 3000,
         slidesToShow: 1,
         slidesToScroll: 1,
-        cssEase: "linear"
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              initialSlide: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              fade: false,
+              centerMode: true,
+              centerPadding: "20px",
+              speed: 400,
+              autoplay: false,
+
+            }
+          }
+        ]
       };
     return (
         <div className="py-5">
-            <Slider {...settings} className="h-[50%] mx-auto">
+            <Slider {...settings} className="">
           <div>
-            <img src={banner1} />
+            <img className="h-[160px] rounded-xl md:rounded-none p-2 md:p-0 md:h-full " src={banner1} />
           </div>
           <div>
-            <img src={banner2} />
+            <img className="h-[160px] rounded-xl md:rounded-none p-2 md:p-0 md:h-full" src={banner2} />
           </div>
           <div>
-            <img src={banner3} />
+            <img className="h-[160px] rounded-xl md:rounded-none p-2 md:p-0 md:h-full" src={banner3} />
           </div>
           <div>
-            <img src={banner4} />
+            <img className="h-[160px] rounded-xl md:rounded-none p-2 md:p-0 md:h-full" src={banner4} />
           </div>
           <div>
-            <img src={banner5} />
+            <img className="h-[160px] rounded-xl md:rounded-none p-2 md:p-0 md:h-full" src={banner5} />
           </div>
           <div>
-            <img src={banner6} />
+            <img className="h-[160px] rounded-xl md:rounded-none p-2 md:p-0 md:h-full" src={banner6} />
           </div>
           <div>
-            <img src={banner7} />
+            <img className="h-[160px] rounded-xl md:rounded-none p-2 md:p-0 md:h-full" src={banner7} />
           </div>
           <div>
-            <img src={banner8} />
+            <img className="h-[160px] rounded-xl md:rounded-none p-2 md:p-0 md:h-full" src={banner8} />
           </div>
         </Slider>
         <div className="grid grid-cols-2 md:grid-cols-3 mt-3 gap-4">
