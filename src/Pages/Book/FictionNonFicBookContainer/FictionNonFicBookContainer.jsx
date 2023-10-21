@@ -6,7 +6,7 @@ import useReligiousBooks from "../../../Hooks/useReligiousBooks";
 import useAcademicBooks from "../../../Hooks/useAcademicBooks";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import "./FictionNonFicBookContainer.css";
-import arrowDown from '../../../../public/arrow-down.svg'
+import arrowDown from "../../../../public/arrow-down.svg";
 const SampleNextArrow = (props) => {
   // eslint-disable-next-line react/prop-types
   const { className, style, onClick } = props;
@@ -164,16 +164,13 @@ const FictionNonFicBookContainer = () => {
         </Slider>
       </div>
       <div className="md:hidden space-y-6">
-        <Accordion
-          variant="splitted"
-          defaultExpandedKeys={["1"]}
-        >
+        <Accordion variant="splitted" defaultExpandedKeys={["1"]}>
           <AccordionItem
-          className="accrodion-item-1"
+            className="accrodion-item-1"
             key="1"
             aria-label="Accordion 1"
             startContent={<p className="ps-4">ফিকশন বই</p>}
-            indicator={<img className="w-6 h-6 rotate-90" src={arrowDown} />}
+            indicator={<img className="w-6 h-6" src={arrowDown} />}
           >
             <FicNonFicCard
               books={fictionBooks}
@@ -181,21 +178,39 @@ const FictionNonFicBookContainer = () => {
               apiPath={"books"}
             ></FicNonFicCard>
           </AccordionItem>
-          <AccordionItem className="accrodion-item-2" key="2" aria-label="Accordion 2" startContent={<p className="ps-4">নন ফিকশন বই</p>}>
+          <AccordionItem
+            className="accrodion-item-2"
+            key="2"
+            aria-label="Accordion 2"
+            startContent={<p className="ps-4">নন ফিকশন বই</p>}
+            indicator={<img className="w-6 h-6" src={arrowDown} />}
+          >
             <FicNonFicCard
               books={nonFictionBooks}
               tags={tagsOfNonFictionBooks}
               apiPath={"books"}
             ></FicNonFicCard>
           </AccordionItem>
-          <AccordionItem className="accrodion-item-3" key="3" aria-label="Accordion 3" startContent={<p className="ps-4">ধর্মীয় বই</p>}>
+          <AccordionItem
+            className="accrodion-item-3"
+            key="3"
+            aria-label="Accordion 3"
+            startContent={<p className="ps-4">ধর্মীয় বই</p>}
+            indicator={<img className="w-6 h-6" src={arrowDown} />}
+          >
             <FicNonFicCard
               books={religiousBooks}
               tags={tagsOfreligiousBooks}
               apiPath={"books"}
             ></FicNonFicCard>
           </AccordionItem>
-          <AccordionItem className="accrodion-item-4" key="4" aria-label="Accordion 4" startContent={<p className="ps-4">ক্যারিয়ার ও একাডেমিক বই</p>}>
+          <AccordionItem
+            className="accrodion-item-4"
+            key="4"
+            aria-label="Accordion 4"
+            startContent={<p className="ps-4">ক্যারিয়ার ও একাডেমিক বই</p>}
+            indicator={<img className="w-6 h-6" src={arrowDown} />}
+          >
             <FicNonFicCard
               books={academicBooks}
               tags={tagsOfAcademicBooks}

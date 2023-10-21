@@ -1,12 +1,12 @@
-import { FaAngleDown, FaRegStar, FaStar } from "react-icons/fa";
+import { FaRegStar, FaStar } from "react-icons/fa";
 import Rating from "react-rating";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import './FicNonFicCard.css'
 import { Link } from "react-router-dom";
 import { Card, Skeleton } from "@nextui-org/react";
-import { useState } from "react";
+
+
 const FicNonFicCard = ({ header, books, tags, apiPath }) => {
-  const [sprade, setSprade] = useState(false)
   if (!books) {
     return <Card className="space-y-3 w-full h-[475px] mr-5">
     <Skeleton className="w-full h-full">

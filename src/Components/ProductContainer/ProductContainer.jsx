@@ -73,11 +73,19 @@ const ProductContainer = ({data, headding, apiPath}) => {
     return (
         <div className=" mx-auto px-5 py-10  my-5 bg-white">
           <h2 className="text-lg font-bold text-gray-700 mb-3">{headding}</h2>
+          <div className="hidden md:block">
             <Slider  {...settings}> 
           {
-            data.map(product => <ProductCard key={product._id} product={product} apiPath={apiPath}></ProductCard>)
+            data?.map(product => <ProductCard key={product._id} product={product} apiPath={apiPath}></ProductCard>)
           }
         </Slider>
+          </div>
+            
+        <div className="grid grid-cols-2">
+        {
+            data?.map(product => <ProductCard key={product._id} product={product} apiPath={apiPath}></ProductCard>)
+          }
+        </div>
         </div>
     );
 };

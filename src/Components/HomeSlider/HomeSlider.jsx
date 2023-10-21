@@ -10,11 +10,17 @@ import banner5 from '../../../public/banner-5.png'
 import banner6 from '../../../public/banner-6.png'
 import banner7 from '../../../public/banner-7.png'
 import banner8 from '../../../public/banner-8.png'
+import banner9 from '../../../public/banner-9.png'
+import banner10 from '../../../public/banner-10.png'
+import banner11 from '../../../public/banner-11.png'
+import banner12 from '../../../public/banner-12.png'
+import banner13 from '../../../public/banner-13.png'
 import add1 from '../../../public/add1.png'
 import add2 from '../../../public/add2.png'
 import add3 from '../../../public/add3.png'
 import { RiAlertFill } from "react-icons/ri";
 const HomeSlider = () => {
+  const sliderImages = [banner1, banner2, banner3, banner4, banner5, banner6, banner7, banner8, banner9, banner10, banner11, banner12, banner13];
     const settings = {
         fade: true,
         infinite: true,
@@ -46,7 +52,7 @@ const HomeSlider = () => {
               slidesToScroll: 1,
               fade: false,
               centerMode: true,
-              centerPadding: "20px",
+              centerPadding: "30px",
               speed: 400,
               autoplay: false,
 
@@ -57,37 +63,19 @@ const HomeSlider = () => {
     return (
         <div className="py-5">
             <Slider {...settings} className="">
-          <div>
-            <img className="h-[160px] rounded-xl md:rounded-none p-2 md:p-0 md:h-full " src={banner1} />
-          </div>
-          <div>
-            <img className="h-[160px] rounded-xl md:rounded-none p-2 md:p-0 md:h-full" src={banner2} />
-          </div>
-          <div>
-            <img className="h-[160px] rounded-xl md:rounded-none p-2 md:p-0 md:h-full" src={banner3} />
-          </div>
-          <div>
-            <img className="h-[160px] rounded-xl md:rounded-none p-2 md:p-0 md:h-full" src={banner4} />
-          </div>
-          <div>
-            <img className="h-[160px] rounded-xl md:rounded-none p-2 md:p-0 md:h-full" src={banner5} />
-          </div>
-          <div>
-            <img className="h-[160px] rounded-xl md:rounded-none p-2 md:p-0 md:h-full" src={banner6} />
-          </div>
-          <div>
-            <img className="h-[160px] rounded-xl md:rounded-none p-2 md:p-0 md:h-full" src={banner7} />
-          </div>
-          <div>
-            <img className="h-[160px] rounded-xl md:rounded-none p-2 md:p-0 md:h-full" src={banner8} />
-          </div>
+              {
+                sliderImages.map((img, index) => <div key={index}>
+                  <img className="h-[160px] rounded-[10px] md:rounded-none p-[5px] md:p-0 md:h-[225px] w-full" src={img} />
+                </div>)
+              }
+          
         </Slider>
         <div className="grid grid-cols-2 md:grid-cols-3 mt-3 gap-4">
           <img src={add1} alt="" />
           <img src={add2} alt="" />
-          <img src={add3} alt="" />
+          <img className="col-span-2 w-4/6 mx-auto md:w-full md:col-span-1" src={add3} alt="" />
         </div>
-        <p className="mt-7 gap-1 items-center text-gray-700 flex justify-center"><RiAlertFill className="text-amber-500 w-6 h-6"></RiAlertFill>  অর্ডারকৃত প্রোডাক্টে রিভিউ এবং রেটিং দিয়ে সংগ্রহ করুন ৫০ পয়েন্ট।</p>
+        <p className="mt-7 gap-1 items-start md:items-center text-sm md:text-base text-gray-700 flex justify-center"><RiAlertFill className="text-amber-500 w-6 h-6"></RiAlertFill>  অর্ডারকৃত প্রোডাক্টে রিভিউ এবং রেটিং দিয়ে সংগ্রহ করুন ৫০ পয়েন্ট।</p>
         </div>
     );
 };

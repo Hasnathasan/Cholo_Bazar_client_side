@@ -25,7 +25,7 @@ const UserProfile = () => {
     const onSubmit = (data) => {
       console.log(data);
       const newUserData = {email, name: data?.name, phoneNumber, photoUrl, date_of_birth: data?.date_of_birth, gender: data?.gender || gender};
-      fetch(`http://localhost:5000/updateUser/${_id}`, {
+      fetch(`https://rokomari-clone-server-omega.vercel.app/updateUser/${_id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json"

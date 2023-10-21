@@ -4,7 +4,7 @@ const useHotDeals = () => {
     const { data: hotDeals, isLoading: isHotDealsLoading } = useQuery({
         queryKey: ['hot-deals'],
         queryFn: async() => {
-            const res = await fetch('http://localhost:5000/hot-deals');
+            const res = await fetch('https://rokomari-clone-server-omega.vercel.app/hot-deals');
             return res.json()
         },
       })
