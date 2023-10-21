@@ -7,9 +7,12 @@ import Rating from "react-rating";
 import { FaRegStar, FaStar, FaTag } from "react-icons/fa";
 import cartImg from '../../../public/cart-white.png'
 import banner from '../../../public/details-page-banner.png';
-import { BsExclamationCircle } from "react-icons/bs";
+import { BsExclamationCircle, BsHeart } from "react-icons/bs";
 import DetailsForBooks from "./DetailsForBooks/DetailsForBooks";
 import Reviews from "../../Components/Reviews/Reviews";
+import Slider from "react-slick";
+import { MdShare } from "react-icons/md";
+import { TiMessages } from "react-icons/ti";
 
 function ThumbnailPlugin(mainRef) {
   return (slider) => {
@@ -76,12 +79,48 @@ const Details = () => {
     return <h1>Loading</h1>;
   }
   const { specification, price } = product;
+
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+
+        }
+      }
+    ]
+  };
   return (
    <>
    {
-    apiPath !== 'books' ?  <div className="mx-auto max-w-[1160px] py-20">
-    <div className="bg-white flex flex-col md:flex-row p-5 mb-5 gap-10 shadow-lg"> 
-      <div className="w-[400px]">
+    apiPath !== 'books' ?  <div className="mx-auto max-w-[1160px] md:py-20">
+    <div className="md:bg-white  hidden md:flex flex-col md:flex-row md:p-5 mb-5 gap-5 md:gap-10 md:shadow-lg"> 
+      <div className="md:w-[400px]">
         <div ref={sliderRef} className="keen-slider w-full mb-7">
           {product?.images?.map((img, index) => (
             <div
@@ -104,7 +143,14 @@ const Details = () => {
           ))}
         </div>
       </div>
-      <div className="space-y-4">
+
+
+      
+
+
+
+
+      <div className="space-y-4 hidden md:block">
           <h1 className="text-xl text-gray-700">{specification?.title}</h1>
           <div className="flex items-center gap-5 relative">
           <Rating
@@ -133,17 +179,68 @@ const Details = () => {
             <button className="px-8 flex gap-2 text-lg font-semibold text-white justify-center items-center py-3 bg-amber-500 hover:bg-[#f59f0bd0] rounded duration-500  transition-all"> <img className="w-8" src={cartImg} alt="" />Add to Cart</button>
           </div>
       </div>
+
+            
+
+
+
+    </div>
+
+    <div className="md:hidden flex flex-col mb-5 gap-5">
+      {/* Image silder for small devices */}
+      <div className="bg-white py-12 relative">
+              <Slider  {...settings} >
+            {
+              product.images.map((img, index) => (
+                <div key={index}>
+                  <img className="w-3/5 mx-auto" src={img} alt="" />
+                </div>
+              ))
+            }
+      </Slider>
+      <div className="flex flex-col gap-5 absolute top-1/4 right-7">
+        <div className="bg-white p-3 w-min rounded-full shadow-circle">
+          <MdShare className="w-6 h-6 text-gray-500"></MdShare>
+        </div>
+        <div className="bg-white p-3 w-min rounded-full shadow-circle">
+          <BsHeart className="w-6 h-6 text-gray-500"></BsHeart>
+        </div>
+        <div className="bg-white p-3 w-min rounded-full shadow-circle">
+          <TiMessages className="w-6 h-6 text-gray-500"></TiMessages>
+        </div>
+      </div>
+            </div>
+      
+
+      {/* Image slider end */}
+      {/* About section for small devices */}
+
+      <div className="bg-white p-5 mx-3 md:hidden text-center border-2 border-[#e9e9e9] md:border-none">
+              <h1 className="text-lg text-gray-900">{specification?.title}</h1>
+              <p className="text-gray-700 text-[15px] mt-2">Brand: <span className="text-[#0397d6]">{specification?.brand}</span></p>
+              <hr className="my-2" />
+              <p className="text-gray-700 text-[15px]">Category: <span className="text-[#0397d6]">{specification?.category[0]}</span></p>
+              <hr className="my-2" />
+              <div className="flex gap-5 justify-center items-end">
+              <h5 className="text-xl text-gray-600 font-semibold line-through">TK. {price.real_price}</h5>
+              <h5 className="text-xl font-semibold text-gray-900">TK. {price.discounted_price}</h5>
+              
+          </div>
+              </div>
+
+
+            {/* About section end */}
     </div>
       <img src={banner} alt="" />
-    <div className="bg-white my-5 p-6 mb-5 gap-10 shadow-lg">
-    <h1 className="text-xl text-gray-700">Product Summary & Specification</h1>
-    <h3 className="font-semibold text-[#333333] mt-3 mb-2 text-lg">Summary:</h3>
+    <div className="bg-white mx-3 md:mx-0 my-5 p-4 py-5 md:p-6 mb-5 gap-10 rounded-sm md:shadow-lg border-2 border-[#e9e9e9] md:border-none">
+    <h1 className="text-xl text-gray-900 md:text-gray-700">Product Summary & Specification</h1>
+    <h3 className="md:font-semibold font-medium text-gray-900 mt-3 mb-2 text-lg">Summary:</h3>
     <p className="text-[15px] text-gray-800 mb-5">{product?.specification?.summary || "N/A"}</p>
     <hr className="my-5" />
-    <h3 className="font-semibold text-[#333333] mt-3 mb-2 text-lg">Specification:</h3>
+    <h3 className="md:font-semibold text-gray-900 mt-3 mb-2 text-lg">Specification:</h3>
     <div>
       <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Title:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product.specification?.title}</p></div>
-      <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Brand:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product.specification?.brand}</p></div>
+      <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Brand:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-cyan-600 p-1">{product.specification?.brand}</p></div>
       <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Volumn:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product.specification?.Volume?product.specification?.Volume:product.specification?.volume}</p></div>
       <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Age:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product.specification?.age?product.specification?.age:"N/A"}</p></div>
       <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Item Form:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product.specification?.item_form || product.specification?.category[0]}</p></div>
@@ -151,14 +248,22 @@ const Details = () => {
       
     </div>
     <hr className="my-8" />
-    <div className="flex gap-3 items-center">
+    <div className="flex gap-3 flex-wrap items-center">
       {
         product?.tags?.map((tag, index) => <span key={index} className="py-[5px] px-3 border text-sm rounded-[4px] cursor-pointer text-slate-600 border-slate-200 bg-slate-50 hover:bg-[#7fc8ff] hover:text-white duration-300" >{tag}</span>)
       }
     </div>
-    <hr className="my-7" />
-    <p className="text-red-600 hover:text-cyan-700 duration-300 flex items-center w-max gap-1 mx-auto"> <BsExclamationCircle className="rotate-180 w-6 h-6" /> Report incorrect information</p>
-    <hr className="my-7" />
+    <hr className="my-7 hidden md:block" />
+    <p className="text-red-600 hidden md:flex hover:text-cyan-700 duration-300  items-center w-max gap-1 mx-auto"> <BsExclamationCircle className="rotate-180 w-6 h-6" /> Report incorrect information</p>
+    <hr className="my-7 hidden md:block" />
+    <div className="hidden md:block">
+      <Reviews product={product}></Reviews>
+    </div>
+    </div>
+    <div className="bg-white p-4 my-5 mx-3 rounded-sm border-2 border-[#e9e9e9]">
+    <p className="text-red-600 md:hidden flex hover:text-cyan-700 duration-300  items-center w-max gap-1 mx-auto"> <BsExclamationCircle className="rotate-180 w-6 h-6" /> Report incorrect information</p>
+    </div>
+    <div className="bg-white p-4 mx-3 my-5 rounded-sm border-2 border-[#e9e9e9]">
     <Reviews product={product}></Reviews>
     </div>
   </div>: <DetailsForBooks book={product} apiPath={apiPath}></DetailsForBooks>

@@ -1,2 +1,6 @@
-
- 
+.shadow-circle{
+    border-radius: 150px;
+background: #ffffff;
+box-shadow:  5px 5px 28px #dedede,
+             -5px -5px 28px #ffffff;
+}

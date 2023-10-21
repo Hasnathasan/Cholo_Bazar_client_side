@@ -20,10 +20,10 @@ const Reviews = ({ product }) => {
         <p className="text-gray-600 text-sm">
           অর্ডারকৃত প্রোডাক্টে রিভিউ এবং রেটিং দিয়ে ৫০ পয়েন্ট সংগ্রহ করতে
           পারেন। সর্বনিম্ন ৩০ টি শব্দ এবং প্রোডাক্ট/প্যাকেটের ছবি সংযুক্ত করতে
-          হবে।
+          হবে
         </p>
       </div>
-      <div className="flex justify-between mt-5">
+      <div className="flex flex-col-reverse md:flex-row gap-y-4 justify-between mt-5">
         <div className="space-y-2">
           <h4 className="text-gray-700 text-lg">Rate this product</h4>
           <Rating

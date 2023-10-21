@@ -71,8 +71,8 @@ const ProductContainer = ({data, headding, apiPath}) => {
         ]
       };
     return (
-        <div className=" mx-auto px-5 py-10  my-5 bg-white">
-          <h2 className="text-lg font-bold text-gray-700 mb-3">{headding}</h2>
+        <div className=" md:mx-auto px-2 py-6 md:px-5 md:py-10 border-2 border-[#e9e9e9] md:border-none my-5 bg-white rounded-[4px] md:rounded-none mx-3 ">
+          <h2 className="text-xl ps-4 font-bold text-gray-800 mb-3">{headding}</h2>
           <div className="hidden md:block">
             <Slider  {...settings}> 
           {
@@ -81,10 +81,17 @@ const ProductContainer = ({data, headding, apiPath}) => {
         </Slider>
           </div>
             
-        <div className="grid grid-cols-2">
+        <div className="md:hidden">
+        <div className="grid gap-y-4 gap-x-[5px] grid-cols-2">
         {
             data?.map(product => <ProductCard key={product._id} product={product} apiPath={apiPath}></ProductCard>)
           }
+        </div>
+        <div className="flex justify-center py-3 items-center">
+          <button className="px-6 py-2 border font-bold text-cyan-500 border-cyan-400 hover:bg-cyan-500 text-sky-500 hover:text-white hover:border-sky-500 transition-all">
+            View All
+          </button>
+        </div>
         </div>
         </div>
     );

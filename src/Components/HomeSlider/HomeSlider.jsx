@@ -61,11 +61,11 @@ const HomeSlider = () => {
         ]
       };
     return (
-        <div className="py-5">
+        <div className="py-5 mx-2 md:mx-0">
             <Slider {...settings} className="">
               {
                 sliderImages.map((img, index) => <div key={index}>
-                  <img className="h-[160px] rounded-[10px] md:rounded-none p-[5px] md:p-0 md:h-[225px] w-full" src={img} />
+                  <img className="h-[170px] rounded-[10px] md:rounded-none p-[5px] md:p-0 md:h-[225px] w-full" src={img} />
                 </div>)
               }
           

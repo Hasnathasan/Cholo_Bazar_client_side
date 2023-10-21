@@ -93,7 +93,7 @@ const NavigationBar = () => {
             <div>
             </div>
           </Navbar>
-            <form className='md:hidden mt-5 w-full rounded-sm overflow-hidden flex max-w-lg md:mx-auto px-4'>
+            <form className='hidden mt-5 w-full rounded-sm overflow-hidden  max-w-lg md:mx-auto px-4'>
                     <input type="text" className='w-full  border border-gray-200 border-b-2 border-b-orange-400  outline-0 focus:border focus:border-sky-500 p-2' />
                     <button className=' px-3 bg-blue-500 border-2 border-blue-500 rounded-r'><FontAwesomeIcon className='text-white' icon={faMagnifyingGlass} /></button>
               </form>
