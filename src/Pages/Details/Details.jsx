@@ -4,7 +4,7 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import './Details.css'
 import Rating from "react-rating";
-import { FaRegStar, FaStar, FaTag } from "react-icons/fa";
+import { FaTag } from "react-icons/fa";
 import cartImg from '../../../public/cart-white.png'
 import banner from '../../../public/details-page-banner.png';
 import { BsExclamationCircle, BsHeart } from "react-icons/bs";
@@ -13,6 +13,7 @@ import Reviews from "../../Components/Reviews/Reviews";
 import Slider from "react-slick";
 import { MdShare } from "react-icons/md";
 import { TiMessages } from "react-icons/ti";
+import { IoStarOutline, IoStarSharp } from "react-icons/io5";
 
 function ThumbnailPlugin(mainRef) {
   return (slider) => {
@@ -155,8 +156,8 @@ const Details = () => {
           <div className="flex items-center gap-5 relative">
           <Rating
                   className="text-orange-400"
-                  emptySymbol={<FaRegStar></FaRegStar>}
-                  fullSymbol={<FaStar></FaStar>}
+                  emptySymbol={<IoStarOutline></IoStarOutline>}
+                  fullSymbol={<IoStarSharp></IoStarSharp>}
                   fractions={2}
                   initialRating={product.rating}
                   readonly
@@ -260,10 +261,10 @@ const Details = () => {
       <Reviews product={product}></Reviews>
     </div>
     </div>
-    <div className="bg-white p-4 my-5 mx-3 rounded-sm border-2 border-[#e9e9e9]">
-    <p className="text-red-600 md:hidden flex hover:text-cyan-700 duration-300  items-center w-max gap-1 mx-auto"> <BsExclamationCircle className="rotate-180 w-6 h-6" /> Report incorrect information</p>
+    <div className="bg-white md:hidden p-4 my-5 mx-3 rounded-sm border-2 border-[#e9e9e9]">
+    <p className="text-red-600 flex hover:text-cyan-700 duration-300  items-center w-max gap-1 mx-auto"> <BsExclamationCircle className="rotate-180 w-6 h-6" /> Report incorrect information</p>
     </div>
-    <div className="bg-white p-4 mx-3 my-5 rounded-sm border-2 border-[#e9e9e9]">
+    <div className="bg-white md:hidden p-4 mx-3 my-5 rounded-sm border-2 border-[#e9e9e9]">
     <Reviews product={product}></Reviews>
     </div>
   </div>: <DetailsForBooks book={product} apiPath={apiPath}></DetailsForBooks>

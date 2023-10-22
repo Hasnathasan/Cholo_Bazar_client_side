@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './ProductCard.css'
 import { Link } from 'react-router-dom';
 import Rating from 'react-rating';
-import { FaRegStar, FaStar } from 'react-icons/fa';
+import { IoStarOutline, IoStarSharp } from 'react-icons/io5';
 const ProductCard = ({product, apiPath}) => {
     const [hover, setHover] = useState(false)
     const {_id, specification, images, price} = product;
@@ -25,18 +25,18 @@ const ProductCard = ({product, apiPath}) => {
 
 
         {/* Component for small device */}
-        <div className='md:hidden h-[300px]'>
+        <div className='md:hidden h-[300px] relative'>
         <Link to={`/details/${apiPath}/${_id}`}>
             <div className='flex flex-col justify-between text-center pt-3'>
             <img className='h-[130px] w-3/4 mx-auto' src={images[0]} alt="" />
-            <div className=' p-2 space-y-1'>
+            <div className=' p-2 space-y-1 absolute bottom-0'>
             <h3 className='text-sm'>{specification.title}</h3>
             <h4 className='text-sm text-gray-600'>{specification.brand}</h4>
             <div className='flex items-start gap-1 text-sm justify-center'>
             <Rating
                   className="text-orange-400"
-                  emptySymbol={<FaRegStar></FaRegStar>}
-                  fullSymbol={<FaStar></FaStar>}
+                  emptySymbol={<IoStarOutline></IoStarOutline>}
+                  fullSymbol={<IoStarSharp></IoStarSharp>}
                   fractions={2}
                   initialRating={product.rating}
                   readonly

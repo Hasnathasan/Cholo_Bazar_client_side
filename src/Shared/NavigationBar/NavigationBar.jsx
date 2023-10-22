@@ -29,7 +29,7 @@ const NavigationBar = () => {
     const {user, logout} = useContext(AuthContext)
     return (
         <>
-          <Navbar className='py-3 w-full nav bg-white' >
+          <Navbar className='py-[2px] md:py-3 w-full md:fixed top-0 z-50 nav bg-white' >
                 <div className='md:hidden'>
                 <img className='w-5 h-5 md:w-6' onClick={openDrawer} src={hamBurger} alt="" />
                 </div>
@@ -48,10 +48,10 @@ const NavigationBar = () => {
                 </form>
                 <div className='flex justify-between items-center gap-4 md:gap-7'>
                     <button>
-                        <img className='w-7 md:w-9' src={cart} alt="" />
+                        <img className='w-6 md:w-9' src={cart} alt="" />
                     </button>
                     <button>
-                        <img className='w-7 md:w-9' src={notificationIcon} alt="" />
+                        <img className='w-6 md:w-9' src={notificationIcon} alt="" />
                     </button>
                     {
                         user ? 
@@ -59,7 +59,7 @@ const NavigationBar = () => {
                         <div className='hidden md:block'>
                         <Dropdown shouldBlockScroll={false} className='dropdown-classes' >
       <DropdownTrigger>
-      <button className='px-4 py-2 border flex items-center gap-2 border-gray-400 rounded hover:bg-green-500 hover:text-white hover:border-green-500 transition-all'><img className='w-9' src={userIcon} alt="" /> {user?.displayName}</button>
+      <button className='px-4 py-2 border flex items-center gap-2 border-gray-400 rounded hover:bg-green-500 hover:text-white hover:border-green-500 transition-all'><img className='w-9' src={user.photoURL || userIcon} alt="" /> {user?.displayName}</button>
       </DropdownTrigger>
       <DropdownMenu 
         aria-label="Dropdown Variants"
@@ -84,7 +84,7 @@ const NavigationBar = () => {
       </DropdownMenu>
     </Dropdown>
                         </div>
-    <img className='w-7 h-7 md:hidden' onClick={openDrawerRight} src={userIcon} alt="" />
+    <img className={` md:hidden ${user.photoURL ? "rounded-full w-7 h-7" : "w-6 h-6"}`} onClick={openDrawerRight} src={user.photoURL || userIcon} alt="" />
     </>
     
                         : <Link to="/login"><button className='px-4 py-2 border border-gray-400 rounded hover:bg-green-500 hover:text-white hover:border-green-500 transition-all'>Sign In</button></Link>
@@ -109,7 +109,7 @@ const NavigationBar = () => {
       <List className='overflow-y-auto'>
         <Accordion
           open={openAccordian === 1}
-          icon={<FaAngleDown></FaAngleDown>}
+          icon={<FaAngleDown className={`mx-auto h-4 w-4 transition-transform ${openAccordian === 1 ? "rotate-180" : ""}`}></FaAngleDown>}
         >
           <ListItem ripple={false} className="p-0" selected={openAccordian === 1}>
             <AccordionHeader onClick={() => handleOpen(1)} className="border-b-0 p-3">

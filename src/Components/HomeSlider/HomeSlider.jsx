@@ -52,9 +52,7 @@ const HomeSlider = () => {
               slidesToScroll: 1,
               fade: false,
               centerMode: true,
-              centerPadding: "30px",
-              speed: 400,
-              autoplay: false,
+              centerPadding: "20px",
 
             }
           }
@@ -65,7 +63,7 @@ const HomeSlider = () => {
             <Slider {...settings} className="">
               {
                 sliderImages.map((img, index) => <div key={index}>
-                  <img className="h-[170px] rounded-[10px] md:rounded-none p-[5px] md:p-0 md:h-[225px] w-full" src={img} />
+                  <img className="h-[145px] rounded-[10px] md:rounded-none p-[5px] md:p-0 md:h-[225px] w-full" src={img} />
                 </div>)
               }
           

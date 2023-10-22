@@ -6,7 +6,7 @@ const Main = () => {
     return (
         <div className="overflow-x-hidden">
             <NavigationBar></NavigationBar>
-         <div className="">
+         <div className="md:mt-[88px]">
             <Outlet></Outlet>
          </div>
         </div>

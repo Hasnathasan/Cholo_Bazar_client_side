@@ -17,7 +17,7 @@ const Home = () => {
         selectedIndex={tabIndex}
         onSelect={(index) => setTabIndex(index)}
       >
-        <TabList className="flex flex-col md:flex-row justify-center bg-white gap-5 border-b border-sky-400">
+        <TabList className="flex justify-center bg-white gap-5 pt-1 border-b border-[#30bbfc]">
           <Tab>বই</Tab>
           <Tab>ইলেক্ট্রনিক্স</Tab>
           <Tab>মনিহারি পণ্য</Tab>
