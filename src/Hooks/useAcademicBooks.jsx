@@ -4,7 +4,7 @@ const useAcademicBooks = () => {
     const { data: academicBooks, isLoading: isAcademicBooksLoading } = useQuery({
         queryKey: ['academicBooks'],
         queryFn: async() => {
-            const res = await fetch('https://rokomari-clone-server-omega.vercel.app/booksByCategory/academic-books');
+            const res = await fetch('https://rokomari-clone-server-beta.vercel.app/booksByCategory/academic-books');
             return res.json()
         },
       })

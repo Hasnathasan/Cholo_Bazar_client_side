@@ -10,7 +10,7 @@ const DashboardOfUser = () => {
     console.log(user);
     return (
         <div className="grid grid-cols-12 max-w-[1100px] mx-auto">
-            <div className="col-span-3">
+            <div className="col-span-3 hidden md:inline">
                 <div className="w-[250px] mt-7 shadow-lg rounded-[4px] bg-white px-6 py-5 gap-2 flex items-center">
                     <img className="w-[55px] rounded-full" src={user?.photoURL || noUser} alt="" />
                     <div>
@@ -33,7 +33,7 @@ const DashboardOfUser = () => {
                     <NavLink className="p-4 text-[17px]" to="/my-section/profile">My Bkash Account</NavLink>
                 </div>
             </div>
-            <div className="col-span-9">
+            <div className="col-span-12 md:col-span-9">
             <Outlet></Outlet>
             </div>
         </div>

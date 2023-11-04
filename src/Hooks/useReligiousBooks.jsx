@@ -4,7 +4,7 @@ const useReligiousBooks = () => {
     const { data: religiousBooks, isLoading: isReligiousBooksLoading } = useQuery({
         queryKey: ['islami-books'],
         queryFn: async() => {
-            const res = await fetch('https://rokomari-clone-server-omega.vercel.app/booksByCategory/relegious-books');
+            const res = await fetch('https://rokomari-clone-server-beta.vercel.app/booksByCategory/relegious-books');
             return res.json()
         },
       })

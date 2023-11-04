@@ -4,7 +4,7 @@ const useNonFictionBooks = () => {
     const { data: nonFictionBooks, isLoading: isNonFictionBooksLoading } = useQuery({
         queryKey: ['nonFictionBooks'],
         queryFn: async() => {
-            const res = await fetch('https://rokomari-clone-server-omega.vercel.app/booksByCategory/non-fiction-books');
+            const res = await fetch('https://rokomari-clone-server-beta.vercel.app/booksByCategory/non-fiction-books');
             return res.json()
         },
       })

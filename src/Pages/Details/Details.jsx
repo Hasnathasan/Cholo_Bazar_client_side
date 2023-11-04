@@ -56,7 +56,7 @@ const Details = () => {
     queryKey: [`product/${id}`],
     queryFn: async () => {
       const res = await fetch(
-        `https://rokomari-clone-server-omega.vercel.app/${apiPath}/${id}`
+        `https://rokomari-clone-server-beta.vercel.app/${apiPath}/${id}`
       );
       return res.json();
     },

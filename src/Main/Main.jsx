@@ -4,7 +4,7 @@ import NavigationBar from "../Shared/NavigationBar/NavigationBar";
 
 const Main = () => {
     return (
-        <div className="overflow-x-hidden">
+        <div className="">
             <NavigationBar></NavigationBar>
          <div className="md:mt-[88px]">
             <Outlet></Outlet>

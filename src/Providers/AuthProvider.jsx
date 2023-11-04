@@ -54,19 +54,19 @@ const AuthProvider = ({ children }) => {
       setUser(loogedUser);
       console.log(loogedUser);
       const newUser = {
-        name: loogedUser.displayName,
-        email: loogedUser.email,
+        name: loogedUser?.displayName,
+        email: loogedUser?.email,
         date_of_birth: null,
         gender: null,
-        phoneNumber: loogedUser.phoneNumber,
-        photoUrl: loogedUser.photoURL,
+        phoneNumber: loogedUser?.phoneNumber,
+        photoUrl: loogedUser?.photoURL,
       };
       if (loogedUser?.email) {
-        fetch(`https://rokomari-clone-server-omega.vercel.app/eachUser/${loogedUser.email}`)
+        fetch(`https://rokomari-clone-server-beta.vercel.app/eachUser/${loogedUser?.email}`)
           .then((res) => res.json())
           .then(data => {
             if(data.notFound){
-                fetch('https://rokomari-clone-server-omega.vercel.app/users', {
+                fetch('https://rokomari-clone-server-beta.vercel.app/users', {
                 method: "POST",
                 headers: {
                     "content-type": "application/json"
@@ -81,11 +81,11 @@ const AuthProvider = ({ children }) => {
       }
       else if(loogedUser?.phoneNumber){
         console.log("User has Phone Number");
-        fetch(`https://rokomari-clone-server-omega.vercel.app/each-user-by-number/${loogedUser?.phoneNumber}`)
+        fetch(`https://rokomari-clone-server-beta.vercel.app/each-user-by-number/${loogedUser?.phoneNumber}`)
           .then((res) => res.json())
           .then(data => {
-            if(data.notFound){
-                fetch('https://rokomari-clone-server-omega.vercel.app/users', {
+            if(data?.notFound){
+                fetch('https://rokomari-clone-server-beta.vercel.app/users', {
                 method: "POST",
                 headers: {
                     "content-type": "application/json"

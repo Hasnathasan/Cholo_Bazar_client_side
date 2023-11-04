@@ -25,7 +25,7 @@ const UserProfile = () => {
     const onSubmit = (data) => {
       console.log(data);
       const newUserData = {email, name: data?.name, phoneNumber, photoUrl, date_of_birth: data?.date_of_birth, gender: data?.gender || gender};
-      fetch(`https://rokomari-clone-server-omega.vercel.app/updateUser/${_id}`, {
+      fetch(`https://rokomari-clone-server-beta.vercel.app/updateUser/${_id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json"
@@ -62,7 +62,7 @@ const UserProfile = () => {
         {...register("name", { required: true })}
         id="name"
         name="name"
-          className="p-[15px] w-[360px] bg-[#fcfcfc] focus:outline-none rounded border border-gray-300"
+          className="p-[15px] md:w-[360px] bg-[#fcfcfc] focus:outline-none rounded border border-gray-300"
           type="text"
           defaultValue={userData?.name}
           disabled={!updatePersonalInfo}
@@ -74,7 +74,7 @@ const UserProfile = () => {
         id="date_of_birth"
         name="date_of_birth"
         {...register("date_of_birth", { required: true })}
-          className="p-[15px] w-[360px] bg-[#fcfcfc] focus:outline-none rounded border border-gray-300"
+          className="p-[15px] md:w-[360px] bg-[#fcfcfc] focus:outline-none rounded border border-gray-300"
           type="date"
           defaultValue={userData?.date_of_birth}
           disabled={!updatePersonalInfo}
@@ -94,7 +94,7 @@ const UserProfile = () => {
         </div>
         <hr className="my-5" />
         <input
-          className="p-[15px] w-[360px] bg-[#fcfcfc] focus:outline-none rounded border border-gray-300"
+          className="p-[15px] md:w-[360px] bg-[#fcfcfc] focus:outline-none rounded border border-gray-300"
           type="number"
           defaultValue={parseInt(userData?.phoneNumber)}
           disabled={!updateNumber}
@@ -109,7 +109,7 @@ const UserProfile = () => {
         </div>
         <hr className="my-5" />
         <input
-          className="p-[15px] w-[360px] bg-[#fcfcfc] focus:outline-none rounded border border-gray-300"
+          className="p-[15px] md:w-[360px] bg-[#fcfcfc] focus:outline-none rounded border border-gray-300"
           type="text"
           defaultValue={userData?.email}
           disabled={!updateEmail}
@@ -142,7 +142,7 @@ const UserProfile = () => {
         <div>
           <label className="block my-3 text-gray-800" htmlFor="newPass">New Password</label>
         <input
-          className="p-[15px] w-[360px] bg-[#fcfcfc] focus:outline-none rounded border border-gray-300"
+          className="p-[15px] md:w-[360px] bg-[#fcfcfc] focus:outline-none rounded border border-gray-300"
           type="text"
           defaultValue={userData?.password}
         />
@@ -150,7 +150,7 @@ const UserProfile = () => {
         <div>
           <label className="block my-3 text-gray-800" htmlFor="newPass">Confirm Password</label>
         <input
-          className="p-[15px] w-[360px] bg-[#fcfcfc] focus:outline-none rounded border border-gray-300"
+          className="p-[15px] md:w-[360px] bg-[#fcfcfc] focus:outline-none rounded border border-gray-300"
           type="text"
         />
         </div>
