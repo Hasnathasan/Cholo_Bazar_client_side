@@ -51,7 +51,7 @@ const UserProfile = () => {
       <div className="bg-white p-5 shadow-lg rounded border-t-2 border-green-500">
         <div className="flex items-center gap-8">
           <h2 className="text-xl text-gray-700">Personal Information</h2>
-          <p className={`${updatePersonalInfo ? "hidden" : ""} text-sky-500 cursor-pointer`} onClick={() => setUpdatePersonalInfo(true)}>Change Information</p>
+          <p className={`${updatePersonalInfo ? "hidden" : ""} text-blue-500 cursor-pointer`} onClick={() => setUpdatePersonalInfo(true)}>Change Information</p>
         </div>
         <hr className="my-5" />
        <form onSubmit={handleSubmit(onSubmit)}>
@@ -62,7 +62,7 @@ const UserProfile = () => {
         {...register("name", { required: true })}
         id="name"
         name="name"
-          className="p-[15px] md:w-[360px] bg-[#fcfcfc] focus:outline-none rounded border border-gray-300"
+          className="p-[15px] w-full md:w-[360px] bg-[#fcfcfc] focus:outline-none rounded border border-gray-300"
           type="text"
           defaultValue={userData?.name}
           disabled={!updatePersonalInfo}
@@ -74,7 +74,7 @@ const UserProfile = () => {
         id="date_of_birth"
         name="date_of_birth"
         {...register("date_of_birth", { required: true })}
-          className="p-[15px] md:w-[360px] bg-[#fcfcfc] focus:outline-none rounded border border-gray-300"
+          className="p-[15px] w-full md:w-[360px] bg-[#fcfcfc] focus:outline-none rounded border border-gray-300"
           type="date"
           defaultValue={userData?.date_of_birth}
           disabled={!updatePersonalInfo}
@@ -90,11 +90,11 @@ const UserProfile = () => {
         <hr className="my-7" />
         <div className="flex items-center gap-8">
           <h2 className="text-xl text-gray-700">Mobile Number</h2>
-          <p className={`${updateNumber ? "hidden" : ""} text-sky-500 cursor-pointer`} onClick={() => setUpdateNumber(true)}>Change Mobile Number</p>
+          <p className={`${updateNumber ? "hidden" : ""} text-blue-500 cursor-pointer`} onClick={() => setUpdateNumber(true)}>Change Mobile Number</p>
         </div>
         <hr className="my-5" />
         <input
-          className="p-[15px] md:w-[360px] bg-[#fcfcfc] focus:outline-none rounded border border-gray-300"
+          className="p-[15px] w-full md:w-[360px] bg-[#fcfcfc] focus:outline-none rounded border border-gray-300"
           type="number"
           defaultValue={parseInt(userData?.phoneNumber)}
           disabled={!updateNumber}
@@ -105,11 +105,11 @@ const UserProfile = () => {
         <hr className="my-7" />
         <div className="flex items-center gap-8">
           <h2 className="text-xl text-gray-700">Email Address</h2>
-          <p className={`${updateEmail ? "hidden" : ""} text-sky-500 cursor-pointer`} onClick={() => setUpdateEmail(true)}>Change Email Address</p>
+          <p className={`${updateEmail ? "hidden" : ""} text-blue-500 cursor-pointer`} onClick={() => setUpdateEmail(true)}>Change Email Address</p>
         </div>
         <hr className="my-5" />
         <input
-          className="p-[15px] md:w-[360px] bg-[#fcfcfc] focus:outline-none rounded border border-gray-300"
+          className="p-[15px] w-full md:w-[360px] bg-[#fcfcfc] focus:outline-none rounded border border-gray-300"
           type="text"
           defaultValue={userData?.email}
           disabled={!updateEmail}
@@ -120,7 +120,7 @@ const UserProfile = () => {
         <hr className="my-7" />
         <div className="flex items-center gap-8">
           <h2 className="text-xl text-gray-700">Profile Picture</h2>
-          <p className={`${updateProfilePic ? "hidden" : ""} text-sky-500 cursor-pointer`} onClick={() => setUpdateProfilePic(true)}>Change Profile Picture</p>
+          <p className={`${updateProfilePic ? "hidden" : ""} text-blue-500 cursor-pointer`} onClick={() => setUpdateProfilePic(true)}>Change Profile Picture</p>
         </div>
         <p className="text-xs text-gray-700 mt-1">(PNG/JPG/JPEG/BMP, Max. 3MB)</p>
         <hr className="my-5" />
@@ -135,14 +135,14 @@ const UserProfile = () => {
         <hr className="my-7" />
         <div className="flex items-center gap-8">
           <h2 className="text-xl text-gray-700">Password</h2>
-          <p className={`${updatePassword ? "hidden" : ""} text-sky-500 cursor-pointer`} onClick={() => setUpdatePassword(true)}>Add Password</p>
+          <p className={`${updatePassword ? "hidden" : ""} text-blue-500 cursor-pointer`} onClick={() => setUpdatePassword(true)}>Add Password</p>
         </div>
         <hr className="my-5" />
         <div className={`flex items-center gap-9 ${updatePassword ? "" : "hidden"}`}>
         <div>
           <label className="block my-3 text-gray-800" htmlFor="newPass">New Password</label>
         <input
-          className="p-[15px] md:w-[360px] bg-[#fcfcfc] focus:outline-none rounded border border-gray-300"
+          className="p-[15px] w-full md:w-[360px] bg-[#fcfcfc] focus:outline-none rounded border border-gray-300"
           type="text"
           defaultValue={userData?.password}
         />
@@ -150,7 +150,7 @@ const UserProfile = () => {
         <div>
           <label className="block my-3 text-gray-800" htmlFor="newPass">Confirm Password</label>
         <input
-          className="p-[15px] md:w-[360px] bg-[#fcfcfc] focus:outline-none rounded border border-gray-300"
+          className="p-[15px] w-full md:w-[360px] bg-[#fcfcfc] focus:outline-none rounded border border-gray-300"
           type="text"
         />
         </div>

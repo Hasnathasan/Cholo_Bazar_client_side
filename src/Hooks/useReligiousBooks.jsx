@@ -4,7 +4,7 @@ import useAxiosSecure from "./useAxiosSecure";
 const useReligiousBooks = () => {
     const [axiosSecure] = useAxiosSecure()
     const { data: religiousBooks, isLoading: isReligiousBooksLoading } = useQuery({
-        queryKey: ['islami-books'],
+        queryKey: ['islamiBooks'],
         queryFn: async() => {
             const res = await axiosSecure.get("/booksByCategory/relegious-books")
             return res.data;

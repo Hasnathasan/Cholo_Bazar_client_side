@@ -44,7 +44,7 @@ const Home = () => {
               <Tab>লিডারবোর্ডের ২০০ বই</Tab>
               <Tab>বইমেলা ২০২৩</Tab>
             </TabList>
-            <TabPanel className=" max-w-[1120px] mx-auto"><Book></Book></TabPanel>
+            <TabPanel className=" max-w-[1200px] mx-auto"><Book></Book></TabPanel>
             <TabPanel></TabPanel>
           </Tabs>
         </TabPanel>

@@ -3,6 +3,7 @@ import ProductContainer from "../../Components/ProductContainer/ProductContainer
 import useHotDeals from "../../Hooks/useHotDeals";
 import FictionNonFicBookContainer from "./FictionNonFicBookContainer/FictionNonFicBookContainer";
 import bookFairLogo from '../../../public/book_fair_logo.svg'
+import CategorySlider from "../../Components/CategorySlider/CategorySlider";
 
 const Book = () => {
     const [hotDeals, isHotDealsLoading] = useHotDeals();
@@ -18,6 +19,7 @@ const Book = () => {
             </div>
             <ProductContainer data={hotDeals} apiPath={"hot-deals"} headding={"Deals on Rokomari Products"}></ProductContainer>
             <FictionNonFicBookContainer></FictionNonFicBookContainer>
+            <CategorySlider></CategorySlider>
         </div>
     );
 };
