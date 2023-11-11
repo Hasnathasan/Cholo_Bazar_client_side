@@ -53,7 +53,7 @@ const Details = () => {
   const { apiPath, id } = apiObj;
   console.log(apiPath, id);
   const { data: product, isLoading: isProductLoading } = useQuery({
-    queryKey: [`product/${id}`],
+    queryKey: [id],
     queryFn: async () => {
       const res = await fetch(
         `https://rokomari-clone-server-beta.vercel.app/${apiPath}/${id}`
@@ -137,7 +137,7 @@ const Details = () => {
           {product?.images?.map((img, index) => (
             <div
               key={index}
-              className="keen-slider__slide number-slide1 w-16 h-16 border border-gray-300"
+              className="keen-slider__slide number-slide1 w-16 h-16"
             >
               <img src={img} className=" cursor-pointer w-full h-full" alt="" />
             </div>

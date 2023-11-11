@@ -1,11 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
+import useAxiosSecure from "./useAxiosSecure";
 
 const useHotDeals = () => {
+    const [axiosSecure] = useAxiosSecure()
     const { data: hotDeals, isLoading: isHotDealsLoading } = useQuery({
         queryKey: ['hot-deals'],
         queryFn: async() => {
-            const res = await fetch('https://rokomari-clone-server-beta.vercel.app/hot-deals');
-            return res.json()
+            const res = await axiosSecure.get("/hot-deals")
+            return res.data;
         },
       })
       return [hotDeals, isHotDealsLoading]
