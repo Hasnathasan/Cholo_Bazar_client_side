@@ -13,17 +13,20 @@ import category11 from "../../../public/category-11.png";
 import category12 from "../../../public/category-12.png";
 
 const CategorySlider = () => {
-  const settings = {
-    className: "center",
-    centerMode: true,
-    infinite: true,
-    centerPadding: "60px",
-    slidesToShow: 7,
-    speed: 500,
-    rows: 2,
-  };
+    
+    const settings = {
+        className: "center",
+        centerMode: true,
+        infinite: true,
+        centerPadding: "60px",
+        slidesToShow: 6,
+        speed: 500,
+        swipeToSlide: true,
+        rows: 2,
+        slidesPerRow: 1
+      };
   const categories = [
-    { cateImg: category1, cateName: "Testing Instrument & Equipment" },
+    { cateImg: category1, cateName: "Testing Instrument" },
     { cateImg: category2, cateName: "Beauty" },
     { cateImg: category3, cateName: "Music Items" },
     { cateImg: category4, cateName: "Sports & Entertainment" },
@@ -35,17 +38,21 @@ const CategorySlider = () => {
     { cateImg: category10, cateName: "Electrical Equipment" },
     { cateImg: category11, cateName: "Food & Bevarage" },
     { cateImg: category12, cateName: "Gifts & Crafts" },
+    { cateImg: category7, cateName: "Furniture" },
+    { cateImg: category8, cateName: "Personal Care" },
+    { cateImg: category5, cateName: "Kids zone" },
+    { cateImg: category9, cateName: "Home Appliances" },
   ];
   return (
-    <div className="my-20">
+    <div className="my-20 max-w-[1120px] mx-auto">
       <Slider {...settings}>
-        {categories.map(({ category, cateName }, index) => (
-          <div key={index} className="my-5">
-            <div className="w-[140px] h-[140px] p-4 border-2 border-gray-300 hover:border-blue-500 transition-all duration-200 rounded-full  flex justify-center items-center">
-              <img src={category} alt="" />
-              <h4>{cateName}</h4>
-            </div>
+        {categories.map(({ cateImg, cateName }, index) => (
+          <div key={index} className="my-2">
+          <div className="w-[140px] h-[140px] cursor-pointer p-4 border-2 grayscale hover:grayscale-0 border-gray-300 hover:border-blue-500 transition-all duration-200 rounded-full  flex flex-col gap-[5px] justify-center items-center">
+            <img className="w-9 h-9" src={cateImg} alt="" />
+            <h4 className="text-sm text-center">{cateName}</h4>
           </div>
+        </div>
         ))}
       </Slider>
     </div>
