@@ -11,20 +11,76 @@ import category9 from "../../../public/category-9.png";
 import category10 from "../../../public/category-10.png";
 import category11 from "../../../public/category-11.png";
 import category12 from "../../../public/category-12.png";
+import nextPre from "../../../public/next-pre.png";
+
+const SampleNextArrow = (props) => {
+  // eslint-disable-next-line react/prop-types
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{
+        ...style,
+        padding: "10px",
+        width: "50px",
+        height: "50px",
+        zIndex: "10",
+        display: "flex",
+        alignItems: "center",
+        color: "black",
+        justifyContent: "center",
+        borderRadius: "50%",
+        background: "#ffffff",
+        boxShadow: "20px 20px 92px #878787, -20px -20px 92px #ffffff",
+      }}
+      onClick={onClick}
+    >
+      <img className="w-6 h-6 absolute" src={nextPre} alt="" />
+    </div>
+  );
+};
+
+const SamplePrevArrow = (props) => {
+  // eslint-disable-next-line react/prop-types
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{
+        ...style,
+        padding: "10px",
+        width: "50px",
+        height: "50px",
+        zIndex: "10",
+        display: "flex",
+        alignItems: "center",
+        color: "black",
+        justifyContent: "center",
+        borderRadius: "50%",
+        background: "#ffffff",
+        boxShadow: "20px 20px 92px #878787, -20px -20px 92px #ffffff",
+      }}
+      onClick={onClick}
+    >
+      <img className="w-6 h-6 absolute rotate-180" src={nextPre} alt="" />
+    </div>
+  );
+};
 
 const CategorySlider = () => {
-    
-    const settings = {
-        className: "center",
-        centerMode: true,
-        infinite: true,
-        centerPadding: "60px",
-        slidesToShow: 6,
-        speed: 500,
-        swipeToSlide: true,
-        rows: 2,
-        slidesPerRow: 1
-      };
+  const settings = {
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 6,
+    speed: 500,
+    swipeToSlide: true,
+    rows: 2,
+    slidesPerRow: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+  };
   const categories = [
     { cateImg: category1, cateName: "Testing Instrument" },
     { cateImg: category2, cateName: "Beauty" },
@@ -48,11 +104,11 @@ const CategorySlider = () => {
       <Slider {...settings}>
         {categories.map(({ cateImg, cateName }, index) => (
           <div key={index} className="my-2">
-          <div className="w-[140px] h-[140px] cursor-pointer p-4 border-2 grayscale hover:grayscale-0 border-gray-300 hover:border-blue-500 transition-all duration-200 rounded-full  flex flex-col gap-[5px] justify-center items-center">
-            <img className="w-9 h-9" src={cateImg} alt="" />
-            <h4 className="text-sm text-center">{cateName}</h4>
+            <div className="w-[140px] h-[140px] cursor-pointer p-4 border-2 grayscale hover:grayscale-0 border-gray-300 hover:border-blue-500 transition-all duration-200 rounded-full  flex flex-col gap-[5px] justify-center items-center">
+              <img className="w-9 h-9" src={cateImg} alt="" />
+              <h4 className="text-sm text-center">{cateName}</h4>
+            </div>
           </div>
-        </div>
         ))}
       </Slider>
     </div>
