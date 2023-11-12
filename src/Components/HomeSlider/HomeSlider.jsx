@@ -25,6 +25,7 @@ const HomeSlider = () => {
         fade: true,
         infinite: true,
         autoplay: true,
+        arrows: false,
         speed: 700,
       autoplaySpeed: 3000,
         slidesToShow: 1,

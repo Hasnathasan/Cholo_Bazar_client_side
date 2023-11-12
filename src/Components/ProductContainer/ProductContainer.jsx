@@ -49,8 +49,6 @@ const ProductContainer = ({data, headding, apiPath}) => {
             settings: {
               slidesToShow: 3,
               slidesToScroll: 3,
-              infinite: true,
-              dots: true
             }
           },
           {
@@ -71,7 +69,7 @@ const ProductContainer = ({data, headding, apiPath}) => {
         ]
       };
     return (
-        <div className=" md:mx-auto px-2 py-6 md:px-5 md:py-10 border-2 border-[#e9e9e9] md:border-none my-5 bg-white rounded-[4px] md:rounded-none mx-3 ">
+        <div className=" md:mx-auto px-2 py-6 md:px-5 md:py-10 border-2 border-[#e9e9e9] shadow-sm md:border-none my-5 bg-white rounded-[4px] md:rounded-none mx-3 ">
           <h2 className="text-xl ps-4 font-bold text-gray-800 mb-3">{headding}</h2>
           <div className="hidden md:block">
             <Slider  {...settings}> 

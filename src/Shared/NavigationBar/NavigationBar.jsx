@@ -59,7 +59,7 @@ const NavigationBar = () => {
                         <div className='hidden md:block'>
                         <Dropdown shouldBlockScroll={false} className='dropdown-classes' >
       <DropdownTrigger>
-      <button className='px-4 py-2 border flex items-center gap-2 border-gray-400 rounded hover:bg-green-500 hover:text-white hover:border-green-500 transition-all'><img className='w-9' src={user.photoURL || userIcon} alt="" /> {user?.displayName}</button>
+      <button className='px-4 py-2 border flex items-center gap-2 border-gray-400 rounded hover:bg-green-500 hover:text-white hover:border-green-500 transition-all'><img className='w-9 h-9 rounded-full' src={user.photoURL || userIcon} alt="" /> {user?.displayName}</button>
       </DropdownTrigger>
       <DropdownMenu 
         aria-label="Dropdown Variants"

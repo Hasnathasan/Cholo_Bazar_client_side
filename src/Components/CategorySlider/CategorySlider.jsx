@@ -74,10 +74,10 @@ const CategorySlider = () => {
     infinite: true,
     centerPadding: "60px",
     slidesToShow: 6,
-    speed: 500,
+    speed: 800,
     swipeToSlide: true,
     rows: 2,
-    slidesPerRow: 1,
+    slidesToScroll: 2,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   };
