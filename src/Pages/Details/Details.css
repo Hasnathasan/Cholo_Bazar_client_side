@@ -4,3 +4,15 @@ background: #ffffff;
 box-shadow:  5px 5px 28px #dedede,
              -5px -5px 28px #ffffff;
 }
+
+.thumbnail .keen-slider__slide {
+    font-size: 30px;
+    margin-top: 10px;
+    height: 70px;
+  }
+  .thumbnail .keen-slider__slide {
+    cursor: pointer;
+  }
+  .thumbnail .keen-slider__slide.active {
+    border: 2px dashed rgb(65, 65, 65);
+  }

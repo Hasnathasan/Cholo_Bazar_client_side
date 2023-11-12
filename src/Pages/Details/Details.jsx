@@ -77,8 +77,10 @@ const Details = () => {
     [ThumbnailPlugin(instanceRef)]
   );
   if (isProductLoading) {
+    console.log(isProductLoading);
     return <h1>Loading</h1>;
   }
+  
   const { specification, price } = product;
 
 
@@ -126,7 +128,7 @@ const Details = () => {
           {product?.images?.map((img, index) => (
             <div
               key={index}
-              className="keen-slider__slide number-slide1 w-full h-[380px] p-3 border border-gray-300"
+              className={`keen-slider__slide number-slide${index + 1} w-full h-[380px] p-3 border border-gray-300`}
             >
               <img className="w-full h-full" src={img} alt="" />
             </div>
@@ -137,9 +139,9 @@ const Details = () => {
           {product?.images?.map((img, index) => (
             <div
               key={index}
-              className="keen-slider__slide number-slide1 w-16 h-16"
+              className={`keen-slider__slide number-slide${index + 1} w-20 h-16`}
             >
-              <img src={img} className=" cursor-pointer w-full h-full" alt="" />
+              <img src={img} className="cursor-pointer w-full h-full" alt="" />
             </div>
           ))}
         </div>
@@ -159,17 +161,17 @@ const Details = () => {
                   emptySymbol={<IoStarOutline></IoStarOutline>}
                   fullSymbol={<IoStarSharp></IoStarSharp>}
                   fractions={2}
-                  initialRating={product.rating}
+                  initialRating={product?.rating}
                   readonly
           />
-          <p className=" absolute -top-[3px] left-24">{product.rating} rating | {product.review} review</p>
+          <p className=" absolute -top-[3px] left-24">{product?.rating} rating | {product?.review} review</p>
           </div>
           <p className="text-gray-600">Brand: <span className="text-[#0397d6]">{specification?.brand}</span></p>
           <p className="text-gray-600">Category: <span className="text-[#0397d6]">{specification?.category[0]}</span></p>
           <div className="flex gap-5 items-end">
-              <h5 className="text-xl text-gray-400 font-semibold line-through">TK. {price.real_price}</h5>
-              <h5 className="text-xl font-semibold text-gray-700">TK. {price.discounted_price}</h5>
-              <p className="text-sm text-gray-600">You save TK.{price.real_price - price.discounted_price}  ({parseInt(((price.real_price-price.discounted_price) / price.real_price ) * 100)}%)</p>
+              <h5 className="text-xl text-gray-400 font-semibold line-through">TK. {price?.real_price}</h5>
+              <h5 className="text-xl font-semibold text-gray-700">TK. {price?.discounted_price}</h5>
+              <p className="text-sm text-gray-600">You save TK.{price?.real_price - price?.discounted_price}  ({parseInt(((price?.real_price-price?.discounted_price) / price?.real_price ) * 100)}%)</p>
           </div>
           <p className="text-green-500 text-sm flex items-center gap-2"><FaTag></FaTag>১০% অতিরিক্ত ছাড় ও নিশ্চিত ফ্রি শিপিং পশ্চিমবঙ্গের ৭৯৯+৳ বাংলা বই অর্ডারে।</p>
           <p className="text-green-500 text-sm flex items-center gap-2"><FaTag></FaTag>Unilever BD এর প্রতিটি পণ্যের সাথে নিশ্চিত ১টি 35ml Rin liquid ফ্রি! এছাড়াও ২৯% পর্যন্ত ছাড়!</p>
@@ -223,8 +225,8 @@ const Details = () => {
               <p className="text-gray-700 text-[15px]">Category: <span className="text-[#0397d6]">{specification?.category[0]}</span></p>
               <hr className="my-2" />
               <div className="flex gap-5 justify-center items-end">
-              <h5 className="text-xl text-gray-600 font-semibold line-through">TK. {price.real_price}</h5>
-              <h5 className="text-xl font-semibold text-gray-900">TK. {price.discounted_price}</h5>
+              <h5 className="text-xl text-gray-600 font-semibold line-through">TK. {price?.real_price}</h5>
+              <h5 className="text-xl font-semibold text-gray-900">TK. {price?.discounted_price}</h5>
               
           </div>
               </div>
@@ -240,12 +242,12 @@ const Details = () => {
     <hr className="my-5" />
     <h3 className="md:font-semibold text-gray-900 mt-3 mb-2 text-lg">Specification:</h3>
     <div>
-      <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Title:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product.specification?.title}</p></div>
-      <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Brand:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-cyan-600 p-1">{product.specification?.brand}</p></div>
-      <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Volumn:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product.specification?.Volume?product.specification?.Volume:product.specification?.volume}</p></div>
-      <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Age:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product.specification?.age?product.specification?.age:"N/A"}</p></div>
-      <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Item Form:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product.specification?.item_form || product.specification?.category[0]}</p></div>
-      <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Made in:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product.specification?.country_of_origin?product.specification?.country_of_origin:"N/A"}</p></div>
+      <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Title:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product?.specification?.title}</p></div>
+      <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Brand:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-cyan-600 p-1">{product?.specification?.brand}</p></div>
+      <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Volumn:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product?.specification?.Volume?product.specification?.Volume:product.specification?.volume}</p></div>
+      <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Age:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product?.specification?.age?product.specification?.age:"N/A"}</p></div>
+      <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Item Form:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product?.specification?.item_form || product.specification?.category[0]}</p></div>
+      <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Made in:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product?.specification?.country_of_origin?product.specification?.country_of_origin:"N/A"}</p></div>
       
     </div>
     <hr className="my-8" />

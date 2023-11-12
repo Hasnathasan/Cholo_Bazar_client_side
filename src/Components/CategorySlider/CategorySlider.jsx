@@ -80,6 +80,32 @@ const CategorySlider = () => {
     slidesToScroll: 2,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
   const categories = [
     { cateImg: category1, cateName: "Testing Instrument" },
@@ -104,11 +130,13 @@ const CategorySlider = () => {
       <div className="layer z-10 pointer-events-none"></div>
       <Slider {...settings}>
         {categories.map(({ cateImg, cateName }, index) => (
-          <div key={index} className="my-2">
-            <div className="w-[140px] h-[140px] cursor-pointer p-4 border-3 grayscale hover:grayscale-0 border-gray-300 hover:border-blue-500 transition-all duration-200 rounded-full  flex flex-col gap-[5px] justify-center items-center">
+          <div key={index} className="my-2 ">
+           <div className="w-full h-full flex items-center justify-center">
+           <div className="w-[140px] h-[140px] cursor-pointer p-4 border-3 grayscale hover:grayscale-0 border-gray-300 hover:border-blue-500 transition-all duration-200 rounded-full  flex flex-col gap-[5px] justify-center items-center">
               <img className="w-9 h-9" src={cateImg} alt="" />
               <h4 className="text-sm text-center">{cateName}</h4>
             </div>
+           </div>
           </div>
         ))}
       </Slider>
