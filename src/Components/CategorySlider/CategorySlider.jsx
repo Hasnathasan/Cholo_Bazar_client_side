@@ -12,7 +12,7 @@ import category10 from "../../../public/category-10.png";
 import category11 from "../../../public/category-11.png";
 import category12 from "../../../public/category-12.png";
 import nextPre from "../../../public/next-pre.png";
-
+import './CategorySlider.css'
 const SampleNextArrow = (props) => {
   // eslint-disable-next-line react/prop-types
   const { className, style, onClick } = props;
@@ -24,14 +24,14 @@ const SampleNextArrow = (props) => {
         padding: "10px",
         width: "50px",
         height: "50px",
-        zIndex: "10",
+        zIndex: "10000",
         display: "flex",
         alignItems: "center",
         color: "black",
         justifyContent: "center",
         borderRadius: "50%",
         background: "#ffffff",
-        boxShadow: "20px 20px 92px #878787, -20px -20px 92px #ffffff",
+        boxShadow: "5px 5px 44px #666666, -5px -5px 44px #ffffff",
       }}
       onClick={onClick}
     >
@@ -51,14 +51,14 @@ const SamplePrevArrow = (props) => {
         padding: "10px",
         width: "50px",
         height: "50px",
-        zIndex: "10",
+        zIndex: "10000",
         display: "flex",
         alignItems: "center",
         color: "black",
         justifyContent: "center",
         borderRadius: "50%",
         background: "#ffffff",
-        boxShadow: "20px 20px 92px #878787, -20px -20px 92px #ffffff",
+        boxShadow: "5px 5px 44px #666666, -5px -5px 44px #ffffff",
       }}
       onClick={onClick}
     >
@@ -100,11 +100,12 @@ const CategorySlider = () => {
     { cateImg: category9, cateName: "Home Appliances" },
   ];
   return (
-    <div className="my-20 max-w-[1120px] mx-auto">
+    <div className="my-20 z-0 relative max-w-[1120px] mx-auto">
+      <div className="layer z-10 pointer-events-none"></div>
       <Slider {...settings}>
         {categories.map(({ cateImg, cateName }, index) => (
           <div key={index} className="my-2">
-            <div className="w-[140px] h-[140px] cursor-pointer p-4 border-2 grayscale hover:grayscale-0 border-gray-300 hover:border-blue-500 transition-all duration-200 rounded-full  flex flex-col gap-[5px] justify-center items-center">
+            <div className="w-[140px] h-[140px] cursor-pointer p-4 border-3 grayscale hover:grayscale-0 border-gray-300 hover:border-blue-500 transition-all duration-200 rounded-full  flex flex-col gap-[5px] justify-center items-center">
               <img className="w-9 h-9" src={cateImg} alt="" />
               <h4 className="text-sm text-center">{cateName}</h4>
             </div>

@@ -88,7 +88,7 @@ const ProductContainer = ({data, headding, apiPath}) => {
           }
         </div>
         <div className="flex justify-center py-3 items-center">
-          <button className="px-6 py-2 border font-bold text-cyan-500 border-cyan-400 hover:bg-cyan-500 text-sky-500 hover:text-white hover:border-sky-500 transition-all">
+          <button className="px-6 py-2 border font-bold text-blue-500 border-blue-400 hover:bg-blue-400 hover:text-white hover:border-blue-500 transition-all">
             View All
           </button>
         </div>

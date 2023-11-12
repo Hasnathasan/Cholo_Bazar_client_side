@@ -73,7 +73,7 @@ const FicNonFicCard = ({ header, books, tags, apiPath }) => {
           </TabPanel>
         </Tabs>
         <div className="flex justify-center py-3 items-center">
-          <button className="px-4 text-sm py-2 border border-cyan-400 hover:bg-cyan-500 text-sky-500 hover:text-white hover:border-sky-500 transition-all">
+          <button className="px-4 text-sm py-2 border border-blue-400 hover:bg-blue-500 text-blue-500 hover:text-white hover:border-blue-500 transition-all">
             View All
           </button>
         </div>

@@ -19,7 +19,7 @@ const ProductCard = ({product, apiPath}) => {
                 <h4 className=' font-semibold'>৳{price.discounted_price}</h4>
                 <h4 className='text-red-500 text-sm'>{parseInt(((price.real_price-price.discounted_price) / price.real_price ) * 100)}% OFF</h4>
             </div>
-            <Link to={`/details/${apiPath}/${_id}`}><button className={`w-full bg-blue-600 py-[9px] text-white font-bold ${hover ? "visible": "invisible"} absolute left-0 bottom-0`}>View Details</button></Link>
+            <Link to={`/details/${apiPath}/${_id}`}><button className={`w-full bg-blue-400 py-[9px] text-white font-bold ${hover ? "visible": "invisible"} absolute left-0 bottom-0`}>View Details</button></Link>
             </div>
         </div>
 
