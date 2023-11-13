@@ -962,7 +962,67 @@
       },
       {
         "images": [
-          "https://i.postimg.cc/bJ1SHQpV/img.png",
+          "https://i.postimg.cc/028mD3f6/img.jpg",
+          "https://i.postimg.cc/XNxSmfyF/img.webp",
+          "https://i.postimg.cc/Z5fhVcm7/img.webp",
+          "https://i.postimg.cc/J0BG1rw9/img.webp"
+        ],
+        "price": {
+          "real_price": 1799,
+          "discounted_price": 1699
+        },
+        "rating": 4.7,
+        "reviews": [
+          {
+            "reviewedBy": "David Miller",
+            "rating": 5,
+            "liked": 10,
+            "totalReact": 10,
+            "review": "This is the best refrigerator I've ever had! It's huge, has all the features I could ever want, and is very energy-efficient. I especially love the built-in water dispenser and the fact that it has a door-in-door feature that allows me to access my favorite drinks and snacks without having to open the entire refrigerator door. I would highly recommend this refrigerator to anyone."
+          },
+          {
+            "reviewedBy": "Sarah Johnson",
+            "rating": 4,
+            "liked": 9,
+            "totalReact": 9,
+            "review": "This refrigerator is great overall, but it can be a bit expensive. However, I think it's worth the investment, especially if you're looking for a refrigerator that has all the bells and whistles. I would recommend this refrigerator to anyone who is looking for a high-quality, energy-efficient refrigerator with all the latest features."
+          }
+        ],
+        "number_of_ratings": 809,
+        "number_of_reviews": 698,
+        "brand_info": {
+          "image": "https://i.imgur.com/876543.png",
+          "name": "LG",
+          "description": "LG is a leading brand in consumer electronics and home appliances. We are committed to providing our customers with innovative and reliable products that make their lives easier."
+        },
+        "tags": [
+          "Refrigerator",
+          "Kitchen Appliances",
+          "Home Appliances"
+        ],
+        "specification": {
+          "Title": "LG LFXS26978S Smart Instaview Door-in-Door Refrigerator",
+          "brand": "LG",
+          "WarrantyPeriod": "1 Year",
+          "Capacity": "26 cu. ft.",
+          "CountryOfOrigin": "South Korea",
+          "WarrantyType": "Manufacturer Warranty",
+          "RefrigeratorType": "Side-by-Side",
+          "Features": "Instaview Door-in-Door, Door-in-Door Ice & Water Dispenser, Smart Wi-Fi Connectivity",
+          "Colour": "Stainless Steel",
+          "Model": "LFXS26978S",
+          "PowerSupply": "120V/60Hz/1",
+          "RemoteControl": "Yes",
+          "Dimensions": "72.7 x 35.7 x 35.5 inches",
+          "CoolingType": "Compressor"
+        },
+        "super_deal": false,
+        "secondary_category": "refrigerator",
+        "main_category": "electronics"
+      },
+      {
+        "images": [
+          "https://i.postimg.cc/rFSzR45Z/img.webp",
           "https://i.postimg.cc/Px4nR0D6/img.webp",
           "https://i.postimg.cc/MHC5bpGg/img.jpg",
           "https://i.postimg.cc/Px4nR0D6/img.webp"
@@ -1022,8 +1082,8 @@
       },
       {
         "images": [
-          "https://i.postimg.cc/MHC5bpGg/img.jpg",
-          "https://i.postimg.cc/Px4nR0D6/img.webp"
+          "https://i.postimg.cc/Px4nR0D6/img.webp",
+          "https://i.postimg.cc/MHC5bpGg/img.jpg"
         ],
         "price": {
           "real_price": 1799,
@@ -1196,8 +1256,8 @@
       },
       {
         "images": [
-          "https://i.postimg.cc/ZKhpjPKh/img.webp",
-          "https://i.postimg.cc/kgZHDTnj/img.jpg"
+          "https://i.postimg.cc/vZx3Mq0T/img.webp",
+          "https://i.postimg.cc/2SdcZTwK/img.webp"
         ],
         "price": {
           "real_price": 1699,
@@ -1313,10 +1373,9 @@
       },
       {
         "images": [
-          "https://i.postimg.cc/ncDhSPXx/img.jpg",
-          "https://i.postimg.cc/RCbWDtG7/img.webp",
-          "https://i.postimg.cc/KYr61n4C/img.webp",
-            "https://i.postimg.cc/VNLxbJM6/img.webp"
+          "https://i.postimg.cc/J0BG1rw9/img.webp",
+          "https://i.postimg.cc/mgQcKgRq/img.webp",
+          "https://i.postimg.cc/Z5fhVcm7/img.webp"
         ],
         "price": {
           "real_price": 1399,
@@ -1373,10 +1432,9 @@
       },
       {
         "images": [
-          "https://i.postimg.cc/ncDhSPXx/img.jpg",
-          "https://i.postimg.cc/RCbWDtG7/img.webp",
-          "https://i.postimg.cc/KYr61n4C/img.webp",
-            "https://i.postimg.cc/VNLxbJM6/img.webp"
+          "https://i.postimg.cc/XNxSmfyF/img.webp",
+          "https://i.postimg.cc/Z5fhVcm7/img.webp",
+          "https://i.postimg.cc/J0BG1rw9/img.webp"
         ],
         "price": {
           "real_price": 1499,
@@ -1431,64 +1489,7 @@
         "secondary_category": "refrigerator",
         "main_category": "electronics"
       },
-      {
-        "images": [
-          "https://i.imgur.com/345678.jpg",
-          "https://i.imgur.com/901234.jpg"
-        ],
-        "price": {
-          "real_price": 1799,
-          "discounted_price": 1699
-        },
-        "rating": 4.7,
-        "reviews": [
-          {
-            "reviewedBy": "David Miller",
-            "rating": 5,
-            "liked": 10,
-            "totalReact": 10,
-            "review": "This is the best refrigerator I've ever had! It's huge, has all the features I could ever want, and is very energy-efficient. I especially love the built-in water dispenser and the fact that it has a door-in-door feature that allows me to access my favorite drinks and snacks without having to open the entire refrigerator door. I would highly recommend this refrigerator to anyone."
-          },
-          {
-            "reviewedBy": "Sarah Johnson",
-            "rating": 4,
-            "liked": 9,
-            "totalReact": 9,
-            "review": "This refrigerator is great overall, but it can be a bit expensive. However, I think it's worth the investment, especially if you're looking for a refrigerator that has all the bells and whistles. I would recommend this refrigerator to anyone who is looking for a high-quality, energy-efficient refrigerator with all the latest features."
-          }
-        ],
-        "number_of_ratings": 809,
-        "number_of_reviews": 698,
-        "brand_info": {
-          "image": "https://i.imgur.com/876543.png",
-          "name": "LG",
-          "description": "LG is a leading brand in consumer electronics and home appliances. We are committed to providing our customers with innovative and reliable products that make their lives easier."
-        },
-        "tags": [
-          "Refrigerator",
-          "Kitchen Appliances",
-          "Home Appliances"
-        ],
-        "specification": {
-          "Title": "LG LFXS26978S Smart Instaview Door-in-Door Refrigerator",
-          "brand": "LG",
-          "WarrantyPeriod": "1 Year",
-          "Capacity": "26 cu. ft.",
-          "CountryOfOrigin": "South Korea",
-          "WarrantyType": "Manufacturer Warranty",
-          "RefrigeratorType": "Side-by-Side",
-          "Features": "Instaview Door-in-Door, Door-in-Door Ice & Water Dispenser, Smart Wi-Fi Connectivity",
-          "Colour": "Stainless Steel",
-          "Model": "LFXS26978S",
-          "PowerSupply": "120V/60Hz/1",
-          "RemoteControl": "Yes",
-          "Dimensions": "72.7 x 35.7 x 35.5 inches",
-          "CoolingType": "Compressor"
-        },
-        "super_deal": false,
-        "secondary_category": "refrigerator",
-        "main_category": "electronics"
-      },
+      
       {
         "images": [
           "https://i.imgur.com/923748.jpg",
