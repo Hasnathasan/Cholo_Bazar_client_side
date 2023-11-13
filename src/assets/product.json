@@ -59,7 +59,7 @@
         ],
         "specification": {
             "Title": "Olitalia Sunflower Oil 5 Ltr - OLSFO5000A",
-            "brand": "OLITALIA",
+            "Brand": "OLITALIA",
             "category": [
                 "Oil"
             ],
@@ -135,7 +135,7 @@
         "product_id": "SKU - 69764401",
         "specification": {
             "Title": "Dove Conditioner Hairfall Rescue 170 Ml - SKU - 69764401",
-            "brand": "Dove",
+            "Brand": "Dove",
             "category": [
                 "Conditioner"
             ],
@@ -192,7 +192,7 @@
         ],
         "specification": {
             "Title": "Rin Washing Liquid 800 Ml - 69737578",
-            "brand": "Unilever Bangladesh",
+            "Brand": "Unilever Bangladesh",
             "category": [
                 "Washing Liquid"
             ],
@@ -246,7 +246,7 @@
         "product_id": "1041",
         "specification": {
             "Title": "Nutri Plus Tiffin Plus Orange Chocolate Value Pack - 168 gm",
-            "brand": "Nutri+",
+            "Brand": "Nutri+",
             "category": [
                 "Chocolate"
             ],
@@ -300,7 +300,7 @@
         ],
         "specification": {
             "Title": "Vaseline Lotion Healthy Bright - 300 ml - 69617132",
-            "brand": "Vaseline",
+            "Brand": "Vaseline",
             "category": [
                 "Lotion",
                 "Cream"
@@ -384,7 +384,7 @@
         ],
         "specification": {
             "Title": "Dove Beauty Bar White 90 Gm - 69767528",
-            "brand": "Dove",
+            "Brand": "Dove",
             "category": [
                 "Body Soaps & Shower Gels"
             ],
@@ -459,7 +459,7 @@
         "specification": {
             "Title": "Tang Orange Flavoured Instant Drink Powder (500 gm) - 4278950",
             "summary": "Description: Beat the heat with the refreshing Orange Tang. Enjoy its yummy taste with the benefits of Vitamin A, B and C and Iron. Rejuvenate your day by drinking a glass full of fresh and energetic drink- which gives you 60 percent of your Vitamin C requirement of the day.Tang makes water more fun to drink ensuring that your family stays hydrated – a glass of Tang gives your child vitamins required for the entire day. No need to add sugar, just add the powder to water and enjoy the delicious drink on the go",
-            "brand": "Tang",
+            "Brand": "Tang",
             "category": [
                 "Powdered Dringk Mixes & Flavorings"
             ],
@@ -479,7 +479,7 @@
             "https://i.ibb.co/fdgYhnG/Singer-Green-Inverter-AC-SRAC-SAS12-CBR3-Singer-16ada-333454.jpg"
         ],
         "price": {
-            "real_price": 65990,
+            "real_price": 6599,
             "discounted_price": 0
         },
         "rating": 4.5,
@@ -534,7 +534,7 @@
         ],
         "specification": {
             "Title": "Singer Green Inverter AC | SRAC-SAS12CBR32LVSGRIH-CO",
-            "brand": "Singer",
+            "Brand": "Singer",
             "WarrantyPeriod": "5 Years",
             "Capacity": "1.0 Ton",
             "CountryOfOrigin": "China",
@@ -572,7 +572,7 @@
             "https://i.postimg.cc/ncDhSPXx/img.jpg"
         ],
         "price": {
-            "real_price": 49990,
+            "real_price": 4999,
             "discounted_price": 3999
         },
         "rating": 4.5,
@@ -627,7 +627,7 @@
         ],
         "specification": {
             "Title": "CoolBreeze TurboCool Air Cooler | CB-TC2000",
-            "brand": "CoolBreeze",
+            "Brand": "CoolBreeze",
             "WarrantyPeriod": "2 Years",
             "Capacity": "20 Liters",
             "CountryOfOrigin": "India",
@@ -659,7 +659,7 @@
             "https://i.postimg.cc/ncDhSPXx/img.jpg"
         ],
         "price": {
-            "real_price": 69990,
+            "real_price": 6999,
             "discounted_price": 5999
         },
         "rating": 4.2,
@@ -693,7 +693,7 @@
         ],
         "specification": {
             "Title": "ArcticCool UltraCool AC | AC-UC3000",
-            "brand": "ArcticCool",
+            "Brand": "ArcticCool",
             "WarrantyPeriod": "3 Years",
             "Capacity": "25,000 BTU",
             "CountryOfOrigin": "United States",
@@ -722,7 +722,7 @@
             "https://i.postimg.cc/ncDhSPXx/img.jpg"
         ],
         "price": {
-            "real_price": 54990,
+            "real_price": 5499,
             "discounted_price": 4999
         },
         "rating": 4.8,
@@ -756,7 +756,7 @@
         ],
         "specification": {
             "Title": "CoolWave ChillMaster AC | CM-AC1500",
-            "brand": "CoolWave",
+            "Brand": "CoolWave",
             "WarrantyPeriod": "5 Years",
             "Capacity": "18,000 BTU",
             "CountryOfOrigin": "Japan",
@@ -818,7 +818,7 @@
         ],
         "specification": {
           "Title": "BreezeMaster CoolBlast AC | BM-CB1200",
-          "brand": "BreezeMaster",
+          "Brand": "BreezeMaster",
           "WarrantyPeriod": "4 Years",
           "Capacity": "15,000 BTU",
           "CountryOfOrigin": "South Korea",
@@ -879,7 +879,7 @@
         ],
         "specification": {
           "Title": "AirMaster EliteCool AC | AM-EC1800",
-          "brand": "AirMaster",
+          "Brand": "AirMaster",
           "WarrantyPeriod": "3 Years",
           "Capacity": "20,000 BTU",
           "CountryOfOrigin": "China",
@@ -940,7 +940,7 @@
         ],
         "specification": {
           "Title": "TechCool SmartBreeze AC | TC-SB2500",
-          "brand": "TechCool",
+          "Brand": "TechCool",
           "WarrantyPeriod": "4 Years",
           "Capacity": "22,000 BTU",
           "CountryOfOrigin": "Germany",
@@ -1002,7 +1002,7 @@
         ],
         "specification": {
           "Title": "LG LFXS26978S Smart Instaview Door-in-Door Refrigerator",
-          "brand": "LG",
+          "Brand": "LG",
           "WarrantyPeriod": "1 Year",
           "Capacity": "26 cu. ft.",
           "CountryOfOrigin": "South Korea",
@@ -1062,7 +1062,7 @@
         ],
         "specification": {
           "Title": "Whirlpool WRT518SZFM French Door Refrigerator",
-          "brand": "Whirlpool",
+          "Brand": "Whirlpool",
           "WarrantyPeriod": "1 Year",
           "Capacity": "25 cu. ft.",
           "CountryOfOrigin": "United States",
@@ -1120,7 +1120,7 @@
         ],
         "specification": {
           "Title": "LG LFXS26978S Smart Instaview Door-in-Door Refrigerator",
-          "brand": "LG",
+          "Brand": "LG",
           "WarrantyPeriod": "1 Year",
           "Capacity": "26 cu. ft.",
           "CountryOfOrigin": "South Korea",
@@ -1178,7 +1178,7 @@
         ],
         "specification": {
           "Title": "Samsung RF28K9580S4 Family Hub 4-Door Flex Refrigerator",
-          "brand": "Samsung",
+          "Brand": "Samsung",
           "WarrantyPeriod": "1 Year",
           "Capacity": "28 cu. ft.",
           "CountryOfOrigin": "South Korea",
@@ -1236,7 +1236,7 @@
         ],
         "specification": {
           "Title": "Frigidaire FFTR2021TS Top Freezer Refrigerator",
-          "brand": "Frigidaire",
+          "Brand": "Frigidaire",
           "WarrantyPeriod": "1 Year",
           "Capacity": "20 cu. ft.",
           "CountryOfOrigin": "United States",
@@ -1294,7 +1294,7 @@
         ],
         "specification": {
           "Title": "GE GFE28HSMHES French Door Refrigerator",
-          "brand": "GE",
+          "Brand": "GE",
           "WarrantyPeriod": "1 Year",
           "Capacity": "28 cu. ft.",
           "CountryOfOrigin": "United States",
@@ -1353,7 +1353,7 @@
         ],
         "specification": {
           "Title": "Bosch B26CS50SNS French Door Refrigerator",
-          "brand": "Bosch",
+          "Brand": "Bosch",
           "WarrantyPeriod": "1 Year",
           "Capacity": "26 cu. ft.",
           "CountryOfOrigin": "Germany",
@@ -1412,7 +1412,7 @@
         ],
         "specification": {
           "Title": "Kenmore 79582 French Door Refrigerator",
-          "brand": "Kenmore",
+          "Brand": "Kenmore",
           "WarrantyPeriod": "1 Year",
           "Capacity": "25 cu. ft.",
           "CountryOfOrigin": "United States",
@@ -1471,7 +1471,7 @@
         ],
         "specification": {
           "Title": "Whirlpool WRT518SZFM French Door Refrigerator",
-          "brand": "Whirlpool",
+          "Brand": "Whirlpool",
           "WarrantyPeriod": "1 Year",
           "Capacity": "25 cu. ft.",
           "CountryOfOrigin": "United States",
@@ -1492,12 +1492,13 @@
       
       {
         "images": [
-          "https://i.imgur.com/923748.jpg",
-          "https://i.imgur.com/123456.jpg"
+          "https://i.postimg.cc/q72TW54s/img.jpg",
+          "https://i.postimg.cc/fWcvkjT8/img.jpg",
+          "https://i.postimg.cc/VkC9QjT9/img.jpg"
         ],
         "price": {
-          "real_price": 29.99,
-          "discounted_price": 19.99
+          "real_price": 250,
+          "discounted_price": 240
         },
         "rating": 4.8,
         "reviews": [
@@ -1530,7 +1531,7 @@
         ],
         "specification": {
           "Title": "Hamilton Beach 40870 Electric Kettle",
-          "brand": "Hamilton Beach",
+          "Brand": "Hamilton Beach",
           "WarrantyPeriod": "1 Year",
           "Capacity": "1.7 Liters",
           "CountryOfOrigin": "China",
@@ -1548,12 +1549,13 @@
       },
       {
         "images": [
-          "https://i.imgur.com/987654.jpg",
-          "https://i.imgur.com/345678.jpg"
+          "https://i.postimg.cc/W1fSmNZz/tile.jpg",
+          "https://i.postimg.cc/BZTLfJJz/BKE625-WHT1-BUS1.jpg",
+          "https://i.postimg.cc/VkC9QjT9/img.jpg"
         ],
         "price": {
-          "real_price": 40,
-          "discounted_price": 29
+          "real_price": 400,
+          "discounted_price": 290
         },
         "rating": 4.9,
         "reviews": [
@@ -1586,7 +1588,7 @@
         ],
         "specification": {
           "Title": "Breville BTA840XL SmartTemp Electric Kettle",
-          "brand": "Breville",
+          "Brand": "Breville",
           "WarrantyPeriod": "2 Years",
           "Capacity": "1.7 Liters",
           "CountryOfOrigin": "United Kingdom",
@@ -1604,12 +1606,13 @@
       },
       {
         "images": [
-          "https://i.imgur.com/123456.jpg",
-          "https://i.imgur.com/123456.jpg"
+          "https://i.postimg.cc/L8S42P8K/White-EKG-hero-shot-Web-214836b8-3612-4c8e-8f62-61adbb3c7338-900x.png",
+          "https://i.postimg.cc/rmVQkQv0/img.jpg",
+          "https://i.postimg.cc/HWh0jpqk/img.jpg"
         ],
         "price": {
-          "real_price": 199.99,
-          "discounted_price": 179.99
+          "real_price": 280,
+          "discounted_price": 240
         },
         "rating": 4.9,
         "reviews": [
@@ -1642,7 +1645,7 @@
         ],
         "specification": {
           "Title": "Fellow Stagg EKG Electric Kettle",
-          "brand": "Fellow",
+          "Brand": "Fellow",
           "WarrantyPeriod": "2 Years",
           "Capacity": "0.9 Liters",
           "CountryOfOrigin": "China",
@@ -1660,12 +1663,12 @@
       },
       {
         "images": [
-          "https://i.imgur.com/123456.jpg",
-          "https://i.imgur.com/987654.jpg"
+          "https://i.postimg.cc/85VPPnGH/img.webp",
+          "https://i.postimg.cc/Xqj5XvWQ/img.jpg"
         ],
         "price": {
-          "real_price": 49.99,
-          "discounted_price": 39.99
+          "real_price": 260,
+          "discounted_price": 235
         },
         "rating": 4.8,
         "reviews": [
@@ -1698,7 +1701,7 @@
         ],
         "specification": {
           "Title": "Cuisinart CPK-17 PerfecTemp Cordless Electric Kettle",
-          "brand": "Cuisinart",
+          "Brand": "Cuisinart",
           "WarrantyPeriod": "3 Years",
           "Capacity": "1.7 Liters",
           "CountryOfOrigin": "United States",
@@ -1716,12 +1719,12 @@
       },
       {
         "images": [
-          "https://i.imgur.com/abc123.jpg",
-          "https://i.imgur.com/456def.jpg"
+          "https://i.postimg.cc/tRsZS8T1/img.jpg",
+          "https://i.postimg.cc/DyfD3Q9b/img.webp"
         ],
         "price": {
-          "real_price": 59.99,
-          "discounted_price": 49.99
+          "real_price": 320,
+          "discounted_price": 300
         },
         "rating": 4.9,
         "reviews": [
@@ -1754,7 +1757,7 @@
         ],
         "specification": {
           "Title": "Bodum Bistro Gooseneck Electric Kettle",
-          "brand": "Bodum",
+          "Brand": "Bodum",
           "WarrantyPeriod": "1 Year",
           "Capacity": "0.9 Liters",
           "CountryOfOrigin": "China",
@@ -1772,12 +1775,12 @@
       },
       {
         "images": [
-          "https://i.imgur.com/xyz789.jpg",
-          "https://i.imgur.com/abc123.jpg"
+          "https://i.postimg.cc/281TrHSM/img.jpg",
+          "https://i.postimg.cc/bwNbHgZL/img.webp"
         ],
         "price": {
-          "real_price": 79.99,
-          "discounted_price": 69.99
+          "real_price": 240,
+          "discounted_price": 210
         },
         "rating": 4.8,
         "reviews": [
@@ -1810,7 +1813,7 @@
         ],
         "specification": {
           "Title": "Bonavita BV382510V Gooseneck Electric Kettle",
-          "brand": "Bonavita",
+          "Brand": "Bonavita",
           "WarrantyPeriod": 2,
           "Capacity": "1 Liter",
           "CountryOfOrigin": "China",
@@ -1827,12 +1830,13 @@
       },
       {
         "images": [
-          "https://i.imgur.com/123abc.jpg",
-          "https://i.imgur.com/456def.jpg"
+          "https://i.postimg.cc/MH3CXtNH/img.webp",
+          "https://i.postimg.cc/zvF73fQf/img.jpg",
+          "https://i.postimg.cc/pLRTDL6H/img.jpg"
         ],
         "price": {
-          "real_price": 89.99,
-          "discounted_price": 79.99
+          "real_price": 150,
+          "discounted_price": 130
         },
         "rating": 4.9,
         "reviews": [
@@ -1865,7 +1869,7 @@
         ],
         "specification": {
           "Title": "Smeg KLF04 Kettle",
-          "brand": "Smeg",
+          "Brand": "Smeg",
           "WarrantyPeriod": 2,
           "Capacity": "1.7 Liters",
           "CountryOfOrigin": "Italy",
@@ -1883,12 +1887,14 @@
       },
       {
         "images": [
-          "https://i.imgur.com/345678.jpg",
-          "https://i.imgur.com/901234.jpg"
+          "https://i.postimg.cc/x8LsV5QB/img.webp",
+          "https://i.postimg.cc/L8S42P8K/White-EKG-hero-shot-Web-214836b8-3612-4c8e-8f62-61adbb3c7338-900x.png",
+          "https://i.postimg.cc/rmVQkQv0/img.jpg",
+          "https://i.postimg.cc/HWh0jpqk/img.jpg"
         ],
         "price": {
-          "real_price": 199.99,
-          "discounted_price": 179.99
+          "real_price": 200,
+          "discounted_price": 185
         },
         "rating": 4.9,
         "reviews": [
@@ -1921,7 +1927,7 @@
         ],
         "specification": {
           "Title": "Fellow Stagg EKG Electric Kettle",
-          "brand": "Fellow",
+          "Brand": "Fellow",
           "WarrantyPeriod": 2,
           "Capacity": "0.9 Liters",
           "CountryOfOrigin": "China",
@@ -1936,5 +1942,442 @@
         "super_deal": false,
         "secondary_category": "kettle",
         "main_category": "electronics"
+      },
+      {
+        "images": [
+          "https://i.postimg.cc/x8LsV5QB/img.webp",
+          "https://i.postimg.cc/L8S42P8K/White-EKG-hero-shot-Web-214836b8-3612-4c8e-8f62-61adbb3c7338-900x.png",
+          "https://i.postimg.cc/rmVQkQv0/img.jpg",
+          "https://i.postimg.cc/HWh0jpqk/img.jpg"
+        ],
+        "price": {
+          "real_price": 69.99,
+          "discounted_price": 59.99
+        },
+        "rating": 4.8,
+        "reviews": [
+          {
+            "reviewedBy": "John Doe",
+            "rating": 5,
+            "liked": 10,
+            "totalReact": 10,
+            "review": "This trimmer is amazing! It's so versatile and easy to use. I love that it comes with so many attachments, so I can trim my beard, hair, and body hair. The trimmer is also very powerful and durable. I would highly recommend this trimmer to anyone."
+          },
+          {
+            "reviewedBy": "Jane Smith",
+            "rating": 4,
+            "liked": 9,
+            "totalReact": 9,
+            "review": "This trimmer is a great value for the price. It's not as powerful as some of the more expensive models, but it still cuts well. I also like that it's cordless and easy to clean. Overall, I'm happy with this purchase and would recommend it to others."
+          }
+        ],
+        "number_of_ratings": 1009,
+        "number_of_reviews": 898,
+        "brand_info": {
+          "image": "",
+          "name": "Philips Norelco",
+          "description": "Philips Norelco is a leading brand in men's grooming products. We are committed to providing our customers with high-quality, innovative products that help them look and feel their best."
+        },
+        "tags": [
+          "Trimmer",
+          "Grooming Appliances",
+          "Personal Care"
+        ],
+        "secondary_category": "trimmer",
+        "specification": {
+          "Title": "Philips Norelco Multigroom Series 7000 MG7750",
+          "Brand": "Philips Norelco",
+          "WarrantyPeriod": 2,
+          "Features": "13 attachments for beard, hair, and body trimming, cordless design, dual-cut technology, self-sharpening blades",
+          "Colour": "Black",
+          "Model": "MG7750",
+          "PowerSupply": "Rechargeable battery",
+          "RemoteControl": "No",
+          "Dimensions": "7 x 4 x 9 inches"
+        },
+        "super_deal": true,
+        "main_category": "electronics"
+      },
+      {
+        "images": [
+          "https://i.postimg.cc/x8LsV5QB/img.webp",
+          "https://i.postimg.cc/L8S42P8K/White-EKG-hero-shot-Web-214836b8-3612-4c8e-8f62-61adbb3c7338-900x.png",
+          "https://i.postimg.cc/rmVQkQv0/img.jpg",
+          "https://i.postimg.cc/HWh0jpqk/img.jpg"
+        ],
+        "price": {
+          "real_price": 249.99,
+          "discounted_price": 199.99
+        },
+        "rating": 4.9,
+        "reviews": [
+          {
+            "reviewedBy": "Susan Doe",
+            "rating": 5,
+            "liked": 11,
+            "totalReact": 11,
+            "review": "This trimmer is the best I've ever used! It's so precise and easy to use. I love the FlexMotion technology, which allows me to get a close trim even on my neck and chin. The trimmer is also very durable and easy to clean. I would highly recommend this trimmer to anyone."
+          },
+          {
+            "reviewedBy": "Michael Smith",
+            "rating": 4,
+            "liked": 10,
+            "totalReact": 10,
+            "review": "This trimmer is a great investment. It's a bit pricey, but it's worth it for the quality and performance. I love the FlexMotion technology and the precision blades. The trimmer is also very easy to use and clean. Overall, I'm very happy with this purchase."
+          }
+        ],
+        "number_of_ratings": 1209,
+        "number_of_reviews": 1098,
+        "brand_info": {
+          "image": "https://www.braun.com/en-us/content/dam/global/brand/braun-logo.svg",
+          "name": "Braun",
+          "description": "Braun is a leading brand in grooming products. We are committed to providing our customers with high-quality, innovative products that help them look and feel their best."
+        },
+        "tags": [
+          "Trimmer",
+          "Grooming Appliances",
+          "Personal Care"
+        ],
+        "secondary_category": "trimmer",
+        "specification": {
+          "Title": "Braun Series 9 Pro 9465cc",
+          "Brand": "Braun",
+          "WarrantyPeriod": 2,
+          "Features": "FlexMotion technology, precision blades, 5 adjustable trimmer combs, cordless design, rechargeable battery",
+          "Colour": "Black",
+          "Model": "9465cc",
+          "PowerSupply": "Rechargeable battery",
+          "RemoteControl": "No",
+          "Dimensions": "7 x 4 x 9 inches"
+        },
+        "super_deal": true,
+        "main_category": "electronics"
+      },
+      {
+        "images": [
+          "https://i.imgur.com/123456.jpg",
+          "https://i.imgur.com/987654.jpg",
+          "https://i.imgur.com/abcdef.jpg"
+        ],
+        "price": {
+          "real_price": 149.99,
+          "discounted_price": 119.99
+        },
+        "rating": 4.7,
+        "reviews": [
+          {
+            "reviewedBy": "John Doe",
+            "rating": 5,
+            "liked": 12,
+            "totalReact": 12,
+            "review": "This trimmer is great! It's easy to use and gives me a close, even trim every time. I love that it comes with a variety of attachments so I can trim my beard, hair, and body hair. The trimmer is also very durable and easy to clean. I would definitely recommend this trimmer to anyone."
+          },
+          {
+            "reviewedBy": "Jane Smith",
+            "rating": 4,
+            "liked": 11,
+            "totalReact": 11,
+            "review": "This trimmer is a great value for the price. It's not as powerful as some of the more expensive models, but it still cuts well. I also like that it's cordless and easy to clean. Overall, I'm happy with this purchase and would recommend it to others."
+          }
+        ],
+        "number_of_ratings": 1109,
+        "number_of_reviews": 998,
+        "brand_info": {
+          "image": "https://i.imgur.com/ghi789.png",
+          "name": "Wahl",
+          "description": "Wahl is a leading brand in hair clippers and trimmers. We are committed to providing our customers with high-quality, innovative products that help them look and feel their best."
+        },
+        "tags": [
+          "Trimmer",
+          "Grooming Appliances",
+          "Personal Care"
+        ],
+        "secondary_category": "trimmer",
+        "specification": {
+          "Title": "Wahl Aqua Blade 9899",
+          "Brand": "Wahl",
+          "WarrantyPeriod": 2,
+          "Features": "Wet/dry use, cordless design, rechargeable battery, self-sharpening blades",
+          "Colour": "Black",
+          "Model": "9899",
+          "PowerSupply": "Rechargeable battery",
+          "RemoteControl": "No",
+          "Dimensions": "7 x 4 x 9 inches"
+        },
+        "super_deal": false,
+        "main_category": "electronics"
+      },
+      {
+        "images": [
+          "https://i.imgur.com/ghi789.png",
+          "https://i.imgur.com/abcdef.jpg"
+        ],
+        "price": {
+          "real_price": 79.99,
+          "discounted_price": 69.99
+        },
+        "rating": 4.6,
+        "reviews": [
+          {
+            "reviewedBy": "John Doe",
+            "rating": 5,
+            "liked": 13,
+            "totalReact": 13,
+            "review": "This trimmer is the best I've ever used! It's so easy to use and gives me a close, even trim every time. I love the gooseneck spout, which allows me to get a precise trim even on my neck and chin. The trimmer is also very durable and easy to clean. I would highly recommend this trimmer to anyone."
+          },
+          {
+            "reviewedBy": "Jane Smith",
+            "rating": 4,
+            "liked": 12,
+            "totalReact": 12,
+            "review": "This trimmer is a great value for the price. It's not as powerful as some of the more expensive models, but it still cuts well. I also like that it's cordless and easy to clean. Overall, I'm happy with this purchase and would recommend it to others."
+          }
+        ],
+        "number_of_ratings": 1209,
+        "number_of_reviews": 1098,
+        "brand_info": {
+          "image": "https://i.imgur.com/ghi789.png",
+          "name": "Panasonic",
+          "description": "Panasonic is a leading brand in electronics and appliances. We are committed to providing our customers with high-quality, innovative products that make their lives easier."
+        },
+        "tags": [
+          "Trimmer",
+          "Grooming Appliances",
+          "Personal Care"
+        ],
+        "secondary_category": "trimmer",
+        "specification": {
+          "Title": "Panasonic ER-GB42-K Beard Trimmer for Men",
+          "Brand": "Panasonic",
+          "WarrantyPeriod": 2,
+          "Features": "Gooseneck spout, cordless design, rechargeable battery, self-sharpening blades",
+          "Colour": "Black",
+          "Model": "ER-GB42-K",
+          "PowerSupply": "Rechargeable battery",
+          "RemoteControl": "No",
+          "Dimensions": "7 x 4 x 9 inches"
+        },
+        "super_deal": true,
+        "main_category": "electronics"
+      },
+      {
+        "images": [
+          "https://i.imgur.com/789ghi.jpg", 
+          "https://i.imgur.com/abcdef.jpg" 
+        ],
+        "price": {
+          "real_price": 59.99,
+          "discounted_price": 49.99
+        },
+        "rating": 4.5,
+        "reviews": [
+          {
+            "reviewedBy": "John Doe",
+            "rating": 5,
+            "liked": 14,
+            "totalReact": 14,
+            "review": "This trimmer is a great value for the price. It's easy to use and gives me a close, even trim every time. I love the variety of attachments so I can trim my beard, hair, and body hair. The trimmer is also very durable and easy to clean. I would definitely recommend this trimmer to anyone."
+          },
+          {
+            "reviewedBy": "Jane Smith",
+            "rating": 4,
+            "liked": 13,
+            "totalReact": 13,
+            "review": "This trimmer is a great option for anyone looking for an affordable and easy-to-use trimmer. It's not as powerful as some of the more expensive models, but it still cuts well. I also like that it's cordless and easy to clean. Overall, I'm happy with this purchase and would recommend it to others."
+          }
+        ],
+        "number_of_ratings": 1309,
+        "number_of_reviews": 1198,
+        "brand_info": {
+          "image": "https://i.imgur.com/ghi789.png",
+          "name": "Remington",
+          "description": "Remington is a leading brand in hair styling and grooming products. We are committed to providing our customers with high-quality, innovative products that help them look and feel their best."
+        },
+        "tags": [
+          "Trimmer",
+          "Grooming Appliances",
+          "Personal Care"
+        ],
+        "secondary_category": "trimmer",
+        "specification": {
+          "Title": "Remington MB6850 The Beard Boss Trimmer",
+          "Brand": "Remington",
+          "WarrantyPeriod": 2,
+          "Features": "9 attachments for beard, hair, and body trimming, cordless design, rechargeable battery, self-sharpening blades",
+          "Colour": "Black",
+          "Model": "MB6850",
+          "PowerSupply": "Rechargeable battery",
+          "RemoteControl": "No",
+          "Dimensions": "7 x 4 x 9 inches"
+        },
+        "super_deal": true,
+        "main_category": "electronics"
+      },
+      {
+        "images": [
+          "https://i.imgur.com/789ghi.jpg",
+          "https://i.imgur.com/abcdef.jpg" 
+        ],
+        "price": {
+          "real_price": 49.99,
+          "discounted_price": 39.99
+        },
+        "rating": 4.7,
+        "reviews": [
+          {
+            "reviewedBy": "John Doe",
+            "rating": 5,
+            "liked": 16,
+            "totalReact": 16,
+            "review": "This trimmer is a great all-in-one solution for grooming my beard, hair, and body hair. It comes with a variety of attachments so I can customize my trim to get the exact look I want. The trimmer is also very easy to use and clean. I would definitely recommend this trimmer to anyone looking for a versatile and affordable option."
+          },
+          {
+            "reviewedBy": "Jane Smith",
+            "rating": 4,
+            "liked": 15,
+            "totalReact": 15,
+            "review": "This trimmer is a great value for the price. It's not as powerful as some of the more expensive models, but it still cuts well. I also like that it comes with a variety of attachments so I can customize my trim. The trimmer is also very easy to use and clean. Overall, I'm happy with this purchase and would recommend it to others."
+          }
+        ],
+        "number_of_ratings": 1509,
+        "number_of_reviews": 1398,
+        "description": "The Brio 5-in-1 Electric Body Groomer for Men is a versatile and affordable grooming solution for men. It comes with five attachments so you can trim your beard, hair, and body hair to the exact length you want. The trimmer is also very easy to use and clean.",
+        "brand_info": {
+          "image": "https://i.imgur.com/ghi789.png",
+          "name": "Brio",
+          "description": "Brio is a brand that specializes in affordable and easy-to-use grooming products. We are committed to providing our customers with products that help them look and feel their best."
+        },
+        "tags": [
+          "Trimmer",
+          "Grooming Appliances",
+          "Personal Care"
+        ],
+        "secondary_category": "trimmer",
+        "specification": {
+          "Title": "Brio 5-in-1 Electric Body Groomer for Men",
+          "Brand": "Brio",
+          "WarrantyPeriod": 2,
+          "Features": "5 attachments for beard, hair, and body trimming, cordless design, rechargeable battery, self-sharpening blades",
+          "Colour": "Black",
+          "Model": "BG5000",
+          "PowerSupply": "Rechargeable battery",
+          "RemoteControl": "No",
+          "Dimensions": "7 x 4 x 9 inches"
+        },
+        "super_deal": true,
+        "main_category": "electronics"
+      },
+      {
+        "images": [
+          "https://i.imgur.com/789ghi.jpg",
+          "https://i.imgur.com/abcdef.jpg"
+        ],
+        "price": {
+          "real_price": 149.99,
+          "discounted_price": 119.99
+        },
+        "rating": 4.7,
+        "reviews": [
+          {
+            "reviewedBy": "John Doe",
+            "rating": 5,
+            "liked": 17,
+            "totalReact": 17,
+            "review": "This trimmer is great! It's easy to use and gives me a close, even trim every time. I love the variety of attachments so I can trim my beard, hair, and body hair. The trimmer is also very durable and easy to clean. I would definitely recommend this trimmer to anyone."
+          },
+          {
+            "reviewedBy": "Jane Smith",
+            "rating": 4,
+            "liked": 16,
+            "totalReact": 16,
+            "review": "This trimmer is a great value for the price. It's not as powerful as some of the more expensive models, but it still cuts well. I also like that it's cordless and easy to clean. Overall, I'm happy with this purchase and would recommend it to others."
+          }
+        ],
+        "number_of_ratings": 1609,
+        "number_of_reviews": 1498,
+        "brand_info": {
+          "image": "https://i.imgur.com/ghi789.png",
+          "name": "Wahl",
+          "description": "Wahl is a leading brand in hair clippers and trimmers. We are committed to providing our customers with high-quality, innovative products that help them look and feel their best."
+        },
+        "tags": [
+          "Trimmer",
+          "Grooming Appliances",
+          "Personal Care"
+        ],
+        "secondary_category": "trimmer",
+        "super_deal": true,
+        "main_category": "electronics",
+        "specification": {
+          "Title": "Wahl Aqua Blade 9899",
+          "Brand": "Wahl",
+          "WarrantyPeriod": 2,
+          "Features": "Wet/dry use, cordless design, rechargeable battery, self-sharpening blades",
+          "Colour": "Black",
+          "Model": "9899",
+          "PowerSupply": "Rechargeable battery",
+          "RemoteControl": "No",
+          "Dimensions": "7 x 4 x 9 inches"
+        }
+      },
+      {
+        "images": [
+          "https://i.imgur.com/abcdef.jpg",
+          "https://i.imgur.com/ghi789.png"
+        ],
+        "price": {
+          "real_price": 69.99,
+          "discounted_price": 49.99
+        },
+        "rating": 4.6,
+        "reviews": [
+          {
+            "reviewedBy": "John Doe",
+            "rating": 5,
+            "liked": 18,
+            "totalReact": 18,
+            "review": "This trimmer is amazing! It's so easy to use and gives me a perfect trim every time. I love the variety of attachments so I can customize my trim to my exact liking. The trimmer is also very durable and easy to clean. I would definitely recommend this trimmer to anyone looking for a high-quality trimmer at a great price."
+          },
+          {
+            "reviewedBy": "Jane Smith",
+            "rating": 4,
+            "liked": 17,
+            "totalReact": 17,
+            "review": "This trimmer is a great value for the price. It's not as powerful as some of the more expensive models, but it still cuts well. I also like that it's cordless and easy to clean. Overall, I'm happy with this purchase and would recommend it to others."
+          }
+        ],
+        "number_of_ratings": 1709,
+        "number_of_reviews": 1598,
+        "brand_info": {
+          "image": "https://i.imgur.com/xyzabc.png",
+          "name": "Philips",
+          "description": "Philips is a leading brand in consumer electronics and healthcare. We are committed to providing our customers with high-quality, innovative products that help them live healthier and more fulfilling lives."
+        },
+        "tags": [
+          "Trimmer",
+          "Grooming Appliances",
+          "Personal Care"
+        ],
+        "secondary_category": "trimmer",
+        "super_deal": true,
+        "main_category": "electronics",
+        "specification": {
+          "Title": "Philips Multigroom Series 3000 MG3730 Beard Trimmer",
+          "Brand": "Philips",
+          "WarrantyPeriod": 2,
+          "Features": "11 attachments for beard, hair, and body trimming, cordless design, rechargeable battery, self-sharpening blades",
+          "Colour": "Black",
+          "Model": "MG3730",
+          "PowerSupply": "Rechargeable battery",
+          "RemoteControl": "No",
+          "Dimensions": "7 x 4 x 9 inches"
+        }
       }
+      
+      
+      
+      
+      
+      
+      
 ]
