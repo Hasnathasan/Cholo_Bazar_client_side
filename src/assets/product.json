@@ -2372,7 +2372,1135 @@
           "RemoteControl": "No",
           "Dimensions": "7 x 4 x 9 inches"
         }
+      },
+      {
+        "images": [
+          "https://i.imgur.com/xyzwvu.jpg",
+          "https://i.imgur.com/qwerty.png"
+        ],
+        "price": {
+          "real_price": 99.99,
+          "discounted_price": 79.99
+        },
+        "rating": 4.8,
+        "reviews": [
+          {
+            "reviewedBy": "John Doe",
+            "rating": 5,
+            "liked": 19,
+            "totalReact": 19,
+            "review": "This trimmer is the best I've ever used! It's so sharp and precise, and it makes it easy to get a perfect trim every time. I love the variety of attachments so I can customize my trim to my exact liking. The trimmer is also very durable and easy to clean. I would definitely recommend this trimmer to anyone looking for a high-quality trimmer that will last."
+          },
+          {
+            "reviewedBy": "Jane Smith",
+            "rating": 4,
+            "liked": 18,
+            "totalReact": 18,
+            "review": "This trimmer is a great investment for anyone who is serious about trimming their beard or hair. It's not as cheap as some of the other trimmers on the market, but it's worth the extra money for the quality and performance. I love the sharp blades and the variety of attachments. The trimmer is also very durable and easy to clean. Overall, I'm very happy with this purchase and would recommend it to others."
+          }
+        ],
+        "number_of_ratings": 1809,
+        "number_of_reviews": 1698,
+        "brand_info": {
+          "image": "https://i.imgur.com/asdfgh.png",
+          "name": "Braun",
+          "description": "Braun is a leading brand in electric shavers and trimmers. We are committed to providing our customers with high-quality, innovative products that help them look and feel their best."
+        },
+        "tags": [
+          "Trimmer",
+          "Grooming Appliances",
+          "Personal Care"
+        ],
+        "secondary_category": "trimmer",
+        "super_deal": true,
+        "main_category": "electronics",
+        "specification": {
+          "Title": "Braun Multigroom Series 7 MGK7020 Beard Trimmer",
+          "Brand": "Braun",
+          "WarrantyPeriod": 2,
+          "Features": "11-in-1 trimmer for beard, hair, and body trimming, cordless design, rechargeable battery, self-sharpening blades",
+          "Colour": "Black",
+          "Model": "MGK7020",
+          "PowerSupply": "Rechargeable battery",
+          "RemoteControl": "No",
+          "Dimensions": "7 x 4 x 9 inches"
+        }
+      },
+      {
+        "images": [
+          "https://i.imgur.com/uvwxwz.jpg", 
+          "https://i.imgur.com/stqrst.png" 
+        ],
+        "price": {
+          "real_price": 179.99,
+          "discounted_price": 149.99
+        },
+        "rating": 4.9,
+        "reviews": [
+          {
+            "reviewedBy": "Alice Miller",
+            "rating": 5,
+            "liked": 20,
+            "totalReact": 20,
+            "review": "This iron is amazing! It heats up quickly and glides smoothly over fabrics. I love the smart sensor that automatically adjusts the temperature and steam settings for different fabrics. My clothes always come out looking wrinkle-free and professional."
+          },
+          {
+            "reviewedBy": "Bob Smith",
+            "rating": 4,
+            "liked": 19,
+            "totalReact": 19,
+            "review": "This iron is a great investment. It's a bit expensive, but it's worth the money for the quality and performance. I love the smart sensor and the variety of features. The iron is also very durable and easy to clean. Overall, I'm very happy with this purchase and would recommend it to others."
+          },
+          {
+            "reviewedBy": "Carol Jones",
+            "rating": 5,
+            "liked": 18,
+            "totalReact": 18,
+            "review": "I love this iron! It's so easy to use and it makes my clothes look great. I love the smart sensor that automatically adjusts the temperature and steam settings for different fabrics. My clothes always come out looking wrinkle-free and professional. I would definitely recommend this iron to anyone."
+          }
+        ],
+        "number_of_ratings": 1909,
+        "number_of_reviews": 1798,
+        "brand_info": {
+          "image": "https://i.imgur.com/jklqoi.png",
+          "name": "Philips",
+          "description": "Philips is a leading brand in consumer electronics and healthcare. We are committed to providing our customers with high-quality, innovative products that help them live healthier and more fulfilling lives."
+        },
+        "tags": [
+          "Iron",
+          "Laundry Appliances",
+          "Home Appliances"
+        ],
+        "secondary_category": "iron",
+        "super_deal": true,
+        "main_category": "electronics",
+        "specification": {
+          "Title": "Philips PerfectCare Elite Plus Steam Iron",
+          "Brand": "Philips",
+          "WarrantyPeriod": 2,
+          "Features": "Smart sensor that automatically adjusts the temperature and steam settings for different fabrics, powerful steam for easy wrinkle removal, durable soleplate, easy to use and clean",
+          "Colour": "Black",
+          "Model": "GC9682/86",
+          "PowerSupply": "AC 220-240V",
+          "RemoteControl": "No",
+          "Dimensions": "31 x 35 x 51 cm"
+        }
+      },
+      {
+        "images": [
+          "https://i.imgur.com/vbnm,.jpg", 
+          "https://i.imgur.com/zxcvbn.png" 
+        ],
+        "price": {
+          "real_price": 249.99,
+          "discounted_price": 199.99
+        },
+        "rating": 4.8,
+        "reviews": [
+          {
+            "reviewedBy": "David Brown",
+            "rating": 5,
+            "liked": 17,
+            "totalReact": 17,
+            "review": "This iron is the best I've ever used! It heats up incredibly quickly and produces a powerful steam that makes it easy to remove even the toughest wrinkles. I love the built-in anti-scale system and the variety of features. The iron is also very durable and easy to clean. Overall, I'm very happy with this purchase and would definitely recommend it to others."
+          },
+          {
+            "reviewedBy": "Emily Garcia",
+            "rating": 4,
+            "liked": 16,
+            "totalReact": 16,
+            "review": "This iron is a bit expensive, but it's worth the money for the quality and performance. I love the powerful steam and the variety of features. The iron is also very durable and easy to clean. Overall, I'm very happy with this purchase and would recommend it to others who are looking for a high-quality iron."
+          },
+          {
+            "reviewedBy": "Frank Jones",
+            "rating": 5,
+            "liked": 15,
+            "totalReact": 15,
+            "review": "I love this iron! It's so easy to use and it makes my clothes look great. I love the powerful steam that makes it easy to remove wrinkles. The iron is also very durable and easy to clean. I would definitely recommend this iron to anyone."
+          }
+        ],
+        "number_of_ratings": 1809,
+        "number_of_reviews": 1698,
+        "brand_info": {
+          "image": "https://i.imgur.com/aszxcv.png",
+          "name": "Tefal",
+          "description": "Tefal is a leading brand in home appliances. We are committed to providing our customers with innovative products that make their lives easier and more enjoyable."
+        },
+        "tags": [
+          "Iron",
+          "Laundry Appliances",
+          "Home Appliances"
+        ],
+        "secondary_category": "iron",
+        "super_deal": true,
+        "main_category": "electronics",
+        "specification": {
+          "Title": "Tefal FV9845 Ultimate Pure Steam Iron",
+          "Brand": "Tefal",
+          "WarrantyPeriod": 2,
+          "Features": "Powerful steam for easy wrinkle removal, built-in anti-scale system, durable soleplate, easy to use and clean",
+          "Colour": "Black and silver",
+          "Model": "FV9845",
+          "PowerSupply": "AC 220-240V",
+          "RemoteControl": "No",
+          "Dimensions": "32 x 35 x 52 cm"
+        }
+      },
+      {
+        "images": [
+          "https://i.imgur.com/braun-si1024wh.jpg", 
+          "https://i.imgur.com/braun-si1024wh-soleplate.png" 
+        ],
+        "price": {
+          "real_price": 129.99,
+          "discounted_price": 99.99
+        },
+        "rating": 4.7,
+        "reviews": [
+          {
+            "reviewedBy": "George Williams",
+            "rating": 5,
+            "liked": 16,
+            "totalReact": 16,
+            "review": "This iron is great value for the price. It heats up quickly and produces a powerful steam that makes it easy to remove wrinkles. I love the variety of features, including the automatic shut-off and the anti-drip system. The iron is also very durable and easy to clean. Overall, I'm very happy with this purchase and would definitely recommend it to others."
+          },
+          {
+            "reviewedBy": "Hannah Johnson",
+            "rating": 4,
+            "liked": 15,
+            "totalReact": 15,
+            "review": "This iron is a great all-around iron. It's not as expensive as some of the other irons on the market, but it still performs well. I love the variety of features and the fact that it's so easy to use. The iron is also very durable and comes with a two-year warranty. Overall, I'm very happy with this purchase and would recommend it to others looking for a good quality iron at a reasonable price."
+          },
+          {
+            "reviewedBy": "Isaac Taylor",
+            "rating": 5,
+            "liked": 14,
+            "totalReact": 14,
+            "review": "I love this iron! It's so easy to use and it makes my clothes look great. I love the powerful steam that makes it easy to remove wrinkles. The iron is also very durable and easy to clean. I would definitely recommend this iron to anyone."
+          }
+        ],
+        "number_of_ratings": 1709,
+        "number_of_reviews": 1598,
+        "brand_info": {
+          "image": "https://i.imgur.com/braun-logo.png",
+          "name": "Braun",
+          "description": "Braun is a leading brand in small kitchen appliances and personal care products. We are committed to providing our customers with high-quality, innovative products that make their lives easier and more enjoyable."
+        },
+        "tags": [
+          "Iron",
+          "Laundry Appliances",
+          "Home Appliances"
+        ],
+        "secondary_category": "iron",
+        "super_deal": false,
+        "main_category": "electronics",
+        "specification": {
+          "Title": "Braun SI 1024WH Steam Iron",
+          "Brand": "Braun",
+          "WarrantyPeriod": 2,
+          "Features": "Powerful steam for easy wrinkle removal, anti-drip system, automatic shut-off, durable soleplate",
+          "Colour": "White",
+          "Model": "SI 1024WH",
+          "PowerSupply": "AC 220-240V",
+          "RemoteControl": "No",
+          "Dimensions": "30 x 33 x 49 cm"
+        }
+      },
+      {
+        "images": [
+          "https://i.imgur.com/rowenta-dw9280-steam-iron.jpg",
+          "https://i.imgur.com/rowenta-dw9280-steam-iron-soleplate.png"
+        ],
+        "price": {
+          "real_price": 199.99,
+          "discounted_price": 169.99
+        },
+        "rating": 4.9,
+        "reviews": [
+          {
+            "reviewedBy": "Jessica Anderson",
+            "rating": 5,
+            "liked": 18,
+            "totalReact": 18,
+            "review": "This iron is amazing! It heats up so quickly and glides smoothly over fabrics. I love the powerful steam that makes it easy to remove wrinkles. I also love the variety of features, including the precision tip and the vertical steam function. The iron is also very durable and easy to clean. Overall, I'm very happy with this purchase and would definitely recommend it to others."
+          },
+          {
+            "reviewedBy": "Kevin Brown",
+            "rating": 4,
+            "liked": 17,
+            "totalReact": 17,
+            "review": "This iron is a great investment. It's a bit expensive, but it's worth the money for the quality and performance. I love the powerful steam and the variety of features. The iron is also very durable and easy to clean. Overall, I'm very happy with this purchase and would recommend it to others who are looking for a high-quality iron."
+          },
+          {
+            "reviewedBy": "Laura Jones",
+            "rating": 5,
+            "liked": 16,
+            "totalReact": 16,
+            "review": "I love this iron! It's so easy to use and it makes my clothes look great. I love the powerful steam that makes it easy to remove wrinkles. The iron is also very durable and easy to clean. I would definitely recommend this iron to anyone."
+          }
+        ],
+        "number_of_ratings": 1809,
+        "number_of_reviews": 1698,
+        "brand_info": {
+          "image": "https://i.imgur.com/rowenta-logo.png",
+          "name": "Rowenta",
+          "description": "Rowenta is a leading brand in home appliances. We are committed to providing our customers with high-quality, innovative products that make their lives easier and more enjoyable."
+        },
+        "tags": [
+          "Iron",
+          "Laundry Appliances",
+          "Home Appliances"
+        ],
+        "secondary_category": "iron",
+        "super_deal": true,
+        "main_category": "electronics",
+        "specification": {
+          "Title": "Rowenta DW9280 Steam Iron",
+          "Brand": "Rowenta",
+          "WarrantyPeriod": 2,
+          "Features": "Powerful steam for easy wrinkle removal, precision tip for hard-to-reach areas, vertical steam function, durable soleplate",
+          "Colour": "Black and silver",
+          "Model": "DW9280",
+          "PowerSupply": "AC 220-240V",
+          "RemoteControl": "No",
+          "Dimensions": "33 x 36 x 53 cm"
+        }
+      },
+      {
+        "images": [
+          "https://i.imgur.com/black-decker-ir3050ss-steam-iron.jpg", 
+          "https://i.imgur.com/black-decker-ir3050ss-steam-iron-soleplate.png" 
+        ],
+        "price": {
+          "real_price": 59.99,
+          "discounted_price": 49.99
+        },
+        "rating": 4.6,
+        "reviews": [
+          {
+            "reviewedBy": "Michael Smith",
+            "rating": 5,
+            "liked": 15,
+            "totalReact": 15,
+            "review": "This iron is a great value for the price. It heats up quickly and produces a good amount of steam. I love the variety of features, including the automatic shut-off and the anti-drip system. The iron is also very durable and easy to clean. Overall, I'm very happy with this purchase and would definitely recommend it to others who are looking for a good quality iron at a reasonable price."
+          },
+          {
+            "reviewedBy": "Nicole Johnson",
+            "rating": 4,
+            "liked": 14,
+            "totalReact": 14,
+            "review": "This iron is a great basic iron. It's not as expensive as some of the other irons on the market, but it still performs well. I love the fact that it's so easy to use. The iron is also very durable. Overall, I'm very happy with this purchase and would recommend it to others who are looking for a good quality iron at an affordable price."
+          },
+          {
+            "reviewedBy": "Oliver Taylor",
+            "rating": 5,
+            "liked": 13,
+            "totalReact": 13,
+            "review": "I love this iron! It's so easy to use and it makes my clothes look great. I love the anti-drip system that prevents water from leaking out of the iron and the automatic shut-off feature that turns off the iron if it's left unattended. The iron is also very durable and easy to clean. I would definitely recommend this iron to anyone."
+          }
+        ],
+        "number_of_ratings": 1609,
+        "number_of_reviews": 1498,
+        "brand_info": {
+          "image": "https://i.imgur.com/black-decker-logo.png",
+          "name": "Black+Decker",
+          "description": "Black+Decker is a leading brand in home appliances and tools. We are committed to providing our customers with high-quality, innovative products that make their lives easier and more enjoyable."
+        },
+        "tags": [
+          "Iron",
+          "Laundry Appliances",
+          "Home Appliances"
+        ],
+        "secondary_category": "iron",
+        "super_deal": true,
+        "main_category": "electronics",
+        "specification": {
+          "Title": "Black+Decker IR3050SS Steam Iron",
+          "Brand": "Black+Decker",
+          "WarrantyPeriod": 1,
+          "Features": "Anti-drip system, automatic shut-off, durable soleplate",
+          "Colour": "Silver",
+          "Model": "IR3050SS",
+          "PowerSupply": "AC 220-240V",
+          "RemoteControl": "No",
+          "Dimensions": "29 x 32 x 48 cm"
+        }
+      },
+      {
+        "images": [
+          "https://i.imgur.com/sunbeam-gsti305-steam-iron.jpg", 
+          "https://i.imgur.com/sunbeam-gsti305-steam-iron-soleplate.png" 
+        ],
+        "price": {
+          "real_price": 79.99,
+          "discounted_price": 69.99
+        },
+        "rating": 4.7,
+        "reviews": [
+          {
+            "reviewedBy": "Peter Davis",
+            "rating": 5,
+            "liked": 16,
+            "totalReact": 16,
+            "review": "This iron is great for delicate fabrics. It heats up quickly and produces a gentle steam that removes wrinkles without damaging the fabric. I love the precision tip for hard-to-reach areas and the vertical steam function for refreshing clothes without having to take them off the hanger. The iron is also very durable and easy to clean. Overall, I'm very happy with this purchase and would definitely recommend it to others."
+          },
+          {
+            "reviewedBy": "Quinn Evans",
+            "rating": 4,
+            "liked": 15,
+            "totalReact": 15,
+            "review": "This iron is a great all-around iron. It's not as expensive as some of the other irons on the market, but it still performs well. I love the variety of features, including the precision tip, vertical steam function, and automatic shut-off. The iron is also very durable and easy to clean. Overall, I'm very happy with this purchase and would recommend it to others who are looking for a good quality iron at a reasonable price."
+          },
+          {
+            "reviewedBy": "Rachel Ford",
+            "rating": 5,
+            "liked": 14,
+            "totalReact": 14,
+            "review": "I love this iron! It's so easy to use and it makes my clothes look great. I love the precision tip for hard-to-reach areas and the vertical steam function for refreshing clothes without having to take them off the hanger. The iron is also very durable and easy to clean. I would definitely recommend this iron to anyone."
+          }
+        ],
+        "number_of_ratings": 1509,
+        "number_of_reviews": 1398,
+        "brand_info": {
+          "image": "https://i.imgur.com/sunbeam-logo.png",
+          "name": "Sunbeam",
+          "description": "Sunbeam is a leading brand in home appliances. We are committed to providing our customers with high-quality, innovative products that make their lives easier and more enjoyable."
+        },
+        "tags": [
+          "Iron",
+          "Laundry Appliances",
+          "Home Appliances"
+        ],
+        "secondary_category": "iron",
+        "super_deal": true,
+        "main_category": "electronics",
+        "specification": {
+          "Title": "Sunbeam GSTI305 Steam Iron",
+          "Brand": "Sunbeam",
+          "WarrantyPeriod": 1,
+          "Features": "Precision tip for hard-to-reach areas, vertical steam function, automatic shut-off, durable soleplate",
+          "Colour": "Blue",
+          "Model": "GSTI305",
+          "PowerSupply": "AC 220-240V",
+          "RemoteControl": "No",
+          "Dimensions": "30 x 33 x 50 cm"
+        }
+      },
+      {
+        "images": [
+          "https://i.imgur.com/chi-air-titanium-ceramic-soleplate-iron.jpg", 
+          "https://i.imgur.com/chi-air-titanium-ceramic-soleplate-iron-soleplate.png" 
+        ],
+        "price": {
+          "real_price": 89.99,
+          "discounted_price": 79.99
+        },
+        "rating": 4.8,
+        "reviews": [
+          {
+            "reviewedBy": "Sarah Gonzalez",
+            "rating": 5,
+            "liked": 17,
+            "totalReact": 17,
+            "review": "This iron is amazing! It glides smoothly over fabrics and removes wrinkles with ease. I love the titanium ceramic soleplate that prevents snags and pulls. The iron also heats up quickly and produces a powerful steam that can be adjusted for different fabrics. Overall, I'm very happy with this purchase and would definitely recommend it to others."
+          },
+          {
+            "reviewedBy": "Thomas Harrison",
+            "rating": 4,
+            "liked": 16,
+            "totalReact": 16,
+            "review": "This iron is a great investment. It's a bit expensive, but it's worth the money for the quality and performance. I love the titanium ceramic soleplate that glides smoothly over fabrics. The iron also heats up quickly and produces a powerful steam that can be adjusted for different fabrics. Overall, I'm very happy with this purchase and would recommend it to others who are looking for a high-quality iron."
+          },
+          {
+            "reviewedBy": "Umaima Khan",
+            "rating": 5,
+            "liked": 15,
+            "totalReact": 15,
+            "review": "I love this iron! It's so easy to use and it makes my clothes look great. I love the titanium ceramic soleplate that prevents snags and pulls. The iron also heats up quickly and produces a powerful steam that can be adjusted for different fabrics. Overall, I'm very happy with this purchase and would definitely recommend it to anyone."
+          }
+        ],
+        "number_of_ratings": 1409,
+        "number_of_reviews": 1298,
+        "brand_info": {
+          "image": "https://i.imgur.com/chi-air-logo.png",
+          "name": "CHI Air",
+          "description": "CHI Air is a leading brand in hair styling tools and hair care products. We are committed to providing our customers with high-quality, innovative products that help them achieve their desired look."
+        },
+        "tags": [
+          "Iron",
+          "Laundry Appliances",
+          "Home Appliances"
+        ],
+        "secondary_category": "iron",
+        "super_deal": true,
+        "main_category": "electronics",
+        "specification": {
+          "Title": "CHI Air Titanium Ceramic Soleplate Iron",
+          "Brand": "CHI Air",
+          "WarrantyPeriod": 2,
+          "Features": "Titanium ceramic soleplate, powerful steam, adjustable temperature settings, automatic shut-off",
+          "Colour": "Black",
+          "Model": "13102",
+          "PowerSupply": "AC 220-240V",
+          "RemoteControl": "No",
+          "Dimensions": "31 x 34 x 52 cm"
+        }
+      },
+      {
+        "images": [
+          "https://i.imgur.com/panasonic-ni-w610c-steam-iron.jpg", 
+          "https://i.imgur.com/panasonic-ni-w610c-steam-iron-soleplate.png" 
+        ],
+        "price": {
+          "real_price": 119.99,
+          "discounted_price": 99.99
+        },
+        "rating": 4.9,
+        "reviews": [
+          {
+            "reviewedBy": "Vincent Lee",
+            "rating": 5,
+            "liked": 18,
+            "totalReact": 18,
+            "review": "[Image of a perfectly ironed shirt] This iron is a lifesaver! I used to hate ironing, but this iron makes it so easy and quick. The steam is very powerful and removes wrinkles with ease. I also love the fact that it has a variety of features, such as the automatic shut-off and the anti-drip system. Overall, I'm very happy with this purchase and would definitely recommend it to others."
+          },
+          {
+            "reviewedBy": "Wendy Miller",
+            "rating": 4,
+            "liked": 17,
+            "totalReact": 17,
+            "review": "[Image of a flawlessly ironed dress] I'm very impressed with this iron. It heats up quickly and produces a lot of steam. The soleplate glides smoothly over fabrics and removes wrinkles with ease. I also like the variety of features, such as the adjustable temperature settings and the vertical steam function. Overall, this is a great iron and I would definitely recommend it to others."
+          },
+          {
+            "reviewedBy": "Xavier Nguyen",
+            "rating": 5,
+            "liked": 16,
+            "totalReact": 16,
+            "review": "[Image of a neatly ironed stack of clothes] I love this iron! It's so easy to use and it makes my clothes look great. I love the powerful steam that removes wrinkles with ease. The iron also has a variety of features, such as the automatic shut-off and the anti-drip system. Overall, I'm very happy with this purchase and would definitely recommend it to anyone."
+          }
+        ],
+        "number_of_ratings": 1309,
+        "number_of_reviews": 1198,
+        "brand_info": {
+          "image": "https://i.imgur.com/panasonic-logo.png",
+          "name": "Panasonic",
+          "description": "Panasonic is a leading brand in electronics and home appliances. We are committed to providing our customers with high-quality, innovative products that make their lives easier and more enjoyable."
+        },
+        "tags": [
+          "Iron",
+          "Laundry Appliances",
+          "Home Appliances"
+        ],
+        "secondary_category": "iron",
+        "super_deal": true,
+        "main_category": "electronics",
+        "specification": {
+          "Title": "Panasonic NI-W610C Steam Iron",
+          "Brand": "Panasonic",
+          "WarrantyPeriod": 2,
+          "Features": "Powerful steam, adjustable temperature settings, automatic shut-off, anti-drip system, vertical steam function",
+          "Colour": "Black and white",
+          "Model": "NI-W610C",
+          "PowerSupply": "AC 220-240V",
+          "RemoteControl": "No",
+          "Dimensions": "32 x 35 x 51 cm"
+        }
+      },
+      {
+        "images": [
+          "https://images.samsung.com/is/image/samsung/us/tvs/qled-4k-tv/QN65QN90BAFXZA-01_Front_Silver.jpg",
+          "https://images.samsung.com/is/image/samsung/us/tvs/qled-4k-tv/QN65QN90BAFXZA-03_Back_Silver.jpg"
+        ],
+        "price": {
+          "real_price": "1999.99",
+          "discounted_price": "1699.99"
+        },
+        "rating": 4.9,
+        "reviews": [
+          {
+            "reviewedBy": "Alice Smith",
+            "rating": 5,
+            "liked": 18,
+            "totalReact": 18,
+            "review": "This TV is amazing! The picture quality is incredible, and the sound system is top-notch. I love the smart TV features, and the remote is very user-friendly. Overall, I'm extremely happy with this purchase and would definitely recommend it to others."
+          },
+          {
+            "reviewedBy": "Bob Johnson",
+            "rating": 4,
+            "liked": 17,
+            "totalReact": 17,
+            "review": "This TV is a great value for the price. The picture quality is very good, and the sound system is decent. The smart TV features are also nice, but they could be better. Overall, I'm happy with this purchase and would recommend it to others who are looking for a good quality TV at a reasonable price."
+          },
+          {
+            "reviewedBy": "Carol Taylor",
+            "rating": 5,
+            "liked": 16,
+            "totalReact": 16,
+            "review": "I love this TV! It's the perfect size for my living room, and the picture quality is stunning. I also love the smart TV features, which make it easy to stream my favorite shows and movies. Overall, I'm extremely happy with this purchase and would definitely recommend it to others."
+          }
+        ],
+        "number_of_ratings": 1809,
+        "number_of_reviews": 1698,
+        "brand_info": {
+          "image": "https://images.samsung.com/is/image/samsung/us/home/about-us/samsung-logo-black.png",
+          "name": "Samsung",
+          "description": "Samsung is a leading brand in electronics and home appliances. We are committed to providing our customers with high-quality, innovative products that make their lives easier and more enjoyable."
+        },
+        "tags": [
+          "Television",
+          "Home Entertainment",
+          "Electronics"
+        ],
+        "secondary_category": "television",
+        "super_deal": false,
+        "main_category": "electronics",
+        "specification": {
+          "Title": "Samsung QN65QN90BAFXZA 4K Smart TV",
+          "Brand": "Samsung",
+          "WarrantyPeriod": 2,
+          "Features": "Quantum Dot Display, Neo Quantum Processor, Object Tracking Sound+, Smart TV Features, 120Hz Refresh Rate",
+          "Colour": "Silver",
+          "Model": "QN65QN90BAFXZA",
+          "DisplaySize": 65,
+          "Resolution": "4K UHD (3840 x 2160)",
+          "RefreshRate": 120,
+          "SmartTV": true,
+          "HDR": true,
+          "RemoteControl": true,
+          "Dimensions": "147.3 x 90.9 x 29.9 cm"
+        }
+      },
+      {
+        "images": [
+          "https://images.lg.com/is/image/lg/us/tvs/oled-tv/oled-c1-tv-hero-1.jpg", 
+          "https://images.lg.com/is/image/lg/us/tvs/oled-tv/oled-c1-tv-back-1.jpg"
+        ],
+        "price": {
+          "real_price": 2599.99,
+          "discounted_price": 2299.99
+        },
+        "rating": 4.9,
+        "reviews": [
+          {
+            "reviewedBy": "David Miller",
+            "rating": 5,
+            "liked": 18,
+            "totalReact": 18,
+            "review": "This TV is simply incredible. The picture quality is the best I've ever seen, and the sound is amazing. I love the OLED technology, which produces perfect blacks and infinite contrast. The TV is also very smart, and it's easy to use. Overall, I'm extremely happy with this purchase and would definitely recommend it to others."
+          },
+          {
+            "reviewedBy": "Emily Jones",
+            "rating": 4,
+            "liked": 17,
+            "totalReact": 17,
+            "review": "This TV is a great value for the price. The picture quality is very good, and the sound system is decent. The smart TV features are also nice. Overall, I'm happy with this purchase and would recommend it to others who are looking for a good quality TV at a reasonable price."
+          },
+          {
+            "reviewedBy": "Frank Williams",
+            "rating": 5,
+            "liked": 16,
+            "totalReact": 16,
+            "review": "I love this TV! It's the perfect size for my living room, and the picture quality is stunning. I also love the smart TV features, which make it easy to stream my favorite shows and movies. Overall, I'm extremely happy with this purchase and would definitely recommend it to others."
+          }
+        ],
+        "number_of_ratings": 1809,
+        "number_of_reviews": 1698,
+        "brand_info": {
+          "image": "https://images.lg.com/is/image/lg/us/home/about-us/lg-logo.png",
+          "name": "LG",
+          "description": "LG is a leading brand in electronics and home appliances. We are committed to providing our customers with high-quality, innovative products that make their lives easier and more enjoyable."
+        },
+        "tags": [
+          "Television",
+          "Home Entertainment",
+          "Electronics"
+        ],
+        "secondary_category": "television",
+        "super_deal": false,
+        "main_category": "electronics",
+        "specification": {
+          "Title": "LG C1 OLED TV",
+          "Brand": "LG",
+          "WarrantyPeriod": 2,
+          "Features": "OLED Display, a9 Gen 4 AI Processor 4K, Dolby Vision IQ & Dolby Atmos, webOS 6.0 Smart TV, 120Hz Refresh Rate",
+          "Colour": "Black",
+          "Model": "C1",
+          "DisplaySize": 65,
+          "Resolution": "4K UHD (3840 x 2160)",
+          "RefreshRate": 120,
+          "SmartTV": true,
+          "HDR": true,
+          "RemoteControl": true,
+          "Dimensions": "144.6 x 83.3 x 4.8 cm"
+        }
+      },
+      {
+        "images": [
+          "https://images.sony.com/is/image/sony/us/product-thumb/X90J/X90J_Front_Angle_CA-01.jpg", 
+          "https://images.sony.com/is/image/sony/us/product-thumb/X90J/X90J_Back_Angle_CA-01.jpg"
+        ],
+        "price": {
+          "real_price": 1499.99,
+          "discounted_price": 1399.99
+        },
+        "rating": 4.8,
+        "reviews": [
+          {
+            "reviewedBy": "George Brown",
+            "rating": 5,
+            "liked": 18,
+            "totalReact": 18,
+            "review": "I'm so happy with my new Sony X90J TV! The picture quality is amazing, and the smart TV features are great. I love being able to stream my favorite shows and movies without having to switch devices. I also appreciate that the TV is very energy-efficient. Overall, I highly recommend this TV to anyone looking for a great value."
+          },
+          {
+            "reviewedBy": "Heather Garcia",
+            "rating": 4,
+            "liked": 17,
+            "totalReact": 17,
+            "review": "I'm really impressed with my new Sony X90J TV. The picture quality is excellent, and the sound is surprisingly good for a built-in speaker system. I also like the smart TV features, which are easy to use and provide access to a wide variety of apps and content. Overall, I'm very happy with this TV and would recommend it to others."
+          },
+          {
+            "reviewedBy": "Isaac Martinez",
+            "rating": 5,
+            "liked": 16,
+            "totalReact": 16,
+            "review": "I love my new Sony X90J TV! The picture quality is stunning, and the smart TV features are very convenient. I also appreciate that the TV is very easy to set up and use. Overall, I'm extremely happy with this purchase and would definitely recommend it to others."
+          }
+        ],
+        "number_of_ratings": 1809,
+        "number_of_reviews": 1698,
+        "brand_info": {
+          "image": "https://images.sony.com/is/image/sony/us/home/about-us/sony-logo.png",
+          "name": "Sony",
+          "description": "Sony is a leading brand in electronics and home appliances. We are committed to providing our customers with high-quality, innovative products that make their lives easier and more enjoyable."
+        },
+        "tags": [
+          "Television",
+          "Home Entertainment",
+          "Electronics"
+        ],
+        "secondary_category": "television",
+        "super_deal": false,
+        "main_category": "electronics",
+        "specification": {
+          "Title": "Sony X90J 4K HDR LED TV",
+          "Brand": "Sony",
+          "WarrantyPeriod": 2,
+          "Features": "4K HDR Processor X1, 4K X-Reality PRO, TRILUMINOS Display, Dolby Vision, Dolby Atmos, Google TV, 120Hz Refresh Rate",
+          "Colour": "Black",
+          "Model": "X90J",
+          "DisplaySize": 65,
+          "Resolution": "4K UHD (3840 x 2160)",
+          "RefreshRate": 120,
+          "SmartTV": true,
+          "HDR": true,
+          "RemoteControl": true,
+          "Dimensions": "146.9 x 86.6 x 29.4 cm"
+        }
+      },
+      {
+        "images": [
+          "https://images.tcl.com/products/images/6-Series/TCL-6-Series-Roku-TV-55R655-CA-01.jpg", 
+          "https://images.tcl.com/products/images/6-Series/TCL-6-Series-Roku-TV-55R655-Back.jpg" 
+        ],
+        "price": {
+          "real_price": 799.99,
+          "discounted_price": 699.99
+        },
+        "rating": 4.7,
+        "reviews": [
+          {
+            "reviewedBy": "James Carter",
+            "rating": 5,
+            "liked": 18,
+            "totalReact": 18,
+            "review": "I'm so impressed with my new TCL 6-Series Roku TV! The picture quality is amazing, especially for the price. The TV is also very easy to use, and the Roku smart TV platform is great. I love being able to stream all of my favorite shows and movies right on my TV without having to use a separate device. Overall, I highly recommend this TV to anyone looking for a great value on a high-quality TV."
+          },
+          {
+            "reviewedBy": "Kate Smith",
+            "rating": 4,
+            "liked": 17,
+            "totalReact": 17,
+            "review": "I'm really happy with my new TCL 6-Series Roku TV. The picture quality is very good, and the TV is easy to use. I also like the Roku smart TV platform, which provides access to a wide variety of apps and content. Overall, I think this is a great TV for the price."
+          },
+          {
+            "reviewedBy": "Larry Johnson",
+            "rating": 5,
+            "liked": 16,
+            "totalReact": 16,
+            "review": "I love my new TCL 6-Series Roku TV! The picture quality is stunning, and the smart TV features are very convenient. I also appreciate that the TV is very easy to set up and use. Overall, I'm extremely happy with this purchase and would definitely recommend it to others."
+          }
+        ],
+        "number_of_ratings": 1809,
+        "number_of_reviews": 1698,
+        "brand_info": {
+          "image": "https://images.tcl.com/products/images/logo.png",
+          "name": "TCL",
+          "description": "TCL is a leading brand in electronics and home appliances. We are committed to providing our customers with high-quality, innovative products that make their lives easier and more enjoyable."
+        },
+        "tags": [
+          "Television",
+          "Home Entertainment",
+          "Electronics"
+        ],
+        "secondary_category": "television",
+        "super_deal": true,
+        "main_category": "electronics",
+        "specification": {
+          "Title": "TCL 6-Series Roku TV",
+          "Brand": "TCL",
+          "WarrantyPeriod": 2,
+          "Features": "Mini LED Display, QLED Display, 4K HDR Pro, Roku Smart TV, 120Hz Refresh Rate",
+          "Colour": "Black",
+          "Model": "6-Series",
+          "DisplaySize": 65,
+          "Resolution": "4K UHD (3840 x 2160)",
+          "RefreshRate": 120,
+          "SmartTV": true,
+          "HDR": true,
+          "RemoteControl": true,
+          "Dimensions": "146.6 x 86.0 x 29.9 cm"
+        }
+      },
+      {
+        "images": [
+          "https://images.samsung.com/is/image/samsung/us/tvs/neo-qled-4k-tv/QN95B-01_Front_Silver.jpg",
+          "https://images.samsung.com/is/image/samsung/us/tvs/neo-qled-4k-tv/QN95B-03_Back_Silver.jpg"
+        ],
+        "price": {
+          "real_price": 2999.99,
+          "discounted_price": 2499.99
+        },
+        "rating": 4.9,
+        "reviews": [
+          {
+            "reviewedBy": "Michael Brown",
+            "rating": 5,
+            "liked": 18,
+            "totalReact": 18,
+            "review": "I'm so impressed with my new Samsung QN95B 4K Neo QLED TV! The picture quality is incredible, and the smart TV features are great. I love being able to stream all of my favorite shows and movies right on my TV without having to use a separate device. Overall, I highly recommend this TV to anyone looking for the best possible picture quality."
+          },
+          {
+            "reviewedBy": "Nancy Smith",
+            "rating": 4,
+            "liked": 17,
+            "totalReact": 17,
+            "review": "I'm really happy with my new Samsung QN95B 4K Neo QLED TV. The picture quality is very good, and the TV is easy to use. I also like the smart TV platform, which provides access to a wide variety of apps and content. Overall, I think this is a great TV for the price."
+          },
+          {
+            "reviewedBy": "Oliver Johnson",
+            "rating": 5,
+            "liked": 16,
+            "totalReact": 16,
+            "review": "I love my new Samsung QN95B 4K Neo QLED TV! The picture quality is stunning, and the smart TV features are very convenient. I also appreciate that the TV is very easy to set up and use. Overall, I'm extremely happy with this purchase and would definitely recommend it to others."
+          }
+        ],
+        "number_of_ratings": 1809,
+        "number_of_reviews": 1698,
+        "brand_info": {
+          "image": "https://images.samsung.com/is/image/samsung/us/home/about-us/samsung-logo-black.png",
+          "name": "Samsung",
+          "description": "Samsung is a leading brand in electronics and home appliances. We are committed to providing our customers with high-quality, innovative products that make their lives easier and more enjoyable."
+        },
+        "tags": [
+          "Television",
+          "Home Entertainment",
+          "Electronics"
+        ],
+        "secondary_category": "television",
+        "super_deal": false,
+        "main_category": "electronics",
+        "specification": {
+          "Title": "Samsung QN95B 4K Neo QLED TV",
+          "Brand": "Samsung",
+          "WarrantyPeriod": 2,
+          "Features": "Quantum Dot Display, Neo Quantum Processor 4K, Object Tracking Sound+, Smart TV Features, 120Hz Refresh Rate",
+          "Colour": "Silver",
+          "Model": "QN95B",
+          "DisplaySize": 65,
+          "Resolution": "4K UHD (3840 x 2160)",
+          "RefreshRate": 120,
+          "SmartTV": true,
+          "HDR": true,
+          "RemoteControl": true,
+          "Dimensions": "147.3 x 90.9 x 29.9 cm"
+        }
+      },
+      {
+        "images": [
+          "https://images.sony.com/is/image/sony/us/product-thumb/A90K/A90K_Front_Angle_CA-01.jpg",
+          "https://images.sony.com/is/image/sony/us/product-thumb/A90K/A90K_Back_Angle_CA-01.jpg"
+        ],
+        "price": {
+          "real_price": 3499.99,
+          "discounted_price": 2999.99
+        },
+        "rating": 5.0,
+        "reviews": [
+          {
+            "reviewedBy": "Peter Miller",
+            "rating": 5,
+            "liked": 18,
+            "totalReact": 18,
+            "review": "This TV is simply amazing. The picture quality is the best I've ever seen, and the sound is incredible. I love the OLED technology, which produces perfect blacks and infinite contrast. The TV is also very smart, and it's easy to use. Overall, I'm extremely happy with this purchase and would definitely recommend it to others."
+          },
+          {
+            "reviewedBy": "Quynh Jones",
+            "rating": 4,
+            "liked": 17,
+            "totalReact": 17,
+            "review": "I'm really happy with my new Sony A90K 4K OLED Evo TV. The picture quality is very good, and the sound system is decent. The smart TV features are also nice. Overall, I'm happy with this purchase and would recommend it to others who are looking for a good quality TV at a reasonable price."
+          },
+          {
+            "reviewedBy": "Ryan Williams",
+            "rating": 5,
+            "liked": 16,
+            "totalReact": 16,
+            "review": "I love my new Sony A90K 4K OLED Evo TV! It's the perfect size for my living room, and the picture quality is stunning. I also love the smart TV features, which make it easy to stream my favorite shows and movies. Overall, I'm extremely happy with this purchase and would definitely recommend it to others."
+          }
+        ],
+        "number_of_ratings": 1809,
+        "number_of_reviews": 1698,
+        "brand_info": {
+          "image": "https://images.sony.com/is/image/sony/us/home/about-us/sony-logo.png",
+          "name": "Sony",
+          "description": "Sony is a leading brand in electronics and home appliances. We are committed to providing our customers with high-quality, innovative products that make their lives easier and more enjoyable."
+        },
+        "tags": [
+          "Television",
+          "Home Entertainment",
+          "Electronics"
+        ],
+        "secondary_category": "television",
+        "super_deal": true,
+        "main_category": "electronics",
+        "specification": {
+          "Title": "Sony A90K 4K OLED Evo TV",
+          "Brand": "Sony",
+          "WarrantyPeriod": 2,
+          "Features": "Cognitive Processor XR, 4K HDR Processor X1 Ultimate, Perfect for PS5, Dolby Vision, Dolby Atmos, Google TV, 120Hz Refresh Rate",
+          "Colour": "Black",
+          "Model": "A90K",
+          "DisplaySize": 65,
+          "Resolution": "4K UHD (3840 x 2160)",
+          "RefreshRate": 120,
+          "SmartTV": true,
+          "HDR": true,
+          "RemoteControl": true,
+          "Dimensions": "146.9 x 86.6 x 29.4 cm"
+        }
+      },
+      {
+        "images": [
+          "https://images.lg.com/is/image/lg/us/tvs/oled-evo-tv/oled-g2-evo-tv-65g2-front-hero-v2.jpg",
+          "https://images.lg.com/is/image/lg/us/tvs/oled-evo-tv/oled-g2-evo-tv-65g2-back-hero-v2.jpg"
+        ],
+        "price": {
+          "real_price": 3999.99,
+          "discounted_price": 3499.99
+        },
+        "rating": 5.0,
+        "reviews": [
+          {
+            "reviewedBy": "Sarah Miller",
+            "rating": 5,
+            "liked": 18,
+            "totalReact": 18,
+            "review": "This TV is simply amazing. The picture quality is the best I've ever seen, and the sound is incredible. I love the OLED technology, which produces perfect blacks and infinite contrast. The TV is also very smart, and it's easy to use. Overall, I'm extremely happy with this purchase and would definitely recommend it to others."
+          },
+          {
+            "reviewedBy": "Tom Jones",
+            "rating": 4,
+            "liked": 17,
+            "totalReact": 17,
+            "review": "I'm really happy with my new LG OLED G2 TV. The picture quality is very good, and the sound system is decent. The smart TV features are also nice. Overall, I'm happy with this purchase and would recommend it to others who are looking for a good quality TV at a reasonable price."
+          },
+          {
+            "reviewedBy": "Ursula Williams",
+            "rating": 5,
+            "liked": 16,
+            "totalReact": 16,
+            "review": "I love my new LG OLED G2 TV! It's the perfect size for my living room, and the picture quality is stunning. I also love the smart TV features, which make it easy to stream my favorite shows and movies. Overall, I'm extremely happy with this purchase and would definitely recommend it to others."
+          }
+        ],
+        "number_of_ratings": 1809,
+        "number_of_reviews": 1698,
+        "brand_info": {
+          "image": "https://images.lg.com/is/image/lg/us/home/about-us/lg-logo.png",
+          "name": "LG",
+          "description": "LG is a leading brand in electronics and home appliances. We are committed to providing our customers with high-quality, innovative products that make their lives easier and more enjoyable."
+        },
+        "tags": [
+          "Television",
+          "Home Entertainment",
+          "Electronics"
+        ],
+        "secondary_category": "television",
+        "super_deal": true,
+        "main_category": "electronics",
+        "specification": {
+          "Title": "LG OLED G2 TV",
+          "Brand": "LG",
+          "WarrantyPeriod": 2,
+          "Features": "OLED Evo Display, a9 Gen 5 AI Processor 4K, Dolby Vision IQ & Dolby Atmos, webOS 22 Smart TV, 120Hz Refresh Rate",
+          "Colour": "Black",
+          "Model": "G2",
+          "DisplaySize": 65,
+          "Resolution": "4K UHD (3840 x 2160)",
+          "RefreshRate": 120,
+          "SmartTV": true,
+          "HDR": true,
+          "RemoteControl": true,
+          "Dimensions": "144.6 x 83.3 x 4.8 cm"
+        }
+      },
+      {
+        "images": [
+          "https://images.panasonic.com/is/image/panasonic/th-65hz1000e-front-angle-black-620x620.jpg",
+          "https://images.panasonic.com/is/image/panasonic/th-65hz1000e-back-angle-black-620x620.jpg"
+        ],
+        "price": {
+          "real_price": 2799.99,
+          "discounted_price": 2499.99
+        },
+        "rating": 4.9,
+        "reviews": [
+          {
+            "reviewedBy": "Victor Miller",
+            "rating": 5,
+            "liked": 18,
+            "totalReact": 18,
+            "review": "This TV is amazing! The picture quality is incredible, and the sound is top-notch. I love the smart TV features, and the remote is very user-friendly. Overall, I'm extremely happy with this purchase and would definitely recommend it to others."
+          },
+          {
+            "reviewedBy": "William Jones",
+            "rating": 4,
+            "liked": 17,
+            "totalReact": 17,
+            "review": "I'm really happy with my new Panasonic HZ1000 OLED TV. The picture quality is very good, and the sound system is decent. The smart TV features are also nice. Overall, I'm happy with this purchase and would recommend it to others who are looking for a good quality TV at a reasonable price."
+          },
+          {
+            "reviewedBy": "Xavier Williams",
+            "rating": 5,
+            "liked": 16,
+            "totalReact": 16,
+            "review": "I love my new Panasonic HZ1000 OLED TV! It's the perfect size for my living room, and the picture quality is stunning. I also love the smart TV features, which make it easy to stream my favorite shows and movies. Overall, I'm extremely happy with this purchase and would definitely recommend it to others."
+          }
+        ],
+        "number_of_ratings": 1809,
+        "number_of_reviews": 1698,
+        "brand_info": {
+          "image": "https://images.panasonic.com/is/image/panasonic/logo-panasonic-black-140x60.png",
+          "name": "Panasonic",
+          "description": "Panasonic is a leading brand in electronics and home appliances. We are committed to providing our customers with high-quality, innovative products that make their lives easier and more enjoyable."
+        },
+        "tags": [
+          "Television",
+          "Home Entertainment",
+          "Electronics"
+        ],
+        "secondary_category": "television",
+        "super_deal": true,
+        "main_category": "electronics",
+        "specification": {
+          "Title": "Panasonic HZ1000 OLED TV",
+          "Brand": "Panasonic",
+          "WarrantyPeriod": 2,
+          "Features": "HCX PRO Intelligent Processor, OLED Display, Dolby Vision IQ & Dolby Atmos, My Home Screen 7.0 Smart TV, 120Hz Refresh Rate",
+          "Colour": "Black",
+          "Model": "HZ1000",
+          "DisplaySize": 65,
+          "Resolution": "4K UHD (3840 x 2160)",
+          "RefreshRate": 120,
+          "SmartTV": true,
+          "HDR": true,
+          "RemoteControl": true,
+          "Dimensions": "144.9 x 83.3 x 4.3 cm"
+        }
+      },
+      {
+        "images": [
+          "https://images.philips.com/is/image/PhilipsConsumer/65OLED907_01_front_hero_16_9-JPG?wid=768&hei=432&qlt=75",
+          "https://images.philips.com/is/image/PhilipsConsumer/65OLED907_01_back_hero_16_9-JPG?wid=768&hei=432&qlt=75"
+        ],
+        "price": {
+          "real_price": 3299.99,
+          "discounted_price": 2799.99
+        },
+        "rating": 4.8,
+        "reviews": [
+          {
+            "reviewedBy": "Yvonne Miller",
+            "rating": 5,
+            "liked": 18,
+            "totalReact": 18,
+            "review": "This TV is simply amazing. The picture quality is the best I've ever seen, and the sound is incredible. I love the OLED technology, which produces perfect blacks and infinite contrast. The TV is also very smart, and it's easy to use. Overall, I'm extremely happy with this purchase and would definitely recommend it to others."
+          },
+          {
+            "reviewedBy": "Zachary Jones",
+            "rating": 4,
+            "liked": 17,
+            "totalReact": 17,
+            "review": "I'm really happy with my new Philips 907 OLED TV. The picture quality is very good, and the sound system is decent. The smart TV features are also nice. Overall, I'm happy with this purchase and would recommend it to others who are looking for a good quality TV at a reasonable price."
+          },
+          {
+            "reviewedBy": "Aaron Williams",
+            "rating": 5,
+            "liked": 16,
+            "totalReact": 16,
+            "review": "I love my new Philips 907 OLED TV! It's the perfect size for my living room, and the picture quality is stunning. I also love the smart TV features, which make it easy to stream my favorite shows and movies. Overall, I'm extremely happy with this purchase and would definitely recommend it to others."
+          }
+        ],
+        "number_of_ratings": 1809,
+        "number_of_reviews": 1698,
+        "brand_info": {
+          "image": "https://images.philips.com/is/image/PhilipsConsumer/philips-logo-svg-150x50-JPG?wid=150&hei=50&qlt=75",
+          "name": "Philips",
+          "description": "Philips is a leading brand in electronics and home appliances. We are committed to providing our customers with high-quality, innovative products that make their lives easier and more enjoyable."
+        },
+        "tags": [
+          "Television",
+          "Home Entertainment",
+          "Electronics"
+        ],
+        "secondary_category": "television",
+        "super_deal": true,
+        "main_category": "electronics",
+        "specification": {
+          "Title": "Philips 907 OLED TV",
+          "Brand": "Philips",
+          "WarrantyPeriod": 2,
+          "Features": "P5 AI Processor, OLED Display, Dolby Vision IQ & Dolby Atmos, Android TV 11 Smart TV, 120Hz Refresh Rate",
+          "Colour": "Black",
+          "Model": "907",
+          "DisplaySize": 65,
+          "Resolution": "4K UHD (3840 x 2160)",
+          "RefreshRate": 120,
+          "SmartTV": true,
+          "HDR": true,
+          "RemoteControl": true,
+          "Dimensions": "146.0 x 86.8 x 5.7 cm"
+        }
       }
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
