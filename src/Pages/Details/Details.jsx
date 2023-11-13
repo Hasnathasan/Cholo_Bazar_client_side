@@ -56,7 +56,7 @@ const Details = () => {
     queryKey: [id],
     queryFn: async () => {
       const res = await fetch(
-        `https://rokomari-clone-server-beta.vercel.app/${apiPath}/${id}`
+        `https://summer-camp-server-black.vercel.app/${apiPath}/${id}`
       );
       return res.json();
     },
@@ -154,7 +154,7 @@ const Details = () => {
 
 
       <div className="space-y-4 hidden md:block">
-          <h1 className="text-xl text-gray-700">{specification?.title}</h1>
+          <h1 className="text-xl text-gray-700">{specification?.title || specification?.Title}</h1>
           <div className="flex items-center gap-5 relative">
           <Rating
                   className="text-orange-400"
@@ -164,10 +164,10 @@ const Details = () => {
                   initialRating={product?.rating}
                   readonly
           />
-          <p className=" absolute -top-[3px] left-24">{product?.rating} rating | {product?.review} review</p>
+          <p className=" absolute -top-[3px] left-24">{product?.number_of_ratings} ratings | {product?.number_of_reviews} reviews</p>
           </div>
           <p className="text-gray-600">Brand: <span className="text-[#0397d6]">{specification?.brand}</span></p>
-          <p className="text-gray-600">Category: <span className="text-[#0397d6]">{specification?.category[0]}</span></p>
+          <p className="text-gray-600">Category: <span className="text-[#0397d6]">{specification?.category || product?.secondary_category}</span></p>
           <div className="flex gap-5 items-end">
               <h5 className="text-xl text-gray-400 font-semibold line-through">TK. {price?.real_price}</h5>
               <h5 className="text-xl font-semibold text-gray-700">TK. {price?.discounted_price}</h5>
@@ -219,10 +219,10 @@ const Details = () => {
       {/* About section for small devices */}
 
       <div className="bg-white p-5 mx-3 md:hidden text-center border-2 border-[#e9e9e9] md:border-none">
-              <h1 className="text-lg text-gray-900">{specification?.title}</h1>
+              <h1 className="text-lg text-gray-900">{specification?.title || specification?.Title}</h1>
               <p className="text-gray-700 text-[15px] mt-2">Brand: <span className="text-[#0397d6]">{specification?.brand}</span></p>
               <hr className="my-2" />
-              <p className="text-gray-700 text-[15px]">Category: <span className="text-[#0397d6]">{specification?.category[0]}</span></p>
+              <p className="text-gray-700 text-[15px]">Category: <span className="text-[#0397d6]">{specification?.category}</span></p>
               <hr className="my-2" />
               <div className="flex gap-5 justify-center items-end">
               <h5 className="text-xl text-gray-600 font-semibold line-through">TK. {price?.real_price}</h5>
@@ -242,13 +242,11 @@ const Details = () => {
     <hr className="my-5" />
     <h3 className="md:font-semibold text-gray-900 mt-3 mb-2 text-lg">Specification:</h3>
     <div>
-      <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Title:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product?.specification?.title}</p></div>
-      <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Brand:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-cyan-600 p-1">{product?.specification?.brand}</p></div>
-      <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Volumn:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product?.specification?.Volume?product.specification?.Volume:product.specification?.volume}</p></div>
-      <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Age:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product?.specification?.age?product.specification?.age:"N/A"}</p></div>
-      <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Item Form:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product?.specification?.item_form || product.specification?.category[0]}</p></div>
-      <div className="flex mb-2"><p className="w-40 bg-[#f7f7f7] text-[15px] text-gray-800 ps-7 p-1">Made in:</p> <p className="bg-[#f0f0f0] text-[15px] ps-8 w-full text-gray-800 p-1">{product?.specification?.country_of_origin?product.specification?.country_of_origin:"N/A"}</p></div>
-      
+      {
+        Object.entries(product?.specification).map(([key, value], index) => (
+          <div key={index} className="flex mb-2 text-sm md:text-[15px]"><p className="md:w-56 w-60 bg-[#f7f7f7]  text-gray-800 ps-2 md:ps-7 p-1">{key}</p> <p className={`bg-[#f0f0f0] ps-8 w-full  p-1 ${key == "brand" ? "text-[#0397d6]" : "text-gray-800"}`}>{value}</p></div>
+        ))
+      }
     </div>
     <hr className="my-8" />
     <div className="flex gap-3 flex-wrap items-center">

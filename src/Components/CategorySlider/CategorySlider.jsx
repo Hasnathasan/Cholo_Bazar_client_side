@@ -77,7 +77,6 @@ const CategorySlider = () => {
     speed: 800,
     swipeToSlide: true,
     rows: 2,
-    slidesToScroll: 2,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     responsive: [

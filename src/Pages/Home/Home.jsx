@@ -45,7 +45,13 @@ const Home = () => {
               <Tab>বইমেলা ২০২৩</Tab>
             </TabList>
             <TabPanel className=" max-w-[1200px] mx-auto"><Book></Book></TabPanel>
-            <TabPanel></TabPanel>
+            <TabPanel>Hello from Tab</TabPanel>
+            <TabPanel>Hello from Tab</TabPanel>
+            <TabPanel>Hello from Tab</TabPanel>
+            <TabPanel>Hello from Tab</TabPanel>
+            <TabPanel>Hello from Tab</TabPanel>
+            <TabPanel>Hello from Tab</TabPanel>
+            <TabPanel>Hello from Tab</TabPanel>
           </Tabs>
         </TabPanel>
         <TabPanel>
