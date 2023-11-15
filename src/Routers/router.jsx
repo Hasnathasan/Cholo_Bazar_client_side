@@ -5,6 +5,7 @@ import Login from "../Shared/Login/Login";
 import Details from "../Pages/Details/Details";
 import DashboardOfUser from "../UserDashboard/DashboardOfUser/DashboardOfUser";
 import UserProfile from "../UserDashboard/UserProfile/UserProfile";
+import Electronics from "../Pages/Electronics/Electronics/Electronics";
 
 
 
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
         {
           path: '/details/:apiPath/:id',
           element: <Details></Details>
+        },
+        {
+          path: '/electronics',
+          element: <Electronics></Electronics>
         },
         {
           path: '/myAccount',

@@ -1,5 +1,4 @@
 import { FaAngleDown } from "react-icons/fa";
-import category1 from "../../../../public/category-1.png";
 
 import {Navbar, NavbarContent, NavbarItem } from "@nextui-org/react";
 import NavTopBar from "../NavTopBar";
@@ -8,6 +7,23 @@ import { ListItem, Menu, MenuHandler, MenuList, Typography } from "@material-tai
 import { useState } from "react";
 import EachMenuItem from "./EachMenuItem";
 import { Link } from "react-router-dom";
+
+import category1 from "../../../../public/category-1.png";
+import category2 from "../../../../public/category-2.png";
+import category3 from "../../../../public/category-3.png";
+import category4 from "../../../../public/category-4.png";
+import category5 from "../../../../public/category-5.png";
+import category6 from "../../../../public/category-6.png";
+import category7 from "../../../../public/category-7.png";
+import category8 from "../../../../public/category-8.png";
+import category9 from "../../../../public/category-9.png";
+import category10 from "../../../../public/category-10.png";
+import category11 from "../../../../public/category-11.png";
+import category12 from "../../../../public/category-12.png";
+import refrigerator from "../../../../public/refrigerator.png";
+import iron from "../../../../public/iron.png";
+import kettle from "../../../../public/kettle.png";
+import AC from "../../../../public/air-conditioner.png";
 
 
 const MainNavigation = () => {
@@ -194,12 +210,12 @@ const MainNavigation = () => {
 
         <MenuList className="max-w-screen-xl !bg-[#ffffff] !shadow-lg mx-5 !shadow-gray-400 rounded-xl !p-5 lg:block">
           <ul className="grid grid-cols-3 !bg-[#ffffff] gap-3 gap-y-4 outline-none outline-0">
-             <EachMenuItem icon={category1} title={"Electronic"} description={"See all Electronic Product"}></EachMenuItem>
-             <EachMenuItem icon={category1} title={"Electronic"} description={"See all Electronic Product"}></EachMenuItem>
-             <EachMenuItem icon={category1} title={"Electronic"} description={"See all Electronic Product"}></EachMenuItem>
-             <EachMenuItem icon={category1} title={"Electronic"} description={"See all Electronic Product"}></EachMenuItem>
-             <EachMenuItem icon={category1} title={"Electronic"} description={"See all Electronic Product"}></EachMenuItem>
-             <EachMenuItem icon={category1} title={"Electronic"} description={"See all Electronic Product"}></EachMenuItem>
+             <EachMenuItem icon={category10} title={"Electronic Items"} description={"See all Electronic Product"} path={"/electronics"}></EachMenuItem>
+             <EachMenuItem icon={refrigerator} title={"Refrigerators"} description={"See all Electronic Product"}></EachMenuItem>
+             <EachMenuItem icon={category9} title={"Televisions"} description={"See all Electronic Product"}></EachMenuItem>
+             <EachMenuItem icon={iron} title={"Iron Matchines"} description={"See all Electronic Product"}></EachMenuItem>
+             <EachMenuItem icon={kettle} title={"Kettles"} description={"See all Electronic Product"}></EachMenuItem>
+             <EachMenuItem icon={AC} title={"Air Collers"} description={"See all Electronic Product"}></EachMenuItem>
           </ul>
         </MenuList>
       </Menu>

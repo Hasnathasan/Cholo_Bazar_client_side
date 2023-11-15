@@ -22,7 +22,7 @@ const Book = () => {
             </div>
             <ProductContainer data={hotDeals} apiPath={"products"} headding={"Deals on Rokomari Products"}></ProductContainer>
             <CategorySlider></CategorySlider>
-            <FictionNonFicBookContainer></FictionNonFicBookContainer>
+            {/* <FictionNonFicBookContainer></FictionNonFicBookContainer> */}
         </div>
     );
 };
