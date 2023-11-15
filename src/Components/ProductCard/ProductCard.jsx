@@ -25,7 +25,7 @@ const ProductCard = ({product, apiPath}) => {
 
 
         {/* Component for small device */}
-        <div className='md:hidden h-[300px] relative'>
+        <div className='md:hidden h-[240px] relative'>
         <Link to={`/details/${apiPath}/${_id}`}>
             <div className='flex flex-col justify-between text-center pt-3'>
             <img className='h-[130px] w-3/4 mx-auto' src={images[0]} alt="" />

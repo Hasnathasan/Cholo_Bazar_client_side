@@ -13,7 +13,11 @@
     display: block !important;
 }
 
+header{
+    max-width: 1156px !important;
+    justify-content: center !important;
+}
 
-a.active{
-    color: rgb(33, 122, 255);
+.navItem{
+    border: 1px 1px 0px 1px solid blue !important;
 }

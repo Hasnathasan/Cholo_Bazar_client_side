@@ -7,6 +7,7 @@ import './MainNavigation.css'
 import { ListItem, Menu, MenuHandler, MenuList, Typography } from "@material-tailwind/react";
 import { useState } from "react";
 import EachMenuItem from "./EachMenuItem";
+import { Link } from "react-router-dom";
 
 
 const MainNavigation = () => {
@@ -18,7 +19,7 @@ const MainNavigation = () => {
     return (
         <div>
             <NavTopBar></NavTopBar>
-        <Navbar shouldHideOnScroll className="md:mt-[88px] fixed border-b-1 border-blue-400" >
+        <Navbar shouldHideOnScroll className="md:mt-[88px] fixed" >
       <NavbarContent className="hidden sm:flex gap-5" justify="between">
         {/* <Dropdown>
           <NavbarItem>
@@ -139,7 +140,29 @@ const MainNavigation = () => {
           </DropdownMenu>
         </Dropdown> */}
 
-       {/* {Navbar Item 1} */}
+
+
+ {/* {Navbar Item 1} */}
+        <NavbarItem>
+        <Link to={"/"}>
+        <Typography as="div" variant="paragraph" className="font-medium ">
+            <ListItem
+            ripple={false}
+              className="flex items-center gap-1 py-2 pr-4 font-medium   text-gray-900"
+              selected={isHomeOpen || isMobileMenuOpen}
+              onClick={() => setIsMobileMenuOpen((cur) => !cur)}
+            >
+              Home
+              
+            </ListItem>
+          </Typography>
+        </Link>
+        </NavbarItem>
+
+
+
+
+       {/* {Navbar Item 2} */}
         <NavbarItem>
         <Menu
         open={isHomeOpen}
@@ -148,16 +171,17 @@ const MainNavigation = () => {
         placement="bottom"
         allowHover={true}
         
+        
       >
-        <MenuHandler>
-        <Typography as="div" variant="small" className="font-medium">
+        <MenuHandler >
+        <Typography as="div" variant="pararaph" className="font-medium ">
             <ListItem
             ripple={false}
-              className="flex items-center gap-1 py-2 pr-4 font-medium text-gray-900"
+              className="flex items-center gap-1 py-2 pr-4 font-medium   text-gray-900"
               selected={isHomeOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
-              Resources
+              Electronics
               <FaAngleDown className={`hidden h-3 w-3 transition-transform lg:block ${
                   isHomeOpen ? "rotate-180" : ""
                 }`}></FaAngleDown>
@@ -183,7 +207,7 @@ const MainNavigation = () => {
 
 
 
-        {/* {Navbar Item 2} */}
+        {/* {Navbar Item 3} */}
         <NavbarItem>
         <Menu
         open={isElectricOpen}
@@ -194,14 +218,14 @@ const MainNavigation = () => {
         
       >
         <MenuHandler>
-        <Typography as="div" variant="small" className="font-medium">
+        <Typography as="div" variant="pararaph" className="font-medium">
             <ListItem
             ripple={false}
               className="flex items-center gap-1 py-2 pr-4 font-medium text-gray-900"
               selected={isElectricOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
-              Resources
+              Kids Zone
               <FaAngleDown className={`hidden h-3 w-3 transition-transform lg:block ${
                   isElectricOpen ? "rotate-180" : ""
                 }`}></FaAngleDown>
@@ -227,7 +251,7 @@ const MainNavigation = () => {
 
 
 
-        {/* {Navbar Item 3} */}
+        {/* {Navbar Item 4} */}
         <NavbarItem>
         <Menu
         open={isBeautyOpen}
@@ -238,7 +262,171 @@ const MainNavigation = () => {
         
       >
         <MenuHandler>
-        <Typography as="div" variant="small" className="font-medium">
+        <Typography as="div" variant="pararaph" className="font-medium">
+            <ListItem
+            ripple={false}
+              className="flex items-center gap-1 py-2 pr-4 font-medium text-gray-900"
+              selected={isBeautyOpen || isMobileMenuOpen}
+              onClick={() => setIsMobileMenuOpen((cur) => !cur)}
+            >
+              Resources
+              <FaAngleDown className={`hidden h-3 w-3 transition-transform lg:block ${
+                  isBeautyOpen ? "rotate-180" : ""
+                }`}></FaAngleDown>
+              <FaAngleDown className={`block h-3 w-3 transition-transform lg:hidden ${
+                  isMobileMenuOpen ? "rotate-180" : ""
+                }`}></FaAngleDown>
+            </ListItem>
+          </Typography>
+        </MenuHandler>
+
+        <MenuList className="max-w-screen-xl !shadow-lg mx-5 !p-5 !shadow-gray-400 !bg-[#ffffff] rounded-xl lg:block">
+          <ul className="grid grid-cols-3 gap-y-4 !bg-[#ffffff] gap-3 outline-none outline-0">
+             <EachMenuItem path={"/login"} icon={category1} title={"Electronic"} description={"See all Electronic Product"}></EachMenuItem>
+             <EachMenuItem icon={category1} title={"Electronic"} description={"See all Electronic Product"}></EachMenuItem>
+             <EachMenuItem icon={category1} title={"Electronic"} description={"See all Electronic Product"}></EachMenuItem>
+             <EachMenuItem icon={category1} title={"Electronic"} description={"See all Electronic Product"}></EachMenuItem>
+             <EachMenuItem icon={category1} title={"Electronic"} description={"See all Electronic Product"}></EachMenuItem>
+             <EachMenuItem icon={category1} title={"Electronic"} description={"See all Electronic Product"}></EachMenuItem>
+          </ul>
+        </MenuList>
+      </Menu>
+        </NavbarItem>
+        {/* {Navbar Item 4} */}
+        <NavbarItem>
+        <Menu
+        open={isBeautyOpen}
+        handler={setIsBeautyOpen}
+        offset={{ mainAxis: 20 }}
+        placement="bottom"
+        allowHover={true}
+        
+      >
+        <MenuHandler>
+        <Typography as="div" variant="pararaph" className="font-medium">
+            <ListItem
+            ripple={false}
+              className="flex items-center gap-1 py-2 pr-4 font-medium text-gray-900"
+              selected={isBeautyOpen || isMobileMenuOpen}
+              onClick={() => setIsMobileMenuOpen((cur) => !cur)}
+            >
+              Resources
+              <FaAngleDown className={`hidden h-3 w-3 transition-transform lg:block ${
+                  isBeautyOpen ? "rotate-180" : ""
+                }`}></FaAngleDown>
+              <FaAngleDown className={`block h-3 w-3 transition-transform lg:hidden ${
+                  isMobileMenuOpen ? "rotate-180" : ""
+                }`}></FaAngleDown>
+            </ListItem>
+          </Typography>
+        </MenuHandler>
+
+        <MenuList className="max-w-screen-xl !shadow-lg mx-5 !p-5 !shadow-gray-400 !bg-[#ffffff] rounded-xl lg:block">
+          <ul className="grid grid-cols-3 gap-y-4 !bg-[#ffffff] gap-3 outline-none outline-0">
+             <EachMenuItem path={"/login"} icon={category1} title={"Electronic"} description={"See all Electronic Product"}></EachMenuItem>
+             <EachMenuItem icon={category1} title={"Electronic"} description={"See all Electronic Product"}></EachMenuItem>
+             <EachMenuItem icon={category1} title={"Electronic"} description={"See all Electronic Product"}></EachMenuItem>
+             <EachMenuItem icon={category1} title={"Electronic"} description={"See all Electronic Product"}></EachMenuItem>
+             <EachMenuItem icon={category1} title={"Electronic"} description={"See all Electronic Product"}></EachMenuItem>
+             <EachMenuItem icon={category1} title={"Electronic"} description={"See all Electronic Product"}></EachMenuItem>
+          </ul>
+        </MenuList>
+      </Menu>
+        </NavbarItem>
+        {/* {Navbar Item 4} */}
+        <NavbarItem>
+        <Menu
+        open={isBeautyOpen}
+        handler={setIsBeautyOpen}
+        offset={{ mainAxis: 20 }}
+        placement="bottom"
+        allowHover={true}
+        
+      >
+        <MenuHandler>
+        <Typography as="div" variant="pararaph" className="font-medium">
+            <ListItem
+            ripple={false}
+              className="flex items-center gap-1 py-2 pr-4 font-medium text-gray-900"
+              selected={isBeautyOpen || isMobileMenuOpen}
+              onClick={() => setIsMobileMenuOpen((cur) => !cur)}
+            >
+              Resources
+              <FaAngleDown className={`hidden h-3 w-3 transition-transform lg:block ${
+                  isBeautyOpen ? "rotate-180" : ""
+                }`}></FaAngleDown>
+              <FaAngleDown className={`block h-3 w-3 transition-transform lg:hidden ${
+                  isMobileMenuOpen ? "rotate-180" : ""
+                }`}></FaAngleDown>
+            </ListItem>
+          </Typography>
+        </MenuHandler>
+
+        <MenuList className="max-w-screen-xl !shadow-lg mx-5 !p-5 !shadow-gray-400 !bg-[#ffffff] rounded-xl lg:block">
+          <ul className="grid grid-cols-3 gap-y-4 !bg-[#ffffff] gap-3 outline-none outline-0">
+             <EachMenuItem path={"/login"} icon={category1} title={"Electronic"} description={"See all Electronic Product"}></EachMenuItem>
+             <EachMenuItem icon={category1} title={"Electronic"} description={"See all Electronic Product"}></EachMenuItem>
+             <EachMenuItem icon={category1} title={"Electronic"} description={"See all Electronic Product"}></EachMenuItem>
+             <EachMenuItem icon={category1} title={"Electronic"} description={"See all Electronic Product"}></EachMenuItem>
+             <EachMenuItem icon={category1} title={"Electronic"} description={"See all Electronic Product"}></EachMenuItem>
+             <EachMenuItem icon={category1} title={"Electronic"} description={"See all Electronic Product"}></EachMenuItem>
+          </ul>
+        </MenuList>
+      </Menu>
+        </NavbarItem>
+        {/* {Navbar Item 4} */}
+        <NavbarItem>
+        <Menu
+        open={isBeautyOpen}
+        handler={setIsBeautyOpen}
+        offset={{ mainAxis: 20 }}
+        placement="bottom"
+        allowHover={true}
+        
+      >
+        <MenuHandler>
+        <Typography as="div" variant="pararaph" className="font-medium">
+            <ListItem
+            ripple={false}
+              className="flex items-center gap-1 py-2 pr-4 font-medium text-gray-900"
+              selected={isBeautyOpen || isMobileMenuOpen}
+              onClick={() => setIsMobileMenuOpen((cur) => !cur)}
+            >
+              Resources
+              <FaAngleDown className={`hidden h-3 w-3 transition-transform lg:block ${
+                  isBeautyOpen ? "rotate-180" : ""
+                }`}></FaAngleDown>
+              <FaAngleDown className={`block h-3 w-3 transition-transform lg:hidden ${
+                  isMobileMenuOpen ? "rotate-180" : ""
+                }`}></FaAngleDown>
+            </ListItem>
+          </Typography>
+        </MenuHandler>
+
+        <MenuList className="max-w-screen-xl !shadow-lg mx-5 !p-5 !shadow-gray-400 !bg-[#ffffff] rounded-xl lg:block">
+          <ul className="grid grid-cols-3 gap-y-4 !bg-[#ffffff] gap-3 outline-none outline-0">
+             <EachMenuItem path={"/login"} icon={category1} title={"Electronic"} description={"See all Electronic Product"}></EachMenuItem>
+             <EachMenuItem icon={category1} title={"Electronic"} description={"See all Electronic Product"}></EachMenuItem>
+             <EachMenuItem icon={category1} title={"Electronic"} description={"See all Electronic Product"}></EachMenuItem>
+             <EachMenuItem icon={category1} title={"Electronic"} description={"See all Electronic Product"}></EachMenuItem>
+             <EachMenuItem icon={category1} title={"Electronic"} description={"See all Electronic Product"}></EachMenuItem>
+             <EachMenuItem icon={category1} title={"Electronic"} description={"See all Electronic Product"}></EachMenuItem>
+          </ul>
+        </MenuList>
+      </Menu>
+        </NavbarItem>
+        {/* {Navbar Item 4} */}
+        <NavbarItem>
+        <Menu
+        open={isBeautyOpen}
+        handler={setIsBeautyOpen}
+        offset={{ mainAxis: 20 }}
+        placement="bottom"
+        allowHover={true}
+        
+      >
+        <MenuHandler>
+        <Typography as="div" variant="pararaph" className="font-medium">
             <ListItem
             ripple={false}
               className="flex items-center gap-1 py-2 pr-4 font-medium text-gray-900"
