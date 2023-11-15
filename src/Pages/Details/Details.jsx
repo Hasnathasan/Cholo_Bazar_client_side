@@ -14,7 +14,6 @@ import Slider from "react-slick";
 import { MdShare } from "react-icons/md";
 import { TiMessages } from "react-icons/ti";
 import { IoStarOutline, IoStarSharp } from "react-icons/io5";
-import Home2 from "../Home/Home2";
 
 function ThumbnailPlugin(mainRef) {
   return (slider) => {
@@ -122,8 +121,7 @@ const Details = () => {
   return (
    <>
    {
-    apiPath !== 'books' ?  <div className="mx-auto max-w-[1160px] md:py-20">
-      <Home2></Home2>
+    apiPath !== 'books' ?  <div className="mx-auto max-w-[1160px] md:py-5">
     <div className="md:bg-white  hidden md:flex flex-col md:flex-row md:p-5 mb-5 gap-5 md:gap-10 md:shadow-lg"> 
       <div className="md:w-[400px]">
         <div ref={sliderRef} className="keen-slider w-full mb-7">

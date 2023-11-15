@@ -1,6 +1,5 @@
 
 import { Outlet, useLocation } from "react-router-dom";
-import NavigationBar from "../Shared/NavigationBar/NavTopBar";
 import { useEffect } from "react";
 import MainNavigation from "../Shared/NavigationBar/MainNavigation/MainNavigation";
 
@@ -12,7 +11,7 @@ window.scrollTo(0, 0);
     return (
         <div className="">
             <MainNavigation></MainNavigation>
-         <div className="">
+         <div className="md:mt-[160px]">
             <Outlet></Outlet>
          </div>
         </div>

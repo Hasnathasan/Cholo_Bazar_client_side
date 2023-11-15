@@ -12,3 +12,8 @@
     height: 100% !important;
     display: block !important;
 }
+
+
+a.active{
+    color: rgb(33, 122, 255);
+}
