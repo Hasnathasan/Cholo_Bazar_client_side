@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import rokomari_logo from '../../../public/rokomari_logo.png'
 import cart from '../../../public/cart.png'
-import './NavigationBar.css'
+import './NavTopBar.css'
 import { FaAngleDown, FaCalculator, FaCar, FaHome, FaPrescriptionBottleAlt } from 'react-icons/fa';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
@@ -14,7 +14,7 @@ import userIcon from '../../../public/user.svg'
 import notificationIcon from '../../../public/appointment-reminders.png'
 import { RxCross2 } from "react-icons/rx";
 
-const NavigationBar = () => {
+const NavTopBar = () => {
     const [open, setOpen] = useState(false);
     const [openAccordian, setOpenAccordian] = useState(0);
     const [openRight, setOpenRight] = useState(false);
@@ -501,4 +501,4 @@ const NavigationBar = () => {
     );
 };
 
-export default NavigationBar;
+export default NavTopBar;

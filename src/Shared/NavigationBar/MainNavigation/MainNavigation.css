@@ -1,0 +1,14 @@
+.dropDownItem{
+    padding: 10px !important;
+    display: block !important;
+}
+.dropDownItem > span {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+}
+.dropDownItem  a {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+}
