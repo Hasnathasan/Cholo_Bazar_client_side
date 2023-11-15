@@ -3,16 +3,123 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import Book from "../Book/Book";
 import './Home.css'
+import React from "react";
+// import {
+//   Collapse,
+//   Typography,
+//   Button,
+//   IconButton,
+//   List,
+//   ListItem,
+//   Menu,
+//   MenuHandler,
+//   MenuList,
+//   MenuItem,
+// } from "@material-tailwind/react";
+import { FaArrowDown, FaArrowLeft, FaBars, FaHackerNews, FaMarkdown } from "react-icons/fa";
+
+import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu} from "@nextui-org/react";
+import { NavLink } from "react-router-dom";
+
+
+
 const Home = () => {
   const [tabIndex, setTabIndex] = useState(0);
   const [nestedTabIndex, setNestedTabIndex] = useState(0);
+
+  const navListMenuItems = [
+    {
+      title: "Products",
+      description: "Find the perfect solution for your needs.",
+      icon: <FaHackerNews></FaHackerNews>,
+    },
+    {
+      title: "About Us",
+      description: "Meet and learn about our dedication",
+      icon: <FaHackerNews></FaHackerNews>,
+    },
+    {
+      title: "Blog",
+      description: "Find the perfect solution for your needs.",
+      icon: <FaHackerNews></FaHackerNews>,
+    },
+    {
+      title: "Services",
+      description: "Learn how we can help you achieve your goals.",
+      icon: <FaHackerNews></FaHackerNews>,
+    },
+    {
+      title: "Support",
+      description: "Reach out to us for assistance or inquiries",
+      icon: <FaHackerNews></FaHackerNews>,
+    },
+    {
+      title: "Contact",
+      description: "Find the perfect solution for your needs.",
+      icon: <FaHackerNews></FaHackerNews>,
+    },
+    {
+      title: "News",
+      description: "Read insightful articles, tips, and expert opinions.",
+      icon: <FaHackerNews></FaHackerNews>,
+    },
+    {
+      title: "Products",
+      description: "Find the perfect solution for your needs.",
+      icon: <FaHackerNews></FaHackerNews>,
+    },
+    {
+      title: "Special Offers",
+      description: "Explore limited-time deals and bundles",
+      icon: <FaHackerNews></FaHackerNews>,
+    },
+  ];
+
+  const [openNav, setOpenNav] = React.useState(false);
+ 
+  React.useEffect(() => {
+    window.addEventListener(
+      "resize",
+      () => window.innerWidth >= 960 && setOpenNav(false),
+    );
+  }, []);
+
+
+  // const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  // const renderItems = navListMenuItems.map(
+  //   ({ icon, title, description }, key) => (
+  //     <a href="#" key={key}>
+  //       <MenuItem className="flex items-center gap-3 rounded-lg">
+  //         <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
+  //           {icon}
+  //         </div>
+  //         <div>
+  //           <Typography
+  //             variant="h6"
+  //             color="blue-gray"
+  //             className="flex items-center text-sm font-bold"
+  //           >
+  //             {title}
+  //           </Typography>
+  //           <Typography
+  //             variant="paragraph"
+  //             className="text-xs !font-medium text-blue-gray-500"
+  //           >
+  //             {description}
+  //           </Typography>
+  //         </div>
+  //       </MenuItem>
+  //     </a>
+  //   ),
+  // );
   return (
     <div>
       <div className="md:hidden">
       <Book></Book>
       </div>
       <div className="hidden md:block">
-      <Tabs
+      {/* <Tabs
         selectedTabClassName="activeTab"
         selectedIndex={tabIndex}
         onSelect={(index) => setTabIndex(index)}
@@ -89,7 +196,331 @@ const Home = () => {
         <TabPanel>
           <h2>Any content 2</h2>
         </TabPanel>
-      </Tabs>
+      </Tabs> */}
+ 
+      {/* <Navbar className="mx-auto max-w-screen-xl px-4 py-2">
+      <div className="flex items-center justify-between text-blue-gray-900">
+        <div className="lg:block">
+        <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 flex-row lg:p-1">
+      <Typography
+        as="a"
+        href="#"
+        variant="small"
+        color="blue-gray"
+        className="font-medium"
+      >
+        <ListItem className="flex items-center gap-2 py-2 pr-4">Home</ListItem>
+      </Typography>
+      <Menu
+        open={isMenuOpen}
+        handler={setIsMenuOpen}
+        offset={{ mainAxis: 20 }}
+        placement="bottom"
+        allowHover={true}
+      >
+        <MenuHandler>
+          <Typography as="div" variant="small" className="font-medium">
+            <ListItem
+              className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900"
+              selected={isMenuOpen || isMobileMenuOpen}
+              onClick={() => setIsMobileMenuOpen((cur) => !cur)}
+            >
+              Resources
+              <FaArrowDown className={`hidden h-3 w-3 transition-transform lg:block ${
+                  isMenuOpen ? "rotate-180" : ""
+                }`}></FaArrowDown>
+              <FaArrowDown className={`block h-3 w-3 transition-transform lg:hidden ${
+                  isMobileMenuOpen ? "rotate-180" : ""
+                }`}></FaArrowDown>
+            </ListItem>
+          </Typography>
+        </MenuHandler>
+        <MenuList className="max-w-screen-xl rounded-xl lg:block">
+          <ul className="grid grid-cols-3 gap-y-2 outline-none outline-0">
+            {renderItems}
+          </ul>
+        </MenuList>
+      </Menu>
+      <Typography
+        as="a"
+        href="#"
+        variant="small"
+        color="blue-gray"
+        className="font-medium"
+      >
+        <ListItem className="flex items-center gap-2 py-2 pr-4">
+          Contact Us
+        </ListItem>
+      </Typography>
+    </List>
+        </div>
+      </div>
+    </Navbar> */}
+
+
+
+<Navbar>
+      <NavbarContent className="hidden sm:flex gap-10" justify="between">
+        <Dropdown>
+          <NavbarItem>
+            <DropdownTrigger>
+              <Button
+                disableRipple
+                className="p-0 bg-transparent data-[hover=true]:bg-transparent"
+                endContent={<FaHackerNews></FaHackerNews>}
+                radius="sm"
+                variant="light"
+              >
+                Features
+              </Button>
+            </DropdownTrigger>
+          </NavbarItem>
+          <DropdownMenu
+            aria-label="ACME features"
+            className="w-[580px] grid grid-cols-2"
+            itemClasses={{
+              base: "gap-4",
+            }}
+          >
+            <DropdownItem
+              key="autoscaling"
+              description="ACME scales apps to meet user demand, automagically, based on load."
+              startContent={<FaHackerNews></FaHackerNews>}
+            >
+              Autoscaling
+            </DropdownItem>
+            <DropdownItem
+              key="usage_metrics"
+              description="Real-time metrics to debug issues. Slow query added? We’ll show you exactly where."
+              startContent={<FaHackerNews></FaHackerNews>}
+            >
+              Usage Metrics
+            </DropdownItem>
+            <DropdownItem
+              key="production_ready"
+              description="ACME runs on ACME, join us and others serving requests at web scale."
+              startContent={<FaHackerNews></FaHackerNews>}
+            >
+              Production Ready
+            </DropdownItem>
+            <DropdownItem
+              key="99_uptime"
+              description="Applications stay on the grid with high availability and high uptime guarantees."
+              startContent={<FaHackerNews></FaHackerNews>}
+            >
+              +99% Uptime
+            </DropdownItem>
+            <DropdownItem
+              key="supreme_support"
+              description="Overcome any challenge with a supporting team ready to respond."
+              startContent={<FaHackerNews></FaHackerNews>}
+            >
+              +Supreme Support
+            </DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
+        <Dropdown>
+          <NavbarItem>
+            <DropdownTrigger>
+              <Button
+                disableRipple
+                className="p-0 bg-transparent data-[hover=true]:bg-transparent"
+                endContent={<FaHackerNews></FaHackerNews>}
+                radius="sm"
+                variant="light"
+              >
+                Features
+              </Button>
+            </DropdownTrigger>
+          </NavbarItem>
+          <DropdownMenu
+            aria-label="ACME features"
+            className="w-[580px] grid grid-cols-2"
+            itemClasses={{
+              base: "gap-4",
+            }}
+          >
+            <DropdownItem
+              key="autoscaling"
+              description="ACME scales apps to meet user demand, automagically, based on load."
+              startContent={<FaHackerNews></FaHackerNews>}
+            >
+              Autoscaling
+            </DropdownItem>
+            <DropdownItem
+              key="usage_metrics"
+              description="Real-time metrics to debug issues. Slow query added? We’ll show you exactly where."
+              startContent={<FaHackerNews></FaHackerNews>}
+            >
+              Usage Metrics
+            </DropdownItem>
+            <DropdownItem
+              key="production_ready"
+              description="ACME runs on ACME, join us and others serving requests at web scale."
+              startContent={<FaHackerNews></FaHackerNews>}
+            >
+              Production Ready
+            </DropdownItem>
+            <DropdownItem
+              key="99_uptime"
+              description="Applications stay on the grid with high availability and high uptime guarantees."
+              startContent={<FaHackerNews></FaHackerNews>}
+            >
+              +99% Uptime
+            </DropdownItem>
+            <DropdownItem
+              key="supreme_support"
+              description="Overcome any challenge with a supporting team ready to respond."
+              startContent={<FaHackerNews></FaHackerNews>}
+            >
+              +Supreme Support
+            </DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
+        <Dropdown>
+          <NavbarItem>
+            <DropdownTrigger>
+              <Button
+                disableRipple
+                className="p-0 bg-transparent data-[hover=true]:bg-transparent"
+                endContent={<FaHackerNews></FaHackerNews>}
+                radius="sm"
+                variant="light"
+              >
+                Features
+              </Button>
+            </DropdownTrigger>
+          </NavbarItem>
+          <DropdownMenu
+            aria-label="ACME features"
+            className="w-[580px] grid grid-cols-2"
+            itemClasses={{
+              base: "gap-4",
+            }}
+          >
+            <DropdownItem
+              key="autoscaling"
+              description="ACME scales apps to meet user demand, automagically, based on load."
+              startContent={<FaHackerNews></FaHackerNews>}
+            >
+              Autoscaling
+            </DropdownItem>
+            <DropdownItem
+              key="usage_metrics"
+              description="Real-time metrics to debug issues. Slow query added? We’ll show you exactly where."
+              startContent={<FaHackerNews></FaHackerNews>}
+            >
+              Usage Metrics
+            </DropdownItem>
+            <DropdownItem
+              key="production_ready"
+              description="ACME runs on ACME, join us and others serving requests at web scale."
+              startContent={<FaHackerNews></FaHackerNews>}
+            >
+              Production Ready
+            </DropdownItem>
+            <DropdownItem
+              key="99_uptime"
+              description="Applications stay on the grid with high availability and high uptime guarantees."
+              startContent={<FaHackerNews></FaHackerNews>}
+            >
+              +99% Uptime
+            </DropdownItem>
+            <DropdownItem
+              key="supreme_support"
+              description="Overcome any challenge with a supporting team ready to respond."
+              startContent={<FaHackerNews></FaHackerNews>}
+            >
+              +Supreme Support
+            </DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
+        <Dropdown>
+          <NavbarItem>
+            <DropdownTrigger>
+              <Button
+                disableRipple
+                className="p-0 bg-transparent data-[hover=true]:bg-transparent"
+                endContent={<FaHackerNews></FaHackerNews>}
+                radius="sm"
+                variant="light"
+              >
+                Features
+              </Button>
+            </DropdownTrigger>
+          </NavbarItem>
+          <DropdownMenu
+            aria-label="ACME features"
+            className="w-[580px] grid grid-cols-2"
+            itemClasses={{
+              base: "gap-4",
+            }}
+          >
+            <DropdownItem
+              key="autoscaling"
+              description="ACME scales apps to meet user demand, automagically, based on load."
+              startContent={<FaHackerNews></FaHackerNews>}
+            >
+              Autoscaling
+            </DropdownItem>
+            <DropdownItem
+              key="usage_metrics"
+              description="Real-time metrics to debug issues. Slow query added? We’ll show you exactly where."
+              startContent={<FaHackerNews></FaHackerNews>}
+            >
+              Usage Metrics
+            </DropdownItem>
+            <DropdownItem
+              key="production_ready"
+              description="ACME runs on ACME, join us and others serving requests at web scale."
+              startContent={<FaHackerNews></FaHackerNews>}
+            >
+              Production Ready
+            </DropdownItem>
+            <DropdownItem
+              key="99_uptime"
+              description="Applications stay on the grid with high availability and high uptime guarantees."
+              startContent={<FaHackerNews></FaHackerNews>}
+            >
+              +99% Uptime
+            </DropdownItem>
+            <DropdownItem
+              key="supreme_support"
+              description="Overcome any challenge with a supporting team ready to respond."
+              startContent={<FaHackerNews></FaHackerNews>}
+            >
+              +Supreme Support
+            </DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
+       
+        <NavbarItem>
+          <Link color="foreground" href="#">
+            Beauty
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="#">
+            Nothing
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="#">
+            Personal Care
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="#">
+            Hello
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="#">
+            Nothing
+          </Link>
+        </NavbarItem>
+      </NavbarContent>
+    </Navbar>
       </div>
     </div>
   );

@@ -895,7 +895,7 @@
           "Dimensions": "950x350x300 mm",
           "CoolingType": "Multi Inverter"
         },
-        "super_deal": true,
+        "super_deal": false,
         "secondary_category": "airColler",
         "main_category": "electronics"
       },
@@ -956,7 +956,7 @@
           "Dimensions": "1000x400x350 mm",
           "CoolingType": "Dual Inverter"
         },
-        "super_deal": true,
+        "super_deal": false,
         "secondary_category": "airColler",
         "main_category": "electronics"
       },
@@ -1426,7 +1426,7 @@
           "Dimensions": "72 x 35 x 35 inches",
           "CoolingType": "Compressor"
         },
-        "super_deal": true,
+        "super_deal": false,
         "secondary_category": "refrigerator",
         "main_category": "electronics"
       },
@@ -1825,7 +1825,7 @@
           "RemoteControl": "No",
           "Dimensions": "8.3 x 5.9 x 10 inches"
         },
-        "super_deal": true,
+        "super_deal": false,
         "main_category": "electronics"
       },
       {
@@ -1995,7 +1995,7 @@
           "RemoteControl": "No",
           "Dimensions": "7 x 4 x 9 inches"
         },
-        "super_deal": true,
+        "super_deal": false,
         "main_category": "electronics"
       },
       {
@@ -2050,7 +2050,7 @@
           "RemoteControl": "No",
           "Dimensions": "7 x 4 x 9 inches"
         },
-        "super_deal": true,
+        "super_deal": false,
         "main_category": "electronics"
       },
       {
@@ -2157,7 +2157,7 @@
           "RemoteControl": "No",
           "Dimensions": "7 x 4 x 9 inches"
         },
-        "super_deal": true,
+        "super_deal": false,
         "main_category": "electronics"
       },
       {
@@ -2210,7 +2210,7 @@
           "RemoteControl": "No",
           "Dimensions": "7 x 4 x 9 inches"
         },
-        "super_deal": true,
+        "super_deal": false,
         "main_category": "electronics"
       },
       {
@@ -2265,7 +2265,7 @@
           "RemoteControl": "No",
           "Dimensions": "7 x 4 x 9 inches"
         },
-        "super_deal": true,
+        "super_deal": false,
         "main_category": "electronics"
       },
       {
@@ -2308,7 +2308,7 @@
           "Personal Care"
         ],
         "secondary_category": "trimmer",
-        "super_deal": true,
+        "super_deal": false,
         "main_category": "electronics",
         "specification": {
           "Title": "Wahl Aqua Blade 9899",
@@ -2361,7 +2361,7 @@
           "Personal Care"
         ],
         "secondary_category": "trimmer",
-        "super_deal": true,
+        "super_deal": false,
         "main_category": "electronics",
         "specification": {
           "Title": "Philips Multigroom Series 3000 MG3730 Beard Trimmer",
@@ -2415,7 +2415,7 @@
           "Personal Care"
         ],
         "secondary_category": "trimmer",
-        "super_deal": true,
+        "super_deal": false,
         "main_category": "electronics",
         "specification": {
           "Title": "Braun Multigroom Series 7 MGK7020 Beard Trimmer",
@@ -2431,8 +2431,8 @@
       },
       {
         "images": [
-          "https://i.imgur.com/uvwxwz.jpg", 
-          "https://i.imgur.com/stqrst.png" 
+          "https://i.postimg.cc/fT43TW3G/51mwB7QLf7L._AC_UF894,1000_QL80_.jpg", 
+          "https://i.postimg.cc/kg359THq/hello.webp" 
         ],
         "price": {
           "real_price": 179.99,
@@ -2475,7 +2475,7 @@
           "Home Appliances"
         ],
         "secondary_category": "iron",
-        "super_deal": true,
+        "super_deal": false,
         "main_category": "electronics",
         "specification": {
           "Title": "Philips PerfectCare Elite Plus Steam Iron",
@@ -2491,8 +2491,8 @@
       },
       {
         "images": [
-          "https://i.imgur.com/vbnm,.jpg", 
-          "https://i.imgur.com/zxcvbn.png" 
+          "https://i.postimg.cc/g2mn8MH4/i19.png", 
+          "https://i.postimg.cc/Sj0mSKDD/81MSxPzIpfL.jpg" 
         ],
         "price": {
           "real_price": 249.99,
@@ -2535,7 +2535,7 @@
           "Home Appliances"
         ],
         "secondary_category": "iron",
-        "super_deal": true,
+        "super_deal": false,
         "main_category": "electronics",
         "specification": {
           "Title": "Tefal FV9845 Ultimate Pure Steam Iron",
@@ -2655,7 +2655,7 @@
           "Home Appliances"
         ],
         "secondary_category": "iron",
-        "super_deal": true,
+        "super_deal": false,
         "main_category": "electronics",
         "specification": {
           "Title": "Rowenta DW9280 Steam Iron",
@@ -2715,7 +2715,7 @@
           "Home Appliances"
         ],
         "secondary_category": "iron",
-        "super_deal": true,
+        "super_deal": false,
         "main_category": "electronics",
         "specification": {
           "Title": "Black+Decker IR3050SS Steam Iron",
@@ -2775,7 +2775,7 @@
           "Home Appliances"
         ],
         "secondary_category": "iron",
-        "super_deal": true,
+        "super_deal": false,
         "main_category": "electronics",
         "specification": {
           "Title": "Sunbeam GSTI305 Steam Iron",
@@ -2835,7 +2835,7 @@
           "Home Appliances"
         ],
         "secondary_category": "iron",
-        "super_deal": true,
+        "super_deal": false,
         "main_category": "electronics",
         "specification": {
           "Title": "CHI Air Titanium Ceramic Soleplate Iron",
@@ -2895,7 +2895,7 @@
           "Home Appliances"
         ],
         "secondary_category": "iron",
-        "super_deal": true,
+        "super_deal": false,
         "main_category": "electronics",
         "specification": {
           "Title": "Panasonic NI-W610C Steam Iron",
@@ -3150,7 +3150,7 @@
           "Electronics"
         ],
         "secondary_category": "television",
-        "super_deal": true,
+        "super_deal": false,
         "main_category": "electronics",
         "specification": {
           "Title": "TCL 6-Series Roku TV",
@@ -3279,7 +3279,7 @@
           "Electronics"
         ],
         "secondary_category": "television",
-        "super_deal": true,
+        "super_deal": false,
         "main_category": "electronics",
         "specification": {
           "Title": "Sony A90K 4K OLED Evo TV",
@@ -3343,7 +3343,7 @@
           "Electronics"
         ],
         "secondary_category": "television",
-        "super_deal": true,
+        "super_deal": false,
         "main_category": "electronics",
         "specification": {
           "Title": "LG OLED G2 TV",
@@ -3407,7 +3407,7 @@
           "Electronics"
         ],
         "secondary_category": "television",
-        "super_deal": true,
+        "super_deal": false,
         "main_category": "electronics",
         "specification": {
           "Title": "Panasonic HZ1000 OLED TV",
@@ -3471,7 +3471,7 @@
           "Electronics"
         ],
         "secondary_category": "television",
-        "super_deal": true,
+        "super_deal": false,
         "main_category": "electronics",
         "specification": {
           "Title": "Philips 907 OLED TV",
