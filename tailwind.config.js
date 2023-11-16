@@ -12,6 +12,6 @@ module.exports = withMT({
     extend: {},
   },
   darkMode: "class",
-  plugins: [nextui()],
+  plugins: [nextui(), require("daisyui")],
 });
 

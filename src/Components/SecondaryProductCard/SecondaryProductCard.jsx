@@ -1,16 +1,16 @@
 import { useState } from 'react';
-import './ProductCard.css'
+import './SecondaryProductCard.css'
 import { Link } from 'react-router-dom';
 import Rating from 'react-rating';
 import { IoStarOutline, IoStarSharp } from 'react-icons/io5';
-const ProductCard = ({product, apiPath}) => {
+const SecondaryProductCard = ({product, apiPath}) => {
     const [hover, setHover] = useState(false)
     const {_id, specification, images, price} = product;
     console.log(product);
     return (
         <>
-            <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className='md:flex hidden flex-col justify-between text-center hover-effect h-[340px] px-2 pt-5 relative'>
-            <img className='h-[180px]' src={images[0]} alt="" />
+            <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className='md:flex hidden flex-col justify-between text-center hover-effect h-[320px] px-2 pt-5 relative'>
+            <img className='h-[172px]' src={images[0]} alt="" />
             <div className=' p-2 space-y-2'>
             <h3 className='text-sm'>{specification?.title || specification?.Title}</h3>
             <h4 className='text-sm text-gray-500'>{specification?.brand}</h4>
@@ -55,4 +55,4 @@ const ProductCard = ({product, apiPath}) => {
     );
 };
 
-export default ProductCard;
+export default SecondaryProductCard;

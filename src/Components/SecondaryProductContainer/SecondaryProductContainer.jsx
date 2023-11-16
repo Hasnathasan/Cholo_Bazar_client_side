@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import ProductCard from "../ProductCard/ProductCard";
+import SecondaryProductCard from "../SecondaryProductCard/SecondaryProductCard";
 
 
 
@@ -33,12 +33,12 @@ const  SamplePrevArrow = (props) => {
 
 
 
-const ProductContainer = ({data, headding, apiPath}) => {
+const SecondaryProductContainer = ({data, headding, apiPath, slidesToShow}) => {
   console.log(data);
     let settings = {
         infinite: false,
         speed: 500,
-        slidesToShow: 5,
+        slidesToShow: slidesToShow || 5,
         slidesToScroll: 5,
         initialSlide: 0,
         nextArrow: <SampleNextArrow />,
@@ -74,7 +74,7 @@ const ProductContainer = ({data, headding, apiPath}) => {
           <div className="hidden md:block">
             <Slider  {...settings}> 
           {
-            data?.map(product => <ProductCard key={product._id} product={product} apiPath={apiPath}></ProductCard>)
+            data?.map(product => <SecondaryProductCard key={product._id} product={product} apiPath={apiPath}></SecondaryProductCard>)
           }
         </Slider>
           </div>
@@ -82,7 +82,7 @@ const ProductContainer = ({data, headding, apiPath}) => {
         <div className="md:hidden">
         <div className="grid gap-y-4 gap-x-[5px] grid-cols-2">
         {
-            data?.map(product => <ProductCard key={product._id} product={product} apiPath={apiPath}></ProductCard>)
+            data?.map(product => <SecondaryProductCard key={product._id} product={product} apiPath={apiPath}></SecondaryProductCard>)
           }
         </div>
         <div className="flex justify-center py-3 items-center">
@@ -95,4 +95,4 @@ const ProductContainer = ({data, headding, apiPath}) => {
     );
 };
 
-export default ProductContainer;
+export default SecondaryProductContainer;

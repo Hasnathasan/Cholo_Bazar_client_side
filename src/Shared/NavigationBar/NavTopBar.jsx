@@ -29,7 +29,7 @@ const NavTopBar = () => {
     const {user, logout} = useContext(AuthContext)
     return (
         <>
-          <Navbar className='py-[2px] md:py-3 w-full md:fixed top-0 z-50 nav bg-white' >
+          <Navbar className='pt-[1px] md:py-3 w-full md:fixed top-0 z-50 nav bg-white' >
                 <div className='md:hidden'>
                 <img className='w-5 h-5 md:w-6' onClick={openDrawer} src={hamBurger} alt="" />
                 </div>

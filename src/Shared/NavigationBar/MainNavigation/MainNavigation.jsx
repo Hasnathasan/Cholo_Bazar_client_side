@@ -35,7 +35,7 @@ const MainNavigation = () => {
     return (
         <div>
             <NavTopBar></NavTopBar>
-        <Navbar shouldHideOnScroll className="md:mt-[88px] fixed" >
+        <Navbar className="md:mt-[88px] h-[40px] fixed" >
       <NavbarContent className="hidden sm:flex gap-5" justify="between">
         {/* <Dropdown>
           <NavbarItem>
@@ -164,7 +164,7 @@ const MainNavigation = () => {
         <Typography as="div" variant="paragraph" className="font-medium ">
             <ListItem
             ripple={false}
-              className="flex items-center gap-1 py-2 pr-4 font-medium   text-gray-900"
+              className="flex items-center gap-1 py-2 pr-4 font-medium  !bg-transparent text-gray-900"
               selected={isHomeOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
@@ -193,7 +193,7 @@ const MainNavigation = () => {
         <Typography as="div" variant="pararaph" className="font-medium ">
             <ListItem
             ripple={false}
-              className="flex items-center gap-1 py-2 pr-4 font-medium   text-gray-900"
+              className="flex items-center gap-1 py-2 pr-4 font-medium !bg-transparent   text-gray-900"
               selected={isHomeOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
@@ -237,7 +237,7 @@ const MainNavigation = () => {
         <Typography as="div" variant="pararaph" className="font-medium">
             <ListItem
             ripple={false}
-              className="flex items-center gap-1 py-2 pr-4 font-medium text-gray-900"
+              className="flex items-center gap-1 py-2 pr-4 font-medium !bg-transparent text-gray-900"
               selected={isElectricOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
@@ -281,7 +281,7 @@ const MainNavigation = () => {
         <Typography as="div" variant="pararaph" className="font-medium">
             <ListItem
             ripple={false}
-              className="flex items-center gap-1 py-2 pr-4 font-medium text-gray-900"
+              className="flex items-center gap-1 py-2 pr-4 !bg-transparent font-medium text-gray-900"
               selected={isBeautyOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
@@ -322,7 +322,7 @@ const MainNavigation = () => {
         <Typography as="div" variant="pararaph" className="font-medium">
             <ListItem
             ripple={false}
-              className="flex items-center gap-1 py-2 pr-4 font-medium text-gray-900"
+              className="flex items-center gap-1 py-2 pr-4 font-medium !bg-transparent text-gray-900"
               selected={isBeautyOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
@@ -363,7 +363,7 @@ const MainNavigation = () => {
         <Typography as="div" variant="pararaph" className="font-medium">
             <ListItem
             ripple={false}
-              className="flex items-center gap-1 py-2 pr-4 font-medium text-gray-900"
+              className="flex items-center gap-1 py-2 pr-4 font-medium !bg-transparent text-gray-900"
               selected={isBeautyOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
@@ -404,7 +404,7 @@ const MainNavigation = () => {
         <Typography as="div" variant="pararaph" className="font-medium">
             <ListItem
             ripple={false}
-              className="flex items-center gap-1 py-2 pr-4 font-medium text-gray-900"
+              className="flex items-center gap-1 py-2 pr-4 font-medium !bg-transparent text-gray-900"
               selected={isBeautyOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
@@ -445,7 +445,7 @@ const MainNavigation = () => {
         <Typography as="div" variant="pararaph" className="font-medium">
             <ListItem
             ripple={false}
-              className="flex items-center gap-1 py-2 pr-4 font-medium text-gray-900"
+              className="flex items-center gap-1 py-2 pr-4 font-medium !bg-transparent text-gray-900"
               selected={isBeautyOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >

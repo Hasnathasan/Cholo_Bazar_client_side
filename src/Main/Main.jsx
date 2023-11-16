@@ -11,7 +11,7 @@ window.scrollTo(0, 0);
     return (
         <div className="">
             <MainNavigation></MainNavigation>
-         <div className="md:mt-[160px]">
+         <div className="md:mt-[120px]">
             <Outlet></Outlet>
          </div>
         </div>

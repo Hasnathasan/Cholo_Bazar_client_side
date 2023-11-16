@@ -6,6 +6,7 @@ import Details from "../Pages/Details/Details";
 import DashboardOfUser from "../UserDashboard/DashboardOfUser/DashboardOfUser";
 import UserProfile from "../UserDashboard/UserProfile/UserProfile";
 import Electronics from "../Pages/Electronics/Electronics/Electronics";
+import Irons from "../Pages/Electronics/Irons/Irons";
 
 
 
@@ -28,7 +29,13 @@ const router = createBrowserRouter([
         },
         {
           path: '/electronics',
-          element: <Electronics></Electronics>
+          element: <Electronics></Electronics>,
+          children: [
+            {
+              path: 'electronics',
+              element: <Irons></Irons>
+            }
+          ]
         },
         {
           path: '/myAccount',
