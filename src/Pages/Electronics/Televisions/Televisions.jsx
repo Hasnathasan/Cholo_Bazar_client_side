@@ -1,11 +1,9 @@
-
-
 import ProductContainer from "../../../Components/ProductContainer/ProductContainer";
 import UseProductsBySecondaryCategory from "../../../Hooks/UseProductsBySecondaryCategory";
 
 
-const Refrigerators = () => {
-    const [products, isProductsLoading] = UseProductsBySecondaryCategory("refrigerator");
+const Televisions = () => {
+    const [products, isProductsLoading] = UseProductsBySecondaryCategory("television");
     if(isProductsLoading){
         return <h1 className="w-full text-4xl text-green-600 h-screen flex justify-center items-center">Loading...................</h1>
     }
@@ -16,4 +14,4 @@ const Refrigerators = () => {
     );
 };
 
-export default Refrigerators;
+export default Televisions;

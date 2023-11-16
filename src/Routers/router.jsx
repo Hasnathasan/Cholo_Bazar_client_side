@@ -8,6 +8,9 @@ import UserProfile from "../UserDashboard/UserProfile/UserProfile";
 import Electronics from "../Pages/Electronics/Electronics/Electronics";
 import Irons from "../Pages/Electronics/Irons/Irons";
 import Refrigerators from "../Pages/Electronics/Refrigerators/Refrigerators";
+import Kettles from "../Pages/Electronics/Kettles/Kettles";
+import AirCollers from "../Pages/Electronics/AirCollers/AirCollers";
+import Televisions from "../Pages/Electronics/Televisions/Televisions";
 
 
 
@@ -43,6 +46,18 @@ const router = createBrowserRouter([
             {
               path: 'irons',
               element: <Irons></Irons>
+            },
+            {
+              path: 'kettles',
+              element: <Kettles></Kettles>
+            },
+            {
+              path: 'airCollers',
+              element: <AirCollers></AirCollers>
+            },
+            {
+              path: 'televisions',
+              element: <Televisions></Televisions>
             },
           ]
         },

@@ -215,10 +215,10 @@ const MainNavigation = () => {
           <ul className="grid grid-cols-3 !bg-[#ffffff] gap-3 gap-y-4 outline-none outline-0">
              <EachMenuItem icon={category10} title={"Electronic Items"} description={"See all Electronic Product"} path={"/electronics/electronics"}></EachMenuItem>
              <EachMenuItem icon={refrigerator} title={"Refrigerators"} description={"See all Electronic Product"} path={"/electronics/refrigerators"}></EachMenuItem>
-             <EachMenuItem icon={category9} title={"Televisions"} description={"See all Electronic Product"}></EachMenuItem>
+             <EachMenuItem icon={category9} title={"Televisions"} description={"See all Electronic Product"}  path={"/electronics/televisions"}></EachMenuItem>
              <EachMenuItem icon={iron} title={"Iron Matchines"} description={"See all Electronic Product"} path={"/electronics/irons"}></EachMenuItem>
-             <EachMenuItem icon={kettle} title={"Kettles"} description={"See all Electronic Product"}></EachMenuItem>
-             <EachMenuItem icon={AC} title={"Air Collers"} description={"See all Electronic Product"}></EachMenuItem>
+             <EachMenuItem icon={kettle} title={"Kettles"} description={"See all Electronic Product"} path={"/electronics/kettles"}></EachMenuItem>
+             <EachMenuItem icon={AC} title={"Air Collers"} description={"See all Electronic Product"} path={"/electronics/airCollers"}></EachMenuItem>
           </ul>
         </MenuList>
       </Menu>

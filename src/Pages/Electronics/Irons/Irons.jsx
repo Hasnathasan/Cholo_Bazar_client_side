@@ -1,6 +1,6 @@
 // import { Slider } from "@nextui-org/slider";
 
-import SecondaryProductContainer from "../../../Components/SecondaryProductContainer/SecondaryProductContainer";
+import ProductContainer from "../../../Components/ProductContainer/ProductContainer";
 import UseProductsBySecondaryCategory from "../../../Hooks/UseProductsBySecondaryCategory";
 
 
@@ -10,8 +10,8 @@ const Irons = () => {
         return <h1 className="w-full text-4xl text-green-600 h-screen flex justify-center items-center">Loading...................</h1>
     }
     return (
-        <div className="w-full mx-auto">    
-            <SecondaryProductContainer slidesToShow={4} data={products} apiPath={"products"} headding={"Deals on Rokomari Products"}></SecondaryProductContainer>
+        <div className="w-full py-8 mx-auto">    
+           <ProductContainer data={products} apiPath={"products"}></ProductContainer>
         </div>
     );
 };

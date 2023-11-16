@@ -23,6 +23,8 @@ const SecondaryProductCard = ({product, apiPath}) => {
             </div>
         </div>
 
+       
+
 
         {/* Component for small device */}
         <div className='md:hidden h-[240px] relative'>

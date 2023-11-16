@@ -1,15 +1,12 @@
 .card__name{
     writing-mode: vertical-rl;
 }
-/*Move left*/
-.card:hover{
-    box-shadow: 0 .5rem 1rem #D1D9E6;
-}
+
 .card:hover .card__name{
     left: 0;
 }
 .card:hover .card__img{
-    margin-left: 3.5rem;
+    margin-left: 3.2rem;
 }
 .card:hover .card__icon{
     margin-left: 3.5rem;

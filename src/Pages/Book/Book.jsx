@@ -4,16 +4,17 @@ import FictionNonFicBookContainer from "./FictionNonFicBookContainer/FictionNonF
 import bookFairLogo from '../../../public/book_fair_logo.svg'
 import CategorySlider from "../../Components/CategorySlider/CategorySlider";
 import SecondaryProductContainer from "../../Components/SecondaryProductContainer/SecondaryProductContainer";
-import ProductCard from "../../Components/ProductCard/ProductCard";
+import ProductContainer from "../../Components/ProductContainer/ProductContainer";
+import UseProductsBySecondaryCategory from "../../Hooks/UseProductsBySecondaryCategory";
 
 
 
 const Book = () => {
     const [hotDeals, isHotDealsLoading] = useHotDeals();
-      if(isHotDealsLoading){
-        return <h1>Loading.....................</h1>
-         
-      }
+    const [products, isProductsLoading] = UseProductsBySecondaryCategory("iron");
+    if(isProductsLoading || isHotDealsLoading){
+        return <h1 className="w-full text-4xl text-green-600 h-screen flex justify-center items-center">Loading...................</h1>
+    }
     return (
         <div>
             <HomeSlider></HomeSlider>
@@ -22,7 +23,7 @@ const Book = () => {
               <p className="px-4">অনলাইন বইমেলার সাথে শেষ হয়ে গেলো নগদ-রকমারি বইমেলা বেস্টসেলার অ্যাওয়ার্ডের লিডারবোর্ডের টান টান উত্তেজনা। কে হবে বেস্টসেলার লেখক, কী হবে বেস্টসেলার বই- সব জল্পনা-কল্পনার অবসান ঘটিয়ে পাঠক প্রিয়তায় জায়গা করে নেয়া বই এবং লেখক দেখে নিন এক নজরে। আপনার প্রিয় লেখক আছেন তো এবারের বেস্টসেলার তালিকায়? তাছাড়া এবারের বেস্টসেলার লেখকের বইটি আপনি পড়েছেন তো?</p>
             </div>
             <SecondaryProductContainer data={hotDeals} apiPath={"products"} headding={"Deals on Rokomari Products"}></SecondaryProductContainer>
-            <ProductCard></ProductCard>
+            <ProductContainer data={products} apiPath={"products"}></ProductContainer>
             <CategorySlider></CategorySlider>
             {/* <FictionNonFicBookContainer></FictionNonFicBookContainer> */}
         </div>

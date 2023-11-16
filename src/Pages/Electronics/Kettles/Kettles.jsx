@@ -1,19 +1,17 @@
-
-
 import ProductContainer from "../../../Components/ProductContainer/ProductContainer";
 import UseProductsBySecondaryCategory from "../../../Hooks/UseProductsBySecondaryCategory";
 
 
-const Refrigerators = () => {
-    const [products, isProductsLoading] = UseProductsBySecondaryCategory("refrigerator");
+const Kettles = () => {
+    const [products, isProductsLoading] = UseProductsBySecondaryCategory("kettle");
     if(isProductsLoading){
         return <h1 className="w-full text-4xl text-green-600 h-screen flex justify-center items-center">Loading...................</h1>
     }
     return (
-        <div className="w-full py-9 mx-auto">    
+        <div className="w-full py-8 mx-auto">    
            <ProductContainer data={products} apiPath={"products"}></ProductContainer>
         </div>
     );
 };
 
-export default Refrigerators;
+export default Kettles;
