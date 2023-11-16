@@ -7,6 +7,7 @@ import DashboardOfUser from "../UserDashboard/DashboardOfUser/DashboardOfUser";
 import UserProfile from "../UserDashboard/UserProfile/UserProfile";
 import Electronics from "../Pages/Electronics/Electronics/Electronics";
 import Irons from "../Pages/Electronics/Irons/Irons";
+import Refrigerators from "../Pages/Electronics/Refrigerators/Refrigerators";
 
 
 
@@ -34,7 +35,15 @@ const router = createBrowserRouter([
             {
               path: 'electronics',
               element: <Irons></Irons>
-            }
+            },
+            {
+              path: 'refrigerators',
+              element: <Refrigerators></Refrigerators>
+            },
+            {
+              path: 'irons',
+              element: <Irons></Irons>
+            },
           ]
         },
         {

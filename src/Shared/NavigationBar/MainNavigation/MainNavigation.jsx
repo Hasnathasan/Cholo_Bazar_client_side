@@ -6,7 +6,7 @@ import './MainNavigation.css'
 import { ListItem, Menu, MenuHandler, MenuList, Typography } from "@material-tailwind/react";
 import { useState } from "react";
 import EachMenuItem from "./EachMenuItem";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import category1 from "../../../../public/category-1.png";
 import category2 from "../../../../public/category-2.png";
@@ -32,6 +32,9 @@ const MainNavigation = () => {
     const [isBeautyOpen, setIsBeautyOpen] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const location = useLocation();
+    console.log(location);
+    
     return (
         <div>
             <NavTopBar></NavTopBar>
@@ -164,7 +167,7 @@ const MainNavigation = () => {
         <Typography as="div" variant="paragraph" className="font-medium ">
             <ListItem
             ripple={false}
-              className="flex items-center gap-1 py-2 pr-4 font-medium  !bg-transparent text-gray-900"
+            className={`flex items-center gap-1 py-2 pr-4 font-medium !bg-transparent  ${location.pathname === "/" ? "!text-blue-500" : "text-gray-800"}`}
               selected={isHomeOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
@@ -193,7 +196,7 @@ const MainNavigation = () => {
         <Typography as="div" variant="pararaph" className="font-medium ">
             <ListItem
             ripple={false}
-              className="flex items-center gap-1 py-2 pr-4 font-medium !bg-transparent   text-gray-900"
+              className={`flex items-center gap-1 py-2 pr-4 font-medium !bg-transparent  ${location.pathname?.includes("/electronics") ? "text-blue-500" : "text-gray-700"}`}
               selected={isHomeOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
@@ -210,10 +213,10 @@ const MainNavigation = () => {
 
         <MenuList className="max-w-screen-xl !bg-[#ffffff] !shadow-lg mx-5 !shadow-gray-400 rounded-xl !p-5 lg:block">
           <ul className="grid grid-cols-3 !bg-[#ffffff] gap-3 gap-y-4 outline-none outline-0">
-             <EachMenuItem icon={category10} title={"Electronic Items"} description={"See all Electronic Product"} path={"/electronics"}></EachMenuItem>
-             <EachMenuItem icon={refrigerator} title={"Refrigerators"} description={"See all Electronic Product"}></EachMenuItem>
+             <EachMenuItem icon={category10} title={"Electronic Items"} description={"See all Electronic Product"} path={"/electronics/electronics"}></EachMenuItem>
+             <EachMenuItem icon={refrigerator} title={"Refrigerators"} description={"See all Electronic Product"} path={"/electronics/refrigerators"}></EachMenuItem>
              <EachMenuItem icon={category9} title={"Televisions"} description={"See all Electronic Product"}></EachMenuItem>
-             <EachMenuItem icon={iron} title={"Iron Matchines"} description={"See all Electronic Product"}></EachMenuItem>
+             <EachMenuItem icon={iron} title={"Iron Matchines"} description={"See all Electronic Product"} path={"/electronics/irons"}></EachMenuItem>
              <EachMenuItem icon={kettle} title={"Kettles"} description={"See all Electronic Product"}></EachMenuItem>
              <EachMenuItem icon={AC} title={"Air Collers"} description={"See all Electronic Product"}></EachMenuItem>
           </ul>
@@ -237,7 +240,7 @@ const MainNavigation = () => {
         <Typography as="div" variant="pararaph" className="font-medium">
             <ListItem
             ripple={false}
-              className="flex items-center gap-1 py-2 pr-4 font-medium !bg-transparent text-gray-900"
+            className={`flex items-center gap-1 py-2 pr-4 font-medium !bg-transparent  ${location.pathname?.includes("/kidsZone") ? "text-blue-500" : "text-gray-700"}`}
               selected={isElectricOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
@@ -281,7 +284,7 @@ const MainNavigation = () => {
         <Typography as="div" variant="pararaph" className="font-medium">
             <ListItem
             ripple={false}
-              className="flex items-center gap-1 py-2 pr-4 !bg-transparent font-medium text-gray-900"
+            className={`flex items-center gap-1 py-2 pr-4 font-medium !bg-transparent  ${location.pathname?.includes("/electronics") ? "text-blue-500" : "text-gray-700"}`}
               selected={isBeautyOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
@@ -322,7 +325,7 @@ const MainNavigation = () => {
         <Typography as="div" variant="pararaph" className="font-medium">
             <ListItem
             ripple={false}
-              className="flex items-center gap-1 py-2 pr-4 font-medium !bg-transparent text-gray-900"
+            className={`flex items-center gap-1 py-2 pr-4 font-medium !bg-transparent  ${location.pathname?.includes("/electronics") ? "text-blue-500" : "text-gray-700"}`}
               selected={isBeautyOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
@@ -363,7 +366,7 @@ const MainNavigation = () => {
         <Typography as="div" variant="pararaph" className="font-medium">
             <ListItem
             ripple={false}
-              className="flex items-center gap-1 py-2 pr-4 font-medium !bg-transparent text-gray-900"
+            className={`flex items-center gap-1 py-2 pr-4 font-medium !bg-transparent  ${location.pathname?.includes("/electronics") ? "text-blue-500" : "text-gray-700"}`}
               selected={isBeautyOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
@@ -404,7 +407,7 @@ const MainNavigation = () => {
         <Typography as="div" variant="pararaph" className="font-medium">
             <ListItem
             ripple={false}
-              className="flex items-center gap-1 py-2 pr-4 font-medium !bg-transparent text-gray-900"
+            className={`flex items-center gap-1 py-2 pr-4 font-medium !bg-transparent  ${location.pathname?.includes("/electronics") ? "text-blue-500" : "text-gray-700"}`}
               selected={isBeautyOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
@@ -445,7 +448,7 @@ const MainNavigation = () => {
         <Typography as="div" variant="pararaph" className="font-medium">
             <ListItem
             ripple={false}
-              className="flex items-center gap-1 py-2 pr-4 font-medium !bg-transparent text-gray-900"
+            className={`flex items-center gap-1 py-2 pr-4 font-medium !bg-transparent  ${location.pathname?.includes("/electronics") ? "text-blue-500" : "text-gray-700"}`}
               selected={isBeautyOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
