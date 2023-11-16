@@ -9,8 +9,13 @@
     left: 0;
 }
 .card:hover .card__img{
-    transform: rotate(20deg);
     margin-left: 3.5rem;
+}
+.card:hover .card__icon{
+    margin-left: 3.5rem;
+}
+.card:hover .card__icon_2{
+    margin-right: -2px;
 }
 .card:hover .card__precis{
     margin-left: 3.5rem;
