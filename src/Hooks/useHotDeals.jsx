@@ -4,7 +4,7 @@ import axios from "axios";
 import useAxiosSecure from "./useAxiosSecure";
 
 const useHotDeals = () => {
-    const [axiosSecure] = useAxiosSecure()
+    const [axiosSecure] = useAxiosSecure();
     const { data: hotDeals, isLoading: isHotDealsLoading } = useQuery({
         queryKey: ['hotDeals'],
         queryFn: async() => {

@@ -1,10 +1,11 @@
 import { Radio, RadioGroup } from "@nextui-org/react";
 import './Electronics.css'
-import { useState } from "react";
 import { Typography } from "@material-tailwind/react";
 import { Outlet } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../../Providers/AuthProvider";
 const Electronics = () => {
-  const [selected, setSelected] = useState("");
+  const {filter, setFilter} = useContext(AuthContext)
     return (
         <div className="drawer lg:drawer-open">
   <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -17,18 +18,18 @@ const Electronics = () => {
         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
 
         <div className="w-64"></div>
-        <ul className="menu flex-nowrap fixed top-1/4 left-2 shadow-lg shadow-gray-300 bg-white px-8  py-10 w-64 space-y-2">
+        <ul className="menu flex-nowrap fixed top-1/4 -left-[25%] md:left-4 shadow-lg shadow-gray-300 bg-white px-8  py-10 w-64 space-y-2">
           <h2 className="text-2xl mb-3">Filter</h2>
          
           <RadioGroup
-        value={selected}
-        onValueChange={setSelected}
+        value={filter}
+        onValueChange={setFilter}
         className="!mb-5"
       >
-        <Radio className="mb-[1px]"  value="sydney"><Typography variant="small">Price High to Low</Typography></Radio>
-        <Radio className="mb-[1px]" value="buenos-aires"><Typography variant="small">Price Low to High</Typography></Radio>
-        <Radio className="mb-[1px]"  value="london"><Typography variant="small">Rating High to Low</Typography></Radio>
-        <Radio value="san-francisco"><Typography variant="small">Rating Low to High</Typography></Radio>
+        <Radio className="mb-[1px]"  value="priceHighToLow"><Typography variant="small">Price High to Low</Typography></Radio>
+        <Radio className="mb-[1px]" value="priceLowToHigh"><Typography variant="small">Price Low to High</Typography></Radio>
+        <Radio className="mb-[1px]"  value="ratingHighToLow"><Typography variant="small">Rating High to Low</Typography></Radio>
+        <Radio value="ratingLowToHigh"><Typography variant="small">Rating Low to High</Typography></Radio>
       </RadioGroup>
       {/* <p className="text-default-500 text-small">Selected: {selected}</p> */}
 

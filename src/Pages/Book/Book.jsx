@@ -11,7 +11,8 @@ import UseProductsBySecondaryCategory from "../../Hooks/UseProductsBySecondaryCa
 
 const Book = () => {
     const [hotDeals, isHotDealsLoading] = useHotDeals();
-    const [products, isProductsLoading] = UseProductsBySecondaryCategory("iron");
+    const [products, isProductsLoading] = UseProductsBySecondaryCategory({category: "iron"});
+    console.log(products);
     if(isProductsLoading || isHotDealsLoading){
         return <h1 className="w-full text-4xl text-green-600 h-screen flex justify-center items-center">Loading...................</h1>
     }
@@ -26,6 +27,12 @@ const Book = () => {
             <ProductContainer data={products} apiPath={"products"}></ProductContainer>
             <CategorySlider></CategorySlider>
             {/* <FictionNonFicBookContainer></FictionNonFicBookContainer> */}
+            <SecondaryProductContainer data={hotDeals} apiPath={"products"} headding={"Deals on Rokomari Products"}></SecondaryProductContainer>
+            <SecondaryProductContainer data={hotDeals} apiPath={"products"} headding={"Deals on Rokomari Products"}></SecondaryProductContainer>
+            <SecondaryProductContainer data={hotDeals} apiPath={"products"} headding={"Deals on Rokomari Products"}></SecondaryProductContainer>
+            <SecondaryProductContainer data={hotDeals} apiPath={"products"} headding={"Deals on Rokomari Products"}></SecondaryProductContainer>
+            <SecondaryProductContainer data={hotDeals} apiPath={"products"} headding={"Deals on Rokomari Products"}></SecondaryProductContainer>
+            <SecondaryProductContainer data={hotDeals} apiPath={"products"} headding={"Deals on Rokomari Products"}></SecondaryProductContainer>
         </div>
     );
 };

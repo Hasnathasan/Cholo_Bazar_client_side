@@ -17,10 +17,8 @@ const Reviews = ({ product }) => {
       <h2 className="text-2xl text-gray-700 mb-2">Reviews and Ratings</h2>
       <div className="flex items-start gap-2 max-w-[650px]">
         <img className="mt-1" src={speakerIco} alt="" />
-        <p className="text-gray-600 text-sm">
-          অর্ডারকৃত প্রোডাক্টে রিভিউ এবং রেটিং দিয়ে ৫০ পয়েন্ট সংগ্রহ করতে
-          পারেন। সর্বনিম্ন ৩০ টি শব্দ এবং প্রোডাক্ট/প্যাকেটের ছবি সংযুক্ত করতে
-          হবে
+        <p className="text-gray-700 text-sm">
+        You can collect 50 points by reviewing and rating the ordered products. A minimum of 30 words and product/packet image should be attached
         </p>
       </div>
       <div className="flex flex-col-reverse md:flex-row gap-y-4 justify-between mt-5">

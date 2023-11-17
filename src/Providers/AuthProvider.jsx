@@ -16,6 +16,7 @@ export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [filter, setFilter] = useState(null);
   const auth = getAuth(app);
   const googleProvider = new GoogleAuthProvider();
   const facebookProvider = new FacebookAuthProvider();
@@ -47,6 +48,8 @@ const AuthProvider = ({ children }) => {
     phoneSignIn,
     logout,
     auth,
+    filter,
+    setFilter
   };
 
   useEffect(() => {

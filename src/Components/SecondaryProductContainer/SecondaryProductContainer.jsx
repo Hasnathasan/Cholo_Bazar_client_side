@@ -34,7 +34,6 @@ const  SamplePrevArrow = (props) => {
 
 
 const SecondaryProductContainer = ({data, headding, apiPath, slidesToShow}) => {
-  console.log(data);
     let settings = {
         infinite: false,
         speed: 500,

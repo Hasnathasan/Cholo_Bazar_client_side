@@ -2916,8 +2916,8 @@
           "https://i.postimg.cc/X7bh1Zxv/es-qled-qn95b-qe55qn95batxxc-thumb-531171610.png"
         ],
         "price": {
-          "real_price": "1999.99",
-          "discounted_price": "1699.99"
+          "real_price": 1999.99,
+          "discounted_price": 1699.99
         },
         "rating": 4.9,
         "reviews": [
