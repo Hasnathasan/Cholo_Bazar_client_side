@@ -1,9 +1,10 @@
-
-import { Tooltip } from "@nextui-org/react";
-import { FaHome } from "react-icons/fa";
-import { NavLink, Outlet } from "react-router-dom";
-
+import { Radio, RadioGroup } from "@nextui-org/react";
+import './Electronics.css'
+import { useState } from "react";
+import { Typography } from "@material-tailwind/react";
+import { Outlet } from "react-router-dom";
 const Electronics = () => {
+  const [selected, setSelected] = useState("");
     return (
         <div className="drawer lg:drawer-open">
   <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -17,28 +18,35 @@ const Electronics = () => {
 
         <div className="w-64"></div>
         <ul className="menu flex-nowrap fixed top-1/4 left-2 shadow-lg shadow-gray-300 bg-white px-8  py-10 w-64 space-y-2">
-          <h2 className="text-2xl mb-5">Filter</h2>
+          <h2 className="text-2xl mb-3">Filter</h2>
          
-          <li>
-            <NavLink className="p-3 text-base" to="/allUsers">
-              <FaHome></FaHome> Manage Users
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className="p-3 text-base" to="/allProducts">
-              <FaHome></FaHome> Manage Products
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className="p-3 text-base" to="/addProduct">
-              <FaHome></FaHome> Add New Product
-            </NavLink>
-          </li>
-          <li>
-            <Tooltip content={"Add Task"} className="capitalize">
-              <h1>Hello</h1>
-            </Tooltip>
-          </li>
+          <RadioGroup
+        value={selected}
+        onValueChange={setSelected}
+        className="!mb-5"
+      >
+        <Radio className="mb-[1px]"  value="sydney"><Typography variant="small">Price High to Low</Typography></Radio>
+        <Radio className="mb-[1px]" value="buenos-aires"><Typography variant="small">Price Low to High</Typography></Radio>
+        <Radio className="mb-[1px]"  value="london"><Typography variant="small">Rating High to Low</Typography></Radio>
+        <Radio value="san-francisco"><Typography variant="small">Rating Low to High</Typography></Radio>
+      </RadioGroup>
+      {/* <p className="text-default-500 text-small">Selected: {selected}</p> */}
+
+
+      <div>
+        <Typography className="mb-1" variant="paragraph">Price Range</Typography>
+      <input type="range" min={0} max="3000" defaultValue="0" className="range range-success range-xs" step="16" />
+<div className="w-full flex justify-between text-xs px-2">
+  <span>0.5k</span>
+  <span>1k</span>
+  <span>1.5k</span>
+  <span>2k</span>
+  <span>2.5k</span>
+  <span>3k</span>
+</div>
+      </div>
+         
+          
         </ul>
       </div>
 </div>

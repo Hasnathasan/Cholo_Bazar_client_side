@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const ProductCard = ({product, apiPath}) => {
     const {_id, specification, images, price} = product;
   return (
-    <div className="card !w-[240px] min-h-[320px] relative p-3.5 overflow-hidden !rounded hover:shadow-lg hover:shadow-gray-300 !transition-all !duration-300  delay-75 bg-white">
+    <div className="card !w-[180px] md:!w-[240px] min-h-[320px] relative p-3.5 overflow-hidden !rounded hover:shadow-lg hover:shadow-gray-300 !transition-all !duration-300  delay-75 bg-white">
     <Link
       className="absolute top-0 bottom-0 left-0 right-0 z-10"
       to={`/details/${apiPath}/${_id}`}
