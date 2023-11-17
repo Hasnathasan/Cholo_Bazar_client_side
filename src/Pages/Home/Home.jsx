@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import Book from "../Book/Book";
-import './Home.css'
+import "./Home.css";
 import React from "react";
 
 // import {
@@ -17,10 +17,13 @@ import React from "react";
 //   MenuList,
 //   MenuItem,
 // } from "@material-tailwind/react";
-import { FaArrowDown, FaArrowLeft, FaBars, FaHackerNews, FaMarkdown } from "react-icons/fa";
-
-
-
+import {
+  FaArrowDown,
+  FaArrowLeft,
+  FaBars,
+  FaHackerNews,
+  FaMarkdown,
+} from "react-icons/fa";
 
 const Home = () => {
   const [tabIndex, setTabIndex] = useState(0);
@@ -75,14 +78,13 @@ const Home = () => {
   ];
 
   const [openNav, setOpenNav] = React.useState(false);
- 
+
   React.useEffect(() => {
     window.addEventListener(
       "resize",
-      () => window.innerWidth >= 960 && setOpenNav(false),
+      () => window.innerWidth >= 960 && setOpenNav(false)
     );
   }, []);
-
 
   // const [isMenuOpen, setIsMenuOpen] = useState(false);
   // const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -115,10 +117,10 @@ const Home = () => {
   return (
     <div>
       <div className="md:hidden">
-      <Book></Book>
+        <Book></Book>
       </div>
       <div className="hidden md:block">
-      {/* <Tabs
+        {/* <Tabs
         selectedTabClassName="activeTab"
         selectedIndex={tabIndex}
         onSelect={(index) => setTabIndex(index)}
@@ -196,8 +198,8 @@ const Home = () => {
           <h2>Any content 2</h2>
         </TabPanel>
       </Tabs> */}
- 
-      {/* <Navbar className="mx-auto max-w-screen-xl px-4 py-2">
+
+        {/* <Navbar className="mx-auto max-w-screen-xl px-4 py-2">
       <div className="flex items-center justify-between text-blue-gray-900">
         <div className="lg:block">
         <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 flex-row lg:p-1">
@@ -256,12 +258,9 @@ const Home = () => {
       </div>
     </Navbar> */}
 
-
-
-
-    <div className="max-w-6xl mx-auto">
-    <Book></Book>
-    </div>
+        <div className="max-w-6xl mx-auto">
+          <Book></Book>
+        </div>
       </div>
     </div>
   );
