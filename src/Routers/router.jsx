@@ -11,6 +11,7 @@ import Refrigerators from "../Pages/Electronics/Refrigerators/Refrigerators";
 import Kettles from "../Pages/Electronics/Kettles/Kettles";
 import AirCollers from "../Pages/Electronics/AirCollers/AirCollers";
 import Televisions from "../Pages/Electronics/Televisions/Televisions";
+import Cart from "../Pages/Cart/Cart";
 
 
 
@@ -74,6 +75,10 @@ const router = createBrowserRouter([
               element: <UserProfile></UserProfile>
             }
           ]
+        },
+        {
+          path: "/myCart",
+          element: <Cart></Cart>
         }
       ]
     }

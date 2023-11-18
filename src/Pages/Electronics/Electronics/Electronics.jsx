@@ -22,7 +22,7 @@ const Electronics = () => {
         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
 
         <div className="w-56"></div>
-        <ul className="menu flex-nowrap fixed top-1/4 -left-[25%] md:left-4 shadow-lg shadow-gray-300 bg-white px-8  py-10 w-56 space-y-2">
+        <ul className="menu flex-nowrap fixed top-1/4 -left-[30%] md:left-2 shadow-lg shadow-gray-300 bg-white px-5  py-10 w-56 space-y-2">
           <h2 className="text-2xl mb-3">Filter</h2>
 
           <RadioGroup
