@@ -11,7 +11,7 @@ const CartProductCard = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
   const {price} = product;
   return (
-    <Card className="w-[60%] p-6">
+    <Card className="w-[100%] p-6">
       <div className="flex gap-6">
         <img
           className="w-40 h-40 rounded-xl bg-gray-200"
