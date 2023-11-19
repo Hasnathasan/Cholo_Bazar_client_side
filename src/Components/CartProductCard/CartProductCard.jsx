@@ -9,11 +9,16 @@ import { IoStarOutline, IoStarSharp } from "react-icons/io5";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { useEffect } from "react";
+import axios from "axios";
+import Swal from "sweetalert2";
+import useCart from "../../Hooks/useCart";
 
 
 const CartProductCard = ({ product }) => {
   const {selectedCart, setSelectedCart} = useContext(AuthContext);
+  const [, , refetch] = useCart()
   const [isSelected, setIsSelected] = useState(selectedCart.includes(product));
+  const [quantity, setQuantity] = useState(product?.quantity);
   useEffect( () => {
     if(isSelected){
       setSelectedCart([...selectedCart, product])
@@ -24,14 +29,40 @@ const CartProductCard = ({ product }) => {
     }
   },[isSelected, product, setSelectedCart])
 
-  console.log(selectedCart, isSelected);
-  const [quantity, setQuantity] = useState(1);
+  useEffect( () => {
+    axios.patch(`https://summer-camp-server-black.vercel.app/updateCartProduct/${product?._id}?quantity=${quantity}`)
+    .then(res => {
+      console.log(res);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  },[product?._id, quantity])
+
+  console.log(product);
+  const handleDeleteProductFromCart = () => {
+    axios.delete(`https://summer-camp-server-black.vercel.app/cart/${product?._id}`)
+    .then(res => {
+      if(res.data.deletedCount){
+        refetch()
+        Swal.fire({
+          title: "Successfully deleted from cart!",
+          // text: "Go to cart to Check Out",
+          icon: "success"
+        });
+      }
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
   const {price} = product;
   return (
     <div className="w-[100%] bg-white rounded-2xl shadow-xl relative p-6">
-      <div className="flex justify-center items-center gap-1 absolute top-3 right-3">
+      <div className="flex justify-start items-center gap-4 absolute top-3 right-3">
+      <button onClick={handleDeleteProductFromCart}><img className="w-6 h-6" src={del} alt="" /></button>
+      {" "}
       <Checkbox isSelected={selectedCart.includes(product)} onValueChange={() => setIsSelected(!isSelected)} ></Checkbox>
-     <img className="w-6 h-6" src={del} alt="" />
       </div>
       <div className="flex gap-6">
         <img

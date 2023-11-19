@@ -13,7 +13,7 @@ import Swal from "sweetalert2";
 const ProductCard = ({product, apiPath}) => {
   const { _id, images, price, rating, reviews, numberOfRatings, numberOfReviews, brandInfo, tags, secondaryCategory, superDeal, mainCategory, specification } = product;
     const handleAddToCart = () => {
-      const cartProduct = {images, price, rating, reviews, numberOfRatings, numberOfReviews, brandInfo, tags, secondaryCategory, superDeal, mainCategory, specification, mainId: _id, qunatity: 1};
+      const cartProduct = {images, price, rating, reviews, numberOfRatings, numberOfReviews, brandInfo, tags, quantity: 1, secondaryCategory, superDeal, mainCategory, specification, mainId: _id, qunatity: 1};
       axios.post('https://summer-camp-server-black.vercel.app/cart', cartProduct)
       .then(res => {
         if(res.data.insertedId){
