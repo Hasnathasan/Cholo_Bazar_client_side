@@ -15,32 +15,24 @@ import useCart from "../../Hooks/useCart";
 
 
 const CartProductCard = ({ product }) => {
-  const {selectedCart, setSelectedCart} = useContext(AuthContext);
   const [, , refetch] = useCart()
-  const [isSelected, setIsSelected] = useState(selectedCart.includes(product));
+  const [isSelected, setIsSelected] = useState(product?.isSelected);
   const [quantity, setQuantity] = useState(product?.quantity);
-  useEffect( () => {
-    if(isSelected){
-      setSelectedCart([...selectedCart, product])
-    }
-    else{
-      const selectedCartWithoutThisProduct = selectedCart.filter(item => product !== item)
-      setSelectedCart(selectedCartWithoutThisProduct)
-    }
-  },[isSelected, product, setSelectedCart])
 
   useEffect( () => {
-    axios.patch(`https://summer-camp-server-black.vercel.app/updateCartProduct/${product?._id}?quantity=${quantity}`)
+    axios.patch(`https://summer-camp-server-black.vercel.app/updateCartProduct/${product?._id}?isSelected=${isSelected}&quantity=${quantity}`)
     .then(res => {
       console.log(res);
+      refetch()
     })
     .catch(function (error) {
       console.log(error);
     });
-  },[product?._id, quantity])
+  },[isSelected, product?._id, quantity, refetch])
 
-  console.log(product);
   const handleDeleteProductFromCart = () => {
+    setIsSelected(false)
+    setQuantity(1)
     axios.delete(`https://summer-camp-server-black.vercel.app/cart/${product?._id}`)
     .then(res => {
       if(res.data.deletedCount){
@@ -58,19 +50,19 @@ const CartProductCard = ({ product }) => {
   }
   const {price} = product;
   return (
-    <div className="w-[100%] bg-white rounded-2xl shadow-xl relative p-6">
+    <div className="w-[100%] bg-white rounded-2xl shadow-xl relative p-5">
       <div className="flex justify-start items-center gap-4 absolute top-3 right-3">
       <button onClick={handleDeleteProductFromCart}><img className="w-6 h-6" src={del} alt="" /></button>
       {" "}
-      <Checkbox isSelected={selectedCart.includes(product)} onValueChange={() => setIsSelected(!isSelected)} ></Checkbox>
+      <Checkbox isSelected={isSelected} onValueChange={() => setIsSelected(!isSelected)} ></Checkbox>
       </div>
-      <div className="flex gap-6">
+      <div className="flex gap-4">
         <img
           className="w-40 h-40 rounded-xl bg-gray-200"
           src={product?.images[0]}
           alt=""
         />
-        <div className="space-y-1">
+        <div className="space-y-1 mt-2">
           <Typography variant="h5" className="text-gray-900">
             {product?.specification?.Title}
           </Typography>
