@@ -17,6 +17,8 @@ import { IoStarOutline, IoStarSharp } from "react-icons/io5";
 import axios from "axios";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import Swal from "sweetalert2";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 function ThumbnailPlugin(mainRef) {
   return (slider) => {
@@ -54,6 +56,8 @@ function ThumbnailPlugin(mainRef) {
 const Details = () => {
   const apiObj = useParams();
   const { apiPath, id } = apiObj;
+  const {user} = useContext(AuthContext);
+  console.log(user);
   console.log(apiPath, id);
   const { data: product, isLoading: isProductLoading } = useQuery({
     queryKey: [id],
@@ -121,7 +125,7 @@ const Details = () => {
   };
 
   const handleAddToCart = () => {
-    const cartProduct = {images, price, rating, reviews, numberOfRatings, numberOfReviews, brandInfo, tags, quantity: 1, isSelected: false, secondaryCategory, superDeal, mainCategory, specification, mainId: _id, qunatity: 1};
+    const cartProduct = { addedBy: user?.email || user?.phoneNumber, images, price, rating, reviews, numberOfRatings, numberOfReviews, brandInfo, tags, quantity: 1, isSelected: false, secondaryCategory, superDeal, mainCategory, specification, mainId: _id, qunatity: 1};
     axios.post('https://summer-camp-server-black.vercel.app/cart', cartProduct)
     .then(res => {
       if(res.data.insertedId){
