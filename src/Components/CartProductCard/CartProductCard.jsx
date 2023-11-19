@@ -1,5 +1,5 @@
 import { Typography } from "@material-tailwind/react";
-import { Button, ButtonGroup, Card } from "@nextui-org/react";
+import { Button, ButtonGroup, Card, Checkbox } from "@nextui-org/react";
 import { useState } from "react";
 import plus from '../../../public/plus.png';
 import minus from '../../../public/minus.png'
@@ -11,7 +11,8 @@ const CartProductCard = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
   const {price} = product;
   return (
-    <Card className="w-[100%] p-6">
+    <div className="w-[100%] bg-white rounded-2xl shadow-xl relative p-6">
+      <Checkbox className="absolute top-3 right-3" ></Checkbox>
       <div className="flex gap-6">
         <img
           className="w-40 h-40 rounded-xl bg-gray-200"
@@ -44,7 +45,7 @@ const CartProductCard = ({ product }) => {
                   TK. {price?.discounted_price}
                 </h5>
                 <p className="text-sm text-gray-600">
-                  You save TK.{price?.real_price - price?.discounted_price} (
+                  You save TK. {parseInt(price?.real_price - price?.discounted_price)} (
                   {parseInt(
                     ((price?.real_price - price?.discounted_price) /
                       price?.real_price) *
@@ -53,14 +54,14 @@ const CartProductCard = ({ product }) => {
                   %)
                 </p>
               </div>
-          <ButtonGroup className="float-right" radius="lg" color="primary" variant="flat">
+          <ButtonGroup className="float-right absolute bottom-7 right-7" radius="lg" color="primary" variant="flat">
             <Button isIconOnly  onClick={() => setQuantity(quantity !== 0 ? (quantity - 1): 0)}><img className="w-4" src={minus} /></Button>
             <Button isIconOnly className="!w-5">{quantity}</Button>
             <Button isIconOnly  onClick={() => setQuantity(quantity + 1)}><img className="w-4" src={plus} /></Button>
           </ButtonGroup>
         </div>
       </div>
-    </Card>
+    </div>
   );
 };
 

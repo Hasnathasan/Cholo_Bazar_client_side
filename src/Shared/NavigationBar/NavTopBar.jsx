@@ -47,9 +47,9 @@ const NavTopBar = () => {
                     <button className=' px-3 bg-cyan-500 border-2 border-cyan-500  rounded-r'><FontAwesomeIcon className='text-white' icon={faMagnifyingGlass} /></button>
                 </form>
                 <div className='flex justify-between items-center gap-4 md:gap-7'>
-                    <button>
+                    <Link to={"/myCart"}>
                         <img className='w-6 md:w-9' src={cart} alt="" />
-                    </button>
+                    </Link>
                     <button>
                         <img className='w-6 md:w-9' src={notificationIcon} alt="" />
                     </button>
