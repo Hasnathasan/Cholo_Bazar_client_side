@@ -1,8 +1,9 @@
 import { Typography } from "@material-tailwind/react";
-import { Button, ButtonGroup, Card, Checkbox } from "@nextui-org/react";
+import { Button, ButtonGroup, Checkbox } from "@nextui-org/react";
 import { useState } from "react";
 import plus from '../../../public/plus.png';
-import minus from '../../../public/minus.png'
+import minus from '../../../public/minus.png';
+import del from '../../../public/delete.png';
 import Rating from "react-rating";
 import { IoStarOutline, IoStarSharp } from "react-icons/io5";
 import { useContext } from "react";
@@ -12,7 +13,7 @@ import { useEffect } from "react";
 
 const CartProductCard = ({ product }) => {
   const {selectedCart, setSelectedCart} = useContext(AuthContext);
-  const [isSelected, setIsSelected] = useState(false);
+  const [isSelected, setIsSelected] = useState(selectedCart.includes(product));
   useEffect( () => {
     if(isSelected){
       setSelectedCart([...selectedCart, product])
@@ -23,12 +24,15 @@ const CartProductCard = ({ product }) => {
     }
   },[isSelected, product, setSelectedCart])
 
-  console.log(selectedCart);
+  console.log(selectedCart, isSelected);
   const [quantity, setQuantity] = useState(1);
   const {price} = product;
   return (
     <div className="w-[100%] bg-white rounded-2xl shadow-xl relative p-6">
-      <Checkbox isSelected={isSelected} onValueChange={setIsSelected} className="absolute top-3 right-3" ></Checkbox>
+      <div className="flex justify-center items-center gap-1 absolute top-3 right-3">
+      <Checkbox isSelected={selectedCart.includes(product)} onValueChange={() => setIsSelected(!isSelected)} ></Checkbox>
+     <img className="w-6 h-6" src={del} alt="" />
+      </div>
       <div className="flex gap-6">
         <img
           className="w-40 h-40 rounded-xl bg-gray-200"

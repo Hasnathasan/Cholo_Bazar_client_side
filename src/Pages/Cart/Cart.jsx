@@ -28,11 +28,11 @@ const Cart = () => {
           Open drawer
         </label>
       </div>
-      <div className="drawer-side p-">
+      <div className="drawer-side">
         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
 
-        <div className="w-96"></div>
-        <ul className="menu flex-nowrap fixed top-1/4 -left-[30%] h-[400px] md:left-7 shadow-lg shadow-gray-300 bg-white px-5  py-10 w-96 space-y-2">
+        <div className="w-96 "></div>
+        <ul className="menu flex-nowrap fixed top-1/4 -left-[30%] !border-t-3 !border-blue-400 h-[400px] md:left-7 shadow-lg shadow-gray-300 bg-white px-5  py-10 w-96 space-y-2">
           <h2 className="text-2xl mb-3">Total Selected Product: {selectedCart.length}</h2>
           <h2 className="text-2xl mb-3">Total Price: {totalPrice.toFixed(2)}</h2>
 

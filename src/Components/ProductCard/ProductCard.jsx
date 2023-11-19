@@ -8,13 +8,22 @@ import { IoStarOutline, IoStarSharp } from "react-icons/io5";
 import { Typography } from "@material-tailwind/react";
 import { Chip } from "@nextui-org/react";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const ProductCard = ({product, apiPath}) => {
   const { _id, images, price, rating, reviews, numberOfRatings, numberOfReviews, brandInfo, tags, secondaryCategory, superDeal, mainCategory, specification } = product;
     const handleAddToCart = () => {
       const cartProduct = {images, price, rating, reviews, numberOfRatings, numberOfReviews, brandInfo, tags, secondaryCategory, superDeal, mainCategory, specification, mainId: _id, qunatity: 1};
       axios.post('https://summer-camp-server-black.vercel.app/cart', cartProduct)
-      .then(res => console.log(res))
+      .then(res => {
+        if(res.data.insertedId){
+          Swal.fire({
+            title: "Successfully added to cart!",
+            text: "Go to cart to Check Out",
+            icon: "success"
+          });
+        }
+      })
       .catch(function (error) {
         console.log(error);
       });
@@ -60,12 +69,12 @@ const ProductCard = ({product, apiPath}) => {
           <FaHeart className="w-6 h-6"></FaHeart>
         </a>
        
-        <a
-          href="www.google.com"
+        <button
+          onClick={handleAddToCart}
           className="card__icon_2 absolute bottom-5 right-4 z-20 transition-all !duration-100 !delay-75"
         >
           <img className="w-6 h-6" src={cart} alt="" />
-        </a>
+        </button>
       </div>
     </article>
   </div>

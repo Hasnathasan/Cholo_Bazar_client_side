@@ -16,6 +16,7 @@ import { TiMessages } from "react-icons/ti";
 import { IoStarOutline, IoStarSharp } from "react-icons/io5";
 import axios from "axios";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import Swal from "sweetalert2";
 
 function ThumbnailPlugin(mainRef) {
   return (slider) => {
@@ -122,7 +123,15 @@ const Details = () => {
   const handleAddToCart = () => {
     const cartProduct = {images, price, rating, reviews, numberOfRatings, numberOfReviews, brandInfo, tags, secondaryCategory, superDeal, mainCategory, specification, mainId: _id, qunatity: 1};
     axios.post('https://summer-camp-server-black.vercel.app/cart', cartProduct)
-    .then(res => console.log(res))
+    .then(res => {
+      if(res.data.insertedId){
+        Swal.fire({
+          title: "Successfully added to cart!",
+          text: "Go to cart to Check Out",
+          icon: "success"
+        });
+      }
+    })
     .catch(function (error) {
       console.log(error);
     });
