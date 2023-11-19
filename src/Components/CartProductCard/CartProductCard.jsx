@@ -5,14 +5,30 @@ import plus from '../../../public/plus.png';
 import minus from '../../../public/minus.png'
 import Rating from "react-rating";
 import { IoStarOutline, IoStarSharp } from "react-icons/io5";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+import { useEffect } from "react";
 
 
 const CartProductCard = ({ product }) => {
+  const {selectedCart, setSelectedCart} = useContext(AuthContext);
+  const [isSelected, setIsSelected] = useState(false);
+  useEffect( () => {
+    if(isSelected){
+      setSelectedCart([...selectedCart, product])
+    }
+    else{
+      const selectedCartWithoutThisProduct = selectedCart.filter(item => product !== item)
+      setSelectedCart(selectedCartWithoutThisProduct)
+    }
+  },[isSelected, product, setSelectedCart])
+
+  console.log(selectedCart);
   const [quantity, setQuantity] = useState(1);
   const {price} = product;
   return (
     <div className="w-[100%] bg-white rounded-2xl shadow-xl relative p-6">
-      <Checkbox className="absolute top-3 right-3" ></Checkbox>
+      <Checkbox isSelected={isSelected} onValueChange={setIsSelected} className="absolute top-3 right-3" ></Checkbox>
       <div className="flex gap-6">
         <img
           className="w-40 h-40 rounded-xl bg-gray-200"
@@ -55,7 +71,7 @@ const CartProductCard = ({ product }) => {
                 </p>
               </div>
           <ButtonGroup className="float-right absolute bottom-7 right-7" radius="lg" color="primary" variant="flat">
-            <Button isIconOnly  onClick={() => setQuantity(quantity !== 0 ? (quantity - 1): 0)}><img className="w-4" src={minus} /></Button>
+            <Button isIconOnly  onClick={() => setQuantity(quantity !== 1 ? (quantity - 1): 1)}><img className="w-4" src={minus} /></Button>
             <Button isIconOnly className="!w-5">{quantity}</Button>
             <Button isIconOnly  onClick={() => setQuantity(quantity + 1)}><img className="w-4" src={plus} /></Button>
           </ButtonGroup>

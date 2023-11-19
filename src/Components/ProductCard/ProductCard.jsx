@@ -7,9 +7,18 @@ import { Link } from "react-router-dom";
 import { IoStarOutline, IoStarSharp } from "react-icons/io5";
 import { Typography } from "@material-tailwind/react";
 import { Chip } from "@nextui-org/react";
+import axios from "axios";
 
 const ProductCard = ({product, apiPath}) => {
-    const {_id, specification, images, price} = product;
+  const { _id, images, price, rating, reviews, numberOfRatings, numberOfReviews, brandInfo, tags, secondaryCategory, superDeal, mainCategory, specification } = product;
+    const handleAddToCart = () => {
+      const cartProduct = {images, price, rating, reviews, numberOfRatings, numberOfReviews, brandInfo, tags, secondaryCategory, superDeal, mainCategory, specification, mainId: _id, qunatity: 1};
+      axios.post('https://summer-camp-server-black.vercel.app/cart', cartProduct)
+      .then(res => console.log(res))
+      .catch(function (error) {
+        console.log(error);
+      });
+    }
   return (
     <div className="card !w-[180px] md:!w-[250px] xl:!w-[230px] min-h-[320px] relative p-3.5 overflow-hidden !rounded hover:shadow-lg hover:shadow-gray-300 !transition-all !duration-300  delay-75 bg-white">
     <Link

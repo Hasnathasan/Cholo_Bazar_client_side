@@ -17,6 +17,7 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState(null);
+  const [selectedCart, setSelectedCart] = useState([]);
   const auth = getAuth(app);
   const googleProvider = new GoogleAuthProvider();
   const facebookProvider = new FacebookAuthProvider();
@@ -49,7 +50,9 @@ const AuthProvider = ({ children }) => {
     logout,
     auth,
     filter,
-    setFilter
+    setFilter,
+    selectedCart,
+    setSelectedCart
   };
 
   useEffect(() => {

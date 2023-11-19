@@ -14,6 +14,8 @@ import Slider from "react-slick";
 import { MdShare } from "react-icons/md";
 import { TiMessages } from "react-icons/ti";
 import { IoStarOutline, IoStarSharp } from "react-icons/io5";
+import axios from "axios";
+import useAxiosSecure from "../../Hooks/useAxiosSecure";
 
 function ThumbnailPlugin(mainRef) {
   return (slider) => {
@@ -81,7 +83,7 @@ const Details = () => {
     return <h1>Loading</h1>;
   }
 
-  const { specification, price } = product;
+  const { _id, images, price, rating, reviews, numberOfRatings, numberOfReviews, brandInfo, tags, secondaryCategory, superDeal, mainCategory, specification } = product;
 
   const settings = {
     dots: true,
@@ -116,6 +118,15 @@ const Details = () => {
       },
     ],
   };
+
+  const handleAddToCart = () => {
+    const cartProduct = {images, price, rating, reviews, numberOfRatings, numberOfReviews, brandInfo, tags, secondaryCategory, superDeal, mainCategory, specification, mainId: _id, qunatity: 1};
+    axios.post('https://summer-camp-server-black.vercel.app/cart', cartProduct)
+    .then(res => console.log(res))
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
   return (
     <>
       {apiPath !== "books" ? (
@@ -214,7 +225,7 @@ const Details = () => {
                 ) : (
                   ""
                 )}
-                <button className="px-8 flex gap-2 text-lg font-semibold text-white justify-center items-center py-3 bg-amber-500 hover:bg-[#f59f0bd0] rounded duration-500  transition-all">
+                <button onClick={handleAddToCart} className="px-8 flex gap-2 text-lg font-semibold text-white justify-center items-center py-3 bg-amber-500 hover:bg-[#f59f0bd0] rounded duration-500  transition-all">
                   {" "}
                   <img className="w-8" src={cartImg} alt="" />
                   Add to Cart
