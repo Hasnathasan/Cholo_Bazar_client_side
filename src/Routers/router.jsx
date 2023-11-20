@@ -12,6 +12,7 @@ import Kettles from "../Pages/Electronics/Kettles/Kettles";
 import AirCollers from "../Pages/Electronics/AirCollers/AirCollers";
 import Televisions from "../Pages/Electronics/Televisions/Televisions";
 import Cart from "../Pages/Cart/Cart";
+import CheckOut from "../Pages/CheckOut/CheckOut";
 
 
 
@@ -79,7 +80,11 @@ const router = createBrowserRouter([
         {
           path: "/myCart",
           element: <Cart></Cart>
-        }
+        },
+        {
+          path: "/checkOut",
+          element: <CheckOut></CheckOut>
+        },
       ]
     }
   ]);

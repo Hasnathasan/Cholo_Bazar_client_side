@@ -9,11 +9,14 @@ import { Typography } from "@material-tailwind/react";
 import { Chip } from "@nextui-org/react";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const ProductCard = ({product, apiPath}) => {
-  const { _id, images, price, rating, reviews, numberOfRatings, numberOfReviews, brandInfo, tags, secondaryCategory, superDeal, mainCategory, specification } = product;
+  const {user} = useContext(AuthContext)
+  const { _id, images, price, rating, reviews, number_of_ratings, number_of_reviews, brand_info, tags, secondary_category, super_deal, main_category, specification } = product;
     const handleAddToCart = () => {
-      const cartProduct = {images, price, rating, reviews, numberOfRatings, numberOfReviews, brandInfo, tags, quantity: 1, isSelected: false, secondaryCategory, superDeal, mainCategory, specification, mainId: _id, qunatity: 1};
+      const cartProduct = { addedBy: user?.email || user?.phoneNumber, images, price, rating, reviews, number_of_ratings, number_of_reviews, brand_info, tags, quantity: 1, isSelected: false, secondary_category, super_deal, main_category, specification, mainId: _id, qunatity: 1};
       axios.post('https://cholo-bazar.vercel.app/cart', cartProduct)
       .then(res => {
         if(res.data.insertedId){

@@ -28,6 +28,7 @@
     "react": "^18.2.0",
     "react-custom-scroll": "^5.0.0",
     "react-dom": "^18.2.0",
+    "react-google-autocomplete": "^2.7.3",
     "react-hook-form": "^7.47.0",
     "react-icons": "^4.10.1",
     "react-image-zoom": "^1.3.1",

@@ -1,6 +1,7 @@
 import { Button } from "@nextui-org/react";
 import CartProductCard from "../../Components/CartProductCard/CartProductCard";
 import useCart from "../../Hooks/useCart";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const [cartProduct, isCartProductLoading] = useCart();
@@ -79,15 +80,17 @@ const Cart = () => {
               Delete Cart
             </Button>
 
+            
             <Button
-              className="basis-1/2 hover:!text-white"
+              className="basis-1/2 !relative hover:!text-white"
               size="lg"
               color="success"
               radius="none"
               variant="ghost"
-            >
+            ><Link className="absolute top-0 left-0 right-0 bottom-0" to={"/checkOut"}>
               Check Out
-            </Button>
+            </Link></Button>
+            
           </div>
         </ul>
       </div>
