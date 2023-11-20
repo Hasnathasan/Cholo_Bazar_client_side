@@ -55,6 +55,7 @@ function ThumbnailPlugin(mainRef) {
 
 const Details = () => {
   const apiObj = useParams();
+  const [axiosSecure] = useAxiosSecure()
   const { apiPath, id } = apiObj;
   const {user} = useContext(AuthContext);
   console.log(user);
@@ -62,10 +63,8 @@ const Details = () => {
   const { data: product, isLoading: isProductLoading } = useQuery({
     queryKey: [id],
     queryFn: async () => {
-      const res = await fetch(
-        `https://summer-camp-server-black.vercel.app/${apiPath}/${id}`
-      );
-      return res.json();
+      const res = await axiosSecure.get(`/${apiPath}/${id}`)
+            return res.data;
     },
   });
   console.log(product);
@@ -88,7 +87,7 @@ const Details = () => {
     return <h1>Loading</h1>;
   }
 
-  const { _id, images, price, rating, reviews, numberOfRatings, numberOfReviews, brandInfo, tags, secondaryCategory, superDeal, mainCategory, specification } = product;
+  const { _id, images, price, rating, reviews, number_of_ratings, number_of_reviews, brand_info, tags, secondary_category, super_deal, main_category, specification } = product;
 
   const settings = {
     dots: true,
@@ -125,8 +124,8 @@ const Details = () => {
   };
 
   const handleAddToCart = () => {
-    const cartProduct = { addedBy: user?.email || user?.phoneNumber, images, price, rating, reviews, numberOfRatings, numberOfReviews, brandInfo, tags, quantity: 1, isSelected: false, secondaryCategory, superDeal, mainCategory, specification, mainId: _id, qunatity: 1};
-    axios.post('https://summer-camp-server-black.vercel.app/cart', cartProduct)
+    const cartProduct = { addedBy: user?.email || user?.phoneNumber, images, price, rating, reviews, number_of_ratings, number_of_reviews, brand_info, tags, quantity: 1, isSelected: false, secondary_category, super_deal, main_category, specification, mainId: _id, qunatity: 1};
+    axios.post('https://cholo-bazar.vercel.app/cart', cartProduct)
     .then(res => {
       if(res.data.insertedId){
         Swal.fire({

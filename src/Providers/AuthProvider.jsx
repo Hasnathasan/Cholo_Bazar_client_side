@@ -68,11 +68,11 @@ const AuthProvider = ({ children }) => {
         photoUrl: loogedUser?.photoURL,
       };
       if (loogedUser?.email) {
-        fetch(`https://rokomari-clone-server-beta.vercel.app/eachUser/${loogedUser?.email}`)
+        fetch(`https://cholo-bazar.vercel.app/eachUser/${loogedUser?.email}`)
           .then((res) => res.json())
           .then(data => {
             if(data.notFound){
-                fetch('https://rokomari-clone-server-beta.vercel.app/users', {
+                fetch('https://cholo-bazar.vercel.app/users', {
                 method: "POST",
                 headers: {
                     "content-type": "application/json"
@@ -87,11 +87,11 @@ const AuthProvider = ({ children }) => {
       }
       else if(loogedUser?.phoneNumber){
         console.log("User has Phone Number");
-        fetch(`https://rokomari-clone-server-beta.vercel.app/each-user-by-number/${loogedUser?.phoneNumber}`)
+        fetch(`https://cholo-bazar.vercel.app/each-user-by-number/${loogedUser?.phoneNumber}`)
           .then((res) => res.json())
           .then(data => {
             if(data?.notFound){
-                fetch('https://rokomari-clone-server-beta.vercel.app/users', {
+                fetch('https://cholo-bazar.vercel.app/users', {
                 method: "POST",
                 headers: {
                     "content-type": "application/json"

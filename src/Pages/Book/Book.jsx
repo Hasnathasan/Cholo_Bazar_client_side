@@ -5,6 +5,7 @@ import CategorySlider from "../../Components/CategorySlider/CategorySlider";
 import SecondaryProductContainer from "../../Components/SecondaryProductContainer/SecondaryProductContainer";
 import ProductContainer from "../../Components/ProductContainer/ProductContainer";
 import UseProductsBySecondaryCategory from "../../Hooks/UseProductsBySecondaryCategory";
+import FictionNonFicBookContainer from "./FictionNonFicBookContainer/FictionNonFicBookContainer";
 
 const Book = () => {
   const [hotDeals, isHotDealsLoading] = useHotDeals();
@@ -47,11 +48,11 @@ const Book = () => {
       <SecondaryProductContainer
         data={hotDeals}
         apiPath={"products"}
-        headding={"Deals on Rokomari Products 🔥🔥"}
+        headding={"Deals on CholoBazar Products 🔥🔥"}
       ></SecondaryProductContainer>
       <ProductContainer data={irons} apiPath={"products"}></ProductContainer>
       <CategorySlider></CategorySlider>
-      {/* <FictionNonFicBookContainer></FictionNonFicBookContainer> */}
+      <FictionNonFicBookContainer></FictionNonFicBookContainer>
       <SecondaryProductContainer
         data={refrigerators}
         apiPath={"products"}

@@ -6,8 +6,6 @@ import minus from '../../../public/minus.png';
 import del from '../../../public/delete.png';
 import Rating from "react-rating";
 import { IoStarOutline, IoStarSharp } from "react-icons/io5";
-import { useContext } from "react";
-import { AuthContext } from "../../Providers/AuthProvider";
 import { useEffect } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
@@ -15,56 +13,63 @@ import useCart from "../../Hooks/useCart";
 
 
 const CartProductCard = ({ product }) => {
-  const [, , refetch] = useCart()
-  const [isSelected, setIsSelected] = useState(product?.isSelected);
-  const [quantity, setQuantity] = useState(product?.quantity);
+  const [, , refetch] = useCart();
 
-  useEffect( () => {
-    axios.patch(`https://summer-camp-server-black.vercel.app/updateCartProduct/${product?._id}?isSelected=${isSelected}&quantity=${quantity}`)
-    .then(res => {
-      console.log(res);
-      refetch()
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-  },[isSelected, product?._id, quantity, refetch])
+  const [isSelected, setIsSelected] = useState(product ? product.isSelected : false);
+  const [quantity, setQuantity] = useState(product ? product.quantity : 1);
+
+  useEffect(() => {
+    if (product) {
+      axios
+        .patch(
+          `https://cholo-bazar.vercel.app/updateCartProduct/${product._id}?isSelected=${isSelected}&quantity=${quantity}`
+        )
+        .then((res) => {
+          console.log(res);
+          refetch();
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
+  }, [isSelected, product, quantity, refetch]);
 
   const handleDeleteProductFromCart = () => {
-    setIsSelected(false)
-    setQuantity(1)
-    axios.delete(`https://summer-camp-server-black.vercel.app/cart/${product?._id}`)
-    .then(res => {
-      if(res.data.deletedCount){
-        refetch()
-        Swal.fire({
-          title: "Successfully deleted from cart!",
-          // text: "Go to cart to Check Out",
-          icon: "success"
+    if (product) {
+      axios
+        .delete(`https://cholo-bazar.vercel.app/cart/${product._id}`)
+        .then((res) => {
+          if (res.data.deletedCount) {
+            refetch();
+            Swal.fire({
+              title: "Successfully deleted from cart!",
+              icon: "success",
+            });
+          }
+        })
+        .catch(function (error) {
+          console.log(error);
         });
-      }
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-  }
-  const {price} = product;
+    }
+  };
+
+  const { price } = product;
   return (
     <div className="w-[100%] bg-white rounded-2xl shadow-xl relative p-5">
       <div className="flex justify-start items-center gap-4 absolute top-3 right-3">
-      <button onClick={handleDeleteProductFromCart}><img className="w-6 h-6" src={del} alt="" /></button>
-      {" "}
-      <Checkbox isSelected={isSelected} onValueChange={() => setIsSelected(!isSelected)} ></Checkbox>
+        <button onClick={handleDeleteProductFromCart}><img className="w-6 h-6" src={del} alt="" /></button>
+        {" "}
+        <Checkbox isSelected={isSelected} onValueChange={() => setIsSelected(!isSelected)} ></Checkbox>
       </div>
       <div className="flex gap-4">
         <img
           className="w-40 h-40 rounded-xl bg-gray-200"
-          src={product?.images[0]}
+          src={product?.images ? product?.images[0] : product?.image}
           alt=""
         />
         <div className="space-y-1 mt-2">
           <Typography variant="h5" className="text-gray-900">
-            {product?.specification?.Title}
+            {product?.specification ? product?.specification?.Title : product?.title}
           </Typography>
           <Typography variant="paragraph">
             Brand: <span className="text-blue-500">{product?.specification?.Brand}</span>

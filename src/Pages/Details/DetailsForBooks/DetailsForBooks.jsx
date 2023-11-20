@@ -7,11 +7,32 @@ import banner from '../../../../public/details-page-banner.png';
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import './DetailsForBooks.css'
 import Reviews from "../../../Components/Reviews/Reviews";
+import { useContext } from "react";
+import { AuthContext } from "../../../Providers/AuthProvider";
+import Swal from "sweetalert2";
+import axios from "axios";
 
 
 const DetailsForBooks = ({book, apiPath}) => {
+  const {user} = useContext(AuthContext)
   console.log(book);
-    const {image, title, tags, price, reviews, rating, number_of_pages, number_of_reviews, main_category, language, publisher, category, stock, buyers, country, edition, author, isbn, book_summary, translator} = book;
+    const { _id, image, title, tags, price, reviews, rating, number_of_pages, number_of_reviews, number_of_ratings, main_category, language, publisher, category, stock, buyers, country, edition, author, isbn, book_summary, translator} = book;
+    const handleAddToCart = () => {
+      const cartProduct = { addedBy: user?.email || user?.phoneNumber, image, price, rating, reviews, number_of_ratings, number_of_reviews, author, tags, quantity: 1, isSelected: false, main_category, mainId: _id, qunatity: 1};
+      axios.post('https://cholo-bazar.vercel.app/cart', cartProduct)
+      .then(res => {
+        if(res.data.insertedId){
+          Swal.fire({
+            title: "Successfully added to cart!",
+            text: "Go to cart to Check Out",
+            icon: "success"
+          });
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    }
     return (
         <div className="mx-auto max-w-[1160px] py-20">
       <div className="bg-white flex flex-col md:flex-row p-5 mb-5 gap-10 shadow-lg"> 
@@ -51,7 +72,7 @@ const DetailsForBooks = ({book, apiPath}) => {
               {
                 apiPath.includes("books") ? <button className="px-8 py-3 border border-green-500 rounded-sm hover:bg-green-500 hover:text-white transition-all">একটু পড়ে দেখুন</button> : ""
               }
-              <button className="px-8 flex gap-2 text-lg font-semibold text-white justify-center items-center py-3 bg-amber-500 hover:bg-[#f59f0bd0] rounded duration-500  transition-all"> <img className="w-8" src={cartImg} alt="" />Add to Cart</button>
+              <button onClick={handleAddToCart} className="px-8 flex gap-2 text-lg font-semibold text-white justify-center items-center py-3 bg-amber-500 hover:bg-[#f59f0bd0] rounded duration-500  transition-all"> <img className="w-8" src={cartImg} alt="" />Add to Cart</button>
             </div>
         </div>
       </div>

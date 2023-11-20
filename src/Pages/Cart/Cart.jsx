@@ -1,4 +1,4 @@
-import { Button, Input } from "@nextui-org/react";
+import { Button } from "@nextui-org/react";
 import CartProductCard from "../../Components/CartProductCard/CartProductCard";
 import useCart from "../../Hooks/useCart";
 
@@ -22,8 +22,8 @@ const Cart = () => {
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content mx-auto w-full flex flex-col items-start justify-start">
         <div className="space-y-7 w-[75%] py-10 mx-auto">
-          {cartProduct?.map((product, index) => (
-            <CartProductCard key={index} product={product}></CartProductCard>
+          {cartProduct?.map((product) => (
+            <CartProductCard key={product._id} product={product}></CartProductCard>
           ))}
         </div>
         <label

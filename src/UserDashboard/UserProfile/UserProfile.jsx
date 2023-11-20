@@ -25,7 +25,7 @@ const UserProfile = () => {
     const onSubmit = (data) => {
       console.log(data);
       const newUserData = {email, name: data?.name, phoneNumber, photoUrl, date_of_birth: data?.date_of_birth, gender: data?.gender || gender};
-      fetch(`https://rokomari-clone-server-beta.vercel.app/updateUser/${_id}`, {
+      fetch(`https://cholo-bazar.vercel.app/updateUser/${_id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json"
