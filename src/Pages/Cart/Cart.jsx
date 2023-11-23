@@ -22,23 +22,23 @@ const Cart = () => {
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content mx-auto w-full flex flex-col items-start justify-start">
-        <div className="space-y-7 w-[75%] py-10 mx-auto">
+        <div className="space-y-7 w-[75%] pt-20 md:py-10 mx-auto">
           {cartProduct?.map((product) => (
             <CartProductCard key={product._id} product={product}></CartProductCard>
           ))}
         </div>
         <label
           htmlFor="my-drawer-2"
-          className="btn btn-primary drawer-button lg:hidden"
+          className="px-5 py-3 border border-green-500 hover:bg-green-500 hover:text-white transition-all duration-250 absolute top-2 left-1 drawer-button lg:hidden"
         >
-          Open drawer
+          CheckOut- price: {totalPrice.toFixed(2)}
         </label>
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
 
-        <div className="w-96 "></div>
-        <ul className="menu flex-nowrap fixed top-1/4 -left-[30%] !border-t-3 !border-blue-400 h-[400px] md:left-7 shadow-lg shadow-gray-300 bg-white px-5  py-10 w-96 space-y-2">
+        <div className="md:w-96 "></div>
+        <ul className="menu flex-nowrap fixed top-1/4 md:left-7 !border-t-3 !border-blue-400 h-[400px] shadow-lg shadow-gray-300 bg-white px-5  py-10 md:w-96 space-y-2">
           <h2 className="text-xl mb-3">
             Total Selected Products:{" "}
             <span className="font-semibold">{selectedCartProducts.length}</span>

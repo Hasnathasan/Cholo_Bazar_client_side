@@ -16,7 +16,7 @@ const Main = () => {
 
         // Clean up the timeout on unmount
         return () => clearTimeout(timeoutId);
-    }, []);
+    }, [setIsAnimationVisible]);
 
     const location = useLocation();
 
@@ -27,7 +27,7 @@ const Main = () => {
     return (
         <>
             {
-                isAnimationVisible ? <div className="w-full h-screen flex justify-center items-center"><Lottie animationData={cycling}></Lottie></div> : <div className="">
+                isAnimationVisible ? <div className="w-full h-screen flex justify-center items-center"><Lottie loop={true}  animationData={cycling}></Lottie></div> : <div className="">
                 <MainNavigation></MainNavigation>
              <div className="md:mt-[120px]">
                 <Outlet></Outlet>

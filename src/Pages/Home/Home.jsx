@@ -14,7 +14,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const Home = () => {
-  const {isAnimationVisible, setIsAnimationVisible} = useContext(AuthContext)
+  const { setIsAnimationVisible} = useContext(AuthContext)
 
   const [hotDeals, isHotDealsLoading] = useHotDeals();
   const [irons, isIronsLoading] = UseProductsBySecondaryCategory({
