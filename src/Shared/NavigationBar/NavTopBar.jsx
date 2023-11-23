@@ -34,7 +34,7 @@ const NavTopBar = () => {
                 <img className='w-5 h-5 md:w-6' onClick={openDrawer} src={hamBurger} alt="" />
                 </div>
                 <NavbarBrand>
-                  <Link to="/"><img className='w-20 md:w-32' src={rokomari_logo} alt="Logo of rokomari.com" /></Link>
+                  <Link to="/"><img className='w-20 md:w-36' src={rokomari_logo} alt="Logo of rokomari.com" /></Link>
                 </NavbarBrand>
                
                 <form className='md:flex rounded-md hidden max-w-xl'>

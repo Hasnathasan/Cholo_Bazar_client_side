@@ -4,7 +4,6 @@ import { Typography } from "@material-tailwind/react";
 import useCart from "../../Hooks/useCart";
 import { Button } from "@nextui-org/react";
 import axios from "axios";
-import Swal from "sweetalert2";
 
 
 const CheckOut = () => {

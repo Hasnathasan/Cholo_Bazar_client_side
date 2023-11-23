@@ -1,5 +1,5 @@
 import { Outlet, useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import MainNavigation from "../Shared/NavigationBar/MainNavigation/MainNavigation";
 import cycling from '../../public/cycelling.json'
 import Lottie from "lottie-react";
