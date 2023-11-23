@@ -18,7 +18,7 @@ const Electronics = () => {
           Open drawer
         </label>
       </div>
-      <div className="drawer-side z-[1000] p-">
+      <div className="drawer-side z-[100] p-">
         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
 
         <div className="w-56"></div>

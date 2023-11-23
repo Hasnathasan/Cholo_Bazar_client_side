@@ -13,6 +13,7 @@ import AirCollers from "../Pages/Electronics/AirCollers/AirCollers";
 import Televisions from "../Pages/Electronics/Televisions/Televisions";
 import Cart from "../Pages/Cart/Cart";
 import CheckOut from "../Pages/CheckOut/CheckOut";
+import PaymentSuccess from "../Pages/PaymentSuccess/PaymentSuccess";
 
 
 
@@ -85,6 +86,10 @@ const router = createBrowserRouter([
           path: "/checkOut",
           element: <CheckOut></CheckOut>
         },
+        {
+          path: '/paymentSuccess/:transactionId',
+          element: <PaymentSuccess></PaymentSuccess>
+        }
       ]
     }
   ]);

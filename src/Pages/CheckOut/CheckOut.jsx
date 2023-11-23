@@ -20,14 +20,11 @@ const CheckOut = () => {
         console.log(data);
         const {customerName, address, phoneNumber} = data
         const order = {customerName, customerEmail: userData?.email, address, phoneNumber, products: selectedCartProducts}
-        axios.post('https://cholo-bazar.vercel.app/order', order)
+        axios.post('http://localhost:8000/order', order)
       .then(res => {
-        if(res.data.insertedId){
-          Swal.fire({
-            title: "Payment Successfull!",
-            text: "Buy more products",
-            icon: "success"
-          });
+        console.log(res.data);
+        if(res.data.url){
+          window.location.replace(res.data.url)
         }
       })
       .catch(function (error) {

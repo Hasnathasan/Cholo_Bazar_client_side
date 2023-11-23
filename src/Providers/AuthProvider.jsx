@@ -18,6 +18,7 @@ const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState(null);
   const [selectedCart, setSelectedCart] = useState([]);
+  const [isAnimationVisible, setIsAnimationVisible] = useState(true);
   const auth = getAuth(app);
   const googleProvider = new GoogleAuthProvider();
   const facebookProvider = new FacebookAuthProvider();
@@ -52,7 +53,9 @@ const AuthProvider = ({ children }) => {
     filter,
     setFilter,
     selectedCart,
-    setSelectedCart
+    setSelectedCart,
+    isAnimationVisible,
+    setIsAnimationVisible
   };
 
   useEffect(() => {

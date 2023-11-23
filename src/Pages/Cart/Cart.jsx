@@ -87,7 +87,7 @@ const Cart = () => {
               color="success"
               radius="none"
               variant="ghost"
-            ><Link className="absolute top-0 left-0 right-0 bottom-0" to={"/checkOut"}>
+            ><Link className="absolute top-0 flex justify-center items-center left-0 right-0 bottom-0" to={"/checkOut"}>
               Check Out
             </Link></Button>
             

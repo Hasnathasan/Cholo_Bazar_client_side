@@ -43,7 +43,7 @@ const MainNavigation = () => {
   return (
     <div>
       <NavTopBar></NavTopBar>
-      <Navbar className="md:mt-[88px] h-[40px] fixed">
+      <Navbar shouldHideOnScroll className="md:mt-[88px] h-[40px] fixed ">
         <NavbarContent className="hidden sm:flex gap-5" justify="between">
           {/* <Dropdown>
           <NavbarItem>

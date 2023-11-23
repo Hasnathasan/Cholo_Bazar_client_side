@@ -6,8 +6,11 @@ import SecondaryProductContainer from "../../Components/SecondaryProductContaine
 import ProductContainer from "../../Components/ProductContainer/ProductContainer";
 import UseProductsBySecondaryCategory from "../../Hooks/UseProductsBySecondaryCategory";
 import FictionNonFicBookContainer from "./FictionNonFicBookContainer/FictionNonFicBookContainer";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Book = () => {
+  const {isAnimationVisible, setIsAnimationVisible} = useContext(AuthContext)
   const [hotDeals, isHotDealsLoading] = useHotDeals();
   const [irons, isIronsLoading] = UseProductsBySecondaryCategory({
     category: "iron",
@@ -24,12 +27,8 @@ const Book = () => {
     category: "television",
   });
 
-  if (isIronsLoading || isHotDealsLoading) {
-    return (
-      <h1 className="w-full text-4xl text-green-600 h-screen flex justify-center items-center">
-        Loading...................
-      </h1>
-    );
+  if ( isHotDealsLoading) {
+    setIsAnimationVisible(true)
   }
   return (
     <div>

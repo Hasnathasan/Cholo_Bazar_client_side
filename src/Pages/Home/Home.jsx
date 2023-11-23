@@ -10,8 +10,11 @@ import SecondaryProductContainer from "../../Components/SecondaryProductContaine
 import ProductContainer from "../../Components/ProductContainer/ProductContainer";
 import CategorySlider from "../../Components/CategorySlider/CategorySlider";
 import FictionNonFicBookContainer from "../Book/FictionNonFicBookContainer/FictionNonFicBookContainer";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Home = () => {
+  const {isAnimationVisible, setIsAnimationVisible} = useContext(AuthContext)
 
   const [hotDeals, isHotDealsLoading] = useHotDeals();
   const [irons, isIronsLoading] = UseProductsBySecondaryCategory({
@@ -29,14 +32,10 @@ const Home = () => {
     category: "television",
   });
 
-  if (isIronsLoading || isHotDealsLoading) {
-    return (
-      <h1 className="w-full text-4xl text-green-600 h-screen flex justify-center items-center">
-        Loading...................
-      </h1>
-    );
+  if ( isHotDealsLoading || isIronsLoading ) {
+    setIsAnimationVisible(true)
   }
-
+ setIsAnimationVisible(false)
   return (
     <div>
         <div className="max-w-6xl mx-auto">
