@@ -18,7 +18,6 @@ import banner13 from '../../../public/banner-13.png'
 import add1 from '../../../public/add1.png'
 import add2 from '../../../public/add2.png'
 import add3 from '../../../public/add3.png'
-import { RiAlertFill } from "react-icons/ri";
 const HomeSlider = () => {
   const sliderImages = [banner1, banner2, banner3, banner4, banner5, banner6, banner7, banner8, banner9, banner10, banner11, banner12, banner13];
     const settings = {

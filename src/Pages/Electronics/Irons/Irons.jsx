@@ -6,7 +6,7 @@ import UseProductsBySecondaryCategory from "../../../Hooks/UseProductsBySecondar
 import { AuthContext } from "../../../Providers/AuthProvider";
 
 const Irons = () => {
-  const { filter, setFilter } = useContext(AuthContext);
+  const { filter } = useContext(AuthContext);
   const [sort, SetSort] = useState(null);
   useEffect(() => {
     SetSort(filter);

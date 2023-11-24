@@ -23,7 +23,7 @@ const Cart = () => {
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content mx-auto w-full flex flex-col items-start justify-start">
         <div className="space-y-7 w-[90%] md:w-[75%] py-20 md:py-32 lg:py-10 mx-auto">
-          {cartProduct?.map((product, index) => (
+          {cartProduct?.map((product) => (
             <CartProductCard key={product._id} product={product}></CartProductCard>
           ))}
         </div>

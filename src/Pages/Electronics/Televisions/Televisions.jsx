@@ -6,7 +6,7 @@ import { AuthContext } from "../../../Providers/AuthProvider";
 import { useEffect } from "react";
 
 const Televisions = () => {
-  const { filter, setFilter } = useContext(AuthContext);
+  const { filter } = useContext(AuthContext);
   const [sort, SetSort] = useState(null);
   useEffect(() => {
     SetSort(filter);

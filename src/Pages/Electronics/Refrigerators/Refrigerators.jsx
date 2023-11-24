@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
 
 const Refrigerators = () => {
-  const { filter, setFilter } = useContext(AuthContext);
+  const { filter } = useContext(AuthContext);
   const [sort, SetSort] = useState(null);
   useEffect(() => {
     SetSort(filter);

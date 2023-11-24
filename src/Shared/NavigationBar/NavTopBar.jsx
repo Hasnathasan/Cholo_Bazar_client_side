@@ -54,7 +54,7 @@ const NavTopBar = () => {
   const { user, logout } = useContext(AuthContext);
   return (
     <>
-      <Navbar className="pt-[1px] md:py-2 w-full md:fixed top-0 z-50 nav bg-white">
+      <Navbar className="pt-[1px] md:py-2 w-full overflow-hidden md:fixed top-0 z-50 nav bg-white">
         <div className="md:hidden">
           <img
             className="w-5 h-5 md:w-6"
@@ -63,10 +63,10 @@ const NavTopBar = () => {
             alt=""
           />
         </div>
-        <NavbarBrand>
+        <NavbarBrand className="h-full">
           <Link to="/">
             <img
-              className="w-20 md:w-36"
+              className="w-20 !h-full md:w-36"
               src={rokomari_logo}
               alt="Logo of rokomari.com"
             />
@@ -78,16 +78,16 @@ const NavTopBar = () => {
           radius="none"
           labelPlacement="outside-left"
           defaultSelectedKeys={["products"]}
-            className="max-w-[20%] rounded-l !h-[43px] border-b-3 border-yellow-800 focus:border-blue-400 w-36"
+            className="max-w-[20%] rounded-l !h-[43px] border-b-2 border-orange-500 !bg-[#ebebeb] w-40"
           >
             <SelectItem key={"products"} value={"products"}>Products</SelectItem>
             <SelectItem key={"books"} value={"books"}>Books</SelectItem>
           </Select>
           <input
             type="text"
-            className="border lg:w-[200px] xl:w-[545px] border-gray-200 border-b-2 border-b-orange-400 !outline-none p-2"
+            className="border lg:w-[200px] xl:w-[545px] border-gray-200 border-b-2 border-b-orange-500 !outline-none p-2"
           />
-          <button className=" px-3 bg-blue-400 border-2 rounded-r border-blue-400 ">
+          <button className=" px-[14px] bg-blue-400 border-2 rounded-r border-blue-400 ">
             <FontAwesomeIcon className="text-white" icon={faMagnifyingGlass} />
           </button>
         </form>
@@ -102,7 +102,7 @@ const NavTopBar = () => {
             <>
               <div className="hidden lg:block">
                 <Dropdown
-                  shouldBlockScroll={false}
+                  shouldBlockScroll
                   className="dropdown-classes"
                 >
                   <DropdownTrigger>

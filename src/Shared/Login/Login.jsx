@@ -1,13 +1,12 @@
 import './Login.css';
 import { FaFacebookF, FaGoogle } from 'react-icons/fa';
-import { BsEnvelope } from "react-icons/bs";
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
 import PhoneAuth from '../../Components/PhoneAuth/PhoneAuth';
 
 
 const Login = () => {
-  const {googleLogin, faceBookSignIn, phoneSignIn, user, logout} = useContext(AuthContext);
+  const {googleLogin, faceBookSignIn, user} = useContext(AuthContext);
   console.log(user);
   const handleGoogleSignIn = () => {
     googleLogin()
@@ -27,32 +26,6 @@ const Login = () => {
       console.log(error);
     })
   }
-
-  
-  
-
-  // Initialize the FirebaseUI Widget using Firebase.
-  
-  // The start method will wait until the DOM is loaded.
-    
-    // Get the user's phone number from input
-//     const number = phoneNumber?.current?.value;
-    
-//     // Get the reCAPTCHA verifier instance
-//     const appVerifier = window.recaptchaVerifier;
-
-// const auth = getAuth();
-// signInWithPhoneNumber(auth, number, appVerifier)
-//     .then((confirmationResult) => {
-//       // SMS sent. Prompt user to type the code from the message, then sign the
-//       // user in with confirmationResult.confirm(code).
-//       window.confirmationResult = confirmationResult;
-//       console.log(confirmationResult);
-//       // ...
-//     }).catch((error) => {
-//       // Error; SMS not sent
-//       // ...
-//     });
     
   return (
     <div className='py-10'>
