@@ -41,7 +41,7 @@ const Home = () => {
         <div className="max-w-6xl mx-auto">
         <div>
       <HomeSlider></HomeSlider>
-      <div className="flex items-center flex-col md:flex-row gap-5 md:gap-7 text-gray-700">
+      {/* <div className="flex items-center flex-col md:flex-row gap-5 md:gap-7 text-gray-700">
         <img className="w-44" src={bookFairLogo} alt="" />
         <p className="px-4">
           অনলাইন বইমেলার সাথে শেষ হয়ে গেলো নগদ-রকমারি বইমেলা বেস্টসেলার
@@ -51,7 +51,7 @@ const Home = () => {
           বেস্টসেলার তালিকায়? তাছাড়া এবারের বেস্টসেলার লেখকের বইটি আপনি পড়েছেন
           তো?
         </p>
-      </div>
+      </div> */}
       <SecondaryProductContainer
         data={hotDeals}
         apiPath={"products"}

@@ -43,8 +43,8 @@ const MainNavigation = () => {
   return (
     <div>
       <NavTopBar></NavTopBar>
-      <Navbar shouldHideOnScroll className="md:mt-[88px] h-[40px] fixed hidden md:flex">
-        <NavbarContent className="hidden sm:flex gap-5" justify="between">
+      <Navbar shouldHideOnScroll className="md:mt-[80px] h-[40px] fixed hidden md:flex">
+        <NavbarContent className="hidden sm:flex gap-1 xl:gap-5" justify="between">
           
 
           {/* {Navbar Item 1} */}
@@ -53,7 +53,7 @@ const MainNavigation = () => {
               <Typography as="div" variant="paragraph" className="font-medium ">
                 <ListItem
                   ripple={false}
-                  className={`flex items-center gap-1 py-2 pr-4 font-medium !bg-transparent  ${
+                  className={`flex items-center text-sm xl:text-base gap-1 py-2 pr-4 font-medium !bg-transparent  ${
                     location.pathname === "/"
                       ? "!text-blue-500"
                       : "text-gray-800"
@@ -84,7 +84,7 @@ const MainNavigation = () => {
                 >
                   <ListItem
                     ripple={false}
-                    className={`flex items-center gap-1 py-2 pr-4 font-medium !bg-transparent  ${
+                    className={`flex items-center text-sm xl:text-base gap-1 py-2 pr-4 font-medium !bg-transparent  ${
                       location.pathname?.includes("/electronics")
                         ? "text-blue-500"
                         : "text-gray-700"
@@ -163,7 +163,7 @@ const MainNavigation = () => {
                 <Typography as="div" variant="pararaph" className="font-medium">
                   <ListItem
                     ripple={false}
-                    className={`flex items-center gap-1 py-2 pr-4 font-medium !bg-transparent  ${
+                    className={`flex items-center text-sm xl:text-base gap-1 py-2 pr-4 font-medium !bg-transparent  ${
                       location.pathname?.includes("/kidsZone")
                         ? "text-blue-500"
                         : "text-gray-700"
@@ -236,7 +236,7 @@ const MainNavigation = () => {
                 <Typography as="div" variant="pararaph" className="font-medium">
                   <ListItem
                     ripple={false}
-                    className={`flex items-center gap-1 py-2 pr-4 font-medium !bg-transparent  ${
+                    className={`flex items-center text-sm xl:text-base gap-1 py-2 pr-4 font-medium !bg-transparent  ${
                       location.pathname?.includes("/electronics")
                         ? "text-blue-500"
                         : "text-gray-700"
@@ -309,7 +309,7 @@ const MainNavigation = () => {
                 <Typography as="div" variant="pararaph" className="font-medium">
                   <ListItem
                     ripple={false}
-                    className={`flex items-center gap-1 py-2 pr-4 font-medium !bg-transparent  ${
+                    className={`flex items-center text-sm xl:text-base gap-1 py-2 pr-4 font-medium !bg-transparent  ${
                       location.pathname?.includes("/electronics")
                         ? "text-blue-500"
                         : "text-gray-700"
@@ -382,7 +382,7 @@ const MainNavigation = () => {
                 <Typography as="div" variant="pararaph" className="font-medium">
                   <ListItem
                     ripple={false}
-                    className={`flex items-center gap-1 py-2 pr-4 font-medium !bg-transparent  ${
+                    className={`flex items-center text-sm xl:text-base gap-1 py-2 pr-4 font-medium !bg-transparent  ${
                       location.pathname?.includes("/electronics")
                         ? "text-blue-500"
                         : "text-gray-700"
@@ -455,80 +455,7 @@ const MainNavigation = () => {
                 <Typography as="div" variant="pararaph" className="font-medium">
                   <ListItem
                     ripple={false}
-                    className={`flex items-center gap-1 py-2 pr-4 font-medium !bg-transparent  ${
-                      location.pathname?.includes("/electronics")
-                        ? "text-blue-500"
-                        : "text-gray-700"
-                    }`}
-                    selected={isBeautyOpen || isMobileMenuOpen}
-                    onClick={() => setIsMobileMenuOpen((cur) => !cur)}
-                  >
-                    Resources
-                    <FaAngleDown
-                      className={`hidden h-3 w-3 transition-transform lg:block ${
-                        isBeautyOpen ? "rotate-180" : ""
-                      }`}
-                    ></FaAngleDown>
-                    <FaAngleDown
-                      className={`block h-3 w-3 transition-transform lg:hidden ${
-                        isMobileMenuOpen ? "rotate-180" : ""
-                      }`}
-                    ></FaAngleDown>
-                  </ListItem>
-                </Typography>
-              </MenuHandler>
-
-              <MenuList className="max-w-screen-xl !shadow-lg mx-5 !p-5 !shadow-gray-400 !bg-[#ffffff] rounded-xl lg:block">
-                <ul className="grid grid-cols-3 gap-y-4 !bg-[#ffffff] gap-3 outline-none outline-0">
-                  <EachMenuItem
-                    path={"/login"}
-                    icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
-                  ></EachMenuItem>
-                  <EachMenuItem
-                    icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
-                  ></EachMenuItem>
-                  <EachMenuItem
-                    icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
-                  ></EachMenuItem>
-                  <EachMenuItem
-                    icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
-                  ></EachMenuItem>
-                  <EachMenuItem
-                    icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
-                  ></EachMenuItem>
-                  <EachMenuItem
-                    icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
-                  ></EachMenuItem>
-                </ul>
-              </MenuList>
-            </Menu>
-          </NavbarItem>
-          {/* {Navbar Item 4} */}
-          <NavbarItem>
-            <Menu
-              open={isBeautyOpen}
-              handler={setIsBeautyOpen}
-              offset={{ mainAxis: 20 }}
-              placement="bottom"
-              allowHover={true}
-            >
-              <MenuHandler>
-                <Typography as="div" variant="pararaph" className="font-medium">
-                  <ListItem
-                    ripple={false}
-                    className={`flex items-center gap-1 py-2 pr-4 font-medium !bg-transparent  ${
+                    className={`flex items-center text-sm xl:text-base gap-1 py-2 pr-4 font-medium !bg-transparent  ${
                       location.pathname?.includes("/electronics")
                         ? "text-blue-500"
                         : "text-gray-700"

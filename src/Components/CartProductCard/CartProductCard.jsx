@@ -61,7 +61,7 @@ const CartProductCard = ({ product }) => {
         {" "}
         <Checkbox isSelected={isSelected} onValueChange={() => setIsSelected(!isSelected)} ></Checkbox>
       </div>
-      <div className="flex w-full flex-col md:flex-row gap-4">
+      <div className="flex w-full flex-col sm:flex-row gap-4">
         <img
           className="w-40 h-40 rounded-xl bg-gray-200"
           src={product?.images ? product?.images[0] : product?.image}

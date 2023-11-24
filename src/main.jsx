@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <NextUIProvider>
     <AuthProvider>
       <React.StrictMode>
-        <div className="bg-[#f2f3f7]">
+        <div className="bg-[#f2f3f7] overflow-x-hidden">
           <QueryClientProvider client={queryClient}>
             <RouterProvider router={router} />
           </QueryClientProvider>

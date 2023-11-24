@@ -8,11 +8,9 @@ import './PhoneAuth.css'
 const PhoneAuth = () => {
     useEffect(() => {
         const ui = firebaseui.auth.AuthUI.getInstance() ||  new firebaseui.auth.AuthUI(firebase.auth());
-        ui.start('.firebaseui-auth-container', {
+        ui.start('#firebaseui-auth-container', {
           signInSuccessUrl: 'http://localhost:5173/',
-          signInOptions: [
-            // Leave the lines as is for the providers you want to offer your users.
-            {
+          signInOptions: [           {
               provider: firebase.auth.PhoneAuthProvider.PROVIDER_ID,
               recaptchaParameters: {
                 type: 'image', // 'audio'
@@ -21,11 +19,13 @@ const PhoneAuth = () => {
               },
             }
           ],
-          privacyPolicyUrl: '/'
+          tosUrl: 'https://google.com',
+        // Privacy policy url/callback.
+        privacyPolicyUrl: "https://google.com"
         });
       },[])
     return (
-        <div className="card firebaseui-auth-container ">
+        <div className="card" id="firebaseui-auth-container">
            
         </div>
     );

@@ -65,7 +65,7 @@ const Login = () => {
           </div>
 
           <div className="flex flex-col w-full border-opacity-50 mb-7">
-            <div className="grid h-20 card bg-base-300 rounded-box place-items-center">
+            <div className="grid h-20 card rounded-box place-items-center">
               <div className="flex justify-center items-center text-center space-x-6">
                 <button onClick={handleFBSignIn} className="flex items-center p-3 px-8 f-style text-white bg-blue-500">
                   <FaFacebookF className="text-2xl mr-2" />

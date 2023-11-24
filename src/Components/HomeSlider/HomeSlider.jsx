@@ -74,7 +74,7 @@ const HomeSlider = () => {
           <img src={add2} alt="" />
           <img className="col-span-2 w-4/6 mx-auto md:w-full md:col-span-1" src={add3} alt="" />
         </div>
-        <p className="mt-7 gap-1 items-start md:items-center text-sm md:text-base text-gray-700 flex justify-center"><RiAlertFill className="text-amber-500 w-6 h-6"></RiAlertFill>  অর্ডারকৃত প্রোডাক্টে রিভিউ এবং রেটিং দিয়ে সংগ্রহ করুন ৫০ পয়েন্ট।</p>
+        {/* <p className="mt-7 gap-1 items-start md:items-center text-sm md:text-base text-gray-700 flex justify-center"><RiAlertFill className="text-amber-500 w-6 h-6"></RiAlertFill>  অর্ডারকৃত প্রোডাক্টে রিভিউ এবং রেটিং দিয়ে সংগ্রহ করুন ৫০ পয়েন্ট।</p> */}
         </div>
     );
 };

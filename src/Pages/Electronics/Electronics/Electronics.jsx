@@ -9,7 +9,7 @@ const Electronics = () => {
   return (
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content max-w-5xl py-14  mx-auto flex flex-col items-start justify-start">
+      <div className="drawer-content max-w-5xl py-14 md:py-0  mx-auto flex flex-col items-start justify-start">
         <Outlet></Outlet>
         <label
           htmlFor="my-drawer-2"

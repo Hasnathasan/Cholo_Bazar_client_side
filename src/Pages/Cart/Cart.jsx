@@ -23,7 +23,7 @@ const Cart = () => {
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content mx-auto w-full flex flex-col items-start justify-start">
         <div className="space-y-7 w-[90%] md:w-[75%] py-20 md:py-32 lg:py-10 mx-auto">
-          {cartProduct?.map((product) => (
+          {cartProduct?.map((product, index) => (
             <CartProductCard key={product._id} product={product}></CartProductCard>
           ))}
         </div>
@@ -33,7 +33,7 @@ const Cart = () => {
         >
           CheckOut
         </label>
-        <div className="absolute top-6 right-3">
+        <div className="absolute md:hidden top-6 right-3">
           <h2 className="!mb-4">
             Total Price:{" "}
             <span className="font-semibold">{totalPrice.toFixed(2)} Tk</span>

@@ -69,6 +69,7 @@ const AuthProvider = ({ children }) => {
         gender: null,
         phoneNumber: loogedUser?.phoneNumber,
         photoUrl: loogedUser?.photoURL,
+        userRole: "user"
       };
       if (loogedUser?.email) {
         fetch(`https://cholo-bazar.vercel.app/eachUser/${loogedUser?.email}`)
