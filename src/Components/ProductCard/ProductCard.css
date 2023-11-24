@@ -19,3 +19,15 @@
     padding: 0 1.5rem;
 }
 
+@media (max-width: 576px) {
+    .card:hover .card__precis {
+      margin-left: 1.4rem;
+      padding: 0 1.5rem;
+    }
+    .card:hover .card__icon{
+        margin-left: 1.3rem;
+    }
+    .card:hover .card__img{
+        margin-left: 1.2rem;
+    }
+  }

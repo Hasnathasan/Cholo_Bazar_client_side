@@ -61,17 +61,18 @@ const CartProductCard = ({ product }) => {
         {" "}
         <Checkbox isSelected={isSelected} onValueChange={() => setIsSelected(!isSelected)} ></Checkbox>
       </div>
-      <div className="flex flex-col md:flex-row gap-4">
+      <div className="flex w-full flex-col md:flex-row gap-4">
         <img
           className="w-40 h-40 rounded-xl bg-gray-200"
           src={product?.images ? product?.images[0] : product?.image}
           alt=""
         />
-        <div className="space-y-1 mt-2">
+        <div className="space-y-1 mt-2 w-full">
           {/* <Typography variant="h5" className="text-gray-900">
             {product?.specification ? product?.specification?.Title : product?.title}
           </Typography> */}
           <h2 className="md:text-[19px] text-gray-900 font-semibold">{product?.specification ? product?.specification?.Title : product?.title}</h2>
+          <div className="flex md:block justify-start items-center gap-4">
           <Typography variant="paragraph">
             Brand: <span className="text-blue-500">{product?.specification?.Brand}</span>
           </Typography>
@@ -86,6 +87,7 @@ const CartProductCard = ({ product }) => {
           />
           <p className="text-sm">({product?.rating})</p>
          </div>
+          </div>
           <div className="flex gap-5 items-center">
                 <h5 className="text-base text-red-400 font-semibold line-through">
                   TK. {price?.real_price}
@@ -93,7 +95,7 @@ const CartProductCard = ({ product }) => {
                 <h5 className="md:text-lg font-semibold text-gray-800">
                   TK. {price?.discounted_price}
                 </h5>
-                <p className="text-sm hidden md:inline-block text-gray-600">
+                {/* <p className="text-sm hidden md:inline-block text-gray-600">
                   You save TK. {parseInt(price?.real_price - price?.discounted_price)} (
                   {parseInt(
                     ((price?.real_price - price?.discounted_price) /
@@ -101,9 +103,9 @@ const CartProductCard = ({ product }) => {
                       100
                   )}
                   %)
-                </p>
+                </p> */}
               </div>
-          <ButtonGroup className="float-right md:absolute bottom-7 right-7" radius="lg" color="primary" variant="flat">
+          <ButtonGroup className="float-right xl:absolute xl:bottom-7 xl:right-7" radius="lg" color="primary" variant="flat">
             <Button isIconOnly  onClick={() => setQuantity(quantity !== 1 ? (quantity - 1): 1)}><img className="w-4" src={minus} /></Button>
             <Button isIconOnly className="!w-5">{quantity}</Button>
             <Button isIconOnly  onClick={() => setQuantity(quantity + 1)}><img className="w-4" src={plus} /></Button>

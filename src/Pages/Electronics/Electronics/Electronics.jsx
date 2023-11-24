@@ -9,20 +9,20 @@ const Electronics = () => {
   return (
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content max-w-5xl mx-auto flex flex-col items-start justify-start">
+      <div className="drawer-content max-w-5xl py-14  mx-auto flex flex-col items-start justify-start">
         <Outlet></Outlet>
         <label
           htmlFor="my-drawer-2"
-          className="btn btn-primary drawer-button lg:hidden"
+          className="px-5 py-3 border border-green-500 hover:bg-green-500 hover:text-white transition-all duration-250 absolute top-4 left-2 md:left-10 drawer-button lg:hidden"
         >
-          Open drawer
+          Filter
         </label>
       </div>
       <div className="drawer-side z-[100] p-">
         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
 
         <div className="w-56"></div>
-        <ul className="menu flex-nowrap fixed top-1/4 -left-[30%] md:left-2 shadow-lg shadow-gray-300 bg-white px-5  py-10 w-56 space-y-2">
+        <ul className="menu flex-nowrap fixed top-1/4  md:left-2 shadow-lg shadow-gray-300 bg-white px-5  py-10 w-56 space-y-2">
           <h2 className="text-2xl mb-3">Filter</h2>
 
           <RadioGroup

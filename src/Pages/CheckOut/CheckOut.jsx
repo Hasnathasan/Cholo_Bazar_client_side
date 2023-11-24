@@ -19,7 +19,7 @@ const CheckOut = () => {
         console.log(data);
         const {customerName, address, phoneNumber} = data
         const order = {customerName, customerEmail: userData?.email, address, phoneNumber, products: selectedCartProducts}
-        axios.post('http://localhost:8000/order', order)
+        axios.post('https://cholo-bazar.vercel.app/order', order)
       .then(res => {
         console.log(res.data);
         if(res.data.url){
@@ -47,7 +47,7 @@ const CheckOut = () => {
             <form onSubmit={handleSubmit(onSubmit)}>
             <div className="flex justify-center items-center gap-6">
             <h5 className="text-xl font-semibold">Total Item: <Typography className="inline" variant="h4">{selectedCartProducts?.length}</Typography></h5>
-                <h5 className="text-xl font-semibold">Price: <Typography className="inline" variant="h4">{totalPrice}Tk</Typography></h5>
+                <h5 className="text-xl font-semibold">Price: <Typography className="inline" variant="h4">{totalPrice.toFixed(2)}Tk</Typography></h5>
             </div>
             <label className="block my-3" htmlFor="customerName">
           Name:

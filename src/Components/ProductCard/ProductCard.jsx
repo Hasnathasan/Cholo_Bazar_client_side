@@ -32,7 +32,7 @@ const ProductCard = ({product, apiPath}) => {
       });
     }
   return (
-    <div className="card !w-[180px] md:!w-[250px] xl:!w-[230px] min-h-[320px] relative p-3.5 overflow-hidden !rounded hover:shadow-lg hover:shadow-gray-300 !transition-all !duration-300  delay-75 bg-white">
+    <div className="card !w-[180px] sm:!w-[240px] md:[250px] xl:!w-[230px] min-h-[260px] md:min-h-[320px] relative p-3.5 overflow-hidden !rounded hover:shadow-lg hover:shadow-gray-300 !transition-all !duration-300  delay-75 bg-white">
     <Link
       className="absolute top-0 bottom-0 left-0 right-0 z-10"
       to={`/details/${apiPath}/${_id}`}
@@ -41,9 +41,8 @@ const ProductCard = ({product, apiPath}) => {
       <div className="card__img w-[120%] h-auto p-6 transition-all duration-500 delay-75">
         <img className="w-full max-h-[205px] h-full" src={images[0]} alt="" />
       </div>
-      <Typography variant="paragraph" className="card__name absolute top-0 left-[-25%] w-10 h-full rotate-180 flex justify-center items-center bg-blue-300 text-white font-semibold transition-all duration-500 delay-75">
-        <p>{specification?.title?.split(" ").slice(0, 3).join(" ") || specification?.Title?.split(" ").slice(0, 3).join(" ")}</p>
-      </Typography>
+        <h3  className="card__name text-sm md:text-base absolute top-0 left-[-25%] w-7 md:w-10 h-full rotate-180 flex justify-center items-center bg-blue-300 text-white font-semibold transition-all duration-500 delay-75">{specification?.title?.split(" ").slice(0, 3).join(" ") || specification?.Title?.split(" ").slice(0, 3).join(" ")}</h3>
+      
       <div className="card__precis w-full h-auto mt-auto flex flex-col justify-end items-center transition-all duration-500 delay-75">
       <div className="">
           <span className="block text-center text-[12px] line-through mt-[2px] text-red-400">

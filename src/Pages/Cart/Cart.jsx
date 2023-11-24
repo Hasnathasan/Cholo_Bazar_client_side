@@ -22,17 +22,23 @@ const Cart = () => {
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content mx-auto w-full flex flex-col items-start justify-start">
-        <div className="space-y-7 w-[75%] pt-20 md:py-10 mx-auto">
+        <div className="space-y-7 w-[90%] md:w-[75%] py-20 md:py-32 lg:py-10 mx-auto">
           {cartProduct?.map((product) => (
             <CartProductCard key={product._id} product={product}></CartProductCard>
           ))}
         </div>
         <label
           htmlFor="my-drawer-2"
-          className="px-5 py-3 border border-green-500 hover:bg-green-500 hover:text-white transition-all duration-250 absolute top-2 left-1 drawer-button lg:hidden"
+          className="px-5 py-3 border border-green-500 hover:bg-green-500 hover:text-white transition-all duration-250 absolute top-4 left-2 md:left-10 drawer-button lg:hidden"
         >
-          CheckOut- price: {totalPrice.toFixed(2)}
+          CheckOut
         </label>
+        <div className="absolute top-6 right-3">
+          <h2 className="!mb-4">
+            Total Price:{" "}
+            <span className="font-semibold">{totalPrice.toFixed(2)} Tk</span>
+          </h2>
+        </div>
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
