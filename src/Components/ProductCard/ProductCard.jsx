@@ -4,7 +4,6 @@ import "./ProductCard.css";
 import { FaHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { IoStarOutline, IoStarSharp } from "react-icons/io5";
-import { Typography } from "@material-tailwind/react";
 import { Chip } from "@nextui-org/react";
 import axios from "axios";
 import Swal from "sweetalert2";

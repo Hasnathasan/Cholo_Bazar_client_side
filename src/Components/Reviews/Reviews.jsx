@@ -3,11 +3,9 @@ import speakerIco from "../../../public/megaphone.png";
 import ratingChart from "../../../public/ratingChart.png";
 import { IoStarOutline, IoStarSharp } from "react-icons/io5";
 import { BsShieldCheck } from "react-icons/bs";
-import like from '../../../public/like.svg'
-
+import like from "../../../public/like.svg";
 
 // To Do: To make the reviews dynamic
-
 
 const Reviews = ({ product }) => {
   console.log(product);
@@ -18,7 +16,9 @@ const Reviews = ({ product }) => {
       <div className="flex items-start gap-2 max-w-[650px]">
         <img className="mt-1" src={speakerIco} alt="" />
         <p className="text-gray-700 text-sm">
-        You can collect 50 points by reviewing and rating the ordered products. A minimum of 30 words and product/packet image should be attached
+          You can collect 50 points by reviewing and rating the ordered
+          products. A minimum of 30 words and product/packet image should be
+          attached
         </p>
       </div>
       <div className="flex flex-col-reverse md:flex-row gap-y-4 justify-between mt-5">
@@ -73,23 +73,31 @@ const Reviews = ({ product }) => {
                   , 28 august, 2023
                 </h4>
                 <div className="flex gap-2 items-end">
-                <Rating
-                  className="text-orange-400"
-                  emptySymbol={<IoStarOutline></IoStarOutline>}
-                  fullSymbol={<IoStarSharp></IoStarSharp>}
-                  fractions={2}
-                  initialRating={rating}
-                  readonly
-                />
-                <p className="text-green-500 flex items-center gap-1"><BsShieldCheck></BsShieldCheck> Verified Purchase</p>
+                  <Rating
+                    className="text-orange-400"
+                    emptySymbol={<IoStarOutline></IoStarOutline>}
+                    fullSymbol={<IoStarSharp></IoStarSharp>}
+                    fractions={2}
+                    initialRating={rating}
+                    readonly
+                  />
+                  <p className="text-green-500 flex items-center gap-1">
+                    <BsShieldCheck></BsShieldCheck> Verified Purchase
+                  </p>
                 </div>
               </div>
             </div>
             <p className="text-gray-600 my-4 text-[15px]">{review.review}</p>
-            <p className="text-gray-500 my-2 text-sm">Was this review helpful to you?</p>
+            <p className="text-gray-500 my-2 text-sm">
+              Was this review helpful to you?
+            </p>
             <div className="flex gap-1">
-                <button className="border border-gray-200 hover:bg-gray-100 duration-300 rounded-[4px] px-4 py-2"><img className="w-5 opacity-50" src={like} alt="" /></button>
-                <button className="border border-gray-200 hover:bg-gray-100 duration-300 rounded-[4px] px-4 py-2"><img className="w-5 rotate-180 opacity-50" src={like} alt="" /></button>
+              <button className="border border-gray-200 hover:bg-gray-100 duration-300 rounded-[4px] px-4 py-2">
+                <img className="w-5 opacity-50" src={like} alt="" />
+              </button>
+              <button className="border border-gray-200 hover:bg-gray-100 duration-300 rounded-[4px] px-4 py-2">
+                <img className="w-5 rotate-180 opacity-50" src={like} alt="" />
+              </button>
             </div>
             <hr className="my-6" />
           </div>
