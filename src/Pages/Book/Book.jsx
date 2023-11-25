@@ -10,7 +10,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const Book = () => {
-  const {isAnimationVisible, setIsAnimationVisible} = useContext(AuthContext)
+  const { isAnimationVisible, setIsAnimationVisible } = useContext(AuthContext);
   const [hotDeals, isHotDealsLoading] = useHotDeals();
   const [irons, isIronsLoading] = UseProductsBySecondaryCategory({
     category: "iron",
@@ -27,8 +27,8 @@ const Book = () => {
     category: "television",
   });
 
-  if ( isHotDealsLoading) {
-    setIsAnimationVisible(true)
+  if (isHotDealsLoading) {
+    setIsAnimationVisible(true);
   }
   return (
     <div>

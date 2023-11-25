@@ -24,7 +24,10 @@ const Cart = () => {
       <div className="drawer-content mx-auto w-full flex flex-col items-start justify-start">
         <div className="space-y-7 w-[90%] md:w-[75%] py-20 md:py-32 lg:py-10 mx-auto">
           {cartProduct?.map((product) => (
-            <CartProductCard key={product._id} product={product}></CartProductCard>
+            <CartProductCard
+              key={product._id}
+              product={product}
+            ></CartProductCard>
           ))}
         </div>
         <label
@@ -54,18 +57,18 @@ const Cart = () => {
             <span className="font-semibold">{totalPrice.toFixed(2)} Tk</span>
           </h2>
           <label className="block font-semibold mt-5" htmlFor="coupon">
-          Apply Coupon Code:
-        </label>
+            Apply Coupon Code:
+          </label>
           <div className="!mb-8 h-11 flex justify-center">
-          <input
-        id="coupon"
-        name="coupon"
-          className="p-[15px]  bg-[#fcfcfc] focus:outline-none border border-gray-300"
-          type="text"
-          defaultValue={"Dev-Hasnat"}
-          placeholder="use 'Dev-Hasnat' to get 10% discount"
-        />
-        <Button
+            <input
+              id="coupon"
+              name="coupon"
+              className="p-[15px]  bg-[#fcfcfc] focus:outline-none border border-gray-300"
+              type="text"
+              defaultValue={"Dev-Hasnat"}
+              placeholder="use 'Dev-Hasnat' to get 10% discount"
+            />
+            <Button
               className="basis-1/2 h-full hover:!text-white"
               size="lg"
               color="primary"
@@ -86,17 +89,20 @@ const Cart = () => {
               Delete Cart
             </Button>
 
-            
             <Button
               className="basis-1/2 !relative hover:!text-white"
               size="lg"
               color="success"
               radius="none"
               variant="ghost"
-            ><Link className="absolute top-0 flex justify-center items-center left-0 right-0 bottom-0" to={"/checkOut"}>
-              Check Out
-            </Link></Button>
-            
+            >
+              <Link
+                className="absolute top-0 flex justify-center items-center left-0 right-0 bottom-0"
+                to={"/checkOut"}
+              >
+                Check Out
+              </Link>
+            </Button>
           </div>
         </ul>
       </div>

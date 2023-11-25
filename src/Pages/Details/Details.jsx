@@ -55,16 +55,16 @@ function ThumbnailPlugin(mainRef) {
 
 const Details = () => {
   const apiObj = useParams();
-  const [axiosSecure] = useAxiosSecure()
+  const [axiosSecure] = useAxiosSecure();
   const { apiPath, id } = apiObj;
-  const {user} = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   console.log(user);
   console.log(apiPath, id);
   const { data: product, isLoading: isProductLoading } = useQuery({
     queryKey: [id],
     queryFn: async () => {
-      const res = await axiosSecure.get(`/${apiPath}/${id}`)
-            return res.data;
+      const res = await axiosSecure.get(`/${apiPath}/${id}`);
+      return res.data;
     },
   });
   console.log(product);
@@ -87,7 +87,21 @@ const Details = () => {
     return <h1>Loading</h1>;
   }
 
-  const { _id, images, price, rating, reviews, number_of_ratings, number_of_reviews, brand_info, tags, secondary_category, super_deal, main_category, specification } = product;
+  const {
+    _id,
+    images,
+    price,
+    rating,
+    reviews,
+    number_of_ratings,
+    number_of_reviews,
+    brand_info,
+    tags,
+    secondary_category,
+    super_deal,
+    main_category,
+    specification,
+  } = product;
 
   const settings = {
     dots: true,
@@ -124,21 +138,40 @@ const Details = () => {
   };
 
   const handleAddToCart = () => {
-    const cartProduct = { addedBy: user?.email || user?.phoneNumber, images, price, rating, reviews, number_of_ratings, number_of_reviews, brand_info, tags, quantity: 1, isSelected: false, secondary_category, super_deal, main_category, specification, mainId: _id, qunatity: 1};
-    axios.post('https://cholo-bazar.vercel.app/cart', cartProduct)
-    .then(res => {
-      if(res.data.insertedId){
-        Swal.fire({
-          title: "Successfully added to cart!",
-          text: "Go to cart to Check Out",
-          icon: "success"
-        });
-      }
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-  }
+    const cartProduct = {
+      addedBy: user?.email || user?.phoneNumber,
+      images,
+      price,
+      rating,
+      reviews,
+      number_of_ratings,
+      number_of_reviews,
+      brand_info,
+      tags,
+      quantity: 1,
+      isSelected: false,
+      secondary_category,
+      super_deal,
+      main_category,
+      specification,
+      mainId: _id,
+      qunatity: 1,
+    };
+    axios
+      .post("https://cholo-bazar.vercel.app/cart", cartProduct)
+      .then((res) => {
+        if (res.data.insertedId) {
+          Swal.fire({
+            title: "Successfully added to cart!",
+            text: "Go to cart to Check Out",
+            icon: "success",
+          });
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
   return (
     <>
       {apiPath !== "books" ? (
@@ -237,7 +270,10 @@ const Details = () => {
                 ) : (
                   ""
                 )}
-                <button onClick={handleAddToCart} className="px-8 flex gap-2 text-lg font-semibold text-white justify-center items-center py-3 bg-amber-500 hover:bg-[#f59f0bd0] rounded duration-500  transition-all">
+                <button
+                  onClick={handleAddToCart}
+                  className="px-8 flex gap-2 text-lg font-semibold text-white justify-center items-center py-3 bg-amber-500 hover:bg-[#f59f0bd0] rounded duration-500  transition-all"
+                >
                   {" "}
                   <img className="w-8" src={cartImg} alt="" />
                   Add to Cart
