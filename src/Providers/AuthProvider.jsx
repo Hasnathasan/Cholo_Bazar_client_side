@@ -55,7 +55,7 @@ const AuthProvider = ({ children }) => {
     selectedCart,
     setSelectedCart,
     isAnimationVisible,
-    setIsAnimationVisible
+    setIsAnimationVisible,
   };
 
   useEffect(() => {
@@ -69,41 +69,40 @@ const AuthProvider = ({ children }) => {
         gender: null,
         phoneNumber: loogedUser?.phoneNumber,
         photoUrl: loogedUser?.photoURL,
-        userRole: "user"
+        userRole: "user",
       };
       if (loogedUser?.email) {
         fetch(`https://cholo-bazar.vercel.app/eachUser/${loogedUser?.email}`)
           .then((res) => res.json())
-          .then(data => {
-            if(data.notFound){
-                fetch('https://cholo-bazar.vercel.app/users', {
+          .then((data) => {
+            if (data.notFound) {
+              fetch("https://cholo-bazar.vercel.app/users", {
                 method: "POST",
                 headers: {
-                    "content-type": "application/json"
+                  "content-type": "application/json",
                 },
-                body: JSON.stringify(newUser)
-            })
-            }
-            else{
+                body: JSON.stringify(newUser),
+              });
+            } else {
               console.log("user found");
             }
           });
-      }
-      else if(loogedUser?.phoneNumber){
+      } else if (loogedUser?.phoneNumber) {
         console.log("User has Phone Number");
-        fetch(`https://cholo-bazar.vercel.app/each-user-by-number/${loogedUser?.phoneNumber}`)
+        fetch(
+          `https://cholo-bazar.vercel.app/each-user-by-number/${loogedUser?.phoneNumber}`
+        )
           .then((res) => res.json())
-          .then(data => {
-            if(data?.notFound){
-                fetch('https://cholo-bazar.vercel.app/users', {
+          .then((data) => {
+            if (data?.notFound) {
+              fetch("https://cholo-bazar.vercel.app/users", {
                 method: "POST",
                 headers: {
-                    "content-type": "application/json"
+                  "content-type": "application/json",
                 },
-                body: JSON.stringify(newUser)
-            })
-            }
-            else{
+                body: JSON.stringify(newUser),
+              });
+            } else {
               console.log("user found");
             }
           });

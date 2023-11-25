@@ -43,10 +43,14 @@ const MainNavigation = () => {
   return (
     <div>
       <NavTopBar></NavTopBar>
-      <Navbar shouldHideOnScroll className="md:mt-[80px] h-[40px] fixed hidden md:flex">
-        <NavbarContent className="hidden sm:flex gap-1 xl:gap-5" justify="between">
-          
-
+      <Navbar
+        shouldHideOnScroll
+        className="md:mt-[80px] h-[40px] fixed hidden md:flex"
+      >
+        <NavbarContent
+          className="hidden sm:flex gap-1 xl:gap-5"
+          justify="between"
+        >
           {/* {Navbar Item 1} */}
           <NavbarItem>
             <Link to={"/"}>

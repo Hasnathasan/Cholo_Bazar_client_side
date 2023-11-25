@@ -75,13 +75,17 @@ const NavTopBar = () => {
 
         <form className="md:flex rounded-md hidden max-w-xl">
           <Select
-          radius="none"
-          labelPlacement="outside-left"
-          defaultSelectedKeys={["products"]}
+            radius="none"
+            labelPlacement="outside-left"
+            defaultSelectedKeys={["products"]}
             className="max-w-[20%] rounded-l !h-[43px] border-b-2 border-orange-500 !bg-[#ebebeb] w-40"
           >
-            <SelectItem key={"products"} value={"products"}>Products</SelectItem>
-            <SelectItem key={"books"} value={"books"}>Books</SelectItem>
+            <SelectItem key={"products"} value={"products"}>
+              Products
+            </SelectItem>
+            <SelectItem key={"books"} value={"books"}>
+              Books
+            </SelectItem>
           </Select>
           <input
             type="text"
@@ -101,10 +105,7 @@ const NavTopBar = () => {
           {user ? (
             <>
               <div className="hidden lg:block">
-                <Dropdown
-                  shouldBlockScroll
-                  className="dropdown-classes"
-                >
+                <Dropdown shouldBlockScroll className="dropdown-classes">
                   <DropdownTrigger>
                     <button className="px-4 py-2 border flex items-center gap-2 border-gray-400 rounded hover:bg-green-500 hover:text-white hover:border-green-500 transition-all">
                       <img

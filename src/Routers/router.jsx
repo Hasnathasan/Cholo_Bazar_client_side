@@ -15,84 +15,81 @@ import Cart from "../Pages/Cart/Cart";
 import CheckOut from "../Pages/CheckOut/CheckOut";
 import PaymentSuccess from "../Pages/PaymentSuccess/PaymentSuccess";
 
-
-
 const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Main></Main>,
-      children: [
-        {
-          path: '/',
-          element: <Home></Home>
-        },
-        {
-          path: '/login',
-          element: <Login></Login>
-        },
-        {
-          path: '/details/:apiPath/:id',
-          element: <Details></Details>
-        },
-        {
-          path: '/electronics',
-          element: <Electronics></Electronics>,
-          children: [
-            {
-              path: 'electronics',
-              element: <Irons></Irons>
-            },
-            {
-              path: 'refrigerators',
-              element: <Refrigerators></Refrigerators>
-            },
-            {
-              path: 'irons',
-              element: <Irons></Irons>
-            },
-            {
-              path: 'kettles',
-              element: <Kettles></Kettles>
-            },
-            {
-              path: 'airCollers',
-              element: <AirCollers></AirCollers>
-            },
-            {
-              path: 'televisions',
-              element: <Televisions></Televisions>
-            },
-          ]
-        },
-        {
-          path: '/myAccount',
-          element: <DashboardOfUser></DashboardOfUser>
-        },
-        {
-          path: "/my-section",
-          element: <DashboardOfUser></DashboardOfUser>,
-          children: [
-            {
-              path: "profile",
-              element: <UserProfile></UserProfile>
-            }
-          ]
-        },
-        {
-          path: "/myCart",
-          element: <Cart></Cart>
-        },
-        {
-          path: "/checkOut",
-          element: <CheckOut></CheckOut>
-        },
-        {
-          path: '/paymentSuccess/:transactionId',
-          element: <PaymentSuccess></PaymentSuccess>
-        }
-      ]
-    }
-  ]);
-
+  {
+    path: "/",
+    element: <Main></Main>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/details/:apiPath/:id",
+        element: <Details></Details>,
+      },
+      {
+        path: "/electronics",
+        element: <Electronics></Electronics>,
+        children: [
+          {
+            path: "electronics",
+            element: <Irons></Irons>,
+          },
+          {
+            path: "refrigerators",
+            element: <Refrigerators></Refrigerators>,
+          },
+          {
+            path: "irons",
+            element: <Irons></Irons>,
+          },
+          {
+            path: "kettles",
+            element: <Kettles></Kettles>,
+          },
+          {
+            path: "airCollers",
+            element: <AirCollers></AirCollers>,
+          },
+          {
+            path: "televisions",
+            element: <Televisions></Televisions>,
+          },
+        ],
+      },
+      {
+        path: "/myAccount",
+        element: <DashboardOfUser></DashboardOfUser>,
+      },
+      {
+        path: "/my-section",
+        element: <DashboardOfUser></DashboardOfUser>,
+        children: [
+          {
+            path: "profile",
+            element: <UserProfile></UserProfile>,
+          },
+        ],
+      },
+      {
+        path: "/myCart",
+        element: <Cart></Cart>,
+      },
+      {
+        path: "/checkOut",
+        element: <CheckOut></CheckOut>,
+      },
+      {
+        path: "/paymentSuccess/:transactionId",
+        element: <PaymentSuccess></PaymentSuccess>,
+      },
+    ],
+  },
+]);
 
 export default router;
