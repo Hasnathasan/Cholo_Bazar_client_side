@@ -3,8 +3,6 @@ import Main from "../Main/Main";
 import Home from "../Pages/Home/Home";
 import Login from "../Shared/Login/Login";
 import Details from "../Pages/Details/Details";
-import DashboardOfUser from "../UserDashboard/DashboardOfUser/DashboardOfUser";
-import UserProfile from "../UserDashboard/UserProfile/UserProfile";
 import Electronics from "../Pages/Electronics/Electronics/Electronics";
 import Irons from "../Pages/Electronics/Irons/Irons";
 import Refrigerators from "../Pages/Electronics/Refrigerators/Refrigerators";
@@ -14,6 +12,13 @@ import Televisions from "../Pages/Electronics/Televisions/Televisions";
 import Cart from "../Pages/Cart/Cart";
 import CheckOut from "../Pages/CheckOut/CheckOut";
 import PaymentSuccess from "../Pages/PaymentSuccess/PaymentSuccess";
+import AdminDashBoard from "../UserDashboard/DashboardOfAdmin/AdminDashBoard";
+import DashboardOfUser from "../UserDashboard/DashboardOfUser/DashboardOfUser";
+import UserProfile from "../UserDashboard/DashboardOfUser/UserProfile/UserProfile";
+import Overview from "../UserDashboard/DashboardOfAdmin/Overview";
+import ManageUsers from "../UserDashboard/DashboardOfAdmin/ManageUsers";
+import ManageProducts from "../UserDashboard/DashboardOfAdmin/ManageProducts";
+import ManageOrders from "../UserDashboard/DashboardOfAdmin/ManageOrders";
 
 const router = createBrowserRouter([
   {
@@ -90,6 +95,28 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: "/admin-dashboard",
+    element: <AdminDashBoard></AdminDashBoard>,
+    children: [
+      {
+        path: "",
+        element: <Overview></Overview>
+      },
+      {
+        path: "manageUsers",
+        element: <ManageUsers></ManageUsers>
+      },
+      {
+        path: "manageProducts",
+        element: <ManageProducts></ManageProducts>
+      },
+      {
+        path: "manageOrders",
+        element: <ManageOrders></ManageOrders>
+      },
+    ]
+  }
 ]);
 
 export default router;

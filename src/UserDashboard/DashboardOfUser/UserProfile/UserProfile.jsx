@@ -1,8 +1,8 @@
 import { Radio, RadioGroup } from "@nextui-org/react";
 import { useState } from "react";
 import { BsExclamationCircleFill } from "react-icons/bs";
-import useUser from "../../Hooks/useUser";
-import noUser from "../../../public/user.png";
+import useUser from "../../../Hooks/useUser";
+import noUser from "../../../../public/user.png";
 import { useForm } from "react-hook-form";
 
 const UserProfile = () => {
