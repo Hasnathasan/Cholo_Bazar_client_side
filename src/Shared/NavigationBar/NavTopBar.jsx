@@ -38,11 +38,13 @@ import hamBurger from "../../../public/hamburger.png";
 import userIcon from "../../../public/user.svg";
 import notificationIcon from "../../../public/appointment-reminders.png";
 import { RxCross2 } from "react-icons/rx";
+import useUser from "../../Hooks/useUser";
 
 const NavTopBar = () => {
   const [open, setOpen] = useState(false);
   const [openAccordian, setOpenAccordian] = useState(0);
   const [openRight, setOpenRight] = useState(false);
+  const [userData, isUserDataLoading] = useUser()
 
   const handleOpen = (value) => {
     setOpenAccordian(openAccordian === value ? 0 : value);
@@ -116,7 +118,8 @@ const NavTopBar = () => {
                       {user?.displayName}
                     </button>
                   </DropdownTrigger>
-                  <DropdownMenu
+                  {
+                    userData?.userRole === "admin" ? <DropdownMenu
                     aria-label="Dropdown Variants"
                     color={"default"}
                     variant={""}
@@ -125,15 +128,47 @@ const NavTopBar = () => {
                   >
                     <DropdownItem key="account">
                       <Link
-                        className="block text-base font-normal hover:text-sky-600 py-[5px]"
+                        className="block text-base font-normal hover:text-blue-600 py-[5px]"
                         to={"/my-section/profile"}
                       >
                         My Account
                       </Link>
                     </DropdownItem>
+                    <DropdownItem key="admin-dashboard">
+                      <Link
+                        className="block text-base font-normal hover:text-blue-600 py-[5px]"
+                        to={"/admin-dashboard/"}
+                      >
+                        Admin Dashboard
+                      </Link>
+                    </DropdownItem>
+
+                    <DropdownItem key="signOut" onClick={logout}>
+                      <span className="block text-base font-normal hover:text-blue-600 py-2">
+                        Sign Out
+                      </span>
+                    </DropdownItem>
+                  </DropdownMenu>:<DropdownMenu
+                    aria-label="Dropdown Variants"
+                    color={"default"}
+                    variant={""}
+                    itemClasses={{ padding: "0px" }}
+                    className="dropdownMenuClasses"
+                  >
+                    <DropdownItem key="account">
+                      <Link
+                        className="block text-base font-normal hover:text-blue-600 py-[5px]"
+                        to={"/my-section/profile"}
+                      >
+                        My Account
+                      </Link>
+                    </DropdownItem>
+                    {
+
+                    }
                     <DropdownItem key="order">
                       <Link
-                        className="block text-base font-normal hover:text-sky-600 py-[5px]"
+                        className="block text-base font-normal hover:text-blue-600 py-[5px]"
                         to={"/myOrders"}
                       >
                         My Orders
@@ -141,7 +176,7 @@ const NavTopBar = () => {
                     </DropdownItem>
                     <DropdownItem key="free-book">
                       <Link
-                        className="block text-base font-normal hover:text-sky-600 py-[5px]"
+                        className="block text-base font-normal hover:text-blue-600 py-[5px]"
                         to={"/downloadFreeBook"}
                       >
                         Download Free Book
@@ -149,7 +184,7 @@ const NavTopBar = () => {
                     </DropdownItem>
                     <DropdownItem key="ebook">
                       <Link
-                        className="block text-base font-normal hover:text-sky-600 py-[5px]"
+                        className="block text-base font-normal hover:text-blue-600 py-[5px]"
                         to={"/myEbook"}
                       >
                         My eBook Library
@@ -157,7 +192,7 @@ const NavTopBar = () => {
                     </DropdownItem>
                     <DropdownItem key="list">
                       <Link
-                        className="block text-base font-normal hover:text-sky-600 py-[5px]"
+                        className="block text-base font-normal hover:text-blue-600 py-[5px]"
                         to={"/myList"}
                       >
                         My List
@@ -165,7 +200,7 @@ const NavTopBar = () => {
                     </DropdownItem>
                     <DropdownItem key="book-self">
                       <Link
-                        className="block text-base font-normal hover:text-sky-600 py-[5px]"
+                        className="block text-base font-normal hover:text-blue-600 py-[5px]"
                         to={"/bookShelf"}
                       >
                         My Book Shelf
@@ -173,7 +208,7 @@ const NavTopBar = () => {
                     </DropdownItem>
                     <DropdownItem key="wishlist">
                       <Link
-                        className="block text-base font-normal hover:text-sky-600 py-[5px]"
+                        className="block text-base font-normal hover:text-blue-600 py-[5px]"
                         to={"/myWishlish"}
                       >
                         My Wishlist
@@ -181,7 +216,7 @@ const NavTopBar = () => {
                     </DropdownItem>
                     <DropdownItem key="rating-review">
                       <Link
-                        className="block text-base font-normal hover:text-sky-600 py-[5px]"
+                        className="block text-base font-normal hover:text-blue-600 py-[5px]"
                         to={"/myRatingReviews"}
                       >
                         My Rating Reviews
@@ -189,7 +224,7 @@ const NavTopBar = () => {
                     </DropdownItem>
                     <DropdownItem key="points">
                       <Link
-                        className="block text-base font-normal hover:text-sky-600 py-[5px]"
+                        className="block text-base font-normal hover:text-blue-600 py-[5px]"
                         to={"/myPoints"}
                       >
                         My Points
@@ -197,7 +232,7 @@ const NavTopBar = () => {
                     </DropdownItem>
                     <DropdownItem key="followed-authors">
                       <Link
-                        className="block text-base font-normal hover:text-sky-600 py-[5px]"
+                        className="block text-base font-normal hover:text-blue-600 py-[5px]"
                         to={"/myFollowedAuthors"}
                       >
                         My Following Authors
@@ -205,18 +240,19 @@ const NavTopBar = () => {
                     </DropdownItem>
                     <DropdownItem showDivider={true} key="bkash-account">
                       <Link
-                        className="block text-base font-normal hover:text-sky-600 py-[5px]"
+                        className="block text-base font-normal hover:text-blue-600 py-[5px]"
                         to={"/myBkashAccount"}
                       >
                         My Bkash Account
                       </Link>
                     </DropdownItem>
                     <DropdownItem key="signOut" onClick={logout}>
-                      <span className="block text-base font-normal hover:text-sky-600 py-2">
+                      <span className="block text-base font-normal hover:text-blue-600 py-2">
                         Sign Out
                       </span>
                     </DropdownItem>
                   </DropdownMenu>
+                  }
                 </Dropdown>
               </div>
               <img
@@ -726,77 +762,77 @@ const NavTopBar = () => {
         <div>
           <Link
             onClick={closeDrawerRight}
-            className="block text-lg px-2 font-normal hover:text-sky-600 py-[5px]"
+            className="block text-lg px-2 font-normal hover:text-blue-600 py-[5px]"
             to={"/my-section/profile"}
           >
             My Account
           </Link>
           <Link
             onClick={closeDrawerRight}
-            className="block text-lg px-2 font-normal hover:text-sky-600 py-3"
+            className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
             to={"/myOrders"}
           >
             My Orders
           </Link>
           <Link
             onClick={closeDrawerRight}
-            className="block text-lg px-2 font-normal hover:text-sky-600 py-3"
+            className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
             to={"/downloadFreeBook"}
           >
             Download Free Book
           </Link>
           <Link
             onClick={closeDrawerRight}
-            className="block text-lg px-2 font-normal hover:text-sky-600 py-3"
+            className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
             to={"/myEbook"}
           >
             My eBook Library
           </Link>
           <Link
             onClick={closeDrawerRight}
-            className="block text-lg px-2 font-normal hover:text-sky-600 py-3"
+            className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
             to={"/myList"}
           >
             My List
           </Link>
           <Link
             onClick={closeDrawerRight}
-            className="block text-lg px-2 font-normal hover:text-sky-600 py-3"
+            className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
             to={"/bookShelf"}
           >
             My Book Shelf
           </Link>
           <Link
             onClick={closeDrawerRight}
-            className="block text-lg px-2 font-normal hover:text-sky-600 py-3"
+            className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
             to={"/myWishlish"}
           >
             My Wishlist
           </Link>
           <Link
             onClick={closeDrawerRight}
-            className="block text-lg px-2 font-normal hover:text-sky-600 py-3"
+            className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
             to={"/myRatingReviews"}
           >
             My Rating Reviews
           </Link>
           <Link
             onClick={closeDrawerRight}
-            className="block text-lg px-2 font-normal hover:text-sky-600 py-3"
+            className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
             to={"/myPoints"}
           >
             My Points
           </Link>
           <Link
             onClick={closeDrawerRight}
-            className="block text-lg px-2 font-normal hover:text-sky-600 py-3"
+            className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
             to={"/myFollowedAuthors"}
           >
             My Following Authors
           </Link>
           <Link
             onClick={closeDrawerRight}
-            className="block text-lg px-2 font-normal hover:text-sky-600 py-3"
+            className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
             to={"/myBkashAccount"}
           >
             My Bkash Account
@@ -804,7 +840,7 @@ const NavTopBar = () => {
           <span
             onClickCapture={closeDrawerRight}
             onClick={logout}
-            className="block text-base font-normal hover:text-sky-600 py-2"
+            className="block text-base font-normal hover:text-blue-600 py-2"
           >
             Sign Out
           </span>

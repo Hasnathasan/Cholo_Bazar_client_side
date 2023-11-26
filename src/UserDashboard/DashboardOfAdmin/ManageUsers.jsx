@@ -11,7 +11,7 @@ const ManageUsers = () => {
         return <h1>Loading..........</h1>
     }
     const handleRoleChange = (email, userRole, phoneNumber) => {
-        axios.patch(`http://localhost:8000/changeUserRole/?${email ? `email=${email}` : `phoneNumber=${phoneNumber}`}`, {userRole})
+        axios.patch(`https://cholo-bazar.vercel.app/changeUserRole/?${email ? `email=${email}` : `phoneNumber=${phoneNumber}`}`, {userRole})
             .then(data => {
                 if(data.data.modifiedCount > 0){
                     refetch()

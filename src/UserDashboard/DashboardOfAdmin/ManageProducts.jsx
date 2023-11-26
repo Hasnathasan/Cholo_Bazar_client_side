@@ -5,7 +5,14 @@ import img from '../../../public/user.png'
 import axios from "axios";
 
 
-import { FaArrowDown, FaPlus, FaSearch } from "react-icons/fa";const ManageProducts = () => {
+import { FaArrowDown, FaPlus, FaSearch } from "react-icons/fa";import UseProductsBySecondaryCategory from "../../Hooks/UseProductsBySecondaryCategory";
+const ManageProducts = () => {
+    const [products, isProductsLoading] = UseProductsBySecondaryCategory({
+        category: "iron"
+      });
+      if(isProductsLoading){
+        return <h1>Loading............</h1>
+      }
     return (
         <div className="overflow-x-auto w-full md:w-[80%]">
             <div className="flex flex-col  gap-4">
@@ -58,7 +65,7 @@ import { FaArrowDown, FaPlus, FaSearch } from "react-icons/fa";const ManageProdu
             </Button>
           </div>
         </div>
-          <span className="text-gray-600 mb-2">Total {usersData?.length} users</span>
+          <span className="text-gray-600 mb-2">Total {products?.length} users</span>
       </div>
              <Table aria-label="Example table with custom cells">
       <TableHeader>
@@ -66,35 +73,33 @@ import { FaArrowDown, FaPlus, FaSearch } from "react-icons/fa";const ManageProdu
             Name
           </TableColumn>
           <TableColumn >
-            Email / Number
+            Price
           </TableColumn>
           <TableColumn >
-            User Role
+            Category
           </TableColumn>
           <TableColumn >
-            <h5 className="text-center">Change User Role</h5>
+            Main Category
+          </TableColumn>
+          <TableColumn >
+            Actions
           </TableColumn>
       </TableHeader>
       <TableBody >
           {
-            usersData?.map(user => <TableRow key={user._id}>
+            products?.map(product => <TableRow key={product._id}>
                 <TableCell>
-                <User
-                avatarProps={{radius: "md", src: user.photoUrl || img}}
-                description={user.email || user.phoneNumber}
-                name={user.name || "Unknown"}
-              >
-              </User>
+                {product.specification.Title.slice(0, 30)}....
                 </TableCell>
-                <TableCell>{user.email || user.phoneNumber}</TableCell>
-                <TableCell><Chip className="capitalize" color={user.userRole == "admin" ? "danger" : "primary"} size="sm" variant="flat">
-            {user.userRole}
-          </Chip></TableCell>
+                <TableCell>{product?.price?.discounted_price}</TableCell>
                 <TableCell>
-                <ButtonGroup variant="solid">
-      <Button onClick={() => handleRoleChange(user?.email,"admin", user?.phoneNumber)} isDisabled={user.userRole === "admin"} color="primary" startContent={img}>Admin</Button>
-      <Button onClick={() => handleRoleChange(user?.email,"user", user?.phoneNumber)} isDisabled={user.userRole === "user"} color="success" startContent={img}>User</Button>
-    </ButtonGroup>
+                {product?.secondary_category}
+                </TableCell>
+                <TableCell>
+                {product?.main_category}
+                </TableCell>
+                <TableCell>
+                {product?.main_category}
                 </TableCell>
               </TableRow>)
           }
