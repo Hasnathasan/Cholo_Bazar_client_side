@@ -2,15 +2,24 @@
 import { Button, ButtonGroup, Chip, Table, TableBody, TableCell, TableColumn, TableHeader, TableRow, User } from "@nextui-org/react";
 import useUsers from "../../Hooks/useUsers";
 import img from '../../../public/user.png'
+import axios from "axios";
 
 const ManageUsers = () => {
     const [usersData, isUsersDataLoading, refetch] = useUsers();
     if(isUsersDataLoading){
         return <h1>Loading..........</h1>
     }
+    const handleRoleChange = (email, userRole, phoneNumber) => {
+        axios.patch(`http://localhost:8000/changeUserRole/?${email ? `email=${email}` : `phoneNumber=${phoneNumber}`}`, {userRole})
+            .then(data => {
+                if(data.data.modifiedCount > 0){
+                    refetch()
+                }
+            })
+      };
     console.log(usersData);
     return (
-        <div>
+        <div className="overflow-x-auto w-full md:w-[80%]">
              <Table aria-label="Example table with custom cells">
       <TableHeader>
           <TableColumn >
@@ -43,8 +52,8 @@ const ManageUsers = () => {
           </Chip></TableCell>
                 <TableCell>
                 <ButtonGroup variant="solid">
-      <Button isDisabled={user.userRole === "admin"} color="primary" startContent={img}>Admin</Button>
-      <Button isDisabled={user.userRole === "user"} color="success" startContent={img}>User</Button>
+      <Button onClick={() => handleRoleChange(user?.email,"admin", user?.phoneNumber)} isDisabled={user.userRole === "admin"} color="primary" startContent={img}>Admin</Button>
+      <Button onClick={() => handleRoleChange(user?.email,"user", user?.phoneNumber)} isDisabled={user.userRole === "user"} color="success" startContent={img}>User</Button>
     </ButtonGroup>
                 </TableCell>
               </TableRow>)

@@ -20,7 +20,7 @@ const AdminDashBoard = () => {
   return (
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content w-[100%] overflow-auto flex flex-col min-h-screen items-center justify-center">
+      <div className="drawer-content w-[100%] overflow-auto flex flex-col min-h-screen items-center justify-start py-14">
         {/* Page content here */}
         <Outlet></Outlet>
         <label
