@@ -19,6 +19,7 @@ import Overview from "../UserDashboard/DashboardOfAdmin/Overview";
 import ManageUsers from "../UserDashboard/DashboardOfAdmin/ManageUsers";
 import ManageProducts from "../UserDashboard/DashboardOfAdmin/ManageProducts";
 import ManageOrders from "../UserDashboard/DashboardOfAdmin/ManageOrders";
+import AddNewProduct from "../UserDashboard/DashboardOfAdmin/AddNewProduct";
 
 const router = createBrowserRouter([
   {
@@ -114,6 +115,10 @@ const router = createBrowserRouter([
       {
         path: "manageOrders",
         element: <ManageOrders></ManageOrders>
+      },
+      {
+        path: "add-new-product",
+        element: <AddNewProduct></AddNewProduct>
       },
     ]
   }

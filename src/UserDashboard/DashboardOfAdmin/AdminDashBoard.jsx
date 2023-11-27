@@ -3,8 +3,7 @@ import { BsFillPeopleFill, BsPersonCircle } from "react-icons/bs";
 import { NavLink, Outlet } from "react-router-dom";
 import './AdminDashBoard.css'
 const AdminDashBoard = () => {
-    
-  
+
   const mainLinks = <>
   <li>
             <NavLink className="p-3 text-base" to="/">
@@ -20,7 +19,7 @@ const AdminDashBoard = () => {
   return (
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content w-[100%] overflow-auto flex flex-col min-h-screen items-center justify-start py-14">
+      <div className="drawer-content w-[100%] overflow-auto flex flex-col min-h-screen items-center justify-start py-8">
         {/* Page content here */}
         <Outlet></Outlet>
         <label
@@ -30,12 +29,12 @@ const AdminDashBoard = () => {
           Open drawer
         </label>
       </div>
-      <div className="drawer-side w-full">
+      <div className="drawer-side w-full z-[1000]">
         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
         {/* Sidebar content here */}
         <div className="w-80"></div>
         <ul className="menu flex-nowrap top-0 fixed px-8 h-screen bg-gray-200 py-10 w-80 space-y-2">
-        <h2 className="text-2xl mb-5">Admin Dashboard</h2>
+        <h2 className="text-2xl md:text-3xl mb-5">Admin Dashboard</h2>
         <li>
             <NavLink className="p-3 text-base" to=" ">
               <BsPersonCircle></BsPersonCircle> Overview
@@ -52,7 +51,7 @@ const AdminDashBoard = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink className="p-3 text-base" to="manageOrders">
+            <NavLink className="p-3 text-base" to="add-new-product">
               <FaProductHunt></FaProductHunt> Add New Product
             </NavLink>
           </li>
