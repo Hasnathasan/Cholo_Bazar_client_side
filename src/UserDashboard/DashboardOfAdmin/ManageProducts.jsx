@@ -87,7 +87,7 @@ const ManageProducts = () => {
       </TableHeader>
       <TableBody >
           {
-            products?.map(product => <TableRow key={product._id}>
+            products?.map(product => <TableRow key={product._id} className="hover:!bg-gray-100 duration-100">
                 <TableCell>
                 {product.specification.Title.slice(0, 30)}....
                 </TableCell>
