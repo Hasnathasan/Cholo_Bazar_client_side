@@ -70,7 +70,7 @@ const NavTopBar = () => {
             <img
               className="w-20 !h-full md:w-36"
               src={rokomari_logo}
-              alt="Logo of rokomari.com"
+              alt="Logo of CholoBazar.com"
             />
           </Link>
         </NavbarBrand>

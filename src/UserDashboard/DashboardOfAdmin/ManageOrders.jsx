@@ -21,6 +21,7 @@ import axios from "axios";
 import { FaArrowDown, FaPlus, FaSearch } from "react-icons/fa";
 import UseProductsBySecondaryCategory from "../../Hooks/UseProductsBySecondaryCategory";
 import useOrders from "../../Hooks/useOrders";
+import { Link } from "react-router-dom";
 
 const ManageOrders = () => {
   const [orders, isOrdersLoading] = useOrders();
@@ -124,7 +125,7 @@ const ManageOrders = () => {
                   radius="none"
                   variant="solid"
                 >
-                  Details
+                  <Link className="flex justify-center items-center absolute top-0 bottom-0 left-0 right-0" to={`/admin-dashboard/products-details/${order._id}`}>Details</Link>
                 </Button>
               </TableCell>
               <TableCell className="flex justify-center items-center gap-3">

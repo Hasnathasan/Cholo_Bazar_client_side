@@ -6,6 +6,7 @@ import { Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, Input, T
 
 import { FaArrowDown, FaEye, FaPlus, FaSearch, FaTrash } from "react-icons/fa";
 import useProducts from "../../Hooks/useProducts";
+import { Link } from "react-router-dom";
 const ManageProducts = () => {
     const [products, isProductsLoading] = useProducts()
       if(isProductsLoading){
@@ -97,7 +98,7 @@ const ManageProducts = () => {
                 {product?.main_category}
                 </TableCell>
                 <TableCell className="flex justify-center items-center gap-2">
-                  <Button isIconOnly variant="faded" color="success"><FaEye></FaEye></Button>
+                  <Button isIconOnly variant="faded" color="success"><Link className="flex justify-center items-center absolute top-0 bottom-0 left-0 right-0" to={`/details/products/${product?._id}`}><FaEye></FaEye></Link></Button>
                   <Button isIconOnly variant="faded" color="danger"><FaTrash></FaTrash></Button>
                 </TableCell>
               </TableRow>)

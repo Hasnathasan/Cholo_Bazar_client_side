@@ -20,6 +20,7 @@ import ManageUsers from "../UserDashboard/DashboardOfAdmin/ManageUsers";
 import ManageProducts from "../UserDashboard/DashboardOfAdmin/ManageProducts";
 import ManageOrders from "../UserDashboard/DashboardOfAdmin/ManageOrders";
 import AddNewProduct from "../UserDashboard/DashboardOfAdmin/AddNewProduct";
+import OrderProductDetails from "../UserDashboard/DashboardOfAdmin/OrderProductDetails";
 
 const router = createBrowserRouter([
   {
@@ -120,6 +121,11 @@ const router = createBrowserRouter([
         path: "add-new-product",
         element: <AddNewProduct></AddNewProduct>
       },
+      {
+        path: "products-details/:orderId",
+        element: <OrderProductDetails></OrderProductDetails>
+      }
+      
     ]
   }
 ]);
