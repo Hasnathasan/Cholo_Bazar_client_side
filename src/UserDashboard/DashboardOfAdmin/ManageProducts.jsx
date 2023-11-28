@@ -5,11 +5,10 @@ import img from '../../../public/user.png'
 import axios from "axios";
 
 
-import { FaArrowDown, FaPlus, FaSearch } from "react-icons/fa";import UseProductsBySecondaryCategory from "../../Hooks/UseProductsBySecondaryCategory";
+import { FaArrowDown, FaEye, FaPlus, FaSearch, FaTrash } from "react-icons/fa";
+import useProducts from "../../Hooks/useProducts";
 const ManageProducts = () => {
-    const [products, isProductsLoading] = UseProductsBySecondaryCategory({
-        category: "iron"
-      });
+    const [products, isProductsLoading] = useProducts()
       if(isProductsLoading){
         return <h1>Loading............</h1>
       }
@@ -65,7 +64,7 @@ const ManageProducts = () => {
             </Button>
           </div>
         </div>
-          <span className="text-gray-600 mb-2">Total {products?.length} users</span>
+          <span className="text-gray-600 mb-2">Total {products?.length} Products</span>
       </div>
              <Table aria-label="Example table with custom cells">
       <TableHeader>
@@ -98,8 +97,9 @@ const ManageProducts = () => {
                 <TableCell>
                 {product?.main_category}
                 </TableCell>
-                <TableCell>
-                {product?.main_category}
+                <TableCell className="flex justify-center items-center gap-2">
+                  <Button isIconOnly variant="faded" color="success"><FaEye></FaEye></Button>
+                  <Button isIconOnly variant="faded" color="danger"><FaTrash></FaTrash></Button>
                 </TableCell>
               </TableRow>)
           }

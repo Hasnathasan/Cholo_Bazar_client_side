@@ -5,14 +5,14 @@ import img from '../../../public/user.png'
 import axios from "axios";
 import { FaArrowDown, FaPlus, FaSearch } from "react-icons/fa";
 import UseProductsBySecondaryCategory from "../../Hooks/UseProductsBySecondaryCategory";
+import useOrders from "../../Hooks/useOrders";
 
 const ManageOrders = () => {
-    const [products, isProductsLoading] = UseProductsBySecondaryCategory({
-        category: "iron"
-      });
-      if(isProductsLoading){
+    const [orders, isOrdersLoading] = useOrders()
+      if(isOrdersLoading){
         return <h1>Loading............</h1>
       }
+      console.log(orders);
     return (
         <div className="overflow-x-auto w-full md:w-[80%]">
         <div className="flex flex-col  gap-4">
@@ -65,21 +65,21 @@ const ManageOrders = () => {
         </Button>
       </div>
     </div>
-      <span className="text-gray-600 mb-2">Total {products?.length} users</span>
+      <span className="text-gray-600 mb-2">Total {orders?.length} Orders</span>
   </div>
          <Table aria-label="Example table with custom cells">
   <TableHeader>
       <TableColumn >
-        Name
+        Order By
       </TableColumn>
       <TableColumn >
-        Price
+        Customer Email / Number
       </TableColumn>
-      <TableColumn >
-        Category
+      <TableColumn  className="text-center">
+        Total Products
       </TableColumn>
-      <TableColumn >
-        Main Category
+      <TableColumn  className="text-center">
+        Total Price
       </TableColumn>
       <TableColumn >
         Actions
@@ -87,19 +87,22 @@ const ManageOrders = () => {
   </TableHeader>
   <TableBody >
       {
-        products?.map(product => <TableRow key={product._id} className="hover:!bg-gray-100 duration-100">
+        orders?.map(order => <TableRow key={order._id} className="hover:!bg-gray-100 duration-100">
             <TableCell>
-            {product.specification.Title.slice(0, 30)}....
+            {order.order?.customerName || "Unknown"}
             </TableCell>
-            <TableCell>{product?.price?.discounted_price}</TableCell>
-            <TableCell>
-            {product?.secondary_category}
+            <TableCell>{order.order?.customerEmail || order.order?.phoneNumber}</TableCell>
+            <TableCell className="text-center">
+            {order.order?.products?.length}
+            </TableCell>
+            <TableCell className="text-center">
+            {order.order?.products?.reduce((total, product) =>
+      product.price.discounted_price * product.quantity + total,
+    0
+  ).toFixed(2)} Tk
             </TableCell>
             <TableCell>
-            {product?.main_category}
-            </TableCell>
-            <TableCell>
-            {product?.main_category}
+            {order.order?.main_category}
             </TableCell>
           </TableRow>)
       }

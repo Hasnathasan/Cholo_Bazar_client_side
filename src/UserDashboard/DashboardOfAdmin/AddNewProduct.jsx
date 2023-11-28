@@ -8,7 +8,6 @@ const AddNewProduct = () => {
   const { register, handleSubmit } = useForm();
   const [totalSpecification, setTotalSpecification] = useState([1]);
   const [images, setImages] = useState([]);
-  const [uploadProgress, setUploadProgress] = useState(0);
 
   const handleImageChange = (event) => {
     const selectedImages = event.target.files;
@@ -24,22 +23,27 @@ const AddNewProduct = () => {
 
 
     const formData = new FormData();
-    for (const image of images) {
-      formData.append('image', image);
-    }
-
-    axios.post('https://api.imgbb.com/1/upload?key=d3f91f97f4271f1b700b4304ebdb8133', formData, {
-      onUploadProgress: (progressEvent) => {
-        const uploadPercentage = Math.round((progressEvent.loaded * 100) / progressEvent.total);
-        setUploadProgress(uploadPercentage);
-      },
-    })
-      .then((response) => {
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.error(error);
+      formData.append(`images`, images[0]);
+    try {
+      const apiKey = '8f703673c51b53833829e40de9817ccd';
+      const response = await fetch('https://api.imgbb.com/1/upload?key=' + apiKey, {
+        method: 'POST',
+        body: formData,
       });
+
+      if (response.ok) {
+        const result = await response.json();
+        console.log('Images uploaded successfully:', result.data.images);
+        // Handle the result as needed (e.g., update state, show a success message, etc.)
+      } else {
+        console.error('Failed to upload images. Status:', response.status);
+        // Handle the error (e.g., show an error message)
+      }
+    }
+    catch (error) {
+      console.error('Error during image upload:', error);
+    } 
+    
   };
 
   return (
@@ -51,7 +55,7 @@ const AddNewProduct = () => {
           </h2>
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
             <Input
-              {...register("product_name", { required: true })}
+              {...register("product_name", { required: false })}
               type="text"
               label="Name of your Product"
               placeholder="Product name"
@@ -60,17 +64,17 @@ const AddNewProduct = () => {
             />
 
             <Input
-              {...register("images", { required: true })}
-              onChange={handleImageChange}
+              {...register("images", { required: false })}
               type="file"
               label="Choose Images"
               placeholder=" "
               multiple
               variant="underlined"
+              onChange={handleImageChange}
               labelPlacement="outside"
             />
             <Input
-              {...register("real_price", { required: true })}
+              {...register("real_price", { required: false })}
               type="number"
               label="Real Price"
               placeholder="Tk. 00"
@@ -78,7 +82,7 @@ const AddNewProduct = () => {
               labelPlacement="outside"
             />
             <Input
-              {...register("discounted_price", { required: true })}
+              {...register("discounted_price", { required: false })}
               type="number"
               label="Price after discount"
               placeholder="Tk. 00"
@@ -86,7 +90,7 @@ const AddNewProduct = () => {
               labelPlacement="outside"
             />
             <Select
-              {...register("main_category", { required: true })}
+              {...register("main_category", { required: false })}
               label="Select main category"
               placeholder="Select an category"
               labelPlacement="outside"
@@ -99,7 +103,7 @@ const AddNewProduct = () => {
               <SelectItem key={"daily-needs"}>Daily-needs</SelectItem>
             </Select>
             <Select
-              {...register("secondary_category", { required: true })}
+              {...register("secondary_category", { required: false })}
               label="Select Category"
               placeholder="Select an category"
               labelPlacement="outside"
@@ -112,7 +116,7 @@ const AddNewProduct = () => {
               <SelectItem key={"daily-needs"}>Daily-needs</SelectItem>
             </Select>
             <Input
-              {...register("rating", { required: true })}
+              {...register("rating", { required: false })}
               type="number"
               label="Product rating"
               placeholder="rating"
@@ -120,7 +124,7 @@ const AddNewProduct = () => {
               labelPlacement="outside"
             />
             <Input
-              {...register("countryOfOrigin", { required: true })}
+              {...register("countryOfOrigin", { required: false })}
               type="text"
               label="Country of origin"
               placeholder="Origin country name"
@@ -133,34 +137,27 @@ const AddNewProduct = () => {
           </h2>
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
             <Input
-              {...register("brand", { required: true })}
+              {...register("brand", { required: false })}
               type="text"
               label="Brand Name"
               placeholder="Name of brand"
               variant="underlined"
               labelPlacement="outside"
             />
-            <Input
-              {...register("brand_image", { required: true })}
-              type="file"
-              label="Brand Image"
-              placeholder="Image of Brand"
-              variant="underlined"
-              labelPlacement="outside"
-            />
+            <input {...register("brand_image", { required: false })} type="file"/>
           </div>
           <h2 className="text-xl font-semibold underline leading-[50px] text-gray-900 my-5">
             Description&apos;s of Product and Brand:
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Textarea
-              {...register("product_summery", { required: true })}
+              {...register("product_summery", { required: false })}
               label="Summery of Product"
               variant="underlined"
               placeholder="Enter your Summery"
             />
             <Textarea
-              {...register("brand_description", { required: true })}
+              {...register("brand_description", { required: false })}
               label="Description of the Brand"
               variant="underlined"
               placeholder="Enter brand description"
