@@ -2,6 +2,7 @@ import { FaBookmark, FaHome, FaProductHunt, FaShoppingCart } from "react-icons/f
 import { BsFillPeopleFill, BsPersonCircle } from "react-icons/bs";
 import { NavLink, Outlet } from "react-router-dom";
 import './AdminDashBoard.css'
+import { Button } from "@nextui-org/react";
 const AdminDashBoard = () => {
 
   const mainLinks = <>
@@ -19,15 +20,26 @@ const AdminDashBoard = () => {
   return (
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content w-[100%] overflow-auto flex flex-col min-h-screen items-center justify-start py-8">
+      <div className="drawer-content w-[100%] mt-12 lg:mt-0 overflow-auto px-2 md:px-0 flex flex-col min-h-screen items-center justify-start py-8">
         {/* Page content here */}
         <Outlet></Outlet>
-        <label
-          htmlFor="my-drawer-2"
-          className="btn btn-primary drawer-button lg:hidden"
+        {/* <label
+          
+          className="btn btn-primary"
         >
           Open drawer
-        </label>
+        </label> */}
+        <div className=" bg-white shadow rounded-md mx-2 flex justify-center items-center p-3 absolute top-2 lg:hidden left-0 right-0">
+        <Button
+                  className="basis-1/2 hover:!text-white"
+                  size="sm"
+                  color="primary"
+                  radius="none"
+                  variant="solid"
+                >
+                  <label htmlFor="my-drawer-2" className="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center drawer-button">Open Dashboard</label>
+                </Button>
+        </div>
       </div>
       <div className="drawer-side w-full z-[1000]">
         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>

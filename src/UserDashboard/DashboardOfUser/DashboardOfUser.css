@@ -1,6 +1,6 @@
 .navlinks a.active{
-    color: #1fca75;
-    background: linear-gradient(to right, transparent, #dfffe5);
+    color: rgb(79, 170, 255) !important;
+    background: linear-gradient(to right, transparent, #dff5ff);
 }
 
 .navlinks a{

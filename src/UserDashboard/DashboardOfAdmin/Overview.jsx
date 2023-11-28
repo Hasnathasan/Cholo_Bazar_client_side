@@ -72,8 +72,8 @@ const Overview = () => {
       };
       const seriseForDonut = [44, 55, 13, 22];
     return (
-        <div className="w-full h-full px-2 md:px-8">
-           <div className="grid grid-cols-2 md:grid-cols-3 h-[400px] md:h-[150px] gap-6 mb-7">
+        <div className="w-full px-2 md:px-8">
+           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-7">
            <div className="w-full p-10 rounded-xl shadow-sm bg-[#008ffb] !text-white">
             <h2 className="text-white font-bold text-xl">Total Products - {products?.length}</h2>
             <h2 className="text-white font-bold text-lg">Hasnat Hasan</h2>
