@@ -45,6 +45,7 @@ const Home = () => {
             headding={"Deals on CholoBazar Products 🔥🔥"}
           ></SecondaryProductContainer>
           <ProductContainer
+          width={290}
             data={irons}
             apiPath={"products"}
           ></ProductContainer>

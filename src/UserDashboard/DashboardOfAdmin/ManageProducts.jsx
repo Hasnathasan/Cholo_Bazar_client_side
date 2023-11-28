@@ -1,8 +1,7 @@
 
-import { Button, ButtonGroup, Chip, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, Input, Table, TableBody, TableCell, TableColumn, TableHeader, TableRow, User } from "@nextui-org/react";
+import { Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, Input, Table, TableBody, TableCell, TableColumn, TableHeader, TableRow, User } from "@nextui-org/react";
 
-import img from '../../../public/user.png'
-import axios from "axios";
+
 
 
 import { FaArrowDown, FaEye, FaPlus, FaSearch, FaTrash } from "react-icons/fa";

@@ -10,7 +10,7 @@ import Swal from "sweetalert2";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 
-const ProductCard = ({ product, apiPath }) => {
+const ProductCard = ({ product, apiPath, width }) => {
   const { user } = useContext(AuthContext);
   const {
     _id,
@@ -63,7 +63,7 @@ const ProductCard = ({ product, apiPath }) => {
       });
   };
   return (
-    <div className="card !w-[180px] sm:!w-[240px] md:[250px] xl:!w-[230px] min-h-[260px] md:min-h-[320px] relative p-3.5 overflow-hidden !rounded hover:shadow-lg hover:shadow-gray-300 !transition-all !duration-300  delay-75 bg-white">
+    <div className={`card w-[184px] sm:w-[240px] mx-auto md:[250px] ${width ? `xl:w-[270px]` : 'xl:w-[230px]'} min-h-[260px] md:min-h-[320px] relative p-3.5 overflow-hidden !rounded hover:shadow-lg hover:shadow-gray-300 !transition-all !duration-300  delay-75 bg-white`}>
       <Link
         className="absolute top-0 bottom-0 left-0 right-0 z-10"
         to={`/details/${apiPath}/${_id}`}
