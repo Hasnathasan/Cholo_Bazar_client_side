@@ -767,7 +767,14 @@ const NavTopBar = () => {
           >
             My Account
           </Link>
-          <Link
+          {
+            userData?.userRole === "admin" ?  <Link
+            onClick={closeDrawerRight}
+            className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
+            to={"/admin-dashboard/"}
+          >
+            Admin Dashboard
+          </Link> : <><Link
             onClick={closeDrawerRight}
             className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
             to={"/myOrders"}
@@ -836,7 +843,8 @@ const NavTopBar = () => {
             to={"/myBkashAccount"}
           >
             My Bkash Account
-          </Link>
+          </Link></>
+          }
           <span
             onClickCapture={closeDrawerRight}
             onClick={logout}

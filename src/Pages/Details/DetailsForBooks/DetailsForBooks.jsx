@@ -72,7 +72,7 @@ const DetailsForBooks = ({book, apiPath}) => {
               {
                 apiPath.includes("books") ? <button className="px-8 py-3 border border-green-500 rounded-sm hover:bg-green-500 hover:text-white transition-all">একটু পড়ে দেখুন</button> : ""
               }
-              <button onClick={handleAddToCart} className="px-8 flex gap-2 text-lg font-semibold text-white justify-center items-center py-3 bg-amber-500 hover:bg-[#f59f0bd0] rounded duration-500  transition-all"> <img className="w-8" src={cartImg} alt="" />Add to Cart</button>
+              <button disabled onClick={handleAddToCart} className="px-8 cursor-pointer flex gap-2 text-lg font-semibold text-white justify-center items-center py-3 bg-amber-500 hover:bg-[#f59f0bd0] rounded duration-500  transition-all"> <img className="w-8" src={cartImg} alt="" />Add to Cart</button>
             </div>
         </div>
       </div>

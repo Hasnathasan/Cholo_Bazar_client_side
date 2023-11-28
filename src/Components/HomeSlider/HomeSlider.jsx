@@ -77,7 +77,7 @@ const HomeSlider = () => {
         {sliderImages.map((img, index) => (
           <div key={index}>
             <img
-              className="h-[145px] rounded-[10px] md:rounded-none p-[5px] md:p-0 md:h-[225px] w-full"
+              className="h-[150px] rounded-[10px] md:rounded-none p-[5px] md:p-0 md:h-[225px] w-full"
               src={img}
             />
           </div>
@@ -87,7 +87,7 @@ const HomeSlider = () => {
         <img src={add1} alt="" />
         <img src={add2} alt="" />
         <img
-          className="col-span-2 w-4/6 mx-auto md:w-full md:col-span-1"
+          className="col-span-2 mx-auto md:w-full md:col-span-1"
           src={add3}
           alt=""
         />

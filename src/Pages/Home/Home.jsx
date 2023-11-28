@@ -7,9 +7,9 @@ import HomeSlider from "../../Components/HomeSlider/HomeSlider";
 import SecondaryProductContainer from "../../Components/SecondaryProductContainer/SecondaryProductContainer";
 import ProductContainer from "../../Components/ProductContainer/ProductContainer";
 import CategorySlider from "../../Components/CategorySlider/CategorySlider";
-import FictionNonFicBookContainer from "../Book/FictionNonFicBookContainer/FictionNonFicBookContainer";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import FictionNonFicBookContainer from "../../Components/FictionNonFicBookContainer/FictionNonFicBookContainer";
 
 const Home = () => {
   const { setIsAnimationVisible } = useContext(AuthContext);

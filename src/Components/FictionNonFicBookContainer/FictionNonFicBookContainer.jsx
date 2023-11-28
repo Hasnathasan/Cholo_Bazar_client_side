@@ -1,12 +1,12 @@
 import Slider from "react-slick";
-import useFictionBooks from "../../../Hooks/useFictionBooks";
-import FicNonFicCard from "../FicNonFicCard/FicNonFicCard";
-import useNonFictionBooks from "../../../Hooks/useNonFictionBooks";
-import useReligiousBooks from "../../../Hooks/useReligiousBooks";
-import useAcademicBooks from "../../../Hooks/useAcademicBooks";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import "./FictionNonFicBookContainer.css";
-import arrowDown from "../../../../public/arrow-down.svg";
+import arrowDown from "../../../public/arrow-down.svg";
+import useFictionBooks from "../../Hooks/useFictionBooks";
+import useNonFictionBooks from "../../Hooks/useNonFictionBooks";
+import useReligiousBooks from "../../Hooks/useReligiousBooks";
+import useAcademicBooks from "../../Hooks/useAcademicBooks";
+import FicNonFicCard from "../FicNonFicCard/FicNonFicCard";
 const SampleNextArrow = (props) => {
   // eslint-disable-next-line react/prop-types
   const { className, style, onClick } = props;
