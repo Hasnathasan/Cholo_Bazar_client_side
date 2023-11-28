@@ -72,6 +72,11 @@ const AdminDashBoard = () => {
               <FaBookmark></FaBookmark> Manage Orders
             </NavLink>
           </li>
+          <li>
+            <NavLink className="p-3 text-base" to="deleveredOrders">
+              <FaBookmark></FaBookmark> Delevered Orders
+            </NavLink>
+          </li>
           <div className="divider"></div>
             {mainLinks}
           

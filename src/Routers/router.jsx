@@ -21,6 +21,7 @@ import ManageProducts from "../UserDashboard/DashboardOfAdmin/ManageProducts";
 import ManageOrders from "../UserDashboard/DashboardOfAdmin/ManageOrders";
 import AddNewProduct from "../UserDashboard/DashboardOfAdmin/AddNewProduct";
 import OrderProductDetails from "../UserDashboard/DashboardOfAdmin/OrderProductDetails";
+import DeleveredOrders from "../UserDashboard/DashboardOfAdmin/DeleveredOrders";
 
 const router = createBrowserRouter([
   {
@@ -124,7 +125,11 @@ const router = createBrowserRouter([
       {
         path: "products-details/:orderId",
         element: <OrderProductDetails></OrderProductDetails>
-      }
+      },
+      {
+        path: "deleveredOrders",
+        element: <DeleveredOrders></DeleveredOrders>
+      },
       
     ]
   }

@@ -9,8 +9,9 @@ const OrderProductDetails = () => {
     const [data, setData] = useState([])
     const {orderId} = useParams();
     useEffect( () => {
-        axios.get(`https://cholo-bazar.vercel.app/order/${orderId}`)
+        axios.get(`https://cholo-bazar.vercel.app/singleOrder/${orderId}`)
       .then(res => {
+        console.log(res);
         setData(res.data)
       })
       .catch(function (error) {
@@ -19,7 +20,10 @@ const OrderProductDetails = () => {
     },[orderId])
     console.log(orderId, data);
     return (
-        <ProductContainer data={data?.order?.products} apiPath={"products"} xlCol={true}></ProductContainer>
+        <div>
+            <h1>Products are here</h1>
+            <ProductContainer data={data?.order?.products} apiPath={"products"} xlCol={true}></ProductContainer>
+        </div>
     );
 };
 
