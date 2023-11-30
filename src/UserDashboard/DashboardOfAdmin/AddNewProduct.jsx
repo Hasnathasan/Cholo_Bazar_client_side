@@ -23,26 +23,22 @@ const AddNewProduct = () => {
 
 
     const formData = new FormData();
-      formData.append(`images`, images[0]);
+
+    for (const image of images) {
+      formData.append('image', image);
+    }
+
     try {
-      const apiKey = '8f703673c51b53833829e40de9817ccd';
-      const response = await fetch('https://api.imgbb.com/1/upload?key=' + apiKey, {
-        method: 'POST',
-        body: formData,
+      const response = await axios.post('https://api.imgur.com/3/image', formData, {
+        headers: {
+          Authorization: '65e63a042c56e69',
+        },
       });
 
-      if (response.ok) {
-        const result = await response.json();
-        console.log('Images uploaded successfully:', result.data.images);
-        // Handle the result as needed (e.g., update state, show a success message, etc.)
-      } else {
-        console.error('Failed to upload images. Status:', response.status);
-        // Handle the error (e.g., show an error message)
-      }
+      console.log('Images uploaded successfully:', response.data);
+    } catch (error) {
+      console.error('Error uploading images:', error);
     }
-    catch (error) {
-      console.error('Error during image upload:', error);
-    } 
     
   };
 

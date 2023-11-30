@@ -9,9 +9,11 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import useUser from "../../Hooks/useUser";
 
 const ProductCard = ({ product, apiPath, width }) => {
   const { user } = useContext(AuthContext);
+  const [userData, isUserDataLoading] = useUser();
   const {
     _id,
     images,
@@ -97,7 +99,14 @@ const ProductCard = ({ product, apiPath, width }) => {
             />
             <p className="text-xs text-blue-gray-500">({product?.rating})</p>
           </div>
-          <Chip
+          {
+            product?.quantity ? <Chip
+            className="absolute top-3 right-4 text-xs"
+            color="danger"
+            variant="faded"
+          >
+            Quantity: {product?.quantity}
+          </Chip>: <Chip
             className="absolute top-3 right-4 text-xs"
             color="danger"
             variant="faded"
@@ -109,6 +118,7 @@ const ProductCard = ({ product, apiPath, width }) => {
             )}
             % off
           </Chip>
+          }
           <a
             href=""
             className="card__icon text-3xl text-dark absolute bottom-4 duration-300 delay-75 left-3 z-20 hover:text-blue-400"
@@ -117,6 +127,7 @@ const ProductCard = ({ product, apiPath, width }) => {
           </a>
 
           <button
+          disabled={userData?.userRole === "admin"}
             onClick={handleAddToCart}
             className="card__icon_2 absolute bottom-5 right-4 z-20 transition-all !duration-100 !delay-75"
           >

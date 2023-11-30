@@ -2,7 +2,9 @@ import Chart from "react-apexcharts";
 import useUsers from "../../Hooks/useUsers";
 import UseProductsBySecondaryCategory from "../../Hooks/UseProductsBySecondaryCategory";
 
-
+import team from '../../../public/team.png';
+import packages from '../../../public/package.png';
+import cubes from '../../../public/cubes.png';
 
 
 
@@ -73,18 +75,27 @@ const Overview = () => {
       const seriseForDonut = [44, 55, 13, 22];
     return (
         <div className="w-full px-2 md:px-8">
-           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-7">
-           <div className="w-full p-10 rounded-xl shadow-sm bg-[#008ffb] !text-white">
-            <h2 className="text-white font-bold text-xl">Total Products - {products?.length}</h2>
-            <h2 className="text-white font-bold text-lg">Hasnat Hasan</h2>
+           <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 mb-7">
+           <div className="w-full p-3 md:p-4 xl:p-8 rounded-xl shadow-sm flex justify-start items-center gap-4 bg-[#008ffb] !text-white">
+            <img className="w-10 md:w-12 xl:w-16" src={cubes} alt="" />
+            <div>
+            <h2 className="text-white font-bold xl:text-xl">Total Products - {products?.length}</h2>
+            <h2 className="text-white font-bold xl:text-lg">Hasnat Hasan</h2>
+            </div>
            </div>
-           <div className="w-full p-10 rounded-xl shadow-sm bg-[#02e296]">
-            <h2 className="text-white font-bold text-xl">Total Orders - {products?.length}</h2>
-            <h2 className="text-white font-bold text-lg">Hasnat Hasan</h2>
+           <div className="w-full p-3 md:p-4 xl:p-8 rounded-xl shadow-sm flex justify-start items-center gap-4  bg-[#02e296]">
+            <img className="w-10 md:w-12 xl:w-16" src={packages} alt="" />
+            <div>
+            <h2 className="text-white font-bold xl:text-xl">Total Orders - {products?.length}</h2>
+            <h2 className="text-white font-bold xl:text-lg">Hasnat Hasan</h2>
+            </div>
            </div>
-           <div className="w-full col-span-2 shadow-sm md:col-span-1 p-10 rounded-xl bg-[#ff4560]">
-            <h2 className="text-white font-bold text-xl">Total Users {usersData?.length}</h2>
-            <h2 className="text-white font-bold text-lg">Hasnat Hasan</h2>
+           <div className="w-full col-span-2 shadow-sm lg:col-span-1 p-3 md:p-4 xl:p-8 flex justify-center items-center gap-4 rounded-xl bg-[#ff4560]">
+            <img className="w-10 md:w-12 xl:w-16" src={team} alt="" />
+            <div>
+            <h2 className="text-white font-bold xl:text-xl">Total Users {usersData?.length}</h2>
+            <h2 className="text-white font-bold xl:text-lg">Hasnat Hasan</h2>
+            </div>
            </div>
            </div>
            <div></div>

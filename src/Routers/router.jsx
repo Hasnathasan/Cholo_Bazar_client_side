@@ -22,6 +22,7 @@ import ManageOrders from "../UserDashboard/DashboardOfAdmin/ManageOrders";
 import AddNewProduct from "../UserDashboard/DashboardOfAdmin/AddNewProduct";
 import OrderProductDetails from "../UserDashboard/DashboardOfAdmin/OrderProductDetails";
 import DeleveredOrders from "../UserDashboard/DashboardOfAdmin/DeleveredOrders";
+import MyOrders from "../UserDashboard/DashboardOfUser/UserProfile/myOrders";
 
 const router = createBrowserRouter([
   {
@@ -87,6 +88,10 @@ const router = createBrowserRouter([
       {
         path: "/myCart",
         element: <Cart></Cart>,
+      },
+      {
+        path: "/myOrders",
+        element: <MyOrders></MyOrders>
       },
       {
         path: "/checkOut",

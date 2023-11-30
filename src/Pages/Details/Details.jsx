@@ -19,6 +19,7 @@ import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import Swal from "sweetalert2";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import useUser from "../../Hooks/useUser";
 
 function ThumbnailPlugin(mainRef) {
   return (slider) => {
@@ -58,6 +59,7 @@ const Details = () => {
   const [axiosSecure] = useAxiosSecure();
   const { apiPath, id } = apiObj;
   const { user } = useContext(AuthContext);
+  const [userData, isUserDataLoading] = useUser()
   console.log(user);
   console.log(apiPath, id);
   const { data: product, isLoading: isProductLoading } = useQuery({
@@ -271,6 +273,7 @@ const Details = () => {
                   ""
                 )}
                 <button
+                disabled={userData?.userRole === "admin"}
                   onClick={handleAddToCart}
                   className="px-8 flex gap-2 text-lg font-semibold text-white justify-center items-center py-3 bg-amber-500 hover:bg-[#f59f0bd0] rounded duration-500  transition-all"
                 >
