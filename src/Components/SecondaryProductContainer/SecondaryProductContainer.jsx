@@ -69,16 +69,15 @@ const SecondaryProductContainer = ({
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 4,
+          slidesToScroll: 4,
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 780,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
+          slidesToShow: 3,
+          slidesToScroll: 3,
         },
       },
       {
@@ -93,7 +92,7 @@ const SecondaryProductContainer = ({
   return (
     <div className=" md:mx-auto px-2 py-6 md:px-5 md:py-10 border-2 border-[#e9e9e9] shadow-sm md:border-none my-5 bg-white rounded-[4px] md:rounded-none mx-3 ">
       <h2 className="text-xl ps-4 font-bold text-gray-800 mb-3">{headding}</h2>
-      <div className="hidden md:block">
+      <div className="hidden sm:block">
         <Slider {...settings}>
           {data?.map((product) => (
             <SecondaryProductCard
@@ -105,7 +104,7 @@ const SecondaryProductContainer = ({
         </Slider>
       </div>
 
-      <div className="md:hidden">
+      <div className="sm:hidden">
         <div className="grid gap-y-4 gap-x-[5px] grid-cols-2">
           {data?.map((product) => (
             <SecondaryProductCard

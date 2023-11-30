@@ -23,6 +23,7 @@ import AddNewProduct from "../UserDashboard/DashboardOfAdmin/AddNewProduct";
 import OrderProductDetails from "../UserDashboard/DashboardOfAdmin/OrderProductDetails";
 import DeleveredOrders from "../UserDashboard/DashboardOfAdmin/DeleveredOrders";
 import MyOrders from "../UserDashboard/DashboardOfUser/UserProfile/myOrders";
+import OrderDetails from "../UserDashboard/DashboardOfUser/UserProfile/OrderDetails";
 
 const router = createBrowserRouter([
   {
@@ -100,6 +101,10 @@ const router = createBrowserRouter([
       {
         path: "/paymentSuccess/:transactionId",
         element: <PaymentSuccess></PaymentSuccess>,
+      },
+      {
+        path: "/products-details/:orderId",
+        element: <OrderDetails></OrderDetails>
       },
     ],
   },

@@ -1,6 +1,6 @@
 
-.dropdownMenuClasses > li{
-    padding: 0px 0px 2px 10px !important;
+.dropdownMenuClasses ul li{
+    padding: 0px 0px 0px 10px !important;
 }
 
 .dropdownMenuClasses{

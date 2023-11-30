@@ -8,9 +8,10 @@ const useUserOrders = () => {
     const [axiosSecure] = useAxiosSecure();
     const {user} = useContext(AuthContext);
     const { data: orders, isLoading: isOrdersLoading, refetch } = useQuery({
-        queryKey: [`user${user?.email}`],
+        queryKey: [`orderOf${user?.email}`],
         queryFn: async() => {
-            const res = await axiosSecure.get(`/userOrder/${user?.email}`)
+            const res = await axiosSecure.get(`/ordersByEmail/${user?.email}`)
+            console.log(res);
             return res.data;
         },
       })

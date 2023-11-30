@@ -113,7 +113,7 @@ const SecondaryProductCard = ({ product, apiPath }) => {
       <div className="md:hidden min-h-[265px] relative">
         <Link to={`/details/${apiPath}/${_id}`}>
           <div className="flex flex-col justify-between text-center pt-3">
-            <img className="h-[130px] flex-1 w-3/4 mx-auto" src={images[0]} alt="" />
+            <img className="!h-[130px] w-3/4 mx-auto" src={images[0]} alt="" />
             <div className=" p-2 space-y-1 absolute bottom-0">
               <h3 className="text-sm">{specification.title?.split(" ").slice(0, 4).join(" ") || specification?.Title.split(" ").slice(0, 4).join(" ") }...</h3>
               <h4 className="text-sm text-gray-600">{specification.brand}</h4>

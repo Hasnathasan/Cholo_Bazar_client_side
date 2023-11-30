@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import rokomari_logo from "../../../public/rokomari_logo.png";
-import cart from "../../../public/cart.png";
-import "./NavTopBar.css";
+import rokomari_logo from "../../../../public/rokomari_logo.png";
+import cart from "../../../../public/cart.png";
+import './NavTopBar.css'
 import {
   FaAngleDown,
   FaCalculator,
@@ -12,7 +12,6 @@ import {
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
-import { AuthContext } from "../../Providers/AuthProvider";
 import {
   Card,
   Dropdown,
@@ -34,11 +33,12 @@ import {
   ListItemPrefix,
   Typography,
 } from "@material-tailwind/react";
-import hamBurger from "../../../public/hamburger.png";
-import userIcon from "../../../public/user.svg";
-import notificationIcon from "../../../public/appointment-reminders.png";
+import hamBurger from "../../../../public/hamburger.png";
+import userIcon from "../../../../public/user.svg";
+import notificationIcon from "../../../../public/appointment-reminders.png";
 import { RxCross2 } from "react-icons/rx";
-import useUser from "../../Hooks/useUser";
+import { AuthContext } from "../../../Providers/AuthProvider";
+import useUser from "../../../Hooks/useUser";
 
 const NavTopBar = () => {
   const [open, setOpen] = useState(false);
@@ -848,7 +848,7 @@ const NavTopBar = () => {
           <span
             onClickCapture={closeDrawerRight}
             onClick={logout}
-            className="block text-base font-normal hover:text-blue-600 py-2"
+            className="block px-2 text-base font-normal hover:text-blue-600 py-2"
           >
             Sign Out
           </span>

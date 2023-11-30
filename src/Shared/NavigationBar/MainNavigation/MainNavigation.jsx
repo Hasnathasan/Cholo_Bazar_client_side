@@ -1,7 +1,7 @@
 import { FaAngleDown } from "react-icons/fa";
 
 import { Navbar, NavbarContent, NavbarItem } from "@nextui-org/react";
-import NavTopBar from "../NavTopBar";
+import NavTopBar from "../NavTopBar/NavTopBar";
 import "./MainNavigation.css";
 import {
   ListItem,
