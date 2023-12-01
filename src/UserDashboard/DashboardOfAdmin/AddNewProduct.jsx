@@ -7,38 +7,50 @@ import { FaPlus } from "react-icons/fa";
 const AddNewProduct = () => {
   const { register, handleSubmit } = useForm();
   const [totalSpecification, setTotalSpecification] = useState([1]);
-  const [images, setImages] = useState([]);
-
-  const handleImageChange = (event) => {
-    const selectedImages = event.target.files;
-    setImages(selectedImages);
-  };
-  console.log(images);
+ 
   const onSubmit = async (data) => {
     console.log(data);
+
+    const images = data?.images;
+    const main_category = data.main_category;
+    const number_of_ratings = data.number_of_ratings;
+    const number_of_reviews = data.number_of_reviews;
+    const discounted_price = data.discounted_price;
+    const real_price = data.real_price;
+    const rating = data.rating;
+    const secondary_category = data.secondary_category;
+    const title = data.product_name;
+    const brand = data.brand; 
+    const brand_image = data.brand_image; 
+    const brand_description = data.brand_description; 
+
+
     if (images.length === 0) {
       alert("Please select at least one image to upload.");
       return;
     }
 
 
-    const formData = new FormData();
+    let imagesOfNewProduct = [];
 
     for (const image of images) {
-      formData.append('image', image);
+      const formData = new FormData();
+    formData.append('key', "d3f91f97f4271f1b700b4304ebdb8133");
+      formData.append(`image`, image);
+      try {
+        const response = await axios.post('https://api.imgbb.com/1/upload', formData);
+        const image = response?.data?.data?.url;
+        console.log(image);
+        imagesOfNewProduct = [...imagesOfNewProduct, image];
+        
+      } catch (error) {
+        console.error(error);
+      }
     }
+    console.log(imagesOfNewProduct);
 
-    try {
-      const response = await axios.post('https://api.imgur.com/3/image', formData, {
-        headers: {
-          Authorization: '65e63a042c56e69',
-        },
-      });
-
-      console.log('Images uploaded successfully:', response.data);
-    } catch (error) {
-      console.error('Error uploading images:', error);
-    }
+    const product = {images: imagesOfNewProduct, };
+    
     
   };
 
@@ -66,7 +78,6 @@ const AddNewProduct = () => {
               placeholder=" "
               multiple
               variant="underlined"
-              onChange={handleImageChange}
               labelPlacement="outside"
             />
             <Input
