@@ -35,6 +35,11 @@ const MainNavigation = () => {
   const [isHomeOpen, setIsHomeOpen] = useState(false);
   const [isElectricOpen, setIsElectricOpen] = useState(false);
   const [isBeautyOpen, setIsBeautyOpen] = useState(false);
+  const [isSportsOpen, setIsSportsOpen] = useState(false);
+  const [isFurnitureOpen, setIsFurnitureOpen] = useState(false);
+  const [isFoodOpen, setIsFoodOpen] = useState(false);
+  // const [isBeautyOpen, setIsBeautyOpen] = useState(false);
+  // const [isBeautyOpen, setIsBeautyOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
@@ -241,14 +246,14 @@ const MainNavigation = () => {
                   <ListItem
                     ripple={false}
                     className={`flex items-center text-sm xl:text-base gap-1 py-2 pr-4 font-medium !bg-transparent  ${
-                      location.pathname?.includes("/electronics")
+                      location.pathname?.includes("/beauty")
                         ? "text-blue-500"
                         : "text-gray-700"
                     }`}
                     selected={isBeautyOpen || isMobileMenuOpen}
                     onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                   >
-                    Resources
+                    Beauty
                     <FaAngleDown
                       className={`hidden h-3 w-3 transition-transform lg:block ${
                         isBeautyOpen ? "rotate-180" : ""
@@ -266,7 +271,7 @@ const MainNavigation = () => {
               <MenuList className="max-w-screen-xl !shadow-lg mx-5 !p-5 !shadow-gray-400 !bg-[#ffffff] rounded-xl lg:block">
                 <ul className="grid grid-cols-3 gap-y-4 !bg-[#ffffff] gap-3 outline-none outline-0">
                   <EachMenuItem
-                    path={"/login"}
+                    path={"/comming-soon"}
                     icon={category1}
                     title={"Electronic"}
                     description={"See all Electronic Product"}
@@ -303,8 +308,8 @@ const MainNavigation = () => {
           {/* {Navbar Item 4} */}
           <NavbarItem>
             <Menu
-              open={isBeautyOpen}
-              handler={setIsBeautyOpen}
+              open={isSportsOpen}
+              handler={setIsSportsOpen}
               offset={{ mainAxis: 20 }}
               placement="bottom"
               allowHover={true}
@@ -314,17 +319,17 @@ const MainNavigation = () => {
                   <ListItem
                     ripple={false}
                     className={`flex items-center text-sm xl:text-base gap-1 py-2 pr-4 font-medium !bg-transparent  ${
-                      location.pathname?.includes("/electronics")
+                      location.pathname?.includes("/sports")
                         ? "text-blue-500"
                         : "text-gray-700"
                     }`}
-                    selected={isBeautyOpen || isMobileMenuOpen}
+                    selected={isSportsOpen || isMobileMenuOpen}
                     onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                   >
-                    Resources
+                    Sports
                     <FaAngleDown
                       className={`hidden h-3 w-3 transition-transform lg:block ${
-                        isBeautyOpen ? "rotate-180" : ""
+                        isSportsOpen ? "rotate-180" : ""
                       }`}
                     ></FaAngleDown>
                     <FaAngleDown
@@ -339,7 +344,7 @@ const MainNavigation = () => {
               <MenuList className="max-w-screen-xl !shadow-lg mx-5 !p-5 !shadow-gray-400 !bg-[#ffffff] rounded-xl lg:block">
                 <ul className="grid grid-cols-3 gap-y-4 !bg-[#ffffff] gap-3 outline-none outline-0">
                   <EachMenuItem
-                    path={"/login"}
+                    path={"/comming-soon"}
                     icon={category1}
                     title={"Electronic"}
                     description={"See all Electronic Product"}
@@ -376,8 +381,8 @@ const MainNavigation = () => {
           {/* {Navbar Item 4} */}
           <NavbarItem>
             <Menu
-              open={isBeautyOpen}
-              handler={setIsBeautyOpen}
+              open={isFurnitureOpen}
+              handler={setIsFurnitureOpen}
               offset={{ mainAxis: 20 }}
               placement="bottom"
               allowHover={true}
@@ -387,17 +392,17 @@ const MainNavigation = () => {
                   <ListItem
                     ripple={false}
                     className={`flex items-center text-sm xl:text-base gap-1 py-2 pr-4 font-medium !bg-transparent  ${
-                      location.pathname?.includes("/electronics")
+                      location.pathname?.includes("/furniture")
                         ? "text-blue-500"
                         : "text-gray-700"
                     }`}
-                    selected={isBeautyOpen || isMobileMenuOpen}
+                    selected={isFurnitureOpen || isMobileMenuOpen}
                     onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                   >
-                    Resources
+                    Furniture
                     <FaAngleDown
                       className={`hidden h-3 w-3 transition-transform lg:block ${
-                        isBeautyOpen ? "rotate-180" : ""
+                        isFurnitureOpen ? "rotate-180" : ""
                       }`}
                     ></FaAngleDown>
                     <FaAngleDown
@@ -412,7 +417,7 @@ const MainNavigation = () => {
               <MenuList className="max-w-screen-xl !shadow-lg mx-5 !p-5 !shadow-gray-400 !bg-[#ffffff] rounded-xl lg:block">
                 <ul className="grid grid-cols-3 gap-y-4 !bg-[#ffffff] gap-3 outline-none outline-0">
                   <EachMenuItem
-                    path={"/login"}
+                    path={"/comming-soon"}
                     icon={category1}
                     title={"Electronic"}
                     description={"See all Electronic Product"}
@@ -449,8 +454,8 @@ const MainNavigation = () => {
           {/* {Navbar Item 4} */}
           <NavbarItem>
             <Menu
-              open={isBeautyOpen}
-              handler={setIsBeautyOpen}
+              open={isFoodOpen}
+              handler={setIsFoodOpen}
               offset={{ mainAxis: 20 }}
               placement="bottom"
               allowHover={true}
@@ -460,17 +465,17 @@ const MainNavigation = () => {
                   <ListItem
                     ripple={false}
                     className={`flex items-center text-sm xl:text-base gap-1 py-2 pr-4 font-medium !bg-transparent  ${
-                      location.pathname?.includes("/electronics")
+                      location.pathname?.includes("/food")
                         ? "text-blue-500"
                         : "text-gray-700"
                     }`}
-                    selected={isBeautyOpen || isMobileMenuOpen}
+                    selected={isFoodOpen || isMobileMenuOpen}
                     onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                   >
-                    Resources
+                    Food Item
                     <FaAngleDown
                       className={`hidden h-3 w-3 transition-transform lg:block ${
-                        isBeautyOpen ? "rotate-180" : ""
+                        isFoodOpen ? "rotate-180" : ""
                       }`}
                     ></FaAngleDown>
                     <FaAngleDown
@@ -485,7 +490,7 @@ const MainNavigation = () => {
               <MenuList className="max-w-screen-xl !shadow-lg mx-5 !p-5 !shadow-gray-400 !bg-[#ffffff] rounded-xl lg:block">
                 <ul className="grid grid-cols-3 gap-y-4 !bg-[#ffffff] gap-3 outline-none outline-0">
                   <EachMenuItem
-                    path={"/login"}
+                    path={"/comming-soon"}
                     icon={category1}
                     title={"Electronic"}
                     description={"See all Electronic Product"}

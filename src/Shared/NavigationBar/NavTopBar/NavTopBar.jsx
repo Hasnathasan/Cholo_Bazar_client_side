@@ -39,6 +39,22 @@ import notificationIcon from "../../../../public/appointment-reminders.png";
 import { RxCross2 } from "react-icons/rx";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import useUser from "../../../Hooks/useUser";
+import refrigerator from "../../../../public/refrigerator.png";
+import category1 from "../../../../public/category-1.png";
+import category2 from "../../../../public/category-2.png";
+import category3 from "../../../../public/category-3.png";
+import category4 from "../../../../public/category-4.png";
+import category5 from "../../../../public/category-5.png";
+import category6 from "../../../../public/category-6.png";
+import category7 from "../../../../public/category-7.png";
+import category8 from "../../../../public/category-8.png";
+import category9 from "../../../../public/category-9.png";
+import category10 from "../../../../public/category-10.png";
+import category11 from "../../../../public/category-11.png";
+import category12 from "../../../../public/category-12.png";
+import iron from "../../../../public/iron.png";
+import kettle from "../../../../public/kettle.png";
+import AC from "../../../../public/air-conditioner.png";
 
 const NavTopBar = () => {
   const [open, setOpen] = useState(false);
@@ -177,7 +193,7 @@ const NavTopBar = () => {
                     <DropdownItem key="free-book">
                       <Link
                         className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                        to={"/downloadFreeBook"}
+                        to={"/comming-soon"}
                       >
                         Download Free Book
                       </Link>
@@ -185,7 +201,7 @@ const NavTopBar = () => {
                     <DropdownItem key="ebook">
                       <Link
                         className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                        to={"/myEbook"}
+                        to={"/comming-soon"}
                       >
                         My eBook Library
                       </Link>
@@ -193,7 +209,7 @@ const NavTopBar = () => {
                     <DropdownItem key="list">
                       <Link
                         className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                        to={"/myList"}
+                        to={"/comming-soon"}
                       >
                         My List
                       </Link>
@@ -201,7 +217,7 @@ const NavTopBar = () => {
                     <DropdownItem key="book-self">
                       <Link
                         className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                        to={"/bookShelf"}
+                        to={"/comming-soon"}
                       >
                         My Book Shelf
                       </Link>
@@ -209,7 +225,7 @@ const NavTopBar = () => {
                     <DropdownItem key="wishlist">
                       <Link
                         className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                        to={"/myWishlish"}
+                        to={"/comming-soon"}
                       >
                         My Wishlist
                       </Link>
@@ -217,7 +233,7 @@ const NavTopBar = () => {
                     <DropdownItem key="rating-review">
                       <Link
                         className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                        to={"/myRatingReviews"}
+                        to={"/comming-soon"}
                       >
                         My Rating Reviews
                       </Link>
@@ -225,7 +241,7 @@ const NavTopBar = () => {
                     <DropdownItem key="points">
                       <Link
                         className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                        to={"/myPoints"}
+                        to={"/comming-soon"}
                       >
                         My Points
                       </Link>
@@ -233,7 +249,7 @@ const NavTopBar = () => {
                     <DropdownItem key="followed-authors">
                       <Link
                         className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                        to={"/myFollowedAuthors"}
+                        to={"/comming-soon"}
                       >
                         My Following Authors
                       </Link>
@@ -241,7 +257,7 @@ const NavTopBar = () => {
                     <DropdownItem showDivider={true} key="bkash-account">
                       <Link
                         className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                        to={"/myBkashAccount"}
+                        to={"/comming-soon"}
                       >
                         My Bkash Account
                       </Link>
@@ -294,106 +310,9 @@ const NavTopBar = () => {
           </div>
           <List className="overflow-y-auto">
             <Accordion
-              open={openAccordian === 1}
-              icon={
-                <FaAngleDown
-                  className={`mx-auto h-4 w-4 transition-transform ${
-                    openAccordian === 1 ? "rotate-180" : ""
-                  }`}
-                ></FaAngleDown>
-              }
-            >
-              <ListItem
-                ripple={false}
-                className="p-0"
-                selected={openAccordian === 1}
-              >
-                <AccordionHeader
-                  onClick={() => handleOpen(1)}
-                  className="border-b-0 p-3"
-                >
-                  <ListItemPrefix>
-                    <FaPrescriptionBottleAlt></FaPrescriptionBottleAlt>
-                  </ListItemPrefix>
-                  <Typography color="blue-gray" className="mr-auto font-normal">
-                    বই
-                  </Typography>
-                </AccordionHeader>
-              </ListItem>
-              <AccordionBody className="py-1">
-                <List className="ps-5">
-                  <Link className="flex" to={"/login"}>
-                    <ListItem ripple={false}>
-                      <ListItemPrefix>
-                        <FaCar></FaCar>
-                      </ListItemPrefix>
-                      লেখক
-                    </ListItem>
-                  </Link>
-                  <Link className="flex" to={"/login"}>
-                    <ListItem ripple={false}>
-                      <ListItemPrefix>
-                        <FaCar></FaCar>
-                      </ListItemPrefix>
-                      বিষয়
-                    </ListItem>
-                  </Link>
-                  <Link className="flex" to={"/login"}>
-                    <ListItem ripple={false}>
-                      <ListItemPrefix>
-                        <FaCar></FaCar>
-                      </ListItemPrefix>
-                      প্রকাশনী
-                    </ListItem>
-                  </Link>
-                  <Link className="flex" to={"/login"}>
-                    <ListItem ripple={false}>
-                      <ListItemPrefix>
-                        <FaCar></FaCar>
-                      </ListItemPrefix>
-                      ই-বুক
-                    </ListItem>
-                  </Link>
-                  <Link className="flex" to={"/login"}>
-                    <ListItem ripple={false}>
-                      <ListItemPrefix>
-                        <FaCar></FaCar>
-                      </ListItemPrefix>
-                      Buy 1 Get 1 Offer
-                    </ListItem>
-                  </Link>
-                  <Link className="flex" to={"/login"}>
-                    <ListItem ripple={false}>
-                      <ListItemPrefix>
-                        <FaCar></FaCar>
-                      </ListItemPrefix>
-                      স্টকের প্রোডাক্ট সমূহ
-                    </ListItem>
-                  </Link>
-                  <Link className="flex" to={"/login"}>
-                    <ListItem ripple={false}>
-                      <ListItemPrefix>
-                        <FaCar></FaCar>
-                      </ListItemPrefix>
-                      লিডারবোর্ডের ২০০ বই
-                    </ListItem>
-                  </Link>
-                  <Link className="flex" to={"/login"}>
-                    <ListItem ripple={false}>
-                      <ListItemPrefix>
-                        <FaCar></FaCar>
-                      </ListItemPrefix>
-                      বইমেলা ২০২৩
-                    </ListItem>
-                  </Link>
-                </List>
-              </AccordionBody>
-            </Accordion>
-            <hr className="border-blue-gray-50" />
-            <Accordion
               open={openAccordian === 3}
               icon={
-                <FaCalculator
+                <FaAngleDown
                   className={`mx-auto h-4 w-4 transition-transform ${
                     openAccordian === 3 ? "rotate-180" : ""
                   }`}
@@ -413,24 +332,61 @@ const NavTopBar = () => {
                     <FaCalculator></FaCalculator>
                   </ListItemPrefix>
                   <Typography color="blue-gray" className="mr-auto font-normal">
-                    ইলেক্ট্রনিক্স
+                    Electronics
                   </Typography>
                 </AccordionHeader>
               </ListItem>
               <AccordionBody className="py-1">
                 <List className="p-0">
                   <ListItem ripple={false}>
+                    <Link to={"/electronics/electronics"} className=" flex items-center gap-1 w-full h-full">
                     <ListItemPrefix>
-                      <FaCalculator></FaCalculator>
+                      <img className="w-5 h-5" src={category10} alt="" />
                     </ListItemPrefix>
-                    Orders
+                    All Electronics Products
+                    </Link>
                   </ListItem>
                   <ListItem ripple={false}>
+                    <Link to={"/electronics/refrigerators"} className=" flex items-center gap-1 w-full h-full">
                     <ListItemPrefix>
-                      <FaCalculator></FaCalculator>
+                      <img className="w-5 h-5" src={refrigerator} alt="" />
                     </ListItemPrefix>
-                    Products
+                    Refrigerators
+                    </Link>
                   </ListItem>
+                  <ListItem ripple={false}>
+                    <Link to={"/electronics/televisions"} className=" flex items-center gap-1 w-full h-full">
+                    <ListItemPrefix>
+                      <img className="w-5 h-5" src={category9} alt="" />
+                    </ListItemPrefix>
+                    Televisions
+                    </Link>
+                  </ListItem>
+                  <ListItem ripple={false}>
+                    <Link to={"/electronics/irons"} className=" flex items-center gap-1 w-full h-full">
+                    <ListItemPrefix>
+                      <img className="w-5 h-5" src={iron} alt="" />
+                    </ListItemPrefix>
+                    Iron Machines
+                    </Link>
+                  </ListItem>
+                  <ListItem ripple={false}>
+                    <Link to={"/electronics/kettles"} className=" flex items-center gap-1 w-full h-full">
+                    <ListItemPrefix>
+                      <img className="w-5 h-5" src={kettle} alt="" />
+                    </ListItemPrefix>
+                    Kettles
+                    </Link>
+                  </ListItem>
+                  <ListItem ripple={false}>
+                    <Link to={"/electronics/airCollers"} className=" flex items-center gap-1 w-full h-full">
+                    <ListItemPrefix>
+                      <img className="w-5 h-5" src={AC} alt="" />
+                    </ListItemPrefix>
+                    Air Collers
+                    </Link>
+                  </ListItem>
+                 
                 </List>
               </AccordionBody>
             </Accordion>
@@ -457,7 +413,7 @@ const NavTopBar = () => {
                     <FaCalculator></FaCalculator>
                   </ListItemPrefix>
                   <Typography color="blue-gray" className="mr-auto font-normal">
-                    মনিহারি পণ্য
+                    Kids zone
                   </Typography>
                 </AccordionHeader>
               </ListItem>

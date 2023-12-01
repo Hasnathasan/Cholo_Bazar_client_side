@@ -3,8 +3,8 @@ import "./SecondaryProductCard.css";
 import { Link } from "react-router-dom";
 import Rating from "react-rating";
 import cart from '../../../public/cart.png'
-import { FaHeart } from "react-icons/fa";
-import { IoFlashOff, IoStarOutline, IoStarSharp } from "react-icons/io5";
+import { FaEye, FaHeart } from "react-icons/fa";
+import { IoStarOutline, IoStarSharp } from "react-icons/io5";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Providers/AuthProvider";
@@ -102,11 +102,11 @@ const SecondaryProductCard = ({ product, apiPath }) => {
             <div className={`w-10 h-10 flex justify-center items-center relative ${hover ? "bottom-0" : "-bottom-32"} transition-all !duration-[700ms] bg-white  rounded-full shadow-md`}>
               <FaHeart className="w-[60%]"></FaHeart>
             </div>
-            <div className={`w-10 h-10 flex justify-center items-center relative ${hover ? "bottom-0" : "-bottom-32"} transition-all !duration-[1200ms] bg-white rounded-full shadow-md`}>
-              <IoFlashOff></IoFlashOff>
+            <div className={`w-10 h-10 flex justify-center items-center overflow-hidden relative ${hover ? "bottom-0" : "-bottom-32"} transition-all !duration-[1100ms] bg-white rounded-full shadow-md`}>
+            <Link className=" absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center" to={`/details/${apiPath}/${_id}`}><FaEye></FaEye></Link>
             </div>
             </div>
-            <div className={`bg-gray-800 opacity-60 absolute top-0  left-0 right-0 ${hover ? " bottom-0" : "bottom-[340px]"} !duration-500 `}></div>
+            <div className={`bg-blue-100 opacity-60 absolute top-0  left-0 right-0 ${hover ? " bottom-0" : "bottom-[340px]"} !duration-500 `}></div>
       </div>
 
       {/* Component for small device */}
