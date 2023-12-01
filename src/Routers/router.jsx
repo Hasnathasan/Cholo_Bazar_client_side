@@ -25,6 +25,7 @@ import DeleveredOrders from "../UserDashboard/DashboardOfAdmin/DeleveredOrders";
 import MyOrders from "../UserDashboard/DashboardOfUser/UserProfile/myOrders";
 import OrderDetails from "../UserDashboard/DashboardOfUser/UserProfile/OrderDetails";
 import IAmWorkingOnIt from "../Components/IAmWorkingOnIt/IAmWorkingOnIt";
+import SignUp from "../Shared/SignUp/SignUp";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
+      },
+      {
+        path: "/signUp",
+        element: <SignUp></SignUp>,
       },
       {
         path: "/details/:apiPath/:id",

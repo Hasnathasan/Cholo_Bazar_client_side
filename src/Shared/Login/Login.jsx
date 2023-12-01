@@ -3,8 +3,12 @@ import { FaFacebookF, FaGoogle } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import PhoneAuth from "../../Components/PhoneAuth/PhoneAuth";
+import { Button, Input } from "@nextui-org/react";
+import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 
 const Login = () => {
+  const { register, handleSubmit } = useForm();
   const { googleLogin, faceBookSignIn, user } = useContext(AuthContext);
   console.log(user);
   const handleGoogleSignIn = () => {
@@ -56,7 +60,39 @@ const Login = () => {
             </div>
           </div>
           <div className="font-semibold text-[15px] mb- mt-5">OR</div>
-
+          <div>
+          <form className="w-[90%] flex flex-col justify-center gap-5 mx-auto">
+          <Input
+              {...register("email", { required: true })}
+              type="email"
+              label="Your Email"
+              size="sm"
+              placeholder="example@gmail.com"
+              variant="underlined"
+              labelPlacement="outside"
+            />
+          <Input
+              {...register("password", { required: true })}
+              type="password"
+              label="Your Password"
+              size="sm"
+              placeholder="********"
+              variant="underlined"
+              labelPlacement="outside"
+            />
+            <Button
+          type="submit"
+          className="mt-3 block"
+          color="primary"
+          radius="none"
+          variant="ghost"
+        >
+          Login
+        </Button>
+        <p className="text-[15px]">Haven&apos;t any Account? <Link to={"/signUp"} className="text-blue-500">Create One</Link></p>
+          </form>
+          </div>
+          <div className="font-semibold text-[15px] mb- mt-8">OR</div>
           <PhoneAuth className="px-10"></PhoneAuth>
         </div>
       </div>

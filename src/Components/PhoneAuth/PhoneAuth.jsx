@@ -20,6 +20,9 @@ const PhoneAuth = () => {
             badge: "bottomleft", //' bottomright' or 'inline' applies to invisible.
           },
         },
+        {
+          provider: firebase.auth.GithubAuthProvider.PROVIDER_ID,
+        },
       ],
       tosUrl: "https://google.com",
       // Privacy policy url/callback.
