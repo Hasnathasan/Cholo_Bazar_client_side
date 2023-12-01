@@ -68,7 +68,7 @@
             "Volume": "5Litter",
             "How_to_store": "keep in dry and cool palce"
         },
-        "super_deal": true,
+        "super_deal": false,
         "secondary_category": "oil",
         "main_category": "food-&-bevarage"
     },
@@ -150,7 +150,7 @@
             "container_type": "Bottle",
             "manufacturer": "Unilever"
         },
-        "super_deal": true,
+        "super_deal": false,
         "main_category": "personal-Care"
     },
     {
@@ -202,7 +202,7 @@
             "country_of_origin": "Bangladesh",
             "Fragrance": "Rfagrance Free"
         },
-        "super_deal": true,
+        "super_deal": false,
         "secondary_category": "washing",
         "main_category": "daily-needs"
     },
@@ -254,7 +254,7 @@
             "Flavour": "Orange",
             "country_of_origin": "United States (USA)"
         },
-        "super_deal": true,
+        "super_deal": false,
         "main_category": "food-&-bevarage"
     },
     {
@@ -311,7 +311,7 @@
             "country_of_origin": "India",
             "skin_type": "Normal"
         },
-        "super_deal": true,
+        "super_deal": false,
         "main_category": "personal-Care"
     },
     {
@@ -390,7 +390,7 @@
             ],
             "country_of_origin": "India"
         },
-        "super_deal": true,
+        "super_deal": false,
         "main_category": "personal-Care"
     },
     {
@@ -470,7 +470,7 @@
             "country_of_origin": "India",
             "Flavour": "Orange Flavor"
         },
-        "super_deal": true,
+        "super_deal": false,
         "main_category": "food-&-bevarage"
     },
     {
@@ -895,7 +895,7 @@
           "Dimensions": "950x350x300 mm",
           "CoolingType": "Multi Inverter"
         },
-        "super_deal": false,
+        "super_deal": true,
         "secondary_category": "airColler",
         "main_category": "electronics"
       },
@@ -956,7 +956,7 @@
           "Dimensions": "1000x400x350 mm",
           "CoolingType": "Dual Inverter"
         },
-        "super_deal": false,
+        "super_deal": true,
         "secondary_category": "airColler",
         "main_category": "electronics"
       },
@@ -1016,7 +1016,7 @@
           "Dimensions": "72.7 x 35.7 x 35.5 inches",
           "CoolingType": "Compressor"
         },
-        "super_deal": false,
+        "super_deal": true,
         "secondary_category": "refrigerator",
         "main_category": "electronics"
       },
@@ -1192,7 +1192,7 @@
           "Dimensions": "72 x 35 x 35 inches",
           "CoolingType": "Compressor"
         },
-        "super_deal": false,
+        "super_deal": true,
         "secondary_category": "refrigerator",
         "main_category": "electronics"
       },
@@ -1881,7 +1881,7 @@
           "RemoteControl": "No",
           "Dimensions": "8.7 x 7.1 x 10.6 inches"
         },
-        "super_deal": false,
+        "super_deal": true,
         "secondary_category": "kettle",
         "main_category": "electronics"
       },
@@ -2361,7 +2361,7 @@
           "Personal Care"
         ],
         "secondary_category": "trimmer",
-        "super_deal": false,
+        "super_deal": true,
         "main_category": "electronics",
         "specification": {
           "Title": "Philips Multigroom Series 3000 MG3730 Beard Trimmer",
@@ -2415,7 +2415,7 @@
           "Personal Care"
         ],
         "secondary_category": "trimmer",
-        "super_deal": false,
+        "super_deal": true,
         "main_category": "electronics",
         "specification": {
           "Title": "Braun Multigroom Series 7 MGK7020 Beard Trimmer",
@@ -2715,7 +2715,7 @@
           "Home Appliances"
         ],
         "secondary_category": "iron",
-        "super_deal": false,
+        "super_deal": true,
         "main_category": "electronics",
         "specification": {
           "Title": "Black+Decker IR3050SS Steam Iron",
@@ -2956,7 +2956,7 @@
           "Electronics"
         ],
         "secondary_category": "television",
-        "super_deal": false,
+        "super_deal": true,
         "main_category": "electronics",
         "specification": {
           "Title": "Samsung QN65QN90BAFXZA 4K Smart TV",

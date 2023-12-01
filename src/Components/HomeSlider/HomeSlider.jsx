@@ -15,12 +15,17 @@ import banner10 from "../../../public/banner-10.png";
 import banner11 from "../../../public/banner-11.png";
 import banner12 from "../../../public/banner-12.png";
 import banner13 from "../../../public/banner-13.png";
+import banner14 from "../../../public/banner-14.png";
 import add1 from "../../../public/add1.png";
 import add2 from "../../../public/add2.png";
 import add3 from "../../../public/add3.png";
 const HomeSlider = () => {
   const sliderImages = [
+    banner11,
+    banner12,
+    banner13,
     banner1,
+    banner14,
     banner2,
     banner3,
     banner4,
@@ -30,9 +35,6 @@ const HomeSlider = () => {
     banner8,
     banner9,
     banner10,
-    banner11,
-    banner12,
-    banner13,
   ];
   const settings = {
     fade: true,

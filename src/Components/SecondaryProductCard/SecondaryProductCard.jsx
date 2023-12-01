@@ -75,7 +75,7 @@ const SecondaryProductCard = ({ product, apiPath }) => {
         <img className="h-[172px] bg-white rounded-md" src={images[0]} alt="" />
         <div className=" p-2 space-y-1">
           <h3 className="text-[13px]">
-            {specification?.title || specification?.Title.split(" ").slice(0, 4).join(" ")}
+            {specification?.title?.split(" ").slice(0, 4).join(" ") || specification?.Title?.split(" ").slice(0, 4).join(" ")}
           </h3>
           <h4 className="text-sm text-gray-500">{specification?.Brand || specification?.brand}</h4>
           <div className="flex justify-around items-end">
@@ -115,7 +115,7 @@ const SecondaryProductCard = ({ product, apiPath }) => {
           <div className="flex flex-col justify-between text-center pt-3">
             <img className="!h-[130px] w-3/4 mx-auto" src={images[0]} alt="" />
             <div className=" p-2 space-y-1 absolute bottom-0">
-              <h3 className="text-sm">{specification.title?.split(" ").slice(0, 4).join(" ") || specification?.Title.split(" ").slice(0, 4).join(" ") }...</h3>
+              <h3 className="text-sm">{specification.title?.split(" ").slice(0, 4).join(" ") || specification?.Title?.split(" ").slice(0, 4).join(" ") }...</h3>
               <h4 className="text-sm text-gray-600">{specification.brand}</h4>
               <div className="flex items-center gap-1 text-sm justify-center">
                 <Rating

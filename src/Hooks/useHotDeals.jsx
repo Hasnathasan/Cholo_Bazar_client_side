@@ -7,7 +7,7 @@ const useHotDeals = () => {
     const { data: hotDeals, isLoading: isHotDealsLoading } = useQuery({
         queryKey: ['hotDeals'],
         queryFn: async() => {
-            const res = await axiosSecure.get('/products')
+            const res = await axiosSecure.get('/hot-deals')
             return res.data;
         },
       })
