@@ -126,7 +126,7 @@ const ProductCard = ({ product, apiPath, width }) => {
           </span>
 
           <button
-          disabled={userData?.userRole === "admin"}
+          disabled={!user || userData?.userRole === "admin"}
             onClick={handleAddToCart}
             className="card__icon_2 absolute bottom-5 cursor-pointer right-4 z-20 transition-all !duration-100 !delay-75"
           >

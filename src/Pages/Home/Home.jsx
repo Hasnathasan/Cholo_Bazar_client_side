@@ -46,13 +46,13 @@ const Home = () => {
           ></SecondaryProductContainer>
           <ProductContainer
           width={290}
-            data={irons}
+            data={refrigerators}
             apiPath={"products"}
           ></ProductContainer>
           <CategorySlider></CategorySlider>
           <FictionNonFicBookContainer></FictionNonFicBookContainer>
           <SecondaryProductContainer
-            data={refrigerators}
+            data={irons}
             apiPath={"products"}
             headding={"Refrigerator are on fire 🔥🔥"}
           ></SecondaryProductContainer>

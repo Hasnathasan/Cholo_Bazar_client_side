@@ -8,8 +8,11 @@ import { IoStarOutline, IoStarSharp } from "react-icons/io5";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Providers/AuthProvider";
+import useUser from "../../Hooks/useUser";
+import { Button } from "@nextui-org/react";
 const SecondaryProductCard = ({ product, apiPath }) => {
   const { user } = useContext(AuthContext);
+  const [userData, isUserDataLoading] = useUser()
   const [hover, setHover] = useState(false);
   const {
     _id,
@@ -96,15 +99,15 @@ const SecondaryProductCard = ({ product, apiPath }) => {
             
         </div>
         <div className={`flex justify-center z-10 items-center relative ${hover ? "bottom-40" : "-bottom-32"} duration-700   gap-3`}>
-            <div onClick={handleAddToCart} className={`w-10 cursor-pointer h-10 flex justify-center items-center relative ${hover ? "bottom-0" : "-bottom-32"} transition-all !duration-400 bg-white  rounded-full shadow-md`}>
+            <Button radius="full" isIconOnly isDisabled={!user || userData?.userRole === "admin"} onClick={handleAddToCart} className={`w-10 cursor-pointer h-10 flex justify-center items-center relative ${hover ? "bottom-0" : "-bottom-32"} transition-all !duration-400 bg-white  rounded-full shadow-md`}>
               <img className="w-[60%]" src={cart} alt="" />
-            </div>
-            <div className={`w-10 h-10 flex justify-center items-center relative ${hover ? "bottom-0" : "-bottom-32"} transition-all !duration-[700ms] bg-white  rounded-full shadow-md`}>
+            </Button>
+            <Button radius="full" isIconOnly className={`w-10 h-10 flex justify-center items-center cursor-pointer relative ${hover ? "bottom-0" : "-bottom-32"} transition-all !duration-[700ms] bg-white  rounded-full shadow-md`}>
               <FaHeart className="w-[60%]"></FaHeart>
-            </div>
-            <div className={`w-10 h-10 flex justify-center items-center overflow-hidden relative ${hover ? "bottom-0" : "-bottom-32"} transition-all !duration-[1100ms] bg-white rounded-full shadow-md`}>
+            </Button>
+            <Button radius="full" isIconOnly className={`w-10 h-10 flex justify-center items-center cursor-pointer overflow-hidden relative ${hover ? "bottom-0" : "-bottom-32"} transition-all !duration-[1100ms] bg-white rounded-full shadow-md`}>
             <Link className=" absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center" to={`/details/${apiPath}/${_id}`}><FaEye></FaEye></Link>
-            </div>
+            </Button>
             </div>
             <div className={`bg-blue-100 opacity-60 absolute top-0  left-0 right-0 ${hover ? " bottom-0" : "bottom-[340px]"} !duration-500 `}></div>
       </div>

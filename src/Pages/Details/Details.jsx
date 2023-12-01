@@ -273,7 +273,7 @@ const Details = () => {
                   ""
                 )}
                 <button
-                disabled={userData?.userRole === "admin"}
+                disabled={!user || userData?.userRole === "admin"}
                   onClick={handleAddToCart}
                   className="px-8 flex gap-2 text-lg font-semibold text-white justify-center items-center py-3 bg-amber-500 hover:bg-[#f59f0bd0] rounded duration-500  transition-all"
                 >

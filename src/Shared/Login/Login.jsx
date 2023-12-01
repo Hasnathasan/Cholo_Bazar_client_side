@@ -5,12 +5,14 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import PhoneAuth from "../../Components/PhoneAuth/PhoneAuth";
 import { Button, Input } from "@nextui-org/react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Login = () => {
-  const { register, handleSubmit } = useForm();
-  const { googleLogin, faceBookSignIn, user } = useContext(AuthContext);
+  const { register, handleSubmit, reset } = useForm();
+  const { googleLogin, faceBookSignIn, user, loginWithEmail } = useContext(AuthContext);
   console.log(user);
+  const navigate = useNavigate()
   const handleGoogleSignIn = () => {
     googleLogin()
       .then((result) => {
@@ -28,6 +30,25 @@ const Login = () => {
       .catch((error) => {
         console.log(error);
       });
+  };
+
+  const onSubmit = (data) => {
+    const {email, password} = data;
+    loginWithEmail(email, password)
+        .then(result => {
+            console.log(result.user);
+            reset()
+            Swal.fire(
+                'Login Successfull',
+                'User has logged in successfully',
+                'success'
+              )
+              navigate ("/")
+              // navigate(from, { replace: true });
+        })
+        .catch(error => {
+            console.log(error.message);
+        })
   };
 
   return (
@@ -61,7 +82,7 @@ const Login = () => {
           </div>
           <div className="font-semibold text-[15px] mb- mt-5">OR</div>
           <div>
-          <form className="w-[90%] flex flex-col justify-center gap-5 mx-auto">
+          <form onSubmit={handleSubmit(onSubmit)} className="w-[90%] flex flex-col justify-center gap-5 mx-auto">
           <Input
               {...register("email", { required: true })}
               type="email"

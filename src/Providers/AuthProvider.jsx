@@ -4,8 +4,10 @@ import app from "../Firebase/Firebase.config";
 import {
   FacebookAuthProvider,
   GoogleAuthProvider,
+  createUserWithEmailAndPassword,
   getAuth,
   onAuthStateChanged,
+  signInWithEmailAndPassword,
   signInWithPhoneNumber,
   signInWithPopup,
   signOut,
@@ -32,6 +34,15 @@ const AuthProvider = ({ children }) => {
     return signInWithPopup(auth, facebookProvider);
   };
 
+  const loginWithEmail = (email, password) => {
+    setLoading(true);
+    return signInWithEmailAndPassword(auth, email, password);
+  };
+  const signUpWithEmail = (email, password) => {
+    setLoading(true);
+    return createUserWithEmailAndPassword(auth, email, password);
+  };
+
   const phoneSignIn = (phoneNumber) => {
     setLoading(true);
     return signInWithPhoneNumber(auth, phoneNumber);
@@ -47,6 +58,8 @@ const AuthProvider = ({ children }) => {
     loading,
     googleLogin,
     faceBookSignIn,
+    signUpWithEmail,
+    loginWithEmail,
     phoneSignIn,
     logout,
     auth,
@@ -72,6 +85,15 @@ const AuthProvider = ({ children }) => {
         userRole: "user",
       };
       if (loogedUser?.email) {
+        const newUser = {
+          name: loogedUser?.displayName,
+          email: loogedUser?.email,
+          date_of_birth: null,
+          gender: null,
+          phoneNumber: loogedUser?.phoneNumber,
+          photoUrl: loogedUser?.photoURL,
+          userRole: "user",
+        };
         fetch(`https://cholo-bazar.vercel.app/eachUser/${loogedUser?.email}`)
           .then((res) => res.json())
           .then((data) => {
@@ -88,6 +110,15 @@ const AuthProvider = ({ children }) => {
             }
           });
       } else if (loogedUser?.phoneNumber) {
+        const newUser = {
+          name: loogedUser?.displayName,
+          email: loogedUser?.email,
+          date_of_birth: null,
+          gender: null,
+          phoneNumber: loogedUser?.phoneNumber,
+          photoUrl: loogedUser?.photoURL,
+          userRole: "user",
+        };
         console.log("User has Phone Number");
         fetch(
           `https://cholo-bazar.vercel.app/each-user-by-number/${loogedUser?.phoneNumber}`
