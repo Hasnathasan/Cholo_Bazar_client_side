@@ -119,17 +119,16 @@ const ProductCard = ({ product, apiPath, width }) => {
             % off
           </Chip>
           }
-          <a
-            href=""
-            className="card__icon text-3xl text-dark absolute bottom-4 duration-300 delay-75 left-3 z-20 hover:text-blue-400"
+          <span
+            className="card__icon text-3xl text-dark cursor-pointer absolute bottom-4 duration-300 delay-75 left-3 z-20 hover:text-blue-400"
           >
             <FaHeart className="w-6 h-6"></FaHeart>
-          </a>
+          </span>
 
           <button
           disabled={userData?.userRole === "admin"}
             onClick={handleAddToCart}
-            className="card__icon_2 absolute bottom-5 right-4 z-20 transition-all !duration-100 !delay-75"
+            className="card__icon_2 absolute bottom-5 cursor-pointer right-4 z-20 transition-all !duration-100 !delay-75"
           >
             <img className="w-6 h-6" src={cart} alt="" />
           </button>

@@ -116,7 +116,7 @@ const FictionNonFicBookContainer = () => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 880,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -133,7 +133,7 @@ const FictionNonFicBookContainer = () => {
     ],
   };
   return (
-    <div className="mx-auto my-10">
+    <div className="mx-auto px-2 my-10">
       <h2 className="text-lg font-bold text-gray-700 mb-3">{""}</h2>
       <div className="hidden md:block">
         <Slider {...settings}>

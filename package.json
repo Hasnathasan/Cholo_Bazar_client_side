@@ -20,7 +20,6 @@
     "@tanstack/react-query": "^4.32.0",
     "apexcharts": "^3.44.0",
     "axios": "^1.6.1",
-    "firebase": "^10.4.0",
     "firebaseui": "^6.1.0",
     "framer-motion": "^10.16.4",
     "keen-slider": "^6.8.6",

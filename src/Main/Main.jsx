@@ -5,6 +5,7 @@ import cycling from "../../public/cycelling.json";
 import Lottie from "lottie-react";
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
+import Footer from "../Shared/Footer/Footer";
 
 const Main = () => {
   const { isAnimationVisible, setIsAnimationVisible } = useContext(AuthContext);
@@ -36,6 +37,7 @@ const Main = () => {
           <div className="md:mt-[120px]">
             <Outlet></Outlet>
           </div>
+          <Footer></Footer>
         </div>
       )}
     </>
