@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import rokomari_logo from "../../../../public/rokomari_logo.png";
 import cart from "../../../../public/cart.png";
-import './NavTopBar.css'
+import "./NavTopBar.css";
 import {
   FaAngleDown,
   FaCalculator,
@@ -60,7 +60,7 @@ const NavTopBar = () => {
   const [open, setOpen] = useState(false);
   const [openAccordian, setOpenAccordian] = useState(0);
   const [openRight, setOpenRight] = useState(false);
-  const [userData, isUserDataLoading] = useUser()
+  const [userData, isUserDataLoading] = useUser();
 
   const handleOpen = (value) => {
     setOpenAccordian(openAccordian === value ? 0 : value);
@@ -134,141 +134,141 @@ const NavTopBar = () => {
                       {user?.displayName}
                     </button>
                   </DropdownTrigger>
-                  {
-                    userData?.userRole === "admin" ? <DropdownMenu
-                    aria-label="Dropdown Variants"
-                    color={"default"}
-                    variant={""}
-                    itemClasses={{ padding: "0px" }}
-                    className="dropdownMenuClasses"
-                  >
-                    <DropdownItem key="account">
-                      <Link
-                        className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                        to={"/my-section/profile"}
-                      >
-                        My Account
-                      </Link>
-                    </DropdownItem>
-                    <DropdownItem key="admin-dashboard">
-                      <Link
-                        className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                        to={"/admin-dashboard/"}
-                      >
-                        Admin Dashboard
-                      </Link>
-                    </DropdownItem>
+                  {userData?.userRole === "admin" ? (
+                    <DropdownMenu
+                      aria-label="Dropdown Variants"
+                      color={"default"}
+                      variant={""}
+                      itemClasses={{ padding: "0px" }}
+                      className="dropdownMenuClasses"
+                    >
+                      <DropdownItem key="account">
+                        <Link
+                          className="block text-base font-normal hover:text-blue-600 py-[5px]"
+                          to={"/my-section/profile"}
+                        >
+                          My Account
+                        </Link>
+                      </DropdownItem>
+                      <DropdownItem key="admin-dashboard">
+                        <Link
+                          className="block text-base font-normal hover:text-blue-600 py-[5px]"
+                          to={"/admin-dashboard/"}
+                        >
+                          Admin Dashboard
+                        </Link>
+                      </DropdownItem>
 
-                    <DropdownItem key="signOut" onClick={logout}>
-                      <span className="block text-base font-normal hover:text-blue-600 py-2">
-                        Sign Out
-                      </span>
-                    </DropdownItem>
-                  </DropdownMenu>:<DropdownMenu
-                    aria-label="Dropdown Variants"
-                    color={"default"}
-                    variant={""}
-                    itemClasses={{ padding: "0px" }}
-                    className="dropdownMenuClasses"
-                  >
-                    <DropdownItem key="account">
-                      <Link
-                        className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                        to={"/my-section/profile"}
-                      >
-                        My Account
-                      </Link>
-                    </DropdownItem>
-                    {
-
-                    }
-                    <DropdownItem key="order">
-                      <Link
-                        className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                        to={"/myOrders"}
-                      >
-                        My Orders
-                      </Link>
-                    </DropdownItem>
-                    <DropdownItem key="free-book">
-                      <Link
-                        className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                        to={"/comming-soon"}
-                      >
-                        Download Free Book
-                      </Link>
-                    </DropdownItem>
-                    <DropdownItem key="ebook">
-                      <Link
-                        className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                        to={"/comming-soon"}
-                      >
-                        My eBook Library
-                      </Link>
-                    </DropdownItem>
-                    <DropdownItem key="list">
-                      <Link
-                        className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                        to={"/comming-soon"}
-                      >
-                        My List
-                      </Link>
-                    </DropdownItem>
-                    <DropdownItem key="book-self">
-                      <Link
-                        className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                        to={"/comming-soon"}
-                      >
-                        My Book Shelf
-                      </Link>
-                    </DropdownItem>
-                    <DropdownItem key="wishlist">
-                      <Link
-                        className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                        to={"/comming-soon"}
-                      >
-                        My Wishlist
-                      </Link>
-                    </DropdownItem>
-                    <DropdownItem key="rating-review">
-                      <Link
-                        className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                        to={"/comming-soon"}
-                      >
-                        My Rating Reviews
-                      </Link>
-                    </DropdownItem>
-                    <DropdownItem key="points">
-                      <Link
-                        className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                        to={"/comming-soon"}
-                      >
-                        My Points
-                      </Link>
-                    </DropdownItem>
-                    <DropdownItem key="followed-authors">
-                      <Link
-                        className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                        to={"/comming-soon"}
-                      >
-                        My Following Authors
-                      </Link>
-                    </DropdownItem>
-                    <DropdownItem showDivider={true} key="bkash-account">
-                      <Link
-                        className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                        to={"/comming-soon"}
-                      >
-                        My Bkash Account
-                      </Link>
-                    </DropdownItem>
-                    <DropdownItem key="signOut" onClick={logout}>
-                      <span className="block text-base font-normal hover:text-blue-600 py-2">
-                        Sign Out
-                      </span>
-                    </DropdownItem>
-                  </DropdownMenu>
-                  }
+                      <DropdownItem key="signOut" onClick={logout}>
+                        <span className="block text-base font-normal hover:text-blue-600 py-2">
+                          Sign Out
+                        </span>
+                      </DropdownItem>
+                    </DropdownMenu>
+                  ) : (
+                    <DropdownMenu
+                      aria-label="Dropdown Variants"
+                      color={"default"}
+                      variant={""}
+                      itemClasses={{ padding: "0px" }}
+                      className="dropdownMenuClasses"
+                    >
+                      <DropdownItem key="account">
+                        <Link
+                          className="block text-base font-normal hover:text-blue-600 py-[5px]"
+                          to={"/my-section/profile"}
+                        >
+                          My Account
+                        </Link>
+                      </DropdownItem>
+                      {}
+                      <DropdownItem key="order">
+                        <Link
+                          className="block text-base font-normal hover:text-blue-600 py-[5px]"
+                          to={"/myOrders"}
+                        >
+                          My Orders
+                        </Link>
+                      </DropdownItem>
+                      <DropdownItem key="free-book">
+                        <Link
+                          className="block text-base font-normal hover:text-blue-600 py-[5px]"
+                          to={"/comming-soon"}
+                        >
+                          Download Free Book
+                        </Link>
+                      </DropdownItem>
+                      <DropdownItem key="ebook">
+                        <Link
+                          className="block text-base font-normal hover:text-blue-600 py-[5px]"
+                          to={"/comming-soon"}
+                        >
+                          My eBook Library
+                        </Link>
+                      </DropdownItem>
+                      <DropdownItem key="list">
+                        <Link
+                          className="block text-base font-normal hover:text-blue-600 py-[5px]"
+                          to={"/comming-soon"}
+                        >
+                          My List
+                        </Link>
+                      </DropdownItem>
+                      <DropdownItem key="book-self">
+                        <Link
+                          className="block text-base font-normal hover:text-blue-600 py-[5px]"
+                          to={"/comming-soon"}
+                        >
+                          My Book Shelf
+                        </Link>
+                      </DropdownItem>
+                      <DropdownItem key="wishlist">
+                        <Link
+                          className="block text-base font-normal hover:text-blue-600 py-[5px]"
+                          to={"/comming-soon"}
+                        >
+                          My Wishlist
+                        </Link>
+                      </DropdownItem>
+                      <DropdownItem key="rating-review">
+                        <Link
+                          className="block text-base font-normal hover:text-blue-600 py-[5px]"
+                          to={"/comming-soon"}
+                        >
+                          My Rating Reviews
+                        </Link>
+                      </DropdownItem>
+                      <DropdownItem key="points">
+                        <Link
+                          className="block text-base font-normal hover:text-blue-600 py-[5px]"
+                          to={"/comming-soon"}
+                        >
+                          My Points
+                        </Link>
+                      </DropdownItem>
+                      <DropdownItem key="followed-authors">
+                        <Link
+                          className="block text-base font-normal hover:text-blue-600 py-[5px]"
+                          to={"/comming-soon"}
+                        >
+                          My Following Authors
+                        </Link>
+                      </DropdownItem>
+                      <DropdownItem showDivider={true} key="bkash-account">
+                        <Link
+                          className="block text-base font-normal hover:text-blue-600 py-[5px]"
+                          to={"/comming-soon"}
+                        >
+                          My Bkash Account
+                        </Link>
+                      </DropdownItem>
+                      <DropdownItem key="signOut" onClick={logout}>
+                        <span className="block text-base font-normal hover:text-blue-600 py-2">
+                          Sign Out
+                        </span>
+                      </DropdownItem>
+                    </DropdownMenu>
+                  )}
                 </Dropdown>
               </div>
               <img
@@ -339,54 +339,71 @@ const NavTopBar = () => {
               <AccordionBody className="py-1">
                 <List className="p-0">
                   <ListItem ripple={false}>
-                    <Link to={"/electronics/electronics"} className=" flex items-center gap-1 w-full h-full">
-                    <ListItemPrefix>
-                      <img className="w-5 h-5" src={category10} alt="" />
-                    </ListItemPrefix>
-                    All Electronics Products
+                    <Link
+                      to={"/electronics/electronics"}
+                      className=" flex items-center gap-1 w-full h-full"
+                    >
+                      <ListItemPrefix>
+                        <img className="w-5 h-5" src={category10} alt="" />
+                      </ListItemPrefix>
+                      All Electronics Products
                     </Link>
                   </ListItem>
                   <ListItem ripple={false}>
-                    <Link to={"/electronics/refrigerators"} className=" flex items-center gap-1 w-full h-full">
-                    <ListItemPrefix>
-                      <img className="w-5 h-5" src={refrigerator} alt="" />
-                    </ListItemPrefix>
-                    Refrigerators
+                    <Link
+                      to={"/electronics/refrigerators"}
+                      className=" flex items-center gap-1 w-full h-full"
+                    >
+                      <ListItemPrefix>
+                        <img className="w-5 h-5" src={refrigerator} alt="" />
+                      </ListItemPrefix>
+                      Refrigerators
                     </Link>
                   </ListItem>
                   <ListItem ripple={false}>
-                    <Link to={"/electronics/televisions"} className=" flex items-center gap-1 w-full h-full">
-                    <ListItemPrefix>
-                      <img className="w-5 h-5" src={category9} alt="" />
-                    </ListItemPrefix>
-                    Televisions
+                    <Link
+                      to={"/electronics/televisions"}
+                      className=" flex items-center gap-1 w-full h-full"
+                    >
+                      <ListItemPrefix>
+                        <img className="w-5 h-5" src={category9} alt="" />
+                      </ListItemPrefix>
+                      Televisions
                     </Link>
                   </ListItem>
                   <ListItem ripple={false}>
-                    <Link to={"/electronics/irons"} className=" flex items-center gap-1 w-full h-full">
-                    <ListItemPrefix>
-                      <img className="w-5 h-5" src={iron} alt="" />
-                    </ListItemPrefix>
-                    Iron Machines
+                    <Link
+                      to={"/electronics/irons"}
+                      className=" flex items-center gap-1 w-full h-full"
+                    >
+                      <ListItemPrefix>
+                        <img className="w-5 h-5" src={iron} alt="" />
+                      </ListItemPrefix>
+                      Iron Machines
                     </Link>
                   </ListItem>
                   <ListItem ripple={false}>
-                    <Link to={"/electronics/kettles"} className=" flex items-center gap-1 w-full h-full">
-                    <ListItemPrefix>
-                      <img className="w-5 h-5" src={kettle} alt="" />
-                    </ListItemPrefix>
-                    Kettles
+                    <Link
+                      to={"/electronics/kettles"}
+                      className=" flex items-center gap-1 w-full h-full"
+                    >
+                      <ListItemPrefix>
+                        <img className="w-5 h-5" src={kettle} alt="" />
+                      </ListItemPrefix>
+                      Kettles
                     </Link>
                   </ListItem>
                   <ListItem ripple={false}>
-                    <Link to={"/electronics/airCollers"} className=" flex items-center gap-1 w-full h-full">
-                    <ListItemPrefix>
-                      <img className="w-5 h-5" src={AC} alt="" />
-                    </ListItemPrefix>
-                    Air Collers
+                    <Link
+                      to={"/electronics/airCollers"}
+                      className=" flex items-center gap-1 w-full h-full"
+                    >
+                      <ListItemPrefix>
+                        <img className="w-5 h-5" src={AC} alt="" />
+                      </ListItemPrefix>
+                      Air Collers
                     </Link>
                   </ListItem>
-                 
                 </List>
               </AccordionBody>
             </Accordion>
@@ -723,84 +740,88 @@ const NavTopBar = () => {
           >
             My Account
           </Link>
-          {
-            userData?.userRole === "admin" ?  <Link
-            onClick={closeDrawerRight}
-            className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
-            to={"/admin-dashboard/"}
-          >
-            Admin Dashboard
-          </Link> : <><Link
-            onClick={closeDrawerRight}
-            className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
-            to={"/myOrders"}
-          >
-            My Orders
-          </Link>
-          <Link
-            onClick={closeDrawerRight}
-            className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
-            to={"/downloadFreeBook"}
-          >
-            Download Free Book
-          </Link>
-          <Link
-            onClick={closeDrawerRight}
-            className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
-            to={"/myEbook"}
-          >
-            My eBook Library
-          </Link>
-          <Link
-            onClick={closeDrawerRight}
-            className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
-            to={"/myList"}
-          >
-            My List
-          </Link>
-          <Link
-            onClick={closeDrawerRight}
-            className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
-            to={"/bookShelf"}
-          >
-            My Book Shelf
-          </Link>
-          <Link
-            onClick={closeDrawerRight}
-            className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
-            to={"/myWishlish"}
-          >
-            My Wishlist
-          </Link>
-          <Link
-            onClick={closeDrawerRight}
-            className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
-            to={"/myRatingReviews"}
-          >
-            My Rating Reviews
-          </Link>
-          <Link
-            onClick={closeDrawerRight}
-            className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
-            to={"/myPoints"}
-          >
-            My Points
-          </Link>
-          <Link
-            onClick={closeDrawerRight}
-            className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
-            to={"/myFollowedAuthors"}
-          >
-            My Following Authors
-          </Link>
-          <Link
-            onClick={closeDrawerRight}
-            className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
-            to={"/myBkashAccount"}
-          >
-            My Bkash Account
-          </Link></>
-          }
+          {userData?.userRole === "admin" ? (
+            <Link
+              onClick={closeDrawerRight}
+              className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
+              to={"/admin-dashboard/"}
+            >
+              Admin Dashboard
+            </Link>
+          ) : (
+            <>
+              <Link
+                onClick={closeDrawerRight}
+                className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
+                to={"/myOrders"}
+              >
+                My Orders
+              </Link>
+              <Link
+                onClick={closeDrawerRight}
+                className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
+                to={"/downloadFreeBook"}
+              >
+                Download Free Book
+              </Link>
+              <Link
+                onClick={closeDrawerRight}
+                className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
+                to={"/myEbook"}
+              >
+                My eBook Library
+              </Link>
+              <Link
+                onClick={closeDrawerRight}
+                className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
+                to={"/myList"}
+              >
+                My List
+              </Link>
+              <Link
+                onClick={closeDrawerRight}
+                className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
+                to={"/bookShelf"}
+              >
+                My Book Shelf
+              </Link>
+              <Link
+                onClick={closeDrawerRight}
+                className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
+                to={"/myWishlish"}
+              >
+                My Wishlist
+              </Link>
+              <Link
+                onClick={closeDrawerRight}
+                className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
+                to={"/myRatingReviews"}
+              >
+                My Rating Reviews
+              </Link>
+              <Link
+                onClick={closeDrawerRight}
+                className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
+                to={"/myPoints"}
+              >
+                My Points
+              </Link>
+              <Link
+                onClick={closeDrawerRight}
+                className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
+                to={"/myFollowedAuthors"}
+              >
+                My Following Authors
+              </Link>
+              <Link
+                onClick={closeDrawerRight}
+                className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
+                to={"/myBkashAccount"}
+              >
+                My Bkash Account
+              </Link>
+            </>
+          )}
           <span
             onClickCapture={closeDrawerRight}
             onClick={logout}
