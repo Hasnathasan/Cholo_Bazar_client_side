@@ -4,6 +4,7 @@ import { BsExclamationCircleFill } from "react-icons/bs";
 import useUser from "../../../Hooks/useUser";
 import noUser from "../../../../public/user.png";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 
 const UserProfile = () => {
   const [updatePersonalInfo, setUpdatePersonalInfo] = useState(false);
@@ -39,7 +40,13 @@ const UserProfile = () => {
     })
       .then((res) => res.json())
       .then((data1) => {
-        console.log(data1);
+        if(data1.modifiedCount > 0){
+          console.log(data1, "From User Profile");
+          Swal.fire({
+            title: "Successfully updated user data",
+            icon: "success",
+          });
+        }
         refetch();
       });
   };

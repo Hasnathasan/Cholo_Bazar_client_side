@@ -26,34 +26,34 @@ const DashboardOfUser = () => {
           <NavLink className="p-4 text-[17px]" to="/my-section/profile">
             My Account
           </NavLink>
-          <NavLink className="p-4 text-[17px]" to="/my-section/orders">
+          <NavLink className="p-4 text-[17px]" to="/myOrders">
             My Orders
           </NavLink>
-          <NavLink className="p-4 text-[17px]" to="/my-section/lists">
+          <NavLink className="p-4 text-[17px]" to="/comming-soon">
             Download Free Book
           </NavLink>
-          <NavLink className="p-4 text-[17px]" to="/my-section/profile">
+          <NavLink className="p-4 text-[17px]" to="/comming-soon">
             My eBook Library
           </NavLink>
-          <NavLink className="p-4 text-[17px]" to="/my-section/profile">
+          <NavLink className="p-4 text-[17px]" to="/comming-soon">
             My List
           </NavLink>
-          <NavLink className="p-4 text-[17px]" to="/my-section/profile">
+          <NavLink className="p-4 text-[17px]" to="/comming-soon">
             My Book Shelf
           </NavLink>
-          <NavLink className="p-4 text-[17px]" to="/my-section/profile">
+          <NavLink className="p-4 text-[17px]" to="/comming-soon">
             My Wishlist
           </NavLink>
-          <NavLink className="p-4 text-[17px]" to="/my-section/profile">
+          <NavLink className="p-4 text-[17px]" to="/comming-soon">
             My Rating Reviews
           </NavLink>
-          <NavLink className="p-4 text-[17px]" to="/my-section/profile">
+          <NavLink className="p-4 text-[17px]" to="/comming-soon">
             My Points
           </NavLink>
-          <NavLink className="p-4 text-[17px]" to="/my-section/profile">
+          <NavLink className="p-4 text-[17px]" to="/comming-soon">
             My Following Authors
           </NavLink>
-          <NavLink className="p-4 text-[17px]" to="/my-section/profile">
+          <NavLink className="p-4 text-[17px]" to="/comming-soon">
             My Bkash Account
           </NavLink>
         </div>

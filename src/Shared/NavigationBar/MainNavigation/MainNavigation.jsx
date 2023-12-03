@@ -198,31 +198,37 @@ const MainNavigation = () => {
               <MenuList className="max-w-screen-xl !shadow-lg mx-5 !p-5 !shadow-gray-400 !bg-[#ffffff] rounded-xl lg:block">
                 <ul className="grid grid-cols-3 gap-y-4 !bg-[#ffffff] gap-3 outline-none outline-0">
                   <EachMenuItem
+                    path={"/comming-soon"}
                     icon={category1}
                     title={"Electronic"}
                     description={"See all Electronic Product"}
                   ></EachMenuItem>
                   <EachMenuItem
+                    path={"/comming-soon"}
                     icon={category1}
                     title={"Electronic"}
                     description={"See all Electronic Product"}
                   ></EachMenuItem>
                   <EachMenuItem
+                    path={"/comming-soon"}
                     icon={category1}
                     title={"Electronic"}
                     description={"See all Electronic Product"}
                   ></EachMenuItem>
                   <EachMenuItem
+                    path={"/comming-soon"}
                     icon={category1}
                     title={"Electronic"}
                     description={"See all Electronic Product"}
                   ></EachMenuItem>
                   <EachMenuItem
+                    path={"/comming-soon"}
                     icon={category1}
                     title={"Electronic"}
                     description={"See all Electronic Product"}
                   ></EachMenuItem>
                   <EachMenuItem
+                    path={"/comming-soon"}
                     icon={category1}
                     title={"Electronic"}
                     description={"See all Electronic Product"}
@@ -277,26 +283,31 @@ const MainNavigation = () => {
                     description={"See all Electronic Product"}
                   ></EachMenuItem>
                   <EachMenuItem
+                    path={"/comming-soon"}
                     icon={category1}
                     title={"Electronic"}
                     description={"See all Electronic Product"}
                   ></EachMenuItem>
                   <EachMenuItem
+                    path={"/comming-soon"}
                     icon={category1}
                     title={"Electronic"}
                     description={"See all Electronic Product"}
                   ></EachMenuItem>
                   <EachMenuItem
+                    path={"/comming-soon"}
                     icon={category1}
                     title={"Electronic"}
                     description={"See all Electronic Product"}
                   ></EachMenuItem>
                   <EachMenuItem
+                    path={"/comming-soon"}
                     icon={category1}
                     title={"Electronic"}
                     description={"See all Electronic Product"}
                   ></EachMenuItem>
                   <EachMenuItem
+                    path={"/comming-soon"}
                     icon={category1}
                     title={"Electronic"}
                     description={"See all Electronic Product"}
@@ -350,26 +361,31 @@ const MainNavigation = () => {
                     description={"See all Electronic Product"}
                   ></EachMenuItem>
                   <EachMenuItem
+                    path={"/comming-soon"}
                     icon={category1}
                     title={"Electronic"}
                     description={"See all Electronic Product"}
                   ></EachMenuItem>
                   <EachMenuItem
+                    path={"/comming-soon"}
                     icon={category1}
                     title={"Electronic"}
                     description={"See all Electronic Product"}
                   ></EachMenuItem>
                   <EachMenuItem
+                    path={"/comming-soon"}
                     icon={category1}
                     title={"Electronic"}
                     description={"See all Electronic Product"}
                   ></EachMenuItem>
                   <EachMenuItem
+                    path={"/comming-soon"}
                     icon={category1}
                     title={"Electronic"}
                     description={"See all Electronic Product"}
                   ></EachMenuItem>
                   <EachMenuItem
+                    path={"/comming-soon"}
                     icon={category1}
                     title={"Electronic"}
                     description={"See all Electronic Product"}
@@ -423,26 +439,31 @@ const MainNavigation = () => {
                     description={"See all Electronic Product"}
                   ></EachMenuItem>
                   <EachMenuItem
+                    path={"/comming-soon"}
                     icon={category1}
                     title={"Electronic"}
                     description={"See all Electronic Product"}
                   ></EachMenuItem>
                   <EachMenuItem
+                    path={"/comming-soon"}
                     icon={category1}
                     title={"Electronic"}
                     description={"See all Electronic Product"}
                   ></EachMenuItem>
                   <EachMenuItem
+                    path={"/comming-soon"}
                     icon={category1}
                     title={"Electronic"}
                     description={"See all Electronic Product"}
                   ></EachMenuItem>
                   <EachMenuItem
+                    path={"/comming-soon"}
                     icon={category1}
                     title={"Electronic"}
                     description={"See all Electronic Product"}
                   ></EachMenuItem>
                   <EachMenuItem
+                    path={"/comming-soon"}
                     icon={category1}
                     title={"Electronic"}
                     description={"See all Electronic Product"}
@@ -496,26 +517,31 @@ const MainNavigation = () => {
                     description={"See all Electronic Product"}
                   ></EachMenuItem>
                   <EachMenuItem
+                    path={"/comming-soon"}
                     icon={category1}
                     title={"Electronic"}
                     description={"See all Electronic Product"}
                   ></EachMenuItem>
                   <EachMenuItem
+                    path={"/comming-soon"}
                     icon={category1}
                     title={"Electronic"}
                     description={"See all Electronic Product"}
                   ></EachMenuItem>
                   <EachMenuItem
+                    path={"/comming-soon"}
                     icon={category1}
                     title={"Electronic"}
                     description={"See all Electronic Product"}
                   ></EachMenuItem>
                   <EachMenuItem
+                    path={"/comming-soon"}
                     icon={category1}
                     title={"Electronic"}
                     description={"See all Electronic Product"}
                   ></EachMenuItem>
                   <EachMenuItem
+                    path={"/comming-soon"}
                     icon={category1}
                     title={"Electronic"}
                     description={"See all Electronic Product"}

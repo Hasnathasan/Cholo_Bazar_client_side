@@ -16,7 +16,10 @@ const Login = () => {
   const handleGoogleSignIn = () => {
     googleLogin()
       .then((result) => {
-        console.log(result.user);
+        console.log(result.user, "Hi");
+        if(result?.user){
+          navigate ("/")
+        }
       })
       .catch((error) => {
         console.log(error);
