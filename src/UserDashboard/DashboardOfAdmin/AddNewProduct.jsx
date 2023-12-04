@@ -9,7 +9,6 @@ const AddNewProduct = () => {
   const { register, handleSubmit } = useForm();
   const [totalSpecification, setTotalSpecification] = useState([1]);
 
- 
   const onSubmit = async (data) => {
     console.log(data);
 
@@ -22,81 +21,97 @@ const AddNewProduct = () => {
     const rating = data.rating;
     const secondary_category = data.secondary_category;
     const title = data.product_name;
-    const brand = data.brand; 
-    const brand_image = data.brand_image; 
-    const brand_description = data.brand_description; 
-    const Country_Of_Origin = data.countryOfOrigin; 
-    const product_summery = data.product_summery; 
-    // const specification_property_1 = data.specification_property_1; 
-    // const specification_property_2 = data.specification_property_2; 
-    // const specification_property_3 = data.specification_property_3; 
-    // const specification_property_4 = data.specification_property_4; 
-    // const specification_property_5 = data.specification_property_5; 
-    // const specification_property_6 = data.specification_property_6; 
-    // const specification_property_7 = data.specification_property_7; 
-    // const specification_property_8 = data.specification_property_8; 
-    // const specification_property_9 = data.specification_property_9; 
+    const brand = data.brand;
+    const brand_image = data.brand_image;
+    const brand_description = data.brand_description;
+    const Country_Of_Origin = data.countryOfOrigin;
+    const product_summery = data.product_summery;
+    // const specification_property_1 = data.specification_property_1;
+    // const specification_property_2 = data.specification_property_2;
+    // const specification_property_3 = data.specification_property_3;
+    // const specification_property_4 = data.specification_property_4;
+    // const specification_property_5 = data.specification_property_5;
+    // const specification_property_6 = data.specification_property_6;
+    // const specification_property_7 = data.specification_property_7;
+    // const specification_property_8 = data.specification_property_8;
+    // const specification_property_9 = data.specification_property_9;
     // const specification_property_10 = data.specification_property_10;
-    // const specification_value_1 = data.specification_value_1; 
-    // const specification_value_2 = data.specification_value_2; 
-    // const specification_value_3 = data.specification_value_3; 
-    // const specification_value_4 = data.specification_value_4; 
-    // const specification_value_5 = data.specification_value_5; 
-    // const specification_value_6 = data.specification_value_6; 
-    // const specification_value_7 = data.specification_value_7; 
-    // const specification_value_8 = data.specification_value_8; 
-    // const specification_value_9 = data.specification_value_9; 
+    // const specification_value_1 = data.specification_value_1;
+    // const specification_value_2 = data.specification_value_2;
+    // const specification_value_3 = data.specification_value_3;
+    // const specification_value_4 = data.specification_value_4;
+    // const specification_value_5 = data.specification_value_5;
+    // const specification_value_6 = data.specification_value_6;
+    // const specification_value_7 = data.specification_value_7;
+    // const specification_value_8 = data.specification_value_8;
+    // const specification_value_9 = data.specification_value_9;
     // const specification_value_10 = data.specification_value_10;
 
+    const specification = {
+      title,
+      summery: product_summery,
+      Country_Of_Origin,
+    };
 
-
-    const specification = {title, summery: product_summery, Country_Of_Origin,  }
-
-
-    for(let i = 0; i <= 10; i++){
+    for (let i = 0; i <= 10; i++) {
       const specificationProperty = `specification_property_${i}`;
       const specificationValue = `specification_value_${i}`;
-      if(data[specificationProperty]){
-        specification[data[specificationProperty]] = data[specificationValue]
+      if (data[specificationProperty]) {
+        specification[data[specificationProperty]] = data[specificationValue];
       }
     }
-console.log(specification);
+    console.log(specification);
 
     if (images.length === 0) {
       alert("Please select at least one image to upload.");
       return;
     }
 
-
     let imagesOfNewProduct = [];
 
     for (const image of images) {
       const formData = new FormData();
-    formData.append('key', "d3f91f97f4271f1b700b4304ebdb8133");
+      formData.append("key", "d3f91f97f4271f1b700b4304ebdb8133");
       formData.append(`image`, image);
       try {
-        const response = await axios.post('https://api.imgbb.com/1/upload', formData);
+        const response = await axios.post(
+          "https://api.imgbb.com/1/upload",
+          formData
+        );
         const image = response?.data?.data?.url;
         console.log(image);
         imagesOfNewProduct = [...imagesOfNewProduct, image];
-        
       } catch (error) {
         console.error(error);
       }
     }
     console.log(imagesOfNewProduct);
 
-    
+    const product = {
+      images: imagesOfNewProduct,
+      price: { real_price, discounted_price },
+      brand_info: {
+        name: brand,
+        image:
+          "https://static01.nyt.com/images/2021/10/02/business/00roose-fb-silo/00roose-fb-silo-superJumbo.jpg",
+        description: brand_description,
+      },
+      rating,
+      number_of_ratings,
+      number_of_reviews,
+      main_category,
+      secondary_category,
+      specification,
+    };
 
-    const product = {images: imagesOfNewProduct, price: {real_price, discounted_price}, brand_info: {name: brand, image: "https://static01.nyt.com/images/2021/10/02/business/00roose-fb-silo/00roose-fb-silo-superJumbo.jpg", description: brand_description}, rating, number_of_ratings, number_of_reviews, main_category, secondary_category, specification};
-    
-    axios.post('https://cholo-bazar.vercel.app/products', product)
-      .then(res => {
-        if(res.data.insertedId){
+    axios
+      .post("https://cholo-bazar.vercel.app/products", product)
+      .then((res) => {
+        if (res.data.insertedId) {
           Swal.fire({
             title: "Successfully added to Server!",
             text: "The product will seen in the Main website",
-            icon: "success"
+            icon: "success",
           });
         }
       })
@@ -122,8 +137,16 @@ console.log(specification);
               labelPlacement="outside"
             />
             <div>
-            <label className="text-[15px] !mb-2" htmlFor="images">Select product Images</label>
-            <input name="images" id="images" type="file" multiple {...register("images", { required: true })} />
+              <label className="text-[15px] !mb-2" htmlFor="images">
+                Select product Images
+              </label>
+              <input
+                name="images"
+                id="images"
+                type="file"
+                multiple
+                {...register("images", { required: true })}
+              />
             </div>
             <Input
               {...register("real_price", { required: true })}
@@ -197,8 +220,15 @@ console.log(specification);
               labelPlacement="outside"
             />
             <div>
-            <label className="text-[15px] !mb-2" htmlFor="image">Select Brand Images</label>
-            <input name="image" id="image" type="file" {...register("brand_image", { required: true })} />
+              <label className="text-[15px] !mb-2" htmlFor="image">
+                Select Brand Images
+              </label>
+              <input
+                name="image"
+                id="image"
+                type="file"
+                {...register("brand_image", { required: true })}
+              />
             </div>
           </div>
           <h2 className="text-xl font-semibold underline leading-[50px] text-gray-900 my-5">
@@ -265,16 +295,16 @@ console.log(specification);
               </div>
             ))}
           </div>
-        <Button
-          type="submit"
-          className="mt-3 block"
-          size="lg"
-          color="primary"
-          radius="none"
-          variant="ghost"
-        >
-          Add Product
-        </Button>
+          <Button
+            type="submit"
+            className="mt-3 block"
+            size="lg"
+            color="primary"
+            radius="none"
+            variant="ghost"
+          >
+            Add Product
+          </Button>
         </div>
       </form>
     </div>

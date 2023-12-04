@@ -19,33 +19,37 @@ import useOrders from "../../Hooks/useOrders";
 import { Link } from "react-router-dom";
 
 const ManageOrders = () => {
-  const [orders, isOrdersLoading, refetch] = useOrders({orderStatus: "pending"});
+  const [orders, isOrdersLoading, refetch] = useOrders({
+    orderStatus: "pending",
+  });
   if (isOrdersLoading) {
     return <h1>Loading............</h1>;
   }
   console.log(orders);
 
-  const handleDecline = id => {
-    axios.patch(`https://cholo-bazar.vercel.app/order/${id}?status=${"declined"}`)
-    .then(res => {
-      console.log(res.data);
-      refetch()
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-  }
+  const handleDecline = (id) => {
+    axios
+      .patch(`https://cholo-bazar.vercel.app/order/${id}?status=${"declined"}`)
+      .then((res) => {
+        console.log(res.data);
+        refetch();
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
 
-  const handleAccept = id => {
-    axios.patch(`https://cholo-bazar.vercel.app/order/${id}?status=${"accepted"}`)
-    .then(res => {
-      console.log(res.data);
-      refetch()
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-  }
+  const handleAccept = (id) => {
+    axios
+      .patch(`https://cholo-bazar.vercel.app/order/${id}?status=${"accepted"}`)
+      .then((res) => {
+        console.log(res.data);
+        refetch();
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
   return (
     <div className="overflow-x-auto w-full md:w-[90%]">
       <div className="flex flex-col  gap-4">
@@ -142,7 +146,12 @@ const ManageOrders = () => {
                   radius="none"
                   variant="solid"
                 >
-                  <Link className="flex justify-center items-center absolute top-0 bottom-0 left-0 right-0" to={`/admin-dashboard/products-details/${order._id}`}>Details</Link>
+                  <Link
+                    className="flex justify-center items-center absolute top-0 bottom-0 left-0 right-0"
+                    to={`/admin-dashboard/products-details/${order._id}`}
+                  >
+                    Details
+                  </Link>
                 </Button>
               </TableCell>
               <TableCell className="flex justify-center items-center gap-3">
@@ -157,7 +166,7 @@ const ManageOrders = () => {
                   Decline
                 </Button>
                 <Button
-                onClick={() => handleAccept(order._id)}
+                  onClick={() => handleAccept(order._id)}
                   className="basis-1/2 hover:!text-white"
                   size="sm"
                   color="success"
