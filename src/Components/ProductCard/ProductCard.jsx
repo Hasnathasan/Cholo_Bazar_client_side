@@ -14,6 +14,7 @@ import useUser from "../../Hooks/useUser";
 const ProductCard = ({ product, apiPath, width }) => {
   const { user } = useContext(AuthContext);
   const [userData, isUserDataLoading] = useUser();
+  console.log(product);
   const {
     _id,
     images,
@@ -68,7 +69,7 @@ const ProductCard = ({ product, apiPath, width }) => {
     <div className={`card w-[184px] sm:w-[240px] mx-auto md:[250px] ${width ? `xl:w-[260px]` : 'xl:w-[230px]'} min-h-[260px] md:min-h-[320px] relative p-3.5 overflow-hidden !rounded hover:shadow-lg hover:shadow-gray-300 !transition-all !duration-300  delay-75 bg-white`}>
       <Link
         className="absolute top-0 bottom-0 left-0 right-0 z-10"
-        to={`/details/${apiPath}/${_id}`}
+        to={`/details/${apiPath}/${ product?.mainId || _id}`}
       ></Link>
       <article className=" flex flex-col h-full items-center justify-between  ">
         <div className="card__img w-[120%] h-auto p-6 transition-all duration-500 delay-75">

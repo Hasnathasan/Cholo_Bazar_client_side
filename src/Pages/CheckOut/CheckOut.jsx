@@ -6,10 +6,20 @@ import { Button } from "@nextui-org/react";
 import axios from "axios";
 
 const CheckOut = () => {
+  const { register, handleSubmit } = useForm();
   const [userData] = useUser();
   const [cartProduct, isCartProductLoading] = useCart();
-
-  const { register, handleSubmit } = useForm();
+  if (isCartProductLoading) {
+    return <h1>Loading............</h1>;
+  }
+  const selectedCartProducts = cartProduct?.filter(
+    (product) => product.isSelected == true
+  );
+  let totalPrice = selectedCartProducts?.reduce(
+    (total, product) =>
+      product.price.discounted_price * product.quantity + total,
+    0
+  );
   const onSubmit = (data) => {
     console.log(data);
     const { customerName, address, phoneNumber } = data;
@@ -32,17 +42,8 @@ const CheckOut = () => {
         console.log(error);
       });
   };
-  if (isCartProductLoading) {
-    return <h1>Loading............</h1>;
-  }
-  const selectedCartProducts = cartProduct?.filter(
-    (product) => product.isSelected == true
-  );
-  let totalPrice = selectedCartProducts?.reduce(
-    (total, product) =>
-      product.price.discounted_price * product.quantity + total,
-    0
-  );
+  
+  
   console.log(userData, selectedCartProducts, totalPrice);
   return (
     <div className="flex justify-center items-center py-16">

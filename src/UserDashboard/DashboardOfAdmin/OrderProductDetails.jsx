@@ -43,12 +43,12 @@ const OrderProductDetails = () => {
               {data?.order?.phoneNumber || "Unknown"}
             </span>
           </h2>
-          <h2 className="font-semibold text-sm  mb-2 text-gray-800">
+          {/* <h2 className="font-semibold text-sm  mb-2 text-gray-800">
             Total Quantity:{" "}
             <span className="font-bold">
               {data?.order?.phoneNumber || "Unknown"}
             </span>
-          </h2>
+          </h2> */}
           <h2 className="font-semibold text-sm  mb-2 text-gray-800">
             Total Price:{" "}
             {data.order?.products
