@@ -74,7 +74,7 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (loogedUser) => {
       setUser(loogedUser);
-      console.log(loogedUser);
+      console.log(loogedUser, loogedUser?.displayName);
       const newUser = {
         name: loogedUser?.displayName,
         email: loogedUser?.email,
@@ -84,16 +84,8 @@ const AuthProvider = ({ children }) => {
         photoUrl: loogedUser?.photoURL,
         userRole: "user",
       };
+      console.log(newUser);
       if (loogedUser?.email) {
-        const newUser = {
-          name: loogedUser?.displayName,
-          email: loogedUser?.email,
-          date_of_birth: null,
-          gender: null,
-          phoneNumber: loogedUser?.phoneNumber,
-          photoUrl: loogedUser?.photoURL,
-          userRole: "user",
-        };
         fetch(`https://cholo-bazar.vercel.app/eachUser/${loogedUser?.email}`)
           .then((res) => res.json())
           .then((data) => {
@@ -110,15 +102,6 @@ const AuthProvider = ({ children }) => {
             }
           });
       } else if (loogedUser?.phoneNumber) {
-        const newUser = {
-          name: loogedUser?.displayName,
-          email: loogedUser?.email,
-          date_of_birth: null,
-          gender: null,
-          phoneNumber: loogedUser?.phoneNumber,
-          photoUrl: loogedUser?.photoURL,
-          userRole: "user",
-        };
         console.log("User has Phone Number");
         fetch(
           `https://cholo-bazar.vercel.app/each-user-by-number/${loogedUser?.phoneNumber}`
