@@ -1,15 +1,14 @@
-import { useEffect } from 'react';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useEffect } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const axiosSecure = axios.create({
-  baseURL: 'https://cholo-bazar.vercel.app', // Replace with your base URL https://rokomari-clone-server-beta.vercel.app
+  baseURL: "https://cholo-bazar.vercel.app", // Replace with your base URL https://rokomari-clone-server-beta.vercel.app
 });
 const useAxiosSecure = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-
     axiosSecure.interceptors.request.use((config) => {
       return config;
     });
@@ -17,8 +16,11 @@ const useAxiosSecure = () => {
     axiosSecure.interceptors.response.use(
       (response) => response,
       (error) => {
-        if (error.response && (error.response.status === 401 || error.response.status === 403)) {
-          navigate('/'); // Redirect to the home page
+        if (
+          error.response &&
+          (error.response.status === 401 || error.response.status === 403)
+        ) {
+          navigate("/"); // Redirect to the home page
         }
         return Promise.reject(error);
       }

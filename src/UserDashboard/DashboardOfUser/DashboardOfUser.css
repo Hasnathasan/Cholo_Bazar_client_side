@@ -1,8 +1,8 @@
-.navlinks a.active{
-    color: rgb(79, 170, 255) !important;
-    background: linear-gradient(to right, transparent, #dff5ff);
+.navlinks a.active {
+  color: rgb(79, 170, 255) !important;
+  background: linear-gradient(to right, transparent, #dff5ff);
 }
 
-.navlinks a{
-    border-bottom: 1px dotted #d3d3d3;
+.navlinks a {
+  border-bottom: 1px dotted #d3d3d3;
 }
