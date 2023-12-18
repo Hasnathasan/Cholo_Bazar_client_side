@@ -66,10 +66,14 @@ const ProductCard = ({ product, apiPath, width }) => {
       });
   };
   return (
-    <div className={`card w-[184px] sm:w-[240px] mx-auto md:[250px] ${width ? `xl:w-[260px]` : 'xl:w-[230px]'} min-h-[260px] md:min-h-[320px] relative p-3.5 overflow-hidden !rounded hover:shadow-lg hover:shadow-gray-300 !transition-all !duration-300  delay-75 bg-white`}>
+    <div
+      className={`card w-[184px] sm:w-[240px] mx-auto md:[250px] ${
+        width ? `xl:w-[260px]` : "xl:w-[230px]"
+      } min-h-[260px] md:min-h-[320px] relative p-3.5 overflow-hidden !rounded hover:shadow-lg hover:shadow-gray-300 !transition-all !duration-300  delay-75 bg-white`}
+    >
       <Link
         className="absolute top-0 bottom-0 left-0 right-0 z-10"
-        to={`/details/${apiPath}/${ product?.mainId || _id}`}
+        to={`/details/${apiPath}/${product?.mainId || _id}`}
       ></Link>
       <article className=" flex flex-col h-full items-center justify-between  ">
         <div className="card__img w-[120%] h-auto p-6 transition-all duration-500 delay-75">
@@ -100,34 +104,34 @@ const ProductCard = ({ product, apiPath, width }) => {
             />
             <p className="text-xs text-blue-gray-500">({product?.rating})</p>
           </div>
-          {
-            product?.quantity ? <Chip
-            className="absolute top-3 right-4 text-xs"
-            color="danger"
-            variant="faded"
-          >
-            Quantity: {product?.quantity}
-          </Chip>: <Chip
-            className="absolute top-3 right-4 text-xs"
-            color="danger"
-            variant="faded"
-          >
-            {parseInt(
-              ((price?.real_price - price?.discounted_price) /
-                price?.real_price) *
-                100
-            )}
-            % off
-          </Chip>
-          }
-          <span
-            className="card__icon text-3xl text-dark cursor-pointer absolute bottom-4 duration-300 delay-75 left-3 z-20 hover:text-blue-400"
-          >
+          {product?.quantity ? (
+            <Chip
+              className="absolute top-3 right-4 text-xs"
+              color="danger"
+              variant="faded"
+            >
+              Quantity: {product?.quantity}
+            </Chip>
+          ) : (
+            <Chip
+              className="absolute top-3 right-4 text-xs"
+              color="danger"
+              variant="faded"
+            >
+              {parseInt(
+                ((price?.real_price - price?.discounted_price) /
+                  price?.real_price) *
+                  100
+              )}
+              % off
+            </Chip>
+          )}
+          <span className="card__icon text-3xl text-dark cursor-pointer absolute bottom-4 duration-300 delay-75 left-3 z-20 hover:text-blue-400">
             <FaHeart className="w-6 h-6"></FaHeart>
           </span>
 
           <button
-          disabled={!user || userData?.userRole === "admin"}
+            disabled={!user || userData?.userRole === "admin"}
             onClick={handleAddToCart}
             className="card__icon_2 absolute bottom-5 cursor-pointer right-4 z-20 transition-all !duration-100 !delay-75"
           >
