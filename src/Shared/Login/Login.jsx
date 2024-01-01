@@ -1,6 +1,6 @@
 import "./Login.css";
 import { FaFacebookF, FaGoogle } from "react-icons/fa";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import PhoneAuth from "../../Components/PhoneAuth/PhoneAuth";
 import { Button, Input } from "@nextui-org/react";
@@ -11,9 +11,11 @@ import Swal from "sweetalert2";
 const Login = () => {
   const { register, handleSubmit, reset } = useForm();
   const { googleLogin, faceBookSignIn, user, loginWithEmail } = useContext(AuthContext);
+  const [errorMessage, setErrorMessage] = useState(null)
   console.log(user);
   const navigate = useNavigate()
   const handleGoogleSignIn = () => {
+    setErrorMessage(null)
     googleLogin()
       .then((result) => {
         console.log(result.user, "Hi");
@@ -23,20 +25,24 @@ const Login = () => {
       })
       .catch((error) => {
         console.log(error);
+        setErrorMessage(error.message)
       });
   };
   const handleFBSignIn = () => {
+    setErrorMessage(null)
     faceBookSignIn()
       .then((result) => {
         console.log(result.user);
       })
       .catch((error) => {
         console.log(error);
+        setErrorMessage(error.message)
       });
   };
 
   const onSubmit = (data) => {
     const {email, password} = data;
+    setErrorMessage(null)
     loginWithEmail(email, password)
         .then(result => {
             console.log(result.user);
@@ -51,6 +57,7 @@ const Login = () => {
         })
         .catch(error => {
             console.log(error.message);
+            setErrorMessage(error.message)
         })
   };
 
@@ -58,6 +65,7 @@ const Login = () => {
     <div className="py-10">
       <div className="bg-white mx-auto w- md:w-[560px] md:shadow-lg p-2 md:p-8 rounded-r-md text-center">
         <div className="mb-6">
+        { errorMessage && <h3 className="text-left text-red-500 text-sm mb-2">{errorMessage}</h3>}
           <h1 className="text-xl to-black font-medium px-5 py-2 w-full">
             LOGIN / SIGN UP
           </h1>
