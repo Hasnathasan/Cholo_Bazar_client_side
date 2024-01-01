@@ -1,4 +1,4 @@
-import { Radio, RadioGroup } from "@nextui-org/react";
+import { Radio, RadioGroup, Slider } from "@nextui-org/react";
 import "./Electronics.css";
 import { Typography } from "@material-tailwind/react";
 import { Outlet } from "react-router-dom";
@@ -21,8 +21,8 @@ const Electronics = () => {
       <div className="drawer-side z-[100] p-">
         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
 
-        <div className="w-56"></div>
-        <ul className="menu flex-nowrap fixed top-1/4  md:left-2 shadow-lg shadow-gray-300 bg-white px-5  py-10 w-56 space-y-2">
+        <div className="w-64"></div>
+        <ul className="menu flex-nowrap fixed top-1/4  md:left-2 shadow-lg shadow-gray-300 bg-white px-5  py-10 w-64 space-y-2">
           <h2 className="text-2xl mb-3">Filter</h2>
 
           <RadioGroup
@@ -49,22 +49,18 @@ const Electronics = () => {
             <Typography className="mb-1" variant="paragraph">
               Price Range
             </Typography>
-            <input
-              type="range"
-              min={0}
-              max="3000"
-              defaultValue="0"
-              className="range range-success range-xs"
-              step="16"
-            />
-            <div className="w-full flex justify-between text-xs px-2">
-              <span>0.5k</span>
-              <span>1k</span>
-              <span>1.5k</span>
-              <span>2k</span>
-              <span>2.5k</span>
-              <span>3k</span>
-            </div>
+            <Slider
+            size="sm"
+      label=" "
+      step={10} 
+      minValue={0} 
+      maxValue={1000} 
+      color="success"
+      defaultValue={[100, 500]} 
+      formatOptions={{style: "currency", currency: "BDT"}}
+      className="max-w-md"
+    />
+          
           </div>
         </ul>
       </div>

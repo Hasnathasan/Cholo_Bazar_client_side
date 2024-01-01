@@ -65,7 +65,7 @@ const Login = () => {
     <div className="py-10">
       <div className="bg-white mx-auto w- md:w-[560px] md:shadow-lg p-2 md:p-8 rounded-r-md text-center">
         <div className="mb-6">
-        { errorMessage && <h3 className="text-left text-red-500 text-sm mb-2">{errorMessage}</h3>}
+        { errorMessage && <h3 className="text-left text-red-500 text-sm mb-2">{errorMessage.slice(10, -1)}</h3>}
           <h1 className="text-xl to-black font-medium px-5 py-2 w-full">
             LOGIN / SIGN UP
           </h1>
