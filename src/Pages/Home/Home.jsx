@@ -46,7 +46,7 @@ const Home = () => {
           ></SecondaryProductContainer>
           <ProductContainer
           width={290}
-            data={refrigerators}
+            data={refrigerators?.slice(0, 8)}
             apiPath={"products"}
           ></ProductContainer>
           <CategorySlider></CategorySlider>

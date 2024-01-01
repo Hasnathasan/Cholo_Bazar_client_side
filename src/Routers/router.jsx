@@ -26,6 +26,7 @@ import MyOrders from "../UserDashboard/DashboardOfUser/UserProfile/myOrders";
 import OrderDetails from "../UserDashboard/DashboardOfUser/UserProfile/OrderDetails";
 import IAmWorkingOnIt from "../Components/IAmWorkingOnIt/IAmWorkingOnIt";
 import SignUp from "../Shared/SignUp/SignUp";
+import CategoryWiseProduct from "../Components/CategoryWiseProduct/CategoryWiseProduct";
 
 const router = createBrowserRouter([
   {
@@ -50,7 +51,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/electronics",
-        element: <Electronics></Electronics>,
+        element: <CategoryWiseProduct></CategoryWiseProduct>,
         children: [
           {
             path: "electronics",
