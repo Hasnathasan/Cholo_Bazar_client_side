@@ -3,7 +3,6 @@ import Main from "../Main/Main";
 import Home from "../Pages/Home/Home";
 import Login from "../Shared/Login/Login";
 import Details from "../Pages/Details/Details";
-import Electronics from "../Pages/Electronics/Electronics/Electronics";
 import Irons from "../Pages/Electronics/Irons/Irons";
 import Refrigerators from "../Pages/Electronics/Refrigerators/Refrigerators";
 import Kettles from "../Pages/Electronics/Kettles/Kettles";
