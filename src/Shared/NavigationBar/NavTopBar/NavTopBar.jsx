@@ -10,7 +10,7 @@ import {
   FaPrescriptionBottleAlt,
 } from "react-icons/fa";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import {
   Card,
@@ -55,8 +55,10 @@ import category12 from "../../../../public/category-12.png";
 import iron from "../../../../public/iron.png";
 import kettle from "../../../../public/kettle.png";
 import AC from "../../../../public/air-conditioner.png";
+import { useForm } from "react-hook-form";
 
 const NavTopBar = () => {
+  const { register, handleSubmit } = useForm();
   const [open, setOpen] = useState(false);
   const [openAccordian, setOpenAccordian] = useState(0);
   const [openRight, setOpenRight] = useState(false);
@@ -70,6 +72,13 @@ const NavTopBar = () => {
   const openDrawerRight = () => setOpenRight(true);
   const closeDrawerRight = () => setOpenRight(false);
   const { user, logout } = useContext(AuthContext);
+  const navigate = useNavigate()
+  const onSearch = (data) => {
+    console.log(data);
+    navigate(`/electronics/search/${data?.name}`)
+  }
+
+
   return (
     <>
       <Navbar className="pt-[1px] md:py-2 w-full overflow-hidden md:!fixed top-0 z-50 nav bg-white">
@@ -91,7 +100,7 @@ const NavTopBar = () => {
           </Link>
         </NavbarBrand>
 
-        <form className="md:flex rounded-md hidden max-w-xl">
+        <form onSubmit={handleSubmit(onSearch)} className="md:flex rounded-md hidden max-w-xl">
           <Select
             radius="none"
             labelPlacement="outside-left"
@@ -107,6 +116,7 @@ const NavTopBar = () => {
           </Select>
           <input
             type="text"
+            {...register("name", { required: true })}
             className="border lg:w-[200px] xl:w-[545px] border-gray-200 border-b-2 border-b-orange-500 !outline-none p-2"
           />
           <button className=" px-[14px] bg-blue-400 border-2 rounded-r border-blue-400 ">

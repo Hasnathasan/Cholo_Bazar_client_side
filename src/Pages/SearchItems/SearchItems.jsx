@@ -2,8 +2,11 @@ import { useContext, useEffect, useState } from "react";
 import ProductContainer from "../../Components/ProductContainer/ProductContainer";
 import { AuthContext } from "../../Providers/AuthProvider";
 import useProductsByName from "../../Hooks/useProductsByName";
+import { useParams } from "react-router-dom";
 
 const SearchItems = () => {
+  const {name} = useParams();
+  console.log(name);
   const { filter, setFilter } = useContext(AuthContext);
   const [sort, SetSort] = useState(null);
   useEffect(() => {
@@ -11,7 +14,7 @@ const SearchItems = () => {
   }, [filter]);
   console.log(sort);
   const [products, isProductsLoading] = useProductsByName({
-    name: "kettle",
+    name: name,
     sort,
   });
   if (isProductsLoading) {

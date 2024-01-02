@@ -26,6 +26,7 @@ import OrderDetails from "../UserDashboard/DashboardOfUser/UserProfile/OrderDeta
 import IAmWorkingOnIt from "../Components/IAmWorkingOnIt/IAmWorkingOnIt";
 import SignUp from "../Shared/SignUp/SignUp";
 import CategoryWiseProduct from "../Components/CategoryWiseProduct/CategoryWiseProduct";
+import SearchItems from "../Pages/SearchItems/SearchItems";
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
         path: "/electronics",
         element: <CategoryWiseProduct></CategoryWiseProduct>,
         children: [
+          {
+            path: "search/:name",
+            element: <SearchItems></SearchItems>,
+          },
           {
             path: "electronics",
             element: <Irons></Irons>,
