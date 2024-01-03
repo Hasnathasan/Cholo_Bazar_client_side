@@ -11,7 +11,6 @@ import {
   TableColumn,
   TableHeader,
   TableRow,
-  User,
 } from "@nextui-org/react";
 
 import { FaArrowDown, FaEye, FaPlus, FaSearch, FaTrash } from "react-icons/fa";

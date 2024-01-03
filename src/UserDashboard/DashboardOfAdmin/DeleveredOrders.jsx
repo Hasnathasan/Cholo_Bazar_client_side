@@ -13,7 +13,6 @@ import {
   TableRow,
 } from "@nextui-org/react";
 
-import axios from "axios";
 import { FaArrowDown, FaPlus, FaSearch } from "react-icons/fa";
 import useOrders from "../../Hooks/useOrders";
 import { Link } from "react-router-dom";

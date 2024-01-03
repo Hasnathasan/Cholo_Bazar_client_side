@@ -5,9 +5,7 @@ import "./NavTopBar.css";
 import {
   FaAngleDown,
   FaCalculator,
-  FaCar,
   FaHome,
-  FaPrescriptionBottleAlt,
 } from "react-icons/fa";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { Link, useNavigate } from "react-router-dom";
@@ -40,18 +38,8 @@ import { RxCross2 } from "react-icons/rx";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import useUser from "../../../Hooks/useUser";
 import refrigerator from "../../../../public/refrigerator.png";
-import category1 from "../../../../public/category-1.png";
-import category2 from "../../../../public/category-2.png";
-import category3 from "../../../../public/category-3.png";
-import category4 from "../../../../public/category-4.png";
-import category5 from "../../../../public/category-5.png";
-import category6 from "../../../../public/category-6.png";
-import category7 from "../../../../public/category-7.png";
-import category8 from "../../../../public/category-8.png";
 import category9 from "../../../../public/category-9.png";
 import category10 from "../../../../public/category-10.png";
-import category11 from "../../../../public/category-11.png";
-import category12 from "../../../../public/category-12.png";
 import iron from "../../../../public/iron.png";
 import kettle from "../../../../public/kettle.png";
 import AC from "../../../../public/air-conditioner.png";

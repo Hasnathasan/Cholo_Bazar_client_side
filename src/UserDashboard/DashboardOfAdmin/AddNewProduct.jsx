@@ -22,7 +22,6 @@ const AddNewProduct = () => {
     const secondary_category = data.secondary_category;
     const title = data.product_name;
     const brand = data.brand;
-    const brand_image = data.brand_image;
     const brand_description = data.brand_description;
     const Country_Of_Origin = data.countryOfOrigin;
     const product_summery = data.product_summery;
