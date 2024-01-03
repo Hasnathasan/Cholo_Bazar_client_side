@@ -5,7 +5,7 @@ import useProductsByName from "../../Hooks/useProductsByName";
 import { useParams } from "react-router-dom";
 
 const SearchItems = () => {
-  const {name} = useParams();
+  const { name } = useParams();
   console.log(name);
   const { filter, setFilter } = useContext(AuthContext);
   const [sort, SetSort] = useState(null);
@@ -24,11 +24,11 @@ const SearchItems = () => {
       </h1>
     );
   }
-    return (
-        <div className="w-full py-9 mx-auto">
+  return (
+    <div className="w-full py-9 mx-auto">
       <ProductContainer data={products} apiPath={"products"}></ProductContainer>
     </div>
-    );
+  );
 };
 
 export default SearchItems;
