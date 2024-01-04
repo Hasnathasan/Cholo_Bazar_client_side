@@ -39,8 +39,6 @@ const MainNavigation = () => {
   const [isFurnitureOpen, setIsFurnitureOpen] = useState(false);
   const [isFoodOpen, setIsFoodOpen] = useState(false);
   // const [isBeautyOpen, setIsBeautyOpen] = useState(false);
-  // const [isBeautyOpen, setIsBeautyOpen] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   console.log(location);
