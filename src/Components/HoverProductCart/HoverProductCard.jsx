@@ -2,9 +2,7 @@ import "./HoverProductCard.css";
 
 const HoverProductCard = ({ product }) => {
   console.log(product);
-  const {
-    images,
-  } = product;
+  const { images } = product;
   return (
     <div className="w-[270px]">
       <div>

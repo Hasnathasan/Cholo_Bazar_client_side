@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const CategoryWiseProduct = () => {
-    const { filter, setFilter } = useContext(AuthContext);
+  const { filter, setFilter } = useContext(AuthContext);
   return (
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -50,17 +50,16 @@ const CategoryWiseProduct = () => {
               Price Range
             </Typography>
             <Slider
-            size="sm"
-      label=" "
-      step={10} 
-      minValue={0} 
-      maxValue={1000} 
-      color="success"
-      defaultValue={[100, 500]} 
-      formatOptions={{style: "currency", currency: "BDT"}}
-      className="max-w-md"
-    />
-          
+              size="sm"
+              label=" "
+              step={10}
+              minValue={0}
+              maxValue={1000}
+              color="success"
+              defaultValue={[100, 500]}
+              formatOptions={{ style: "currency", currency: "BDT" }}
+              className="max-w-md"
+            />
           </div>
         </ul>
       </div>

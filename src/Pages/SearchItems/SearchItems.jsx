@@ -8,7 +8,7 @@ import Loader from "../../Components/Loader/Loader";
 const SearchItems = () => {
   const { name } = useParams();
   console.log(name);
-  const { filter, setFilter } = useContext(AuthContext);
+  const { filter } = useContext(AuthContext);
   const [sort, SetSort] = useState(null);
   useEffect(() => {
     SetSort(filter);
