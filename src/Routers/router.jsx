@@ -103,7 +103,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/myOrders",
-        element: <MyOrders></MyOrders>
+        element: <MyOrders></MyOrders>,
       },
       {
         path: "/checkOut",
@@ -115,11 +115,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/products-details/:orderId",
-        element: <OrderDetails></OrderDetails>
+        element: <OrderDetails></OrderDetails>,
       },
       {
         path: "/comming-soon",
-        element: <IAmWorkingOnIt></IAmWorkingOnIt>
+        element: <IAmWorkingOnIt></IAmWorkingOnIt>,
       },
     ],
   },
@@ -129,35 +129,34 @@ const router = createBrowserRouter([
     children: [
       {
         path: "",
-        element: <Overview></Overview>
+        element: <Overview></Overview>,
       },
       {
         path: "manageUsers",
-        element: <ManageUsers></ManageUsers>
+        element: <ManageUsers></ManageUsers>,
       },
       {
         path: "manageProducts",
-        element: <ManageProducts></ManageProducts>
+        element: <ManageProducts></ManageProducts>,
       },
       {
         path: "manageOrders",
-        element: <ManageOrders></ManageOrders>
+        element: <ManageOrders></ManageOrders>,
       },
       {
         path: "add-new-product",
-        element: <AddNewProduct></AddNewProduct>
+        element: <AddNewProduct></AddNewProduct>,
       },
       {
         path: "products-details/:orderId",
-        element: <OrderProductDetails></OrderProductDetails>
+        element: <OrderProductDetails></OrderProductDetails>,
       },
       {
         path: "deleveredOrders",
-        element: <DeleveredOrders></DeleveredOrders>
+        element: <DeleveredOrders></DeleveredOrders>,
       },
-      
-    ]
-  }
+    ],
+  },
 ]);
 
 export default router;
