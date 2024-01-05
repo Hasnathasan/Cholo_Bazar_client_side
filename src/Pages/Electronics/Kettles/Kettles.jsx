@@ -4,6 +4,7 @@ import UseProductsBySecondaryCategory from "../../../Hooks/UseProductsBySecondar
 import { AuthContext } from "../../../Providers/AuthProvider";
 import { useState } from "react";
 import { useEffect } from "react";
+import Loader from "../../../Components/Loader/Loader";
 
 const Kettles = () => {
   const { filter, setFilter } = useContext(AuthContext);
@@ -18,9 +19,9 @@ const Kettles = () => {
   });
   if (isProductsLoading) {
     return (
-      <h1 className="w-full text-4xl text-green-600 h-screen flex justify-center items-center">
-        Loading...................
-      </h1>
+      <div className="w-full text-4xl text-green-600 h-screen flex justify-center items-center">
+        <Loader></Loader>
+      </div>
     );
   }
   return (

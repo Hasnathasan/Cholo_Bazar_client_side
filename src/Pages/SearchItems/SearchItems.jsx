@@ -3,6 +3,7 @@ import ProductContainer from "../../Components/ProductContainer/ProductContainer
 import { AuthContext } from "../../Providers/AuthProvider";
 import useProductsByName from "../../Hooks/useProductsByName";
 import { useParams } from "react-router-dom";
+import Loader from "../../Components/Loader/Loader";
 
 const SearchItems = () => {
   const { name } = useParams();
@@ -19,9 +20,9 @@ const SearchItems = () => {
   });
   if (isProductsLoading) {
     return (
-      <h1 className="w-full text-4xl text-green-600 h-screen flex justify-center items-center">
-        Loading...................
-      </h1>
+      <div className="w-full text-4xl text-green-600 h-screen flex justify-center items-center">
+        <Loader></Loader>
+      </div>
     );
   }
   return (

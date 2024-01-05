@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import ProductContainer from "../../../Components/ProductContainer/ProductContainer";
 import UseProductsBySecondaryCategory from "../../../Hooks/UseProductsBySecondaryCategory";
 import { AuthContext } from "../../../Providers/AuthProvider";
+import Loader from "../../../Components/Loader/Loader";
 
 const AirCollers = () => {
   const { filter } = useContext(AuthContext);
@@ -16,9 +17,7 @@ const AirCollers = () => {
   });
   if (isProductsLoading) {
     return (
-      <h1 className="w-full text-4xl text-green-600 h-screen flex justify-center items-center">
-        Loading...................
-      </h1>
+      <Loader></Loader>
     );
   }
   return (

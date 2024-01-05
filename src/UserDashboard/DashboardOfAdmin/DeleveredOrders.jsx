@@ -16,13 +16,14 @@ import {
 import { FaArrowDown, FaPlus, FaSearch } from "react-icons/fa";
 import useOrders from "../../Hooks/useOrders";
 import { Link } from "react-router-dom";
+import Loader from "../../Components/Loader/Loader";
 
 const DeleveredOrders = () => {
   const [orders, isOrdersLoading, refetch] = useOrders({
     orderStatus: "accepted",
   });
   if (isOrdersLoading) {
-    return <h1>Loading............</h1>;
+    return <Loader></Loader>;
   }
   console.log(orders);
 

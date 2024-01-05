@@ -2,11 +2,12 @@ import { Button } from "@nextui-org/react";
 import CartProductCard from "../../Components/CartProductCard/CartProductCard";
 import useCart from "../../Hooks/useCart";
 import { Link } from "react-router-dom";
+import Loader from "../../Components/Loader/Loader";
 
 const Cart = () => {
   const [cartProduct, isCartProductLoading] = useCart();
   if (isCartProductLoading) {
-    return <h1>Loading............</h1>;
+    return <Loader></Loader>;
   }
   const selectedCartProducts = cartProduct.filter(
     (product) => product.isSelected == true

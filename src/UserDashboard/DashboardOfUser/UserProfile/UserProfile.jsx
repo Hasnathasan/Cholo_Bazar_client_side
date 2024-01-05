@@ -5,6 +5,7 @@ import useUser from "../../../Hooks/useUser";
 import noUser from "../../../../public/user.png";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
+import Loader from "../../../Components/Loader/Loader";
 
 const UserProfile = () => {
   const [updatePersonalInfo, setUpdatePersonalInfo] = useState(false);
@@ -15,7 +16,7 @@ const UserProfile = () => {
   const [userData, isUserDataLoading, refetch] = useUser();
   const { register, handleSubmit } = useForm();
   if (isUserDataLoading) {
-    return <h1>Loading....</h1>;
+    return <Loader></Loader>;
   }
   console.log(userData);
   const { email, name, phoneNumber, photoUrl, date_of_birth, _id, gender } =

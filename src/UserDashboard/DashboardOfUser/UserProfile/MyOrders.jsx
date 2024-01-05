@@ -5,6 +5,7 @@ import useUserOrders from "../../../Hooks/useUserOrders";
 import { Link } from "react-router-dom";
 import { Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, Input, Table, TableBody, TableCell, TableColumn, TableHeader, TableRow } from "@nextui-org/react";
 import { FaArrowDown, FaPlus, FaSearch } from "react-icons/fa";
+import Loader from "../../../Components/Loader/Loader";
 
 
 const OrderProductDetails = () => {
@@ -12,7 +13,7 @@ const OrderProductDetails = () => {
     const {user} = useContext(AuthContext)
     const [orders, isOrdersLoading] = useUserOrders();
     if(isOrdersLoading){
-      return <h1>loading...........</h1>
+      return <Loader></Loader>;
     }
     console.log(orders);
     return (

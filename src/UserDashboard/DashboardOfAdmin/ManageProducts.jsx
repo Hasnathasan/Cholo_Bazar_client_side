@@ -16,10 +16,11 @@ import {
 import { FaArrowDown, FaEye, FaPlus, FaSearch, FaTrash } from "react-icons/fa";
 import useProducts from "../../Hooks/useProducts";
 import { Link } from "react-router-dom";
+import Loader from "../../Components/Loader/Loader";
 const ManageProducts = () => {
   const [products, isProductsLoading] = useProducts();
   if (isProductsLoading) {
-    return <h1>Loading............</h1>;
+    return <Loader></Loader>;
   }
   return (
     <div className="overflow-x-auto w-full md:w-[80%]">

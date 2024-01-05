@@ -5,6 +5,7 @@ import UseProductsBySecondaryCategory from "../../Hooks/UseProductsBySecondaryCa
 import team from '../../../public/team.png';
 import packages from '../../../public/package.png';
 import cubes from '../../../public/cubes.png';
+import Loader from "../../Components/Loader/Loader";
 
 
 
@@ -14,7 +15,7 @@ const Overview = () => {
       category: "iron"
     });
     if(isProductsLoading || isUsersDataLoading){
-      return <h1>Loading............</h1>
+      return <Loader></Loader>
     }
         
       var options = {

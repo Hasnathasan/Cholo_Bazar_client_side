@@ -4,13 +4,14 @@ import { Typography } from "@material-tailwind/react";
 import useCart from "../../Hooks/useCart";
 import { Button } from "@nextui-org/react";
 import axios from "axios";
+import Loader from "../../Components/Loader/Loader";
 
 const CheckOut = () => {
   const { register, handleSubmit } = useForm();
   const [userData] = useUser();
   const [cartProduct, isCartProductLoading] = useCart();
   if (isCartProductLoading) {
-    return <h1>Loading............</h1>;
+    return <Loader></Loader>;
   }
   const selectedCartProducts = cartProduct?.filter(
     (product) => product.isSelected == true

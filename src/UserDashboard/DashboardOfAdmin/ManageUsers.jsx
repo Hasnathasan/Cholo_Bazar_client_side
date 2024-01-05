@@ -19,11 +19,12 @@ import useUsers from "../../Hooks/useUsers";
 import img from "../../../public/user.png";
 import axios from "axios";
 import { FaArrowDown, FaPlus, FaSearch } from "react-icons/fa";
+import Loader from "../../Components/Loader/Loader";
 
 const ManageUsers = () => {
   const [usersData, isUsersDataLoading, refetch] = useUsers();
   if (isUsersDataLoading) {
-    return <h1>Loading..........</h1>;
+    return <Loader></Loader>;
   }
   const handleRoleChange = (email, userRole, phoneNumber) => {
     axios
