@@ -9,10 +9,10 @@ import Swal from "sweetalert2";
 const SignUp = () => {
   const { register, handleSubmit, reset } = useForm();
   const { signUpWithEmail, logout } = useContext(AuthContext);
-  const [errorMessage, setErrorMessage] = useState(null)
-  const navigate = useNavigate()
+  const [errorMessage, setErrorMessage] = useState(null);
+  const navigate = useNavigate();
   const onSubmit = (data) => {
-    setErrorMessage(null)
+    setErrorMessage(null);
     const { name, email, password } = data;
     signUpWithEmail(email, password)
       .then((result) => {
@@ -20,26 +20,30 @@ const SignUp = () => {
           displayName: name,
         })
           .then(() => {
-            reset()
+            reset();
             logout();
-            navigate('/login')
+            navigate("/login");
             Swal.fire("Account created successfully", " ", "success");
           })
           .catch((error) => {
             console.log(error.message);
-            setErrorMessage(error.message)
+            setErrorMessage(error.message);
           });
       })
       .catch((error) => {
         console.log(error.message);
-        setErrorMessage(error.message)
+        setErrorMessage(error.message);
       });
   };
   return (
     <div className="w-full py-7">
       <div className="max-w-2xl mx-2  sm:mx-auto p-3 md:p-7 bg-white shadow-md rounded">
         <div className="mb-6 text-center">
-        { errorMessage && <h3 className="text-left text-red-500 text-sm mb-2">{errorMessage.slice(10, -1)}</h3>}
+          {errorMessage && (
+            <h3 className="text-left text-red-500 text-sm mb-2">
+              {errorMessage.slice(10, -1)}
+            </h3>
+          )}
           <h1 className="text-xl font-medium px-5 py-2 w-full">
             LOGIN / SIGN UP
           </h1>

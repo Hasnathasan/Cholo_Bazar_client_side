@@ -16,9 +16,7 @@ const AirCollers = () => {
     sort,
   });
   if (isProductsLoading) {
-    return (
-      <Loader></Loader>
-    );
+    return <Loader></Loader>;
   }
   return (
     <div className="w-full py-8 mx-auto">

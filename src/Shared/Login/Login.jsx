@@ -10,62 +10,67 @@ import Swal from "sweetalert2";
 
 const Login = () => {
   const { register, handleSubmit, reset } = useForm();
-  const { googleLogin, faceBookSignIn, user, loginWithEmail } = useContext(AuthContext);
-  const [errorMessage, setErrorMessage] = useState(null)
+  const { googleLogin, faceBookSignIn, user, loginWithEmail } =
+    useContext(AuthContext);
+  const [errorMessage, setErrorMessage] = useState(null);
   console.log(user);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const handleGoogleSignIn = () => {
-    setErrorMessage(null)
+    setErrorMessage(null);
     googleLogin()
       .then((result) => {
         console.log(result.user, "Hi");
-        if(result?.user){
-          navigate ("/")
+        if (result?.user) {
+          navigate("/");
         }
       })
       .catch((error) => {
         console.log(error);
-        setErrorMessage(error.message)
+        setErrorMessage(error.message);
       });
   };
   const handleFBSignIn = () => {
-    setErrorMessage(null)
+    setErrorMessage(null);
     faceBookSignIn()
       .then((result) => {
         console.log(result.user);
       })
       .catch((error) => {
         console.log(error);
-        setErrorMessage(error.message)
+        setErrorMessage(error.message);
       });
   };
 
   const onSubmit = (data) => {
-    const {email, password} = data;
-    setErrorMessage(null)
+    const { email, password } = data;
+    setErrorMessage(null);
     loginWithEmail(email, password)
-        .then(result => {
-            console.log(result.user);
-            reset()
-            Swal.fire(
-                'Login Successfull',
-                'User has logged in successfully',
-                'success'
-              )
-              navigate ("/")
-              // navigate(from, { replace: true });
-        })
-        .catch(error => {
-            console.log(error.message);
-            setErrorMessage(error.message)
-        })
+      .then((result) => {
+        console.log(result.user);
+        reset();
+        Swal.fire(
+          "Login Successfull",
+          "User has logged in successfully",
+          "success"
+        );
+        navigate("/");
+        // navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        console.log(error.message);
+        setErrorMessage(error.message);
+      });
   };
 
   return (
     <div className="py-10">
       <div className="bg-white mx-auto w- md:w-[560px] md:shadow-lg p-2 md:p-8 rounded-r-md text-center">
         <div className="mb-6">
-        { errorMessage && <h3 className="text-left text-red-500 text-sm mb-2">{errorMessage.slice(10, -1)}</h3>}
+          {errorMessage && (
+            <h3 className="text-left text-red-500 text-sm mb-2">
+              {errorMessage.slice(10, -1)}
+            </h3>
+          )}
           <h1 className="text-xl to-black font-medium px-5 py-2 w-full">
             LOGIN / SIGN UP
           </h1>
@@ -93,36 +98,44 @@ const Login = () => {
           </div>
           <div className="font-semibold text-[15px] mb- mt-5">OR</div>
           <div>
-          <form onSubmit={handleSubmit(onSubmit)} className="w-[90%] flex flex-col justify-center gap-5 mx-auto">
-          <Input
-              {...register("email", { required: true })}
-              type="email"
-              label="Your Email"
-              size="sm"
-              placeholder="example@gmail.com"
-              variant="underlined"
-              labelPlacement="outside"
-            />
-          <Input
-              {...register("password", { required: true })}
-              type="password"
-              label="Your Password"
-              size="sm"
-              placeholder="********"
-              variant="underlined"
-              labelPlacement="outside"
-            />
-            <Button
-          type="submit"
-          className="mt-3 block"
-          color="primary"
-          radius="none"
-          variant="ghost"
-        >
-          Login
-        </Button>
-        <p className="text-[15px]">Haven&apos;t any Account? <Link to={"/signUp"} className="text-blue-500">Create One</Link></p>
-          </form>
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className="w-[90%] flex flex-col justify-center gap-5 mx-auto"
+            >
+              <Input
+                {...register("email", { required: true })}
+                type="email"
+                label="Your Email"
+                size="sm"
+                placeholder="example@gmail.com"
+                variant="underlined"
+                labelPlacement="outside"
+              />
+              <Input
+                {...register("password", { required: true })}
+                type="password"
+                label="Your Password"
+                size="sm"
+                placeholder="********"
+                variant="underlined"
+                labelPlacement="outside"
+              />
+              <Button
+                type="submit"
+                className="mt-3 block"
+                color="primary"
+                radius="none"
+                variant="ghost"
+              >
+                Login
+              </Button>
+              <p className="text-[15px]">
+                Haven&apos;t any Account?{" "}
+                <Link to={"/signUp"} className="text-blue-500">
+                  Create One
+                </Link>
+              </p>
+            </form>
           </div>
           <div className="font-semibold text-[15px] mb- mt-8">OR</div>
           <PhoneAuth className="px-10"></PhoneAuth>

@@ -1,4 +1,4 @@
-import { PropagateLoader, RingLoader } from "react-spinners";
+import { PropagateLoader } from "react-spinners";
 
 const Loader = () => {
   return (

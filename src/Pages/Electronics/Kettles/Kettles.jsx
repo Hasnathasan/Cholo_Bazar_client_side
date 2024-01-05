@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import Loader from "../../../Components/Loader/Loader";
 
 const Kettles = () => {
-  const { filter, setFilter } = useContext(AuthContext);
+  const { filter } = useContext(AuthContext);
   const [sort, SetSort] = useState(null);
   useEffect(() => {
     SetSort(filter);
