@@ -27,6 +27,7 @@ import IAmWorkingOnIt from "../Components/IAmWorkingOnIt/IAmWorkingOnIt";
 import SignUp from "../Shared/SignUp/SignUp";
 import CategoryWiseProduct from "../Components/CategoryWiseProduct/CategoryWiseProduct";
 import SearchItems from "../Pages/SearchItems/SearchItems";
+import AllElectronics from "../Pages/Electronics/AllElectronics/AllElectronics";
 
 const router = createBrowserRouter([
   {
@@ -59,7 +60,7 @@ const router = createBrowserRouter([
           },
           {
             path: "electronics",
-            element: <Irons></Irons>,
+            element: <AllElectronics></AllElectronics>,
           },
           {
             path: "refrigerators",
