@@ -50,7 +50,7 @@ const router = createBrowserRouter([
         element: <Details></Details>,
       },
       {
-        path: "/electronics",
+        path: "/products",
         element: <CategoryWiseProduct></CategoryWiseProduct>,
         children: [
           {

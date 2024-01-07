@@ -63,7 +63,7 @@ const NavTopBar = () => {
   const navigate = useNavigate()
   const onSearch = (data) => {
     console.log(data);
-    navigate(`/electronics/search/${data?.name}`)
+    navigate(`/products/search/${data?.name}`)
   }
 
 
@@ -338,7 +338,7 @@ const NavTopBar = () => {
                 <List className="p-0">
                   <ListItem ripple={false}>
                     <Link
-                      to={"/electronics/electronics"}
+                      to={"/products/electronics"}
                       className=" flex items-center gap-1 w-full h-full"
                     >
                       <ListItemPrefix>
@@ -349,7 +349,7 @@ const NavTopBar = () => {
                   </ListItem>
                   <ListItem ripple={false}>
                     <Link
-                      to={"/electronics/refrigerators"}
+                      to={"/products/refrigerators"}
                       className=" flex items-center gap-1 w-full h-full"
                     >
                       <ListItemPrefix>
@@ -360,7 +360,7 @@ const NavTopBar = () => {
                   </ListItem>
                   <ListItem ripple={false}>
                     <Link
-                      to={"/electronics/televisions"}
+                      to={"/products/televisions"}
                       className=" flex items-center gap-1 w-full h-full"
                     >
                       <ListItemPrefix>
@@ -371,7 +371,7 @@ const NavTopBar = () => {
                   </ListItem>
                   <ListItem ripple={false}>
                     <Link
-                      to={"/electronics/irons"}
+                      to={"/products/irons"}
                       className=" flex items-center gap-1 w-full h-full"
                     >
                       <ListItemPrefix>
@@ -382,7 +382,7 @@ const NavTopBar = () => {
                   </ListItem>
                   <ListItem ripple={false}>
                     <Link
-                      to={"/electronics/kettles"}
+                      to={"/products/kettles"}
                       className=" flex items-center gap-1 w-full h-full"
                     >
                       <ListItemPrefix>
@@ -393,7 +393,7 @@ const NavTopBar = () => {
                   </ListItem>
                   <ListItem ripple={false}>
                     <Link
-                      to={"/electronics/airCollers"}
+                      to={"/products/airCollers"}
                       className=" flex items-center gap-1 w-full h-full"
                     >
                       <ListItemPrefix>

@@ -120,37 +120,37 @@ const MainNavigation = () => {
                     icon={category10}
                     title={"Electronic Items"}
                     description={"See all Electronic Product"}
-                    path={"/electronics/electronics"}
+                    path={"/products/electronics"}
                   ></EachMenuItem>
                   <EachMenuItem
                     icon={refrigerator}
                     title={"Refrigerators"}
                     description={"See all Electronic Product"}
-                    path={"/electronics/refrigerators"}
+                    path={"/products/refrigerators"}
                   ></EachMenuItem>
                   <EachMenuItem
                     icon={category9}
                     title={"Televisions"}
                     description={"See all Electronic Product"}
-                    path={"/electronics/televisions"}
+                    path={"/products/televisions"}
                   ></EachMenuItem>
                   <EachMenuItem
                     icon={iron}
                     title={"Iron Matchines"}
                     description={"See all Electronic Product"}
-                    path={"/electronics/irons"}
+                    path={"/products/irons"}
                   ></EachMenuItem>
                   <EachMenuItem
                     icon={kettle}
                     title={"Kettles"}
                     description={"See all Electronic Product"}
-                    path={"/electronics/kettles"}
+                    path={"/products/kettles"}
                   ></EachMenuItem>
                   <EachMenuItem
                     icon={AC}
                     title={"Air Collers"}
                     description={"See all Electronic Product"}
-                    path={"/electronics/airCollers"}
+                    path={"/products/airCollers"}
                   ></EachMenuItem>
                 </ul>
               </MenuList>
