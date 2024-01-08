@@ -177,7 +177,7 @@ const Details = () => {
   return (
     <>
       {apiPath !== "books" ? (
-        <div className="mx-auto max-w-[1160px] md:py-5">
+        <div className="mx-auto max-w-[1160px] relative md:py-5">
           <div className="md:bg-white  hidden md:flex flex-col md:flex-row md:p-5 mb-5 gap-5 md:gap-10 md:shadow-lg">
             <div className="md:w-[400px]">
               <div ref={sliderRef} className="keen-slider w-full mb-7">
@@ -337,8 +337,16 @@ const Details = () => {
               </div>
             </div>
 
+
+
             {/* About section end */}
           </div>
+            <div className=" bg-amber-600 overflow-hidden fixed bottom-0 z-50 flex justify-center items-center h-12 w-full ">
+                  <div>Hello There I am Hasnat</div>
+                  <div className="rotate-45 bg-blue-500 basis-1/2 h-96">
+                  </div>
+                    <h2 className="absolute top-3 right-8">I am Hasnat</h2>
+            </div>
           <img src={banner} alt="" />
           <div className="bg-white mx-3 md:mx-0 my-5 p-4 py-5 md:p-6 mb-5 gap-10 rounded-sm md:shadow-lg border-2 border-[#e9e9e9] md:border-none">
             <h1 className="text-xl text-gray-900 md:text-gray-700">
