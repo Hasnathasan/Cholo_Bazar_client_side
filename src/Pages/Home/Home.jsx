@@ -54,7 +54,7 @@ const Home = () => {
           <SecondaryProductContainer
             data={irons}
             apiPath={"products"}
-            headding={"Refrigerator are on fire 🔥🔥"}
+            headding={"Irons are on fire 🔥🔥"}
           ></SecondaryProductContainer>
           <SecondaryProductContainer
             data={kettles}
