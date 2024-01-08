@@ -4,9 +4,8 @@ import ProductContainer from "../../../Components/ProductContainer/ProductContai
 import Loader from "../../../Components/Loader/Loader";
 import UseProductsByMainCategory from "../../../Hooks/UseProductsByMainCategory";
 
-
 const AllElectronics = () => {
-    const { filter } = useContext(AuthContext);
+  const { filter } = useContext(AuthContext);
   const [sort, SetSort] = useState(null);
   useEffect(() => {
     SetSort(filter);
@@ -17,9 +16,11 @@ const AllElectronics = () => {
     sort,
   });
   if (isProductsLoading) {
-    return <div className="w-full text-4xl text-green-600 h-[500px] flex justify-center items-center">
-    <Loader></Loader>
-  </div>;
+    return (
+      <div className="w-full text-4xl text-green-600 h-[500px] flex justify-center items-center">
+        <Loader></Loader>
+      </div>
+    );
   }
   return (
     <div className="w-full py-8 mx-auto">

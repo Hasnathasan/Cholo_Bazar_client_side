@@ -59,7 +59,7 @@ const Details = () => {
   const [axiosSecure] = useAxiosSecure();
   const { apiPath, id } = apiObj;
   const { user } = useContext(AuthContext);
-  const [userData, isUserDataLoading] = useUser()
+  const [userData, isUserDataLoading] = useUser();
   console.log(user);
   console.log(apiPath, id);
   const { data: product, isLoading: isProductLoading } = useQuery({
@@ -273,7 +273,7 @@ const Details = () => {
                   ""
                 )}
                 <button
-                disabled={!user || userData?.userRole === "admin"}
+                  disabled={!user || userData?.userRole === "admin"}
                   onClick={handleAddToCart}
                   className="px-8 flex gap-2 text-lg font-semibold text-white justify-center items-center py-3 bg-amber-500 hover:bg-[#f59f0bd0] rounded duration-500  transition-all"
                 >
@@ -337,16 +337,13 @@ const Details = () => {
               </div>
             </div>
 
-
-
             {/* About section end */}
           </div>
-            <div className=" bg-amber-600 overflow-hidden fixed bottom-0 z-50 flex justify-center items-center h-12 w-full ">
-                  <div>Hello There I am Hasnat</div>
-                  <div className="rotate-45 bg-blue-500 basis-1/2 h-96">
-                  </div>
-                    <h2 className="absolute top-3 right-8">I am Hasnat</h2>
-            </div>
+          <div className=" bg-amber-600 overflow-hidden fixed bottom-0 z-50 flex justify-center items-center h-12 w-full ">
+            <div>Hello There I am Hasnat</div>
+            <div className="rotate-45 bg-blue-500 basis-1/2 h-96"></div>
+            <h2 className="absolute top-3 right-8">I am Hasnat</h2>
+          </div>
           <img src={banner} alt="" />
           <div className="bg-white mx-3 md:mx-0 my-5 p-4 py-5 md:p-6 mb-5 gap-10 rounded-sm md:shadow-lg border-2 border-[#e9e9e9] md:border-none">
             <h1 className="text-xl text-gray-900 md:text-gray-700">

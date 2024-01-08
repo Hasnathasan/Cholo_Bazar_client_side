@@ -16,9 +16,11 @@ const AirCollers = () => {
     sort,
   });
   if (isProductsLoading) {
-    return <div className="w-full text-4xl text-green-600 h-[500px] flex justify-center items-center">
-    <Loader></Loader>
-  </div>;
+    return (
+      <div className="w-full text-4xl text-green-600 h-[500px] flex justify-center items-center">
+        <Loader></Loader>
+      </div>
+    );
   }
   return (
     <div className="w-full py-8 mx-auto">
