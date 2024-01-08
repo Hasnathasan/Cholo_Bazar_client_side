@@ -19,7 +19,7 @@ const Kettles = () => {
   });
   if (isProductsLoading) {
     return (
-      <div className="w-full text-4xl text-green-600 h-screen flex justify-center items-center">
+      <div className="w-full text-4xl text-green-600 h-[500px] flex justify-center items-center">
         <Loader></Loader>
       </div>
     );
