@@ -340,8 +340,8 @@ const Details = () => {
             {/* About section end */}
           </div>
           <div className=" bg-amber-600 overflow-hidden fixed bottom-0 z-50 flex justify-center items-center h-12 w-full ">
-            <div>Hello There I am Hasnat</div>
-            <div className="rotate-45 bg-blue-500 basis-1/2 h-96"></div>
+            <div className="flex-1">Hello There I am Hasnat</div>
+            <div className="rotate-45 bg-blue-500 basis-[40%] h-96"></div>
             <h2 className="absolute top-3 right-8">I am Hasnat</h2>
           </div>
           <img src={banner} alt="" />
